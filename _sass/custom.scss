@@ -1,5 +1,5 @@
 $bp-tablet: 768px;
-$light-color: #009DDA;
+$blue: #5B92E5;
 
 .navbar-brand {
     display: block;
@@ -63,50 +63,17 @@ $light-color: #009DDA;
     margin-top: 15px;
 }
 
-.standalone-indicator-list,
-.publications {
-    padding: 0;
-
-    li:nth-child(odd) {
-        background: #ececec;
-    }
-
-    li {
-        list-style: none;
-        padding: 5px 5px 5px 10px;
-
-        a {
-            color: #000;
-            text-decoration: none;
-            transition: .3s;
-        }
-
-        a:hover {
-            padding-left: 5px;
-            color: #009DDA;
-        }
-    }
+header {
+    
+nav#main-nav {
+    background: $blue;
+    width: 100%;
+    border-radius: 0;
+    padding: 15px 15px;
 }
-
-.navbar-brand {
-
-    &:focus {
-        outline: unset !important;
-        box-shadow: unset !important;
+    .navbar-brand {
+        display: block;
+        max-width: 100%;
     }
-}
 
-.contrast-high {
-
-    .standalone-indicator-list,
-    .publications {
-
-        li {
-            background: #000;
-
-            a {
-                color: #fff;
-            }
-        }
-    }
 }
