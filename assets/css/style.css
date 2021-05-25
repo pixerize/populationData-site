@@ -2482,9 +2482,6 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   width: 75%;
   max-width: 310px; }
 
-@media (min-width: 769px) {
-  header .container {
-    border-bottom: 2px solid; } }
 @media (max-width: 768px) {
   header .container {
     padding-top: 0; }
