@@ -136,6 +136,40 @@ header {
 
 }
 
+//main icons
+.goal-tiles {
+    & > div {
+        &:after {
+            position: absolute;
+            bottom: -40px;
+            left: 48%;
+            font-size: 20px;
+            text-transform: uppercase;
+            transform: translateX(-50%);
+        }
+
+        &:nth-child(1):after {
+            content: "Population";
+        }
+        &:nth-child(2):after {
+            content: "Population Projection";
+        }
+        &:nth-child(3):after {
+            content: "Health";
+        }
+        &:nth-child(4):after {
+            content: "Violence";
+        }
+        &:nth-child(5):after {
+            content: "Education";
+        }
+        &:nth-child(6):after {
+            content: "Economic, Povery and Activity";
+        }
+    }
+}
+
+
 //sharpen the resized images Chrome
 
 img {
