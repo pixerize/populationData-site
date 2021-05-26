@@ -105,8 +105,8 @@ header {
     }
 
     .menu-target {
-        width: 500px;
-        margin: 0;
+        width: 300px;
+        margin: 0 !important;
     }
 
     #search form {
@@ -114,8 +114,13 @@ header {
     }
 
     .dropdown-toggle {
-        background: $blue;
+        background: $blue !important;
         color: #fff;
+        text-transform: uppercase;
+        
+        &:hover {
+            color: $yellow;
+        }
     }
 
     #search-btn {
@@ -126,6 +131,7 @@ header {
 
     #search input {
         border: unset;
+        max-width: 200px;
     }
 
 }
