@@ -84,11 +84,8 @@ frontpage_introduction_banner:
   description: frontpage.intro_body
 
 frontpage_goals_grid:
-#  title: custom.goal_title
-#  description: custom.goal_description
-  title: DEMOGRAPHIC RESILIENCE DATA
-  description: 
-
+  title: custom.goal_title
+  description: custom.goal_description
 
 frontpage_cards:
   - title: frontpage.download_all
@@ -110,9 +107,9 @@ collections:
 # Menu
 menu:
   # Use these to customise the main navigation.
-  - path: /goals
+#  - path: /goals
     # The "translation_key" refers to the key in the SDG Translations repository.
-    translation_key: general.goals
+#    translation_key: general.goals
 #  - path: /reporting-status
 #    translation_key: menu.reporting_status
   - path: /
