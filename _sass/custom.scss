@@ -141,7 +141,7 @@ header {
 
 //main icons
 .goal-tiles {
-    & > div {
+    & > div div {
         &:after {
             position: absolute;
             bottom: -40px;
