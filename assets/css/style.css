@@ -2496,11 +2496,10 @@ body {
   .logo-and-mobile-widgets .mobile-widgets {
     bottom: 20px; } }
 #main-content h1 {
-  font-size: 36px;
-  margin-bottom: 35px;
-  border-bottom: 2px solid #009dda;
-  padding-bottom: 15px;
-  max-width: max-content; }
+  font-size: 80px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 35px; }
 #main-content .goal-tiles .no-gutters img:not(#goal-18) {
   box-shadow: 1px 5px 5px 0px rgba(5, 5, 5, 0.3);
   transition: all 150ms ease-in-out; }
@@ -2559,6 +2558,9 @@ header #search input {
   border: unset;
   max-width: 200px; }
 
+.site-intro {
+  background: unset; }
+
 .goal-tiles > div:after {
   position: absolute;
   bottom: -40px;
@@ -2583,5 +2585,10 @@ img {
   transform: translateZ(0px); }
 
 /*This to remove */
-.site-intro.spacer.medium, .zip-download-container, footer, .goal-tiles .row:not(:first-child), .disclaimer-alert, .contrast {
+.zip-download-container, footer, .goal-tiles .row:not(:first-child), .disclaimer-alert, .contrast {
   display: none !important; }
+
+div#main-content > p {
+  display: none; }
+div#main-content h2 {
+  display: none; }
