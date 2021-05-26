@@ -1,6 +1,11 @@
 $bp-tablet: 768px;
 $blue: #5B92E5;
 
+
+body {
+    background: #fff;
+}
+
 .navbar-brand {
     display: block;
     width: 75%;
@@ -63,7 +68,7 @@ $blue: #5B92E5;
 
 header {
     
-nav#main-nav {
+#main-nav {
     background: $blue;
     width: 100%;
     border-radius: 0;
@@ -71,7 +76,19 @@ nav#main-nav {
 }
     .navbar-brand {
         display: block;
-        max-width: 100%;
+        max-width: 170px;
+    }
+
+    .navbar ul.navbar-nav > li > a {
+        color: #fff;
     }
 
 }
+
+
+/*This to remove */
+
+.site-intro.spacer.medium, .zip-download-container, footer, .goal-tiles .row:not(:first-child), .disclaimer-alert {
+    display: none;
+}
+
