@@ -2477,6 +2477,9 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
 .layout-config-builder.contrast-high .btn-group .btn span {
   color: black; }
 
+body {
+  background: #fff; }
+
 .navbar-brand {
   display: block;
   width: 75%;
@@ -2514,11 +2517,17 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
 .breadcrumb {
   margin-top: 15px; }
 
-header nav#main-nav {
+header #main-nav {
   background: #5B92E5;
   width: 100%;
   border-radius: 0;
   padding: 15px 15px; }
 header .navbar-brand {
   display: block;
-  max-width: 100%; }
+  max-width: 170px; }
+header .navbar ul.navbar-nav > li > a {
+  color: #fff; }
+
+/*This to remove */
+.site-intro.spacer.medium, .zip-download-container, footer, .goal-tiles .row:not(:first-child), .disclaimer-alert {
+  display: none; }
