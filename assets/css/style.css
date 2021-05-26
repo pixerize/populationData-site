@@ -2541,19 +2541,23 @@ header .navbar ul.navbar-nav > li.active > a {
 header ul#menu {
   width: 100%; }
 header .menu-target {
-  width: 500px;
-  margin: 0; }
+  width: 300px;
+  margin: 0 !important; }
 header #search form {
   margin-top: 0; }
 header .dropdown-toggle {
-  background: #5B92E5;
-  color: #fff; }
+  background: #5B92E5 !important;
+  color: #fff;
+  text-transform: uppercase; }
+  header .dropdown-toggle:hover {
+    color: #ffcc29; }
 header #search-btn {
   background: #fff;
   color: #5B92E5;
   border: unset; }
 header #search input {
-  border: unset; }
+  border: unset;
+  max-width: 200px; }
 
 img {
   transform: translateZ(0px); }
