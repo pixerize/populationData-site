@@ -2521,13 +2521,43 @@ header #main-nav {
   background: #5B92E5;
   width: 100%;
   border-radius: 0;
-  padding: 15px 15px; }
+  padding: 15px 15px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 80px; }
 header .navbar-brand {
   display: block;
   max-width: 170px; }
 header .navbar ul.navbar-nav > li > a {
+  color: #fff;
+  text-transform: uppercase; }
+  header .navbar ul.navbar-nav > li > a:hover {
+    color: #ffcc29; }
+header .navbar ul.navbar-nav > li.active > a {
+  border-bottom: 2px solid #ffcc29;
+  color: #ffcc29; }
+header ul#menu {
+  width: 100%; }
+header .menu-target {
+  width: 500px;
+  margin: 0; }
+header #search form {
+  margin-top: 0; }
+header .dropdown-toggle {
+  background: #5B92E5;
   color: #fff; }
+header #search-btn {
+  background: #fff;
+  color: #5B92E5;
+  border: unset; }
+header #search input {
+  border: unset; }
+
+img {
+  transform: translateZ(0px); }
 
 /*This to remove */
-.site-intro.spacer.medium, .zip-download-container, footer, .goal-tiles .row:not(:first-child), .disclaimer-alert {
-  display: none; }
+.site-intro.spacer.medium, .zip-download-container, footer, .goal-tiles .row:not(:first-child), .disclaimer-alert, .contrast {
+  display: none !important; }
