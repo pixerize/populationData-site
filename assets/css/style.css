@@ -2559,6 +2559,26 @@ header #search input {
   border: unset;
   max-width: 200px; }
 
+.goal-tiles > div:after {
+  position: absolute;
+  bottom: -40px;
+  left: 48%;
+  font-size: 20px;
+  text-transform: uppercase;
+  transform: translateX(-50%); }
+.goal-tiles > div:nth-child(1):after {
+  content: "Population"; }
+.goal-tiles > div:nth-child(2):after {
+  content: "Population Projection"; }
+.goal-tiles > div:nth-child(3):after {
+  content: "Health"; }
+.goal-tiles > div:nth-child(4):after {
+  content: "Violence"; }
+.goal-tiles > div:nth-child(5):after {
+  content: "Education"; }
+.goal-tiles > div:nth-child(6):after {
+  content: "Economic, Povery and Activity"; }
+
 img {
   transform: translateZ(0px); }
 
