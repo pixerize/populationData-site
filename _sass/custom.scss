@@ -108,7 +108,7 @@ header {
     }
 
     .menu-target {
-        width: 300px;
+        width: 600px;
         margin: 0 !important;
     }
 
@@ -135,6 +135,21 @@ header {
     #search input {
         border: unset;
         max-width: 200px;
+    }
+
+    .language-toggle-menu-header {
+        position: absolute;
+        right: 130px;
+    }
+
+    .language-toggle-dropdown:before {
+        content: "";
+        height: 50px;
+        width: 2px;
+        background: #ffffffad;
+        position: absolute;
+        left: -17px;
+        top: -9px;
     }
 
 }
