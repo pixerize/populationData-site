@@ -127,7 +127,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20210527081016">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20210527102505">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -141,184 +141,9 @@ var translations = {
 <body class="language-sr layout-goal-by-target">
 <!-- <div class="container"> -->
 
-<script>translations['header'] = {"alpha":"Алфа","default_contrast":"Задани контраст","disable_high_contrast":"Онемогући високи контраст","disclaimer":"Ова интернет страница се развија. Поздрављамо ваше <a href=\"mailto:%email_address\">повратне информације</a>.","enable_high_contrast":"Омогући високи контраст","high_contrast":"Висок контраст","skip_link":"Пријеђи на главни садржај","tag_line":"17 циљева за трансформирање нашег свијета"};</script>
-
-<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Пријеђи на главни садржај</a>
-<div id="disclaimer">
-  <div class="container">
-  <div class="disclaimer-alert">
-    <strong class="phase-tag">Алфа</strong>
-    
-    Ова интернет страница се развија. Поздрављамо ваше <a href="mailto:sdg@bhas.gov.ba">повратне информације</a>.
-  </div>
-</div>
-
-</div>
-
-<header role="banner">
-  <div class="container">
-
-    <div class="logo-and-mobile-widgets">
-      <a class="navbar-brand" href="/sr/" id="home">
-        <img src="/assets/img/logo/sr/SDG_logo.png" alt="Циљеви одрживог развоја - 17 циљева за трансформирање нашег свијета" />
-      </a>
-
-      <div class="mobile-widgets">
-        <ul id='accessibility-nav' class='contrast-switcher'></ul><div class="language-toggle-mobile">
-          <div class="language-toggle-container">
-  
-  <div class="btn-group language-toggle-dropdown ">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Српски</span>
-      <span class="language-abbreviation">sr</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
-    <ul class="dropdown-menu"><li>
-            <a href="/3/">
-              English
-            </a>
-          </li><li>
-            <a href="/bs/3/">
-              Bosanski
-            </a>
-          </li><li>
-            <a href="/hr/3/">
-              Hrvatski
-            </a>
-          </li></ul>
-  </div>
-</div>
-
-        </div></div>
-    </div>
-
-    <nav class="navbar navbar-default" id="main-nav">
-
-      <ul class="top-level">
-        <li id="menuToggle"
-            aria-label=""
-            aria-haspopup="true">
-          <button data-target="menu-mobile" aria-expanded="false">Мени</button>
-          <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
-    <a href="/sr/">HOME</a>
-    </li><li class="nav-link ">
-    <a href="/sr/about">О нама</a>
-    </li><li class="nav-link ">
-    <a href="/sr/faq">FAQ</a>
-    </li><li class="language-toggle-menu-header">
-    
-
-
-
-
-
-  <div class="language-toggle-container">
-  
-  <div class="btn-group language-toggle-dropdown ">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Српски</span>
-      <span class="language-abbreviation">sr</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
-    <ul class="dropdown-menu"><li>
-            <a href="/3/">
-              English
-            </a>
-          </li><li>
-            <a href="/bs/3/">
-              Bosanski
-            </a>
-          </li><li>
-            <a href="/hr/3/">
-              Hrvatski
-            </a>
-          </li></ul>
-  </div>
-</div>
-
-
-
-</li>
-</ul>
-
-        </li>
-        <li id="searchToggle"
-            aria-label=""
-            aria-haspopup="true">
-          <button data-target="search-mobile" aria-expanded="false">Претраживање</button>
-          <div id="search-mobile" class="menu-target">
-  <form action="/sr/search">
-    <label class="sr-only" for="indicator_search-mobile">Претраживање</label>
-    <input type="text" name="q" id="indicator_search-mobile" title="Претраживање" /><!--
-    --><button aria-label="Претраживање" id="search-mobile-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
-  </form>
-</div>
-
-        </li>
-      </ul>
-
-      <div id="search" class="menu-target">
-  <form action="/sr/search">
-    <label class="sr-only" for="indicator_search">Претраживање</label>
-    <input type="text" name="q" id="indicator_search" title="Претраживање" /><!--
-    --><button aria-label="Претраживање" id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
-  </form>
-</div>
-
-
-      <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
-    <a href="/sr/">HOME</a>
-    </li><li class="nav-link ">
-    <a href="/sr/about">О нама</a>
-    </li><li class="nav-link ">
-    <a href="/sr/faq">FAQ</a>
-    </li><li class="language-toggle-menu-header">
-    
-
-
-
-
-
-  <div class="language-toggle-container">
-  
-  <div class="btn-group language-toggle-dropdown ">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Српски</span>
-      <span class="language-abbreviation">sr</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
-    <ul class="dropdown-menu"><li>
-            <a href="/3/">
-              English
-            </a>
-          </li><li>
-            <a href="/bs/3/">
-              Bosanski
-            </a>
-          </li><li>
-            <a href="/hr/3/">
-              Hrvatski
-            </a>
-          </li></ul>
-  </div>
-</div>
-
-
-
-</li>
-</ul>
-
-
-    </nav>
-  </div>
-
-</header>
-<div id="top" tabindex=-1></div>
-
 
 <div class="container">
-  <ol class="breadcrumb">
-  
-  <li><a href="/sr/">Насловна</a></li>
-  <li class="active">Циљ 3</li>
-  
-</ol>
-
-  
+    
     
 <div class="previous-next-links row">
     <div class="col-xs-3 col-md-3 col-lg-4 pull-left text-left">
@@ -336,848 +161,574 @@ var translations = {
 </div>
 
 
-  
-</div>
-
-<div class="heading goal-banner goal-3">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-4 col-md-3 col-lg-2 goal-tiles">
-        <img src="https://popdata.work/assets/img/goals/sr/3.png" alt="Здравље и благостање - Циљ 3" id="goal-3" />
-      </div>
-      <div class="col-xs-8 col-md-9 col-lg-10">
-        <h1>
-          <span class="hidden-sm hidden-md hidden-lg">Циљ 3: </span>Обезбиједити здрав живот и промовисати добробит свих људи, свих животних доби
-        </h1>
-      </div>
-    </div>
-  </div>
+    
 </div>
 
 <div id="main-content" class="container goal-indicators goal-3 goal-by-target" role="main">
 
-  
+    
 
 
 
-  <div class="visible-md-block visible-lg-block">
-    <div class="col-md-6">
-      <h2>Подциљеви</h2>
+    <div class="visible-md-block visible-lg-block">
+        <div class="col-md-12">
+            <h2>Подциљеви</h2>
+        </div>
+        <div class="col-md-12">
+            <h2>Индикатори</h2>
+        </div>
     </div>
-    <div class="col-md-6">
-      <h2>Индикатори</h2>
-    </div>
-  </div>
 
-  
-  
+    
+    
     
     <div class="indicator-cards target goal-target col-md-6">
-      <span>
-        <label class="hidden-md hidden-lg">Подциљ</label>
-        3.1
-      </span>
-      До 2030. године смањити глобалну стопу смртности код мајки на мање од 70 на 100.000 живорођених
+        <span class="indicator-card-number">
+            <label class="hidden-md hidden-lg">Подциљ</label>
+            3.1
+        </span>
+        До 2030. године смањити глобалну стопу смртности код мајки на мање од 70 на 100.000 живорођених
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          3.1.1
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/3-1-1">
-          Стопа смртности мајки
-        </a>
         
-      </div>
-    
 
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          3.1.2
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/3-1-2">
-          Удио порода уз присуство квалификованих здравствених радника
-        </a>
         
-      </div>
-    
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                3.1.1
+            </span>
+            <a href="/sr/3-1-1">
+                Стопа смртности мајки
+            </a>
+        </div>
+        
+
+        
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                3.1.2
+            </span>
+            <a href="/sr/3-1-2">
+                Удио порода уз присуство квалификованих здравствених радника
+            </a>
+        </div>
+        
     </div>
-  
+    
     
     <div class="indicator-cards target goal-target col-md-6">
-      <span>
-        <label class="hidden-md hidden-lg">Подциљ</label>
-        3.2
-      </span>
-      До 2030. године окончати смртне случајеве који се могу спријечити код новорођенчади и дјeце млађе од 5 година где ће све земље имати за циљ смањење неонаталне смртности на не више од 12 на 1000 живорођених и смртности деце испод 5 година на не више од 25 на 1000 живорођених
+        <span class="indicator-card-number">
+            <label class="hidden-md hidden-lg">Подциљ</label>
+            3.2
+        </span>
+        До 2030. године окончати смртне случајеве који се могу спријечити код новорођенчади и дјeце млађе од 5 година где ће све земље имати за циљ смањење неонаталне смртности на не више од 12 на 1000 живорођених и смртности деце испод 5 година на не више од 25 на 1000 живорођених
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          3.2.1
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/3-2-1">
-          Стопа смртности испод пет година
-        </a>
         
-      </div>
-    
 
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          3.2.2
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/3-2-2">
-          Стопа неонаталне смртности
-        </a>
         
-      </div>
-    
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                3.2.1
+            </span>
+            <a href="/sr/3-2-1">
+                Стопа смртности испод пет година
+            </a>
+        </div>
+        
+
+        
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                3.2.2
+            </span>
+            <a href="/sr/3-2-2">
+                Стопа неонаталне смртности
+            </a>
+        </div>
+        
     </div>
-  
+    
     
     <div class="indicator-cards target goal-target col-md-6">
-      <span>
-        <label class="hidden-md hidden-lg">Подциљ</label>
-        3.3
-      </span>
-      До 2030. године окончати епидемије АИДС-а, туберкулозе, маларије и занемарених тропских болести и наставити борбу против хепатитиса, болести које се преносе водом и осталих заразних болести
+        <span class="indicator-card-number">
+            <label class="hidden-md hidden-lg">Подциљ</label>
+            3.3
+        </span>
+        До 2030. године окончати епидемије АИДС-а, туберкулозе, маларије и занемарених тропских болести и наставити борбу против хепатитиса, болести које се преносе водом и осталих заразних болести
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          3.3.1
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/3-3-1">
-          Број нових ХИВ инфекција на 1.000 неинфицираних становника, по полу, старости и кључним популацијама
-        </a>
         
-      </div>
-    
 
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          3.3.2
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/3-3-2">
-          Учесталост туберкулозе на 100.000 становника
-        </a>
         
-      </div>
-    
-
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          3.3.3
-          <span class="status notstarted">
-            Истраживање извора података
-          </span>
-        </span>
-        <a href="/sr/3-3-3">
-          Учесталост маларије на 1.000 становника
-        </a>
         
-      </div>
-    
-
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          3.3.4
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/3-3-4">
-          Учесталост хепатитиса Б на 100.000 становника
-        </a>
         
-      </div>
-    
 
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          3.3.5
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/3-3-5">
-          Број људи којима су потребне интервенције против занемарених тропских болести
-        </a>
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                3.3.1
+            </span>
+            <a href="/sr/3-3-1">
+                Број нових ХИВ инфекција на 1.000 неинфицираних становника, по полу, старости и кључним популацијама
+            </a>
+        </div>
         
-      </div>
-    
+
+        
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                3.3.2
+            </span>
+            <a href="/sr/3-3-2">
+                Учесталост туберкулозе на 100.000 становника
+            </a>
+        </div>
+        
+
+        
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                3.3.3
+            </span>
+            <a href="/sr/3-3-3">
+                Учесталост маларије на 1.000 становника
+            </a>
+        </div>
+        
+
+        
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                3.3.4
+            </span>
+            <a href="/sr/3-3-4">
+                Учесталост хепатитиса Б на 100.000 становника
+            </a>
+        </div>
+        
+
+        
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                3.3.5
+            </span>
+            <a href="/sr/3-3-5">
+                Број људи којима су потребне интервенције против занемарених тропских болести
+            </a>
+        </div>
+        
     </div>
-  
+    
     
     <div class="indicator-cards target goal-target col-md-6">
-      <span>
-        <label class="hidden-md hidden-lg">Подциљ</label>
-        3.4
-      </span>
-      До 2030. године смањити за једну трећину број пријевремених смртних случајева од незаразних болести кроз превенцију и лијечење и промовисати ментално здравље и благостање
+        <span class="indicator-card-number">
+            <label class="hidden-md hidden-lg">Подциљ</label>
+            3.4
+        </span>
+        До 2030. године смањити за једну трећину број пријевремених смртних случајева од незаразних болести кроз превенцију и лијечење и промовисати ментално здравље и благостање
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          3.4.1
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/3-4-1">
-          Стопа смртности која се приписује кардиоваскуларним болестима, карциному, дијабетесу или хроничним респираторним болестима
-        </a>
         
-      </div>
-    
 
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          3.4.2
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/3-4-2">
-          Стопа смртности самоубистава
-        </a>
         
-      </div>
-    
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                3.4.1
+            </span>
+            <a href="/sr/3-4-1">
+                Стопа смртности која се приписује кардиоваскуларним болестима, карциному, дијабетесу или хроничним респираторним болестима
+            </a>
+        </div>
+        
+
+        
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                3.4.2
+            </span>
+            <a href="/sr/3-4-2">
+                Стопа смртности самоубистава
+            </a>
+        </div>
+        
     </div>
-  
+    
     
     <div class="indicator-cards target goal-target col-md-6">
-      <span>
-        <label class="hidden-md hidden-lg">Подциљ</label>
-        3.5
-      </span>
-      Појачати превенцију злоупотребе супстанци и лијечење посљедица такве злоупотребе, укључујући и злоупотребу опојних дрога и штетну употребу алкохола
+        <span class="indicator-card-number">
+            <label class="hidden-md hidden-lg">Подциљ</label>
+            3.5
+        </span>
+        Појачати превенцију злоупотребе супстанци и лијечење посљедица такве злоупотребе, укључујући и злоупотребу опојних дрога и штетну употребу алкохола
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          3.5.1
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/3-5-1">
-          Покривање интервенцијских третмана (фармаколошке, психосоцијалне,рехабилитационе и накнадне услуге) за поремећаје употребе супстанци
-        </a>
         
-      </div>
-    
 
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          3.5.2
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/3-5-2">
-          Потрошња алкохола по становнику (старости од 15 и више година) у календарској години у литрима чистог алкохола
-        </a>
         
-      </div>
-    
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                3.5.1
+            </span>
+            <a href="/sr/3-5-1">
+                Покривање интервенцијских третмана (фармаколошке, психосоцијалне,рехабилитационе и накнадне услуге) за поремећаје употребе супстанци
+            </a>
+        </div>
+        
+
+        
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                3.5.2
+            </span>
+            <a href="/sr/3-5-2">
+                Потрошња алкохола по становнику (старости од 15 и више година) у календарској години у литрима чистог алкохола
+            </a>
+        </div>
+        
     </div>
-  
+    
     
     <div class="indicator-cards target goal-target col-md-6">
-      <span>
-        <label class="hidden-md hidden-lg">Подциљ</label>
-        3.6
-      </span>
-      До 2020. године преполовити број глобалних смртних случајева и повреда у саобраћајним несрећама
+        <span class="indicator-card-number">
+            <label class="hidden-md hidden-lg">Подциљ</label>
+            3.6
+        </span>
+        До 2020. године преполовити број глобалних смртних случајева и повреда у саобраћајним несрећама
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          3.6.1
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/3-6-1">
-          Стопа смртности због повреда у друмском саобраћају
-        </a>
         
-      </div>
-    
+
+        
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                3.6.1
+            </span>
+            <a href="/sr/3-6-1">
+                Стопа смртности због повреда у друмском саобраћају
+            </a>
+        </div>
+        
     </div>
-  
+    
     
     <div class="indicator-cards target goal-target col-md-6">
-      <span>
-        <label class="hidden-md hidden-lg">Подциљ</label>
-        3.7
-      </span>
-      До 2030. године обезбиједити универзални приступ услугама заштите сексуалног и репродуктивног здравља, укључујући планирање породице, информисање и образовање, те интеграцију репродуктивног здравља у националне стратегије и програме
+        <span class="indicator-card-number">
+            <label class="hidden-md hidden-lg">Подциљ</label>
+            3.7
+        </span>
+        До 2030. године обезбиједити универзални приступ услугама заштите сексуалног и репродуктивног здравља, укључујући планирање породице, информисање и образовање, те интеграцију репродуктивног здравља у националне стратегије и програме
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          3.7.1
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/3-7-1">
-          Удио жена репродуктивног узраста (у доби од 15 до 49 година) који су своју потребу за планирање породице задовољиле са модерним методама
-        </a>
         
-      </div>
-    
 
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          3.7.2
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/3-7-2">
-          Стопа наталитета адолесцената (старости од 10-14 година; старости од 15-19 година) на 1.000 жена у тој старосној групи
-        </a>
         
-      </div>
-    
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                3.7.1
+            </span>
+            <a href="/sr/3-7-1">
+                Удио жена репродуктивног узраста (у доби од 15 до 49 година) који су своју потребу за планирање породице задовољиле са модерним методама
+            </a>
+        </div>
+        
+
+        
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                3.7.2
+            </span>
+            <a href="/sr/3-7-2">
+                Стопа наталитета адолесцената (старости од 10-14 година; старости од 15-19 година) на 1.000 жена у тој старосној групи
+            </a>
+        </div>
+        
     </div>
-  
+    
     
     <div class="indicator-cards target goal-target col-md-6">
-      <span>
-        <label class="hidden-md hidden-lg">Подциљ</label>
-        3.8
-      </span>
-      Постићи универзални обухват здравственог осигурања, укључујући заштиту од финансијског ризика, приступ квалитетним основним здравственим услугама и приступ сигурним, ефикасним, квалитетним и приступачним основним лијековима и вакцинама за све
+        <span class="indicator-card-number">
+            <label class="hidden-md hidden-lg">Подциљ</label>
+            3.8
+        </span>
+        Постићи универзални обухват здравственог осигурања, укључујући заштиту од финансијског ризика, приступ квалитетним основним здравственим услугама и приступ сигурним, ефикасним, квалитетним и приступачним основним лијековима и вакцинама за све
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          3.8.1
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/3-8-1">
-          Покривеност основних здравствених услуга
-        </a>
         
-      </div>
-    
 
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          3.8.2
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/3-8-2">
-          Удио становништва с великим издацима домаћинства за здравство као удио у укупним издацима или приходима домаћинства
-        </a>
         
-      </div>
-    
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                3.8.1
+            </span>
+            <a href="/sr/3-8-1">
+                Покривеност основних здравствених услуга
+            </a>
+        </div>
+        
+
+        
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                3.8.2
+            </span>
+            <a href="/sr/3-8-2">
+                Удио становништва с великим издацима домаћинства за здравство као удио у укупним издацима или приходима домаћинства
+            </a>
+        </div>
+        
     </div>
-  
+    
     
     <div class="indicator-cards target goal-target col-md-6">
-      <span>
-        <label class="hidden-md hidden-lg">Подциљ</label>
-        3.9
-      </span>
-      До 2030. године значајно смањити број смртних случајева и обољења од опасних хемикалија и загађења ваздуха, воде и тла и загађења
+        <span class="indicator-card-number">
+            <label class="hidden-md hidden-lg">Подциљ</label>
+            3.9
+        </span>
+        До 2030. године значајно смањити број смртних случајева и обољења од опасних хемикалија и загађења ваздуха, воде и тла и загађења
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          3.9.1
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/3-9-1">
-          Стопа смртности узрокована загађењем домаћинствима и зрака у околини
-        </a>
         
-      </div>
-    
 
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          3.9.2
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/3-9-2">
-          Стопа смртности узрокована небезбиједном водом, небезјбедној санитацији и недостатку хигијене (излагање небезбједним Водама, Санитацији и Хигијени за Све (ЊАСХ) услугама)
-        </a>
         
-      </div>
-    
-
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          3.9.3
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/3-9-3">
-          Стопа смртности узрокована ненамјерним тровањем
-        </a>
         
-      </div>
-    
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                3.9.1
+            </span>
+            <a href="/sr/3-9-1">
+                Стопа смртности узрокована загађењем домаћинствима и зрака у околини
+            </a>
+        </div>
+        
+
+        
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                3.9.2
+            </span>
+            <a href="/sr/3-9-2">
+                Стопа смртности узрокована небезбиједном водом, небезјбедној санитацији и недостатку хигијене (излагање небезбједним Водама, Санитацији и Хигијени за Све (ЊАСХ) услугама)
+            </a>
+        </div>
+        
+
+        
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                3.9.3
+            </span>
+            <a href="/sr/3-9-3">
+                Стопа смртности узрокована ненамјерним тровањем
+            </a>
+        </div>
+        
     </div>
-  
+    
     
     <div class="indicator-cards target goal-target col-md-6">
-      <span>
-        <label class="hidden-md hidden-lg">Подциљ</label>
-        3.a
-      </span>
-      Ојачати проведбу „Оквирне конвенције Свјетске здравствене организације о контроли духана“ у свим државама, по потреби
+        <span class="indicator-card-number">
+            <label class="hidden-md hidden-lg">Подциљ</label>
+            3.a
+        </span>
+        Ојачати проведбу „Оквирне конвенције Свјетске здравствене организације о контроли духана“ у свим државама, по потреби
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          3.a.1
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/3-a-1">
-          Старосна стандардизирана распрострањеност тренутне употребе духана међу особама од 15 година и више
-        </a>
         
-      </div>
-    
+
+        
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                3.a.1
+            </span>
+            <a href="/sr/3-a-1">
+                Старосна стандардизирана распрострањеност тренутне употребе духана међу особама од 15 година и више
+            </a>
+        </div>
+        
     </div>
-  
+    
     
     <div class="indicator-cards target goal-target col-md-6">
-      <span>
-        <label class="hidden-md hidden-lg">Подциљ</label>
-        3.b
-      </span>
-      Подржати истраживање и развој вакцина и лијекова за заразне и незаразне болести које првенствено погађају земље у развоју, пружити приступ приступачним основним лијековима и вакцинама, у складу с "Декларацијом из Дохе о Споразуму о трговинским аспектима права интелектуалне својине (ТРИПС) и јавном здравству", којом се потврђује право земаља у развоју да у потпуности искористе одредбе "Споразума о трговинским аспектима права интелектуалног власништва" које се односе на флексибилност у заштити јавног здравља, а посебно осигуравају приступа лијековима за све
+        <span class="indicator-card-number">
+            <label class="hidden-md hidden-lg">Подциљ</label>
+            3.b
+        </span>
+        Подржати истраживање и развој вакцина и лијекова за заразне и незаразне болести које првенствено погађају земље у развоју, пружити приступ приступачним основним лијековима и вакцинама, у складу с "Декларацијом из Дохе о Споразуму о трговинским аспектима права интелектуалне својине (ТРИПС) и јавном здравству", којом се потврђује право земаља у развоју да у потпуности искористе одредбе "Споразума о трговинским аспектима права интелектуалног власништва" које се односе на флексибилност у заштити јавног здравља, а посебно осигуравају приступа лијековима за све
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          3.b.1
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/3-b-1">
-          Удио циљане популације обухваћене свим вакцинама укључених у националним програма
-        </a>
         
-      </div>
-    
 
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          3.b.2
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/3-b-2">
-          Укупна нето службена развојна помоћ медицинским истраживањима и основним здравственим секторима
-        </a>
         
-      </div>
-    
-
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          3.b.3
-          <span class="status notstarted">
-            Истраживање извора података
-          </span>
-        </span>
-        <a href="/sr/3-b-3">
-          Удио здравствених установа које имају основни пакет релевантних есенцијалних лијекова који су приуштиви и доступни на одрживој основи
-        </a>
         
-      </div>
-    
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                3.b.1
+            </span>
+            <a href="/sr/3-b-1">
+                Удио циљане популације обухваћене свим вакцинама укључених у националним програма
+            </a>
+        </div>
+        
+
+        
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                3.b.2
+            </span>
+            <a href="/sr/3-b-2">
+                Укупна нето службена развојна помоћ медицинским истраживањима и основним здравственим секторима
+            </a>
+        </div>
+        
+
+        
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                3.b.3
+            </span>
+            <a href="/sr/3-b-3">
+                Удио здравствених установа које имају основни пакет релевантних есенцијалних лијекова који су приуштиви и доступни на одрживој основи
+            </a>
+        </div>
+        
     </div>
-  
+    
     
     <div class="indicator-cards target goal-target col-md-6">
-      <span>
-        <label class="hidden-md hidden-lg">Подциљ</label>
-        3.c
-      </span>
-      Значајно повећати финанцирање у области здравства и регрутовање, развијање, обучавање и задржавање здравствених радника у земљама у развоју, посебно у најнеразвијенијим земљама и малим острвским државама у развоју
+        <span class="indicator-card-number">
+            <label class="hidden-md hidden-lg">Подциљ</label>
+            3.c
+        </span>
+        Значајно повећати финанцирање у области здравства и регрутовање, развијање, обучавање и задржавање здравствених радника у земљама у развоју, посебно у најнеразвијенијим земљама и малим острвским државама у развоју
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          3.c.1
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/3-c-1">
-          Густина и дистрибуција здравствених радника
-        </a>
         
-      </div>
-    
+
+        
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                3.c.1
+            </span>
+            <a href="/sr/3-c-1">
+                Густина и дистрибуција здравствених радника
+            </a>
+        </div>
+        
     </div>
-  
+    
     
     <div class="indicator-cards target goal-target col-md-6">
-      <span>
-        <label class="hidden-md hidden-lg">Подциљ</label>
-        3.d
-      </span>
-      Ојачати капацитете свих земаља, а посебно земаља у развоју, за рано упозоравање, смањивање ризика и управљање националним и глобалним здравственим ризицима
+        <span class="indicator-card-number">
+            <label class="hidden-md hidden-lg">Подциљ</label>
+            3.d
+        </span>
+        Ојачати капацитете свих земаља, а посебно земаља у развоју, за рано упозоравање, смањивање ризика и управљање националним и глобалним здравственим ризицима
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          3.d.1
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/3-d-1">
-          Капацитет међународних здравствених прописа (ИХР) и спремност за хитне случајеве у здравству
-        </a>
         
-      </div>
-    
 
-      
-      
-      
-      
-      
-      
-      
-      
+        
+        
+        
 
-      <div class="col-md-12 indicator-национално goal-indicator">
-        <span>
-          3.d.2
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/3-d-2">
-          Проценат инфекција крвотока због одабраних организама отпорних на антимикробне болести
-        </a>
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                3.d.1
+            </span>
+            <a href="/sr/3-d-1">
+                Капацитет међународних здравствених прописа (ИХР) и спремност за хитне случајеве у здравству
+            </a>
+        </div>
         
-          <ul class="tags">
-          
-            
-            <li class="tag-национално warning">Национално</li>
-          
-          </ul>
+
         
-      </div>
-    
+        
+        
+
+        <div class="col-md-12 indicator-национално goal-indicator">
+            <span class="indicator-card-number">
+                3.d.2
+            </span>
+            <a href="/sr/3-d-2">
+                Проценат инфекција крвотока због одабраних организама отпорних на антимикробне болести
+            </a>
+        </div>
+        
     </div>
-  
+    
 </div>
 
 <footer role="contentinfo">
@@ -1231,12 +782,12 @@ var translations = {
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Претраживање';</script>
 
-<script src='/assets/js/sdg.js?v=20210527081016'></script>
+<script src='/assets/js/sdg.js?v=20210527102505'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20210527081016"></script><script>
+    <script src="/assets/js/custom.js?v=20210527102505"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
@@ -1306,4 +857,3 @@ $(function() {
 
 </body>
 </html>
-

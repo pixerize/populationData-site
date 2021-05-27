@@ -127,7 +127,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20210527081016">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20210527102505">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -141,184 +141,9 @@ var translations = {
 <body class="language-sr layout-goal-by-target">
 <!-- <div class="container"> -->
 
-<script>translations['header'] = {"alpha":"Алфа","default_contrast":"Задани контраст","disable_high_contrast":"Онемогући високи контраст","disclaimer":"Ова интернет страница се развија. Поздрављамо ваше <a href=\"mailto:%email_address\">повратне информације</a>.","enable_high_contrast":"Омогући високи контраст","high_contrast":"Висок контраст","skip_link":"Пријеђи на главни садржај","tag_line":"17 циљева за трансформирање нашег свијета"};</script>
-
-<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Пријеђи на главни садржај</a>
-<div id="disclaimer">
-  <div class="container">
-  <div class="disclaimer-alert">
-    <strong class="phase-tag">Алфа</strong>
-    
-    Ова интернет страница се развија. Поздрављамо ваше <a href="mailto:sdg@bhas.gov.ba">повратне информације</a>.
-  </div>
-</div>
-
-</div>
-
-<header role="banner">
-  <div class="container">
-
-    <div class="logo-and-mobile-widgets">
-      <a class="navbar-brand" href="/sr/" id="home">
-        <img src="/assets/img/logo/sr/SDG_logo.png" alt="Циљеви одрживог развоја - 17 циљева за трансформирање нашег свијета" />
-      </a>
-
-      <div class="mobile-widgets">
-        <ul id='accessibility-nav' class='contrast-switcher'></ul><div class="language-toggle-mobile">
-          <div class="language-toggle-container">
-  
-  <div class="btn-group language-toggle-dropdown ">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Српски</span>
-      <span class="language-abbreviation">sr</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
-    <ul class="dropdown-menu"><li>
-            <a href="/9/">
-              English
-            </a>
-          </li><li>
-            <a href="/bs/9/">
-              Bosanski
-            </a>
-          </li><li>
-            <a href="/hr/9/">
-              Hrvatski
-            </a>
-          </li></ul>
-  </div>
-</div>
-
-        </div></div>
-    </div>
-
-    <nav class="navbar navbar-default" id="main-nav">
-
-      <ul class="top-level">
-        <li id="menuToggle"
-            aria-label=""
-            aria-haspopup="true">
-          <button data-target="menu-mobile" aria-expanded="false">Мени</button>
-          <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
-    <a href="/sr/">HOME</a>
-    </li><li class="nav-link ">
-    <a href="/sr/about">О нама</a>
-    </li><li class="nav-link ">
-    <a href="/sr/faq">FAQ</a>
-    </li><li class="language-toggle-menu-header">
-    
-
-
-
-
-
-  <div class="language-toggle-container">
-  
-  <div class="btn-group language-toggle-dropdown ">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Српски</span>
-      <span class="language-abbreviation">sr</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
-    <ul class="dropdown-menu"><li>
-            <a href="/9/">
-              English
-            </a>
-          </li><li>
-            <a href="/bs/9/">
-              Bosanski
-            </a>
-          </li><li>
-            <a href="/hr/9/">
-              Hrvatski
-            </a>
-          </li></ul>
-  </div>
-</div>
-
-
-
-</li>
-</ul>
-
-        </li>
-        <li id="searchToggle"
-            aria-label=""
-            aria-haspopup="true">
-          <button data-target="search-mobile" aria-expanded="false">Претраживање</button>
-          <div id="search-mobile" class="menu-target">
-  <form action="/sr/search">
-    <label class="sr-only" for="indicator_search-mobile">Претраживање</label>
-    <input type="text" name="q" id="indicator_search-mobile" title="Претраживање" /><!--
-    --><button aria-label="Претраживање" id="search-mobile-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
-  </form>
-</div>
-
-        </li>
-      </ul>
-
-      <div id="search" class="menu-target">
-  <form action="/sr/search">
-    <label class="sr-only" for="indicator_search">Претраживање</label>
-    <input type="text" name="q" id="indicator_search" title="Претраживање" /><!--
-    --><button aria-label="Претраживање" id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
-  </form>
-</div>
-
-
-      <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
-    <a href="/sr/">HOME</a>
-    </li><li class="nav-link ">
-    <a href="/sr/about">О нама</a>
-    </li><li class="nav-link ">
-    <a href="/sr/faq">FAQ</a>
-    </li><li class="language-toggle-menu-header">
-    
-
-
-
-
-
-  <div class="language-toggle-container">
-  
-  <div class="btn-group language-toggle-dropdown ">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Српски</span>
-      <span class="language-abbreviation">sr</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
-    <ul class="dropdown-menu"><li>
-            <a href="/9/">
-              English
-            </a>
-          </li><li>
-            <a href="/bs/9/">
-              Bosanski
-            </a>
-          </li><li>
-            <a href="/hr/9/">
-              Hrvatski
-            </a>
-          </li></ul>
-  </div>
-</div>
-
-
-
-</li>
-</ul>
-
-
-    </nav>
-  </div>
-
-</header>
-<div id="top" tabindex=-1></div>
-
 
 <div class="container">
-  <ol class="breadcrumb">
-  
-  <li><a href="/sr/">Насловна</a></li>
-  <li class="active">Циљ 9</li>
-  
-</ol>
-
-  
+    
     
 <div class="previous-next-links row">
     <div class="col-xs-3 col-md-3 col-lg-4 pull-left text-left">
@@ -336,420 +161,290 @@ var translations = {
 </div>
 
 
-  
-</div>
-
-<div class="heading goal-banner goal-9">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-4 col-md-3 col-lg-2 goal-tiles">
-        <img src="https://popdata.work/assets/img/goals/sr/9.png" alt="Индустрија, иновације и инфраструктура - Циљ 9" id="goal-9" />
-      </div>
-      <div class="col-xs-8 col-md-9 col-lg-10">
-        <h1>
-          <span class="hidden-sm hidden-md hidden-lg">Циљ 9: </span>Изградити издржљиву инфраструктуру, промовисати одрживу индистријализацију и подстицати иновативност
-        </h1>
-      </div>
-    </div>
-  </div>
+    
 </div>
 
 <div id="main-content" class="container goal-indicators goal-9 goal-by-target" role="main">
 
-  
+    
 
 
 
-  <div class="visible-md-block visible-lg-block">
-    <div class="col-md-6">
-      <h2>Подциљеви</h2>
+    <div class="visible-md-block visible-lg-block">
+        <div class="col-md-12">
+            <h2>Подциљеви</h2>
+        </div>
+        <div class="col-md-12">
+            <h2>Индикатори</h2>
+        </div>
     </div>
-    <div class="col-md-6">
-      <h2>Индикатори</h2>
-    </div>
-  </div>
 
-  
-  
+    
+    
     
     <div class="indicator-cards target goal-target col-md-6">
-      <span>
-        <label class="hidden-md hidden-lg">Подциљ</label>
-        9.1
-      </span>
-      Развити квалитетну, поуздану, одрживу и прилагодљиву инфраструктуру, укључујући регионалну и међуграничну инфраструктуру, како би се подржали економски развој и људско благостање, са фокусом на јефтином и једнаком приступу за све
+        <span class="indicator-card-number">
+            <label class="hidden-md hidden-lg">Подциљ</label>
+            9.1
+        </span>
+        Развити квалитетну, поуздану, одрживу и прилагодљиву инфраструктуру, укључујући регионалну и међуграничну инфраструктуру, како би се подржали економски развој и људско благостање, са фокусом на јефтином и једнаком приступу за све
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12 indicator-национално goal-indicator">
-        <span>
-          9.1.1
-          <span class="status notstarted">
-            Истраживање извора података
-          </span>
-        </span>
-        <a href="/sr/9-1-1">
-          Удио руралног становништва које живи на удаљености од 2 км од цјелогодишње цесте
-        </a>
         
-          <ul class="tags">
-          
-            
-            <li class="tag-национално warning">Национално</li>
-          
-          </ul>
-        
-      </div>
-    
 
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          9.1.2
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/9-1-2">
-          Обим путника и терета, према врстама превоза
-        </a>
         
-      </div>
-    
+        
+        
+
+        <div class="col-md-12 indicator-национално goal-indicator">
+            <span class="indicator-card-number">
+                9.1.1
+            </span>
+            <a href="/sr/9-1-1">
+                Удио руралног становништва које живи на удаљености од 2 км од цјелогодишње цесте
+            </a>
+        </div>
+        
+
+        
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                9.1.2
+            </span>
+            <a href="/sr/9-1-2">
+                Обим путника и терета, према врстама превоза
+            </a>
+        </div>
+        
     </div>
-  
+    
     
     <div class="indicator-cards target goal-target col-md-6">
-      <span>
-        <label class="hidden-md hidden-lg">Подциљ</label>
-        9.2
-      </span>
-      Промовисати инклузивну и одрживу индустријализацију и, до 2030. године, значајно повећати удио индустрије у стопи запослености и бруто домаћем производу, у складу са националним околностима, а у најнеразвијенијим земљама удвостручити њен удио
+        <span class="indicator-card-number">
+            <label class="hidden-md hidden-lg">Подциљ</label>
+            9.2
+        </span>
+        Промовисати инклузивну и одрживу индустријализацију и, до 2030. године, значајно повећати удио индустрије у стопи запослености и бруто домаћем производу, у складу са националним околностима, а у најнеразвијенијим земљама удвостручити њен удио
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          9.2.1
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/9-2-1">
-          Додана вриједност у производњи као удио у БДП-у и глави становника
-        </a>
         
-      </div>
-    
 
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          9.2.2
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/9-2-2">
-          Запошљавање у производњи као удио укупне запослености
-        </a>
         
-      </div>
-    
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                9.2.1
+            </span>
+            <a href="/sr/9-2-1">
+                Додана вриједност у производњи као удио у БДП-у и глави становника
+            </a>
+        </div>
+        
+
+        
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                9.2.2
+            </span>
+            <a href="/sr/9-2-2">
+                Запошљавање у производњи као удио укупне запослености
+            </a>
+        </div>
+        
     </div>
-  
+    
     
     <div class="indicator-cards target goal-target col-md-6">
-      <span>
-        <label class="hidden-md hidden-lg">Подциљ</label>
-        9.3
-      </span>
-      Повећати приступ малих индустријских и осталих предузећа финанцијским услугама, посебно у земљама у развоју, што обухвата и повољне кредите, и повећати њихову интеграцију у ланце вриједности и тржишта
+        <span class="indicator-card-number">
+            <label class="hidden-md hidden-lg">Подциљ</label>
+            9.3
+        </span>
+        Повећати приступ малих индустријских и осталих предузећа финанцијским услугама, посебно у земљама у развоју, што обухвата и повољне кредите, и повећати њихову интеграцију у ланце вриједности и тржишта
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          9.3.1
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/9-3-1">
-          Удио малих индустрија у укупној доданој вриједности индустрије
-        </a>
         
-      </div>
-    
 
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          9.3.2
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/9-3-2">
-          Удио малих индустрија са зајмом или кредитном линијом
-        </a>
         
-      </div>
-    
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                9.3.1
+            </span>
+            <a href="/sr/9-3-1">
+                Удио малих индустрија у укупној доданој вриједности индустрије
+            </a>
+        </div>
+        
+
+        
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                9.3.2
+            </span>
+            <a href="/sr/9-3-2">
+                Удио малих индустрија са зајмом или кредитном линијом
+            </a>
+        </div>
+        
     </div>
-  
+    
     
     <div class="indicator-cards target goal-target col-md-6">
-      <span>
-        <label class="hidden-md hidden-lg">Подциљ</label>
-        9.4
-      </span>
-      До 2030. године унаприједити инфраструктуру и прилагодити индустрије како би постале одрживе, уз већу ефикасност у коришћењу ресурса и шире усвајање чистих и еколошки исправних технологија и индустријских процеса, са свим земљама које подузимају акције у складу са својим могућностима
+        <span class="indicator-card-number">
+            <label class="hidden-md hidden-lg">Подциљ</label>
+            9.4
+        </span>
+        До 2030. године унаприједити инфраструктуру и прилагодити индустрије како би постале одрживе, уз већу ефикасност у коришћењу ресурса и шире усвајање чистих и еколошки исправних технологија и индустријских процеса, са свим земљама које подузимају акције у складу са својим могућностима
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          9.4.1
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/9-4-1">
-          Емисија ЦО2 по јединици додане вриједности
-        </a>
         
-      </div>
-    
+
+        
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                9.4.1
+            </span>
+            <a href="/sr/9-4-1">
+                Емисија ЦО2 по јединици додане вриједности
+            </a>
+        </div>
+        
     </div>
-  
+    
     
     <div class="indicator-cards target goal-target col-md-6">
-      <span>
-        <label class="hidden-md hidden-lg">Подциљ</label>
-        9.5
-      </span>
-      Проширити научна истраживања, унаприједити технолошке капацитете индустријских сектора у свим земљама, а посебно у земљама у развоју, што подразумјева да се, до 2030. године подстичу иновације и да се број запослених у области истраживања и развоја на милион људи знатно повећа, као и да се повећа јавна и приватна потрошња на истраживање и развој
+        <span class="indicator-card-number">
+            <label class="hidden-md hidden-lg">Подциљ</label>
+            9.5
+        </span>
+        Проширити научна истраживања, унаприједити технолошке капацитете индустријских сектора у свим земљама, а посебно у земљама у развоју, што подразумјева да се, до 2030. године подстичу иновације и да се број запослених у области истраживања и развоја на милион људи знатно повећа, као и да се повећа јавна и приватна потрошња на истраживање и развој
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          9.5.1
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/9-5-1">
-          Трошкови за истраживање и развој као удио БДП-а
-        </a>
         
-      </div>
-    
 
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          9.5.2
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/9-5-2">
-          Истраживачи (у еквиваленту пуног радног времена) на милион становника
-        </a>
         
-      </div>
-    
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                9.5.1
+            </span>
+            <a href="/sr/9-5-1">
+                Трошкови за истраживање и развој као удио БДП-а
+            </a>
+        </div>
+        
+
+        
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                9.5.2
+            </span>
+            <a href="/sr/9-5-2">
+                Истраживачи (у еквиваленту пуног радног времена) на милион становника
+            </a>
+        </div>
+        
     </div>
-  
+    
     
     <div class="indicator-cards target goal-target col-md-6">
-      <span>
-        <label class="hidden-md hidden-lg">Подциљ</label>
-        9.a
-      </span>
-      Олакшати развој одрживе и прилагодљиве инфраструктуре у земљама у развоју кроз унапређивање финанцијске, технолошке и техничке подршке афричким земљама, најнеразвијенијим земљама, земљама у развоју које немају излаз на море и малим острвским државама у развоју
+        <span class="indicator-card-number">
+            <label class="hidden-md hidden-lg">Подциљ</label>
+            9.a
+        </span>
+        Олакшати развој одрживе и прилагодљиве инфраструктуре у земљама у развоју кроз унапређивање финанцијске, технолошке и техничке подршке афричким земљама, најнеразвијенијим земљама, земљама у развоју које немају излаз на море и малим острвским државама у развоју
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          9.a.1
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/9-a-1">
-          Укупна званична међународна подршка (званична развојна помоћ плус други званични токови) за инфраструктуру
-        </a>
         
-      </div>
-    
+
+        
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                9.a.1
+            </span>
+            <a href="/sr/9-a-1">
+                Укупна званична међународна подршка (званична развојна помоћ плус други званични токови) за инфраструктуру
+            </a>
+        </div>
+        
     </div>
-  
+    
     
     <div class="indicator-cards target goal-target col-md-6">
-      <span>
-        <label class="hidden-md hidden-lg">Подциљ</label>
-        9.b
-      </span>
-      Support domestic technology development, research and innovation in developing countries, including by ensuring a conducive policy environment for, inter alia, industrial diversification and value addition to commodities
+        <span class="indicator-card-number">
+            <label class="hidden-md hidden-lg">Подциљ</label>
+            9.b
+        </span>
+        Support domestic technology development, research and innovation in developing countries, including by ensuring a conducive policy environment for, inter alia, industrial diversification and value addition to commodities
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          9.b.1
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/9-b-1">
-          Удио додане вриједности средње и високотехнолошке индустрије у укупној доданој вриједности
-        </a>
         
-      </div>
-    
+
+        
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                9.b.1
+            </span>
+            <a href="/sr/9-b-1">
+                Удио додане вриједности средње и високотехнолошке индустрије у укупној доданој вриједности
+            </a>
+        </div>
+        
     </div>
-  
+    
     
     <div class="indicator-cards target goal-target col-md-6">
-      <span>
-        <label class="hidden-md hidden-lg">Подциљ</label>
-        9.c
-      </span>
-      Значајно повећати приступ информацијској и комуникацијској технологији и тежити пружању универзалног и приступачног приступа интернету у најмање развијеним земљама до 2020. године
+        <span class="indicator-card-number">
+            <label class="hidden-md hidden-lg">Подциљ</label>
+            9.c
+        </span>
+        Значајно повећати приступ информацијској и комуникацијској технологији и тежити пружању универзалног и приступачног приступа интернету у најмање развијеним земљама до 2020. године
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          9.c.1
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/9-c-1">
-          Удио становништва покривеног мобилном мрежом, према технологији
-        </a>
         
-      </div>
-    
+
+        
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                9.c.1
+            </span>
+            <a href="/sr/9-c-1">
+                Удио становништва покривеног мобилном мрежом, према технологији
+            </a>
+        </div>
+        
     </div>
-  
+    
 </div>
 
 <footer role="contentinfo">
@@ -803,12 +498,12 @@ var translations = {
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Претраживање';</script>
 
-<script src='/assets/js/sdg.js?v=20210527081016'></script>
+<script src='/assets/js/sdg.js?v=20210527102505'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20210527081016"></script><script>
+    <script src="/assets/js/custom.js?v=20210527102505"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
@@ -878,4 +573,3 @@ $(function() {
 
 </body>
 </html>
-

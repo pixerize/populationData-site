@@ -127,7 +127,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20210527081016">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20210527102505">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -141,184 +141,9 @@ var translations = {
 <body class="language-sr layout-goal-by-target">
 <!-- <div class="container"> -->
 
-<script>translations['header'] = {"alpha":"Алфа","default_contrast":"Задани контраст","disable_high_contrast":"Онемогући високи контраст","disclaimer":"Ова интернет страница се развија. Поздрављамо ваше <a href=\"mailto:%email_address\">повратне информације</a>.","enable_high_contrast":"Омогући високи контраст","high_contrast":"Висок контраст","skip_link":"Пријеђи на главни садржај","tag_line":"17 циљева за трансформирање нашег свијета"};</script>
-
-<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Пријеђи на главни садржај</a>
-<div id="disclaimer">
-  <div class="container">
-  <div class="disclaimer-alert">
-    <strong class="phase-tag">Алфа</strong>
-    
-    Ова интернет страница се развија. Поздрављамо ваше <a href="mailto:sdg@bhas.gov.ba">повратне информације</a>.
-  </div>
-</div>
-
-</div>
-
-<header role="banner">
-  <div class="container">
-
-    <div class="logo-and-mobile-widgets">
-      <a class="navbar-brand" href="/sr/" id="home">
-        <img src="/assets/img/logo/sr/SDG_logo.png" alt="Циљеви одрживог развоја - 17 циљева за трансформирање нашег свијета" />
-      </a>
-
-      <div class="mobile-widgets">
-        <ul id='accessibility-nav' class='contrast-switcher'></ul><div class="language-toggle-mobile">
-          <div class="language-toggle-container">
-  
-  <div class="btn-group language-toggle-dropdown ">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Српски</span>
-      <span class="language-abbreviation">sr</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
-    <ul class="dropdown-menu"><li>
-            <a href="/16/">
-              English
-            </a>
-          </li><li>
-            <a href="/bs/16/">
-              Bosanski
-            </a>
-          </li><li>
-            <a href="/hr/16/">
-              Hrvatski
-            </a>
-          </li></ul>
-  </div>
-</div>
-
-        </div></div>
-    </div>
-
-    <nav class="navbar navbar-default" id="main-nav">
-
-      <ul class="top-level">
-        <li id="menuToggle"
-            aria-label=""
-            aria-haspopup="true">
-          <button data-target="menu-mobile" aria-expanded="false">Мени</button>
-          <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
-    <a href="/sr/">HOME</a>
-    </li><li class="nav-link ">
-    <a href="/sr/about">О нама</a>
-    </li><li class="nav-link ">
-    <a href="/sr/faq">FAQ</a>
-    </li><li class="language-toggle-menu-header">
-    
-
-
-
-
-
-  <div class="language-toggle-container">
-  
-  <div class="btn-group language-toggle-dropdown ">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Српски</span>
-      <span class="language-abbreviation">sr</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
-    <ul class="dropdown-menu"><li>
-            <a href="/16/">
-              English
-            </a>
-          </li><li>
-            <a href="/bs/16/">
-              Bosanski
-            </a>
-          </li><li>
-            <a href="/hr/16/">
-              Hrvatski
-            </a>
-          </li></ul>
-  </div>
-</div>
-
-
-
-</li>
-</ul>
-
-        </li>
-        <li id="searchToggle"
-            aria-label=""
-            aria-haspopup="true">
-          <button data-target="search-mobile" aria-expanded="false">Претраживање</button>
-          <div id="search-mobile" class="menu-target">
-  <form action="/sr/search">
-    <label class="sr-only" for="indicator_search-mobile">Претраживање</label>
-    <input type="text" name="q" id="indicator_search-mobile" title="Претраживање" /><!--
-    --><button aria-label="Претраживање" id="search-mobile-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
-  </form>
-</div>
-
-        </li>
-      </ul>
-
-      <div id="search" class="menu-target">
-  <form action="/sr/search">
-    <label class="sr-only" for="indicator_search">Претраживање</label>
-    <input type="text" name="q" id="indicator_search" title="Претраживање" /><!--
-    --><button aria-label="Претраживање" id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
-  </form>
-</div>
-
-
-      <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
-    <a href="/sr/">HOME</a>
-    </li><li class="nav-link ">
-    <a href="/sr/about">О нама</a>
-    </li><li class="nav-link ">
-    <a href="/sr/faq">FAQ</a>
-    </li><li class="language-toggle-menu-header">
-    
-
-
-
-
-
-  <div class="language-toggle-container">
-  
-  <div class="btn-group language-toggle-dropdown ">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Српски</span>
-      <span class="language-abbreviation">sr</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
-    <ul class="dropdown-menu"><li>
-            <a href="/16/">
-              English
-            </a>
-          </li><li>
-            <a href="/bs/16/">
-              Bosanski
-            </a>
-          </li><li>
-            <a href="/hr/16/">
-              Hrvatski
-            </a>
-          </li></ul>
-  </div>
-</div>
-
-
-
-</li>
-</ul>
-
-
-    </nav>
-  </div>
-
-</header>
-<div id="top" tabindex=-1></div>
-
 
 <div class="container">
-  <ol class="breadcrumb">
-  
-  <li><a href="/sr/">Насловна</a></li>
-  <li class="active">Циљ 16</li>
-  
-</ol>
-
-  
+    
     
 <div class="previous-next-links row">
     <div class="col-xs-3 col-md-3 col-lg-4 pull-left text-left">
@@ -336,714 +161,492 @@ var translations = {
 </div>
 
 
-  
-</div>
-
-<div class="heading goal-banner goal-16">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-4 col-md-3 col-lg-2 goal-tiles">
-        <img src="https://popdata.work/assets/img/goals/sr/16.png" alt="Мир, правда и снажне институције - Циљ 16" id="goal-16" />
-      </div>
-      <div class="col-xs-8 col-md-9 col-lg-10">
-        <h1>
-          <span class="hidden-sm hidden-md hidden-lg">Циљ 16: </span>Промовирати мирна и инклузивна друштва за одрживи развој, осигурати приступ правди за све и изградити ефикасне, одговорне и инклузивне институције на свим нивоима
-        </h1>
-      </div>
-    </div>
-  </div>
+    
 </div>
 
 <div id="main-content" class="container goal-indicators goal-16 goal-by-target" role="main">
 
-  
+    
 
 
 
-  <div class="visible-md-block visible-lg-block">
-    <div class="col-md-6">
-      <h2>Подциљеви</h2>
+    <div class="visible-md-block visible-lg-block">
+        <div class="col-md-12">
+            <h2>Подциљеви</h2>
+        </div>
+        <div class="col-md-12">
+            <h2>Индикатори</h2>
+        </div>
     </div>
-    <div class="col-md-6">
-      <h2>Индикатори</h2>
-    </div>
-  </div>
 
-  
-  
+    
+    
     
     <div class="indicator-cards target goal-target col-md-6">
-      <span>
-        <label class="hidden-md hidden-lg">Подциљ</label>
-        16.1
-      </span>
-      Свуда значајно смањити све облике насиља и с тим повезане стопе смртности
+        <span class="indicator-card-number">
+            <label class="hidden-md hidden-lg">Подциљ</label>
+            16.1
+        </span>
+        Свуда значајно смањити све облике насиља и с тим повезане стопе смртности
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          16.1.1
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/16-1-1">
-          Број жртава убистава с намјером на 100.000 становника, према полу и старости
-        </a>
         
-      </div>
-    
 
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          16.1.2
-          <span class="status notstarted">
-            Истраживање извора података
-          </span>
-        </span>
-        <a href="/sr/16-1-2">
-          Умрли повезане са сукобима на 100.000 становника, према полу, старости и узроку
-        </a>
         
-      </div>
-    
-
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          16.1.3
-          <span class="status notstarted">
-            Истраживање извора података
-          </span>
-        </span>
-        <a href="/sr/16-1-3">
-          Удио становништва изложеног (а) физичком насиљу, (б) психичком насиљу и (ц) сексуалном насиљу у претходних 12 мјесеци
-        </a>
         
-      </div>
-    
-
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          16.1.4
-          <span class="status notstarted">
-            Истраживање извора података
-          </span>
-        </span>
-        <a href="/sr/16-1-4">
-          Удио становништва који се осјећају сигурно да се крећу сами око подручја у којем живе
-        </a>
         
-      </div>
-    
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                16.1.1
+            </span>
+            <a href="/sr/16-1-1">
+                Број жртава убистава с намјером на 100.000 становника, према полу и старости
+            </a>
+        </div>
+        
+
+        
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                16.1.2
+            </span>
+            <a href="/sr/16-1-2">
+                Умрли повезане са сукобима на 100.000 становника, према полу, старости и узроку
+            </a>
+        </div>
+        
+
+        
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                16.1.3
+            </span>
+            <a href="/sr/16-1-3">
+                Удио становништва изложеног (а) физичком насиљу, (б) психичком насиљу и (ц) сексуалном насиљу у претходних 12 мјесеци
+            </a>
+        </div>
+        
+
+        
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                16.1.4
+            </span>
+            <a href="/sr/16-1-4">
+                Удио становништва који се осјећају сигурно да се крећу сами око подручја у којем живе
+            </a>
+        </div>
+        
     </div>
-  
+    
     
     <div class="indicator-cards target goal-target col-md-6">
-      <span>
-        <label class="hidden-md hidden-lg">Подциљ</label>
-        16.2
-      </span>
-      Окончати злоупотребу и експлоатацију дјeце, трговину дјeцом и све облике насиља и тортуре над дјeцом
+        <span class="indicator-card-number">
+            <label class="hidden-md hidden-lg">Подциљ</label>
+            16.2
+        </span>
+        Окончати злоупотребу и експлоатацију дјeце, трговину дјeцом и све облике насиља и тортуре над дјeцом
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          16.2.1
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/16-2-1">
-          Удио дјеце у доби од 1 до 17 година која су у протеклих мјесец дана доживјела било какве физичке казне и/или психолошку агресију од стране његоватеља
-        </a>
         
-      </div>
-    
 
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          16.2.2
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/16-2-2">
-          Број жртава трговине људима на 100.000 становника, према полу, старости и облику експлоатације
-        </a>
         
-      </div>
-    
-
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          16.2.3
-          <span class="status notstarted">
-            Истраживање извора података
-          </span>
-        </span>
-        <a href="/sr/16-2-3">
-          Удио младих жена и мушкараца у доби од 18-29 година који су искусили сексуално насиље до 18 година
-        </a>
         
-      </div>
-    
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                16.2.1
+            </span>
+            <a href="/sr/16-2-1">
+                Удио дјеце у доби од 1 до 17 година која су у протеклих мјесец дана доживјела било какве физичке казне и/или психолошку агресију од стране његоватеља
+            </a>
+        </div>
+        
+
+        
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                16.2.2
+            </span>
+            <a href="/sr/16-2-2">
+                Број жртава трговине људима на 100.000 становника, према полу, старости и облику експлоатације
+            </a>
+        </div>
+        
+
+        
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                16.2.3
+            </span>
+            <a href="/sr/16-2-3">
+                Удио младих жена и мушкараца у доби од 18-29 година који су искусили сексуално насиље до 18 година
+            </a>
+        </div>
+        
     </div>
-  
+    
     
     <div class="indicator-cards target goal-target col-md-6">
-      <span>
-        <label class="hidden-md hidden-lg">Подциљ</label>
-        16.3
-      </span>
-      Промовисати владавину права на националном и међународном нивоу и свима осигурати једнак приступ правди
+        <span class="indicator-card-number">
+            <label class="hidden-md hidden-lg">Подциљ</label>
+            16.3
+        </span>
+        Промовисати владавину права на националном и међународном нивоу и свима осигурати једнак приступ правди
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          16.3.1
-          <span class="status notstarted">
-            Истраживање извора података
-          </span>
-        </span>
-        <a href="/sr/16-3-1">
-          Удио жртава насиља у задњих 12 мјесеци који су насиље пријавили надлежним органима или другим званично признатим механизмима за рјешавање сукоба
-        </a>
         
-      </div>
-    
 
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          16.3.2
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/16-3-2">
-          Неосуђени притвореници као удио у укупној затворској популацији
-        </a>
         
-      </div>
-    
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                16.3.1
+            </span>
+            <a href="/sr/16-3-1">
+                Удио жртава насиља у задњих 12 мјесеци који су насиље пријавили надлежним органима или другим званично признатим механизмима за рјешавање сукоба
+            </a>
+        </div>
+        
+
+        
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                16.3.2
+            </span>
+            <a href="/sr/16-3-2">
+                Неосуђени притвореници као удио у укупној затворској популацији
+            </a>
+        </div>
+        
     </div>
-  
+    
     
     <div class="indicator-cards target goal-target col-md-6">
-      <span>
-        <label class="hidden-md hidden-lg">Подциљ</label>
-        16.4
-      </span>
-      До 2030. године значајно смањити незаконите токове новца и оружја, побољшати проналажење и враћање украдене имовине и борити се против свих облика организованог криминала
+        <span class="indicator-card-number">
+            <label class="hidden-md hidden-lg">Подциљ</label>
+            16.4
+        </span>
+        До 2030. године значајно смањити незаконите токове новца и оружја, побољшати проналажење и враћање украдене имовине и борити се против свих облика организованог криминала
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          16.4.1
-          <span class="status notstarted">
-            Истраживање извора података
-          </span>
-        </span>
-        <a href="/sr/16-4-1">
-          Укупна вриједност долазних и одлазних незаконитих финансијских токова (у текућој вриједности USD)
-        </a>
         
-      </div>
-    
 
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          16.4.2
-          <span class="status notstarted">
-            Истраживање извора података
-          </span>
-        </span>
-        <a href="/sr/16-4-2">
-          Удио заплијењеног, пронађеног и предатог ватреног оружја за које су надлежни органи утврдили незаконито порекло или контекст у складу са међународним инструментима
-        </a>
         
-      </div>
-    
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                16.4.1
+            </span>
+            <a href="/sr/16-4-1">
+                Укупна вриједност долазних и одлазних незаконитих финансијских токова (у текућој вриједности USD)
+            </a>
+        </div>
+        
+
+        
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                16.4.2
+            </span>
+            <a href="/sr/16-4-2">
+                Удио заплијењеног, пронађеног и предатог ватреног оружја за које су надлежни органи утврдили незаконито порекло или контекст у складу са међународним инструментима
+            </a>
+        </div>
+        
     </div>
-  
+    
     
     <div class="indicator-cards target goal-target col-md-6">
-      <span>
-        <label class="hidden-md hidden-lg">Подциљ</label>
-        16.5
-      </span>
-      Значајно смањити корупцију и подмићивање у свим њиховим појавним облицима
+        <span class="indicator-card-number">
+            <label class="hidden-md hidden-lg">Подциљ</label>
+            16.5
+        </span>
+        Значајно смањити корупцију и подмићивање у свим њиховим појавним облицима
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          16.5.1
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/16-5-1">
-          Удио особа које су имале најмање један контакт са државним службеником и које су платиле мито државном службенику или су им државни службеници тражили мито током претходних 12 мјесеци
-        </a>
         
-      </div>
-    
 
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          16.5.2
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/16-5-2">
-          Удио предузећа која су имала најмање један контакт са државним службеником и која су платила мито државном службенику или су им државни службеници тражили мито током претходних 12 мјесеци
-        </a>
         
-      </div>
-    
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                16.5.1
+            </span>
+            <a href="/sr/16-5-1">
+                Удио особа које су имале најмање један контакт са државним службеником и које су платиле мито државном службенику или су им државни службеници тражили мито током претходних 12 мјесеци
+            </a>
+        </div>
+        
+
+        
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                16.5.2
+            </span>
+            <a href="/sr/16-5-2">
+                Удио предузећа која су имала најмање један контакт са државним службеником и која су платила мито државном службенику или су им државни службеници тражили мито током претходних 12 мјесеци
+            </a>
+        </div>
+        
     </div>
-  
+    
     
     <div class="indicator-cards target goal-target col-md-6">
-      <span>
-        <label class="hidden-md hidden-lg">Подциљ</label>
-        16.6
-      </span>
-      Развити дјeелотворне, одговорне и транспарентне институције на свим нивоима
+        <span class="indicator-card-number">
+            <label class="hidden-md hidden-lg">Подциљ</label>
+            16.6
+        </span>
+        Развити дјeелотворне, одговорне и транспарентне институције на свим нивоима
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          16.6.1
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/16-6-1">
-          Примарни државни расходи као дио првобитног одобреног буџета, по секторима (или по буџетским кодовима или слично)
-        </a>
         
-      </div>
-    
 
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          16.6.2
-          <span class="status notstarted">
-            Истраживање извора података
-          </span>
-        </span>
-        <a href="/sr/16-6-2">
-          Удио становништва задовољног својим посљедњим искуством у пружању јавних услуга
-        </a>
         
-      </div>
-    
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                16.6.1
+            </span>
+            <a href="/sr/16-6-1">
+                Примарни државни расходи као дио првобитног одобреног буџета, по секторима (или по буџетским кодовима или слично)
+            </a>
+        </div>
+        
+
+        
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                16.6.2
+            </span>
+            <a href="/sr/16-6-2">
+                Удио становништва задовољног својим посљедњим искуством у пружању јавних услуга
+            </a>
+        </div>
+        
     </div>
-  
+    
     
     <div class="indicator-cards target goal-target col-md-6">
-      <span>
-        <label class="hidden-md hidden-lg">Подциљ</label>
-        16.7
-      </span>
-      Осигурајте одговорно, инклузивно, партиципативно и репрезентативно доношење одлука на свим нивоима
+        <span class="indicator-card-number">
+            <label class="hidden-md hidden-lg">Подциљ</label>
+            16.7
+        </span>
+        Осигурајте одговорно, инклузивно, партиципативно и репрезентативно доношење одлука на свим нивоима
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          16.7.1
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/16-7-1">
-          Удио положаја у националним и локалним институцијама, укључујући (а) законодавна тијела; (б) јавну службу; и (ц) правосуђе, у поређењу са националним дистрибуцијама, према полу, старости, особама са инвалидитетом и групама становништва
-        </a>
         
-      </div>
-    
 
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          16.7.2
-          <span class="status notstarted">
-            Истраживање извора података
-          </span>
-        </span>
-        <a href="/sr/16-7-2">
-          Удио становништва који вјерује да је доношење одлука инклузивно и одговара на потребе, по полу, старости, инвалидитету или популационим групама
-        </a>
         
-      </div>
-    
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                16.7.1
+            </span>
+            <a href="/sr/16-7-1">
+                Удио положаја у националним и локалним институцијама, укључујући (а) законодавна тијела; (б) јавну службу; и (ц) правосуђе, у поређењу са националним дистрибуцијама, према полу, старости, особама са инвалидитетом и групама становништва
+            </a>
+        </div>
+        
+
+        
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                16.7.2
+            </span>
+            <a href="/sr/16-7-2">
+                Удио становништва који вјерује да је доношење одлука инклузивно и одговара на потребе, по полу, старости, инвалидитету или популационим групама
+            </a>
+        </div>
+        
     </div>
-  
+    
     
     <div class="indicator-cards target goal-target col-md-6">
-      <span>
-        <label class="hidden-md hidden-lg">Подциљ</label>
-        16.8
-      </span>
-      Проширити и повећати учешће земаља у развоју у институцијама глобалног управљања
+        <span class="indicator-card-number">
+            <label class="hidden-md hidden-lg">Подциљ</label>
+            16.8
+        </span>
+        Проширити и повећати учешће земаља у развоју у институцијама глобалног управљања
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          16.8.1
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/16-8-1">
-          Удио чланова и права гласа земаља у развоју у међународним организацијама
-        </a>
         
-      </div>
-    
+
+        
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                16.8.1
+            </span>
+            <a href="/sr/16-8-1">
+                Удио чланова и права гласа земаља у развоју у међународним организацијама
+            </a>
+        </div>
+        
     </div>
-  
+    
     
     <div class="indicator-cards target goal-target col-md-6">
-      <span>
-        <label class="hidden-md hidden-lg">Подциљ</label>
-        16.9
-      </span>
-      До 2030. године за све обезбједити законски идентитет, укључујући регистрацију приликом рођења
+        <span class="indicator-card-number">
+            <label class="hidden-md hidden-lg">Подциљ</label>
+            16.9
+        </span>
+        До 2030. године за све обезбједити законски идентитет, укључујући регистрацију приликом рођења
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          16.9.1
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/16-9-1">
-          Удио дјеце млађе од 5 година чија су рођења регистрована у цивилним органима, према старосној доби
-        </a>
         
-      </div>
-    
+
+        
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                16.9.1
+            </span>
+            <a href="/sr/16-9-1">
+                Удио дјеце млађе од 5 година чија су рођења регистрована у цивилним органима, према старосној доби
+            </a>
+        </div>
+        
     </div>
-  
+    
     
     <div class="indicator-cards target goal-target col-md-6">
-      <span>
-        <label class="hidden-md hidden-lg">Подциљ</label>
-        16.10
-      </span>
-      Осигурати јавни приступ информацијама и заштиту основних слобода, у складу са националним законодавством и међународним споразумима
+        <span class="indicator-card-number">
+            <label class="hidden-md hidden-lg">Подциљ</label>
+            16.10
+        </span>
+        Осигурати јавни приступ информацијама и заштиту основних слобода, у складу са националним законодавством и међународним споразумима
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          16.10.1
-          <span class="status notstarted">
-            Истраживање извора података
-          </span>
-        </span>
-        <a href="/sr/16-10-1">
-          Број потврђених случајева убистава, киднаповања, присилног нестанка, произвољног затварања и мучења новинара, припадника медијског особља, синдиката и заговорника људских права у претходних 12 мјесеци
-        </a>
         
-      </div>
-    
 
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          16.10.2
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/16-10-2">
-          Број земаља које усвајају и спроводе уставне, законске и/или политичке гаранције за јавни приступ информацијама
-        </a>
         
-      </div>
-    
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                16.10.1
+            </span>
+            <a href="/sr/16-10-1">
+                Број потврђених случајева убистава, киднаповања, присилног нестанка, произвољног затварања и мучења новинара, припадника медијског особља, синдиката и заговорника људских права у претходних 12 мјесеци
+            </a>
+        </div>
+        
+
+        
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                16.10.2
+            </span>
+            <a href="/sr/16-10-2">
+                Број земаља које усвајају и спроводе уставне, законске и/или политичке гаранције за јавни приступ информацијама
+            </a>
+        </div>
+        
     </div>
-  
+    
     
     <div class="indicator-cards target goal-target col-md-6">
-      <span>
-        <label class="hidden-md hidden-lg">Подциљ</label>
-        16.a
-      </span>
-      Ојачати релевантне националне институције, укључујући и међународну сарадњу, за изградњу капацитета на свим нивоима, посебно у земљама у развоју, ради спречавања насиља и борбе против тероризма и криминала
+        <span class="indicator-card-number">
+            <label class="hidden-md hidden-lg">Подциљ</label>
+            16.a
+        </span>
+        Ојачати релевантне националне институције, укључујући и међународну сарадњу, за изградњу капацитета на свим нивоима, посебно у земљама у развоју, ради спречавања насиља и борбе против тероризма и криминала
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          16.a.1
-          <span class="status complete">
-            Извијештено онлине
-          </span>
-        </span>
-        <a href="/sr/16-a-1">
-          Постојање независних националних институција за људска права у складу са Паришким принципима
-        </a>
         
-      </div>
-    
+
+        
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                16.a.1
+            </span>
+            <a href="/sr/16-a-1">
+                Постојање независних националних институција за људска права у складу са Паришким принципима
+            </a>
+        </div>
+        
     </div>
-  
+    
     
     <div class="indicator-cards target goal-target col-md-6">
-      <span>
-        <label class="hidden-md hidden-lg">Подциљ</label>
-        16.b
-      </span>
-      Промовирати и проводити недискриминацијске законе и политике за одрживи развој
+        <span class="indicator-card-number">
+            <label class="hidden-md hidden-lg">Подциљ</label>
+            16.b
+        </span>
+        Промовирати и проводити недискриминацијске законе и политике за одрживи развој
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-      
-      
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span>
-          16.b.1
-          <span class="status notstarted">
-            Истраживање извора података
-          </span>
-        </span>
-        <a href="/sr/16-b-1">
-          Проценат извјештавања о становништву које је лично било дискриминирано или узнемиравано у претходних 12 мјесеци на основу дискриминације забрањене међународним законом о људским правима
-        </a>
         
-      </div>
-    
+
+        
+        
+        
+
+        <div class="col-md-12  goal-indicator">
+            <span class="indicator-card-number">
+                16.b.1
+            </span>
+            <a href="/sr/16-b-1">
+                Проценат извјештавања о становништву које је лично било дискриминирано или узнемиравано у претходних 12 мјесеци на основу дискриминације забрањене међународним законом о људским правима
+            </a>
+        </div>
+        
     </div>
-  
+    
 </div>
 
 <footer role="contentinfo">
@@ -1097,12 +700,12 @@ var translations = {
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Претраживање';</script>
 
-<script src='/assets/js/sdg.js?v=20210527081016'></script>
+<script src='/assets/js/sdg.js?v=20210527102505'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20210527081016"></script><script>
+    <script src="/assets/js/custom.js?v=20210527102505"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
@@ -1172,4 +775,3 @@ $(function() {
 
 </body>
 </html>
-
