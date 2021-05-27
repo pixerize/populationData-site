@@ -127,7 +127,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20210527104749">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20210527105809">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -141,8 +141,175 @@ var translations = {
 <body class="language-sr layout-goal-by-target">
 <!-- <div class="container"> -->
 
+<script>translations['header'] = {"alpha":"Алфа","default_contrast":"Задани контраст","disable_high_contrast":"Онемогући високи контраст","disclaimer":"Ова интернет страница се развија. Поздрављамо ваше <a href=\"mailto:%email_address\">повратне информације</a>.","enable_high_contrast":"Омогући високи контраст","high_contrast":"Висок контраст","skip_link":"Пријеђи на главни садржај","tag_line":"17 циљева за трансформирање нашег свијета"};</script>
+
+<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Пријеђи на главни садржај</a>
+<div id="disclaimer">
+</div>
+
+<header role="banner">
+  <div class="container">
+
+    <div class="logo-and-mobile-widgets">
+      <a class="navbar-brand" href="/sr/" id="home">
+        <img src="/assets/img/logo/sr/SDG_logo.png" alt="Циљеви одрживог развоја - 17 циљева за трансформирање нашег свијета" />
+      </a>
+
+      <div class="mobile-widgets">
+        <ul id='accessibility-nav' class='contrast-switcher'></ul><div class="language-toggle-mobile">
+          <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown ">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Српски</span>
+      <span class="language-abbreviation">sr</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
+    <ul class="dropdown-menu"><li>
+            <a href="/8/">
+              English
+            </a>
+          </li><li>
+            <a href="/bs/8/">
+              Bosanski
+            </a>
+          </li><li>
+            <a href="/hr/8/">
+              Hrvatski
+            </a>
+          </li></ul>
+  </div>
+</div>
+
+        </div></div>
+    </div>
+
+    <nav class="navbar navbar-default" id="main-nav">
+
+      <ul class="top-level">
+        <li id="menuToggle"
+            aria-label=""
+            aria-haspopup="true">
+          <button data-target="menu-mobile" aria-expanded="false">Мени</button>
+          <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
+    <a href="/sr/">HOME</a>
+    </li><li class="nav-link ">
+    <a href="/sr/about">О нама</a>
+    </li><li class="nav-link ">
+    <a href="/sr/faq">FAQ</a>
+    </li><li class="language-toggle-menu-header">
+    
+
+
+
+
+
+  <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown ">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Српски</span>
+      <span class="language-abbreviation">sr</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
+    <ul class="dropdown-menu"><li>
+            <a href="/8/">
+              English
+            </a>
+          </li><li>
+            <a href="/bs/8/">
+              Bosanski
+            </a>
+          </li><li>
+            <a href="/hr/8/">
+              Hrvatski
+            </a>
+          </li></ul>
+  </div>
+</div>
+
+
+
+</li>
+</ul>
+
+        </li>
+        <li id="searchToggle"
+            aria-label=""
+            aria-haspopup="true">
+          <button data-target="search-mobile" aria-expanded="false">Претраживање</button>
+          <div id="search-mobile" class="menu-target">
+  <form action="/sr/search">
+    <label class="sr-only" for="indicator_search-mobile">Претраживање</label>
+    <input type="text" name="q" id="indicator_search-mobile" title="Претраживање" /><!--
+    --><button aria-label="Претраживање" id="search-mobile-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
+  </form>
+</div>
+
+        </li>
+      </ul>
+
+      <div id="search" class="menu-target">
+  <form action="/sr/search">
+    <label class="sr-only" for="indicator_search">Претраживање</label>
+    <input type="text" name="q" id="indicator_search" title="Претраживање" /><!--
+    --><button aria-label="Претраживање" id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
+  </form>
+</div>
+
+
+      <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
+    <a href="/sr/">HOME</a>
+    </li><li class="nav-link ">
+    <a href="/sr/about">О нама</a>
+    </li><li class="nav-link ">
+    <a href="/sr/faq">FAQ</a>
+    </li><li class="language-toggle-menu-header">
+    
+
+
+
+
+
+  <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown ">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Српски</span>
+      <span class="language-abbreviation">sr</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
+    <ul class="dropdown-menu"><li>
+            <a href="/8/">
+              English
+            </a>
+          </li><li>
+            <a href="/bs/8/">
+              Bosanski
+            </a>
+          </li><li>
+            <a href="/hr/8/">
+              Hrvatski
+            </a>
+          </li></ul>
+  </div>
+</div>
+
+
+
+</li>
+</ul>
+
+
+    </nav>
+  </div>
+
+</header>
+<div id="top" tabindex=-1></div>
+
 
 <div class="container">
+    <ol class="breadcrumb">
+  
+  <li><a href="/sr/">Насловна</a></li>
+  <li class="active">Циљ 8</li>
+  
+</ol>
+
     
     
 <div class="previous-next-links row">
@@ -164,6 +331,25 @@ var translations = {
     
 </div>
 
+<div class="heading goal-banner goal-8">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-4 col-md-3 col-lg-2 goal-tiles">
+                <img src="https://popdata.work/assets/img/goals/sr/8.png"
+                    alt="Достојанствен рад и економски раст - Циљ 8"
+                    id="goal-8"
+                    class="goal-icon-image goal-icon-image-png" />
+            </div>
+            <div class="col-xs-8 col-md-9 col-lg-10">
+                <h1>
+                    <span class="hidden-sm hidden-md hidden-lg">Циљ 8:
+                    </span>Промовисати инклузиван и одржив економски раст, запосленост и достојанствен рад за све
+                </h1>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div id="main-content" class="container goal-indicators goal-8 goal-by-target" role="main">
 
     
@@ -171,10 +357,10 @@ var translations = {
 
 
     <div class="visible-md-block visible-lg-block">
-        <div class="col-md-12">
+        <div class="col-md-6">
             <h2>Подциљеви</h2>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-6">
             <h2>Индикатори</h2>
         </div>
     </div>
@@ -189,7 +375,7 @@ var translations = {
         </span>
         Одржати економски раст по глави становника у складу са националним околностима, а посебно у најнеразвијенијим земљама одржати раст бруто домаћег производа на нивоу од најмање 7 одсто годишње
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -215,7 +401,7 @@ var translations = {
         </span>
         Постићи више нивое економске продуктивности преко диверсификације, технолошких унапређења и иновација, између осталог и фокусирајући се на радно интензивне и високо профитабилне секторе
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -241,7 +427,7 @@ var translations = {
         </span>
         Промовисати развојно оријентисане политике које подржавају производне активности, стварање пристојних послова, предузетништво, креативност и иновативност и подстицати формално оснивање и раст микропредузећа, односно малих и средњих предузећа, између осталог и кроз приступ финансијским услугама
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -267,7 +453,7 @@ var translations = {
         </span>
         Прогресивно унаприједити, до 2030. године, глобалну ефикасност ресурса у потрошњи и производњи и уложити напоре да се економски раст раздвоји од деградације животне средине у складу са 10-годишњим оквиром "Програма о одрживој потрошњи и производњи", уз водећу улогу развијених земаља
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -307,7 +493,7 @@ var translations = {
         </span>
         До 2030. године постићи пуну и продуктивну запосленост и достојанствен рад за све жене и мушкарце, што обухвата и млађе људе и особе са инвалидитетом, као и исту плату за рад једнаке вриједности
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -347,7 +533,7 @@ var translations = {
         </span>
         До 2020. године знатно смањити удио младих који нису запослени, нити у процесу образовања или обуке
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -373,7 +559,7 @@ var translations = {
         </span>
         Предузети тренутне и ефикасне мјере за искорјењивање присилног рада, окончање модерног ропства и трговине људима и осигурати забрану и елиминисати најгоре облике дјечијег рада, укључујући регрутовање и употребу дјeце војника, и до 2025. године дјечији рад у свим облицима
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -399,7 +585,7 @@ var translations = {
         </span>
         Заштитити радна права и промовисати безбједно и сигурно радно окружење за све раднике, укључујући раднике мигранте, а посебно жене мигранте, и оне који раде опасне послове
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -439,7 +625,7 @@ var translations = {
         </span>
         До 2030. године осмислити и имплементирати политике за промовисање одрживог туризма који ствара радна мјеста и промовише локалну културу и производе
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -465,7 +651,7 @@ var translations = {
         </span>
         Ојачати капацитете домаћих финансијских институција како би се подстицала и ширила доступност банкарских, осигуравајућих и финансијских услуга за све
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -505,7 +691,7 @@ var translations = {
         </span>
         Повећати подршку на основу „Помоћи за трговину“ за земље у развоју, посебно за најнеразвијеније земље, укључујући и „Побољшани интегрирани оквир за трговинску техничку помоћ најмање развијеним земљама“.
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -531,7 +717,7 @@ var translations = {
         </span>
         До 2020. године развити и операционализовати глобалну стратегију за запошљавање младих и примјенити „Глобални пакт о запошљавању“ Међународне организације рада
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -602,12 +788,12 @@ var translations = {
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Претраживање';</script>
 
-<script src='/assets/js/sdg.js?v=20210527104749'></script>
+<script src='/assets/js/sdg.js?v=20210527105809'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20210527104749"></script><script>
+    <script src="/assets/js/custom.js?v=20210527105809"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

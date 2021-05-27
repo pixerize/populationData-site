@@ -127,7 +127,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20210527104749">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20210527105809">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -141,8 +141,175 @@ var translations = {
 <body class="language-sr layout-goal-by-target">
 <!-- <div class="container"> -->
 
+<script>translations['header'] = {"alpha":"Алфа","default_contrast":"Задани контраст","disable_high_contrast":"Онемогући високи контраст","disclaimer":"Ова интернет страница се развија. Поздрављамо ваше <a href=\"mailto:%email_address\">повратне информације</a>.","enable_high_contrast":"Омогући високи контраст","high_contrast":"Висок контраст","skip_link":"Пријеђи на главни садржај","tag_line":"17 циљева за трансформирање нашег свијета"};</script>
+
+<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Пријеђи на главни садржај</a>
+<div id="disclaimer">
+</div>
+
+<header role="banner">
+  <div class="container">
+
+    <div class="logo-and-mobile-widgets">
+      <a class="navbar-brand" href="/sr/" id="home">
+        <img src="/assets/img/logo/sr/SDG_logo.png" alt="Циљеви одрживог развоја - 17 циљева за трансформирање нашег свијета" />
+      </a>
+
+      <div class="mobile-widgets">
+        <ul id='accessibility-nav' class='contrast-switcher'></ul><div class="language-toggle-mobile">
+          <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown ">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Српски</span>
+      <span class="language-abbreviation">sr</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
+    <ul class="dropdown-menu"><li>
+            <a href="/5/">
+              English
+            </a>
+          </li><li>
+            <a href="/bs/5/">
+              Bosanski
+            </a>
+          </li><li>
+            <a href="/hr/5/">
+              Hrvatski
+            </a>
+          </li></ul>
+  </div>
+</div>
+
+        </div></div>
+    </div>
+
+    <nav class="navbar navbar-default" id="main-nav">
+
+      <ul class="top-level">
+        <li id="menuToggle"
+            aria-label=""
+            aria-haspopup="true">
+          <button data-target="menu-mobile" aria-expanded="false">Мени</button>
+          <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
+    <a href="/sr/">HOME</a>
+    </li><li class="nav-link ">
+    <a href="/sr/about">О нама</a>
+    </li><li class="nav-link ">
+    <a href="/sr/faq">FAQ</a>
+    </li><li class="language-toggle-menu-header">
+    
+
+
+
+
+
+  <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown ">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Српски</span>
+      <span class="language-abbreviation">sr</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
+    <ul class="dropdown-menu"><li>
+            <a href="/5/">
+              English
+            </a>
+          </li><li>
+            <a href="/bs/5/">
+              Bosanski
+            </a>
+          </li><li>
+            <a href="/hr/5/">
+              Hrvatski
+            </a>
+          </li></ul>
+  </div>
+</div>
+
+
+
+</li>
+</ul>
+
+        </li>
+        <li id="searchToggle"
+            aria-label=""
+            aria-haspopup="true">
+          <button data-target="search-mobile" aria-expanded="false">Претраживање</button>
+          <div id="search-mobile" class="menu-target">
+  <form action="/sr/search">
+    <label class="sr-only" for="indicator_search-mobile">Претраживање</label>
+    <input type="text" name="q" id="indicator_search-mobile" title="Претраживање" /><!--
+    --><button aria-label="Претраживање" id="search-mobile-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
+  </form>
+</div>
+
+        </li>
+      </ul>
+
+      <div id="search" class="menu-target">
+  <form action="/sr/search">
+    <label class="sr-only" for="indicator_search">Претраживање</label>
+    <input type="text" name="q" id="indicator_search" title="Претраживање" /><!--
+    --><button aria-label="Претраживање" id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
+  </form>
+</div>
+
+
+      <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
+    <a href="/sr/">HOME</a>
+    </li><li class="nav-link ">
+    <a href="/sr/about">О нама</a>
+    </li><li class="nav-link ">
+    <a href="/sr/faq">FAQ</a>
+    </li><li class="language-toggle-menu-header">
+    
+
+
+
+
+
+  <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown ">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Српски</span>
+      <span class="language-abbreviation">sr</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
+    <ul class="dropdown-menu"><li>
+            <a href="/5/">
+              English
+            </a>
+          </li><li>
+            <a href="/bs/5/">
+              Bosanski
+            </a>
+          </li><li>
+            <a href="/hr/5/">
+              Hrvatski
+            </a>
+          </li></ul>
+  </div>
+</div>
+
+
+
+</li>
+</ul>
+
+
+    </nav>
+  </div>
+
+</header>
+<div id="top" tabindex=-1></div>
+
 
 <div class="container">
+    <ol class="breadcrumb">
+  
+  <li><a href="/sr/">Насловна</a></li>
+  <li class="active">Циљ 5</li>
+  
+</ol>
+
     
     
 <div class="previous-next-links row">
@@ -164,6 +331,25 @@ var translations = {
     
 </div>
 
+<div class="heading goal-banner goal-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-4 col-md-3 col-lg-2 goal-tiles">
+                <img src="https://popdata.work/assets/img/goals/sr/5.png"
+                    alt="Родна равноправност - Циљ 5"
+                    id="goal-5"
+                    class="goal-icon-image goal-icon-image-png" />
+            </div>
+            <div class="col-xs-8 col-md-9 col-lg-10">
+                <h1>
+                    <span class="hidden-sm hidden-md hidden-lg">Циљ 5:
+                    </span>Постићи родну равноправност и оснаживати све жене и ђевојчице
+                </h1>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div id="main-content" class="container goal-indicators goal-5 goal-by-target" role="main">
 
     
@@ -171,10 +357,10 @@ var translations = {
 
 
     <div class="visible-md-block visible-lg-block">
-        <div class="col-md-12">
+        <div class="col-md-6">
             <h2>Подциљеви</h2>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-6">
             <h2>Индикатори</h2>
         </div>
     </div>
@@ -189,7 +375,7 @@ var translations = {
         </span>
         Окончати свуда све облике дискриминације против жена и дјевојчица
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -215,7 +401,7 @@ var translations = {
         </span>
         Елиминирати све облике насиља над свим женама и дјевојчицама у јавној и приватној сфери, укључујући трговину људима и сексуалне и друге облике експлоатације
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -255,7 +441,7 @@ var translations = {
         </span>
         Елиминисати све штетне праксе као што су дјечији, рани и насилни бракови и обрезивање женских гениталија
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -295,7 +481,7 @@ var translations = {
         </span>
         Препознати и вредновати неплаћено старање и рад у домаћинству кроз обезбјеђивање јавних услуга, инфраструктуре и политике социјалне заштите те кроз промовисање заједничке одговорности у домаћинству и породици као национално прикладним
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -321,7 +507,7 @@ var translations = {
         </span>
         Осигурати женама пуно и ефикасно учешће и једнаке могућности за вођство на свим нивоима одлучивања у политичком, економском и јавном животу
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -361,7 +547,7 @@ var translations = {
         </span>
         Осигурати универзални приступ полном и репродуктивном здрављу и репродуктивним правима како је договорено у складу с Програмом акције Међународне конференције о становништву и развоју“ и „Пекиншком платформом за акцију“, и исходним документима њихових ревизијских конференција
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -401,7 +587,7 @@ var translations = {
         </span>
         Провести реформе како би жене добиле једнака права на економске ресурсе, као и приступ власништву и контроли над земљиштем и осталим облицима власништва, финансијским услугама, насљедству и природним ресурсима, у складу са националним законима
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -441,7 +627,7 @@ var translations = {
         </span>
         Повећати употребу иновативних технологија, посебно информационе и комуникационе технологије, ради промовисања оснаживања жена
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -467,7 +653,7 @@ var translations = {
         </span>
         Усвојити и оснажити добре политике и извршно законодавство за промовисање родне равноправности и оснаживања свих жена и дјевојчица на свим нивоима
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -538,12 +724,12 @@ var translations = {
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Претраживање';</script>
 
-<script src='/assets/js/sdg.js?v=20210527104749'></script>
+<script src='/assets/js/sdg.js?v=20210527105809'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20210527104749"></script><script>
+    <script src="/assets/js/custom.js?v=20210527105809"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

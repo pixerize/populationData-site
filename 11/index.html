@@ -127,7 +127,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20210527104749">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20210527105809">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -141,8 +141,175 @@ var translations = {
 <body class="language-en layout-goal-by-target">
 <!-- <div class="container"> -->
 
+<script>translations['header'] = {"alpha":"Alpha","default_contrast":"Default contrast","disable_high_contrast":"Disable high contrast","disclaimer":"This is a development website. We welcome your <a href=\"mailto:%email_address\">feedback</a>.","enable_high_contrast":"Enable high contrast","high_contrast":"High contrast","skip_link":"Skip to main content","tag_line":"17 Goals to Transform our World","toggle_menu":"Menu toggle. Click to expand or collapse the menu.","toggle_search":"Search toggle. Click to expand or collapse the search bar."};</script>
+
+<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Skip to main content</a>
+<div id="disclaimer">
+</div>
+
+<header role="banner">
+  <div class="container">
+
+    <div class="logo-and-mobile-widgets">
+      <a class="navbar-brand" href="/" id="home">
+        <img src="/assets/img/logo/en/SDG_logo.png" alt="Sustainable Development Goals - 17 Goals to Transform our World" />
+      </a>
+
+      <div class="mobile-widgets">
+        <ul id='accessibility-nav' class='contrast-switcher'></ul><div class="language-toggle-mobile">
+          <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown ">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">English</span>
+      <span class="language-abbreviation">en</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
+    <ul class="dropdown-menu"><li>
+            <a href="/bs/11/">
+              Bosanski
+            </a>
+          </li><li>
+            <a href="/sr/11/">
+              Српски
+            </a>
+          </li><li>
+            <a href="/hr/11/">
+              Hrvatski
+            </a>
+          </li></ul>
+  </div>
+</div>
+
+        </div></div>
+    </div>
+
+    <nav class="navbar navbar-default" id="main-nav">
+
+      <ul class="top-level">
+        <li id="menuToggle"
+            aria-label="Menu toggle. Click to expand or collapse the menu."
+            aria-haspopup="true">
+          <button data-target="menu-mobile" aria-expanded="false">Menu</button>
+          <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
+    <a href="/">HOME</a>
+    </li><li class="nav-link ">
+    <a href="/about">About</a>
+    </li><li class="nav-link ">
+    <a href="/faq">FAQ</a>
+    </li><li class="language-toggle-menu-header">
+    
+
+
+
+
+
+  <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown ">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">English</span>
+      <span class="language-abbreviation">en</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
+    <ul class="dropdown-menu"><li>
+            <a href="/bs/11/">
+              Bosanski
+            </a>
+          </li><li>
+            <a href="/sr/11/">
+              Српски
+            </a>
+          </li><li>
+            <a href="/hr/11/">
+              Hrvatski
+            </a>
+          </li></ul>
+  </div>
+</div>
+
+
+
+</li>
+</ul>
+
+        </li>
+        <li id="searchToggle"
+            aria-label="Search toggle. Click to expand or collapse the search bar."
+            aria-haspopup="true">
+          <button data-target="search-mobile" aria-expanded="false">Search</button>
+          <div id="search-mobile" class="menu-target">
+  <form action="/search">
+    <label class="sr-only" for="indicator_search-mobile">Search</label>
+    <input type="text" name="q" id="indicator_search-mobile" title="Search" /><!--
+    --><button aria-label="Search" id="search-mobile-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
+  </form>
+</div>
+
+        </li>
+      </ul>
+
+      <div id="search" class="menu-target">
+  <form action="/search">
+    <label class="sr-only" for="indicator_search">Search</label>
+    <input type="text" name="q" id="indicator_search" title="Search" /><!--
+    --><button aria-label="Search" id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
+  </form>
+</div>
+
+
+      <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
+    <a href="/">HOME</a>
+    </li><li class="nav-link ">
+    <a href="/about">About</a>
+    </li><li class="nav-link ">
+    <a href="/faq">FAQ</a>
+    </li><li class="language-toggle-menu-header">
+    
+
+
+
+
+
+  <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown ">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">English</span>
+      <span class="language-abbreviation">en</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
+    <ul class="dropdown-menu"><li>
+            <a href="/bs/11/">
+              Bosanski
+            </a>
+          </li><li>
+            <a href="/sr/11/">
+              Српски
+            </a>
+          </li><li>
+            <a href="/hr/11/">
+              Hrvatski
+            </a>
+          </li></ul>
+  </div>
+</div>
+
+
+
+</li>
+</ul>
+
+
+    </nav>
+  </div>
+
+</header>
+<div id="top" tabindex=-1></div>
+
 
 <div class="container">
+    <ol class="breadcrumb">
+  
+  <li><a href="/">Home</a></li>
+  <li class="active">Goal 11</li>
+  
+</ol>
+
     
     
 <div class="previous-next-links row">
@@ -164,6 +331,25 @@ var translations = {
     
 </div>
 
+<div class="heading goal-banner goal-11">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-4 col-md-3 col-lg-2 goal-tiles">
+                <img src="https://popdata.work/assets/img/goals/en/11.png"
+                    alt="Sustainable cities &amp; communities - Goal 11"
+                    id="goal-11"
+                    class="goal-icon-image goal-icon-image-png" />
+            </div>
+            <div class="col-xs-8 col-md-9 col-lg-10">
+                <h1>
+                    <span class="hidden-sm hidden-md hidden-lg">Goal 11:
+                    </span>Make cities and human settlements inclusive, safe, resilient and sustainable
+                </h1>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div id="main-content" class="container goal-indicators goal-11 goal-by-target" role="main">
 
     
@@ -171,10 +357,10 @@ var translations = {
 
 
     <div class="visible-md-block visible-lg-block">
-        <div class="col-md-12">
+        <div class="col-md-6">
             <h2>Targets</h2>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-6">
             <h2>Indicators</h2>
         </div>
     </div>
@@ -189,7 +375,7 @@ var translations = {
         </span>
         By 2030, ensure access for all to adequate, safe and affordable housing and basic services and upgrade slums
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -215,7 +401,7 @@ var translations = {
         </span>
         By 2030, provide access to safe, affordable, accessible and sustainable transport systems for all, improving road safety, notably by expanding public transport, with special attention to the needs of those in vulnerable situations, women, children, persons with disabilities and older persons
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -241,7 +427,7 @@ var translations = {
         </span>
         By 2030, enhance inclusive and sustainable urbanization and capacity for participatory, integrated and sustainable human settlement planning and management in all countries
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -281,7 +467,7 @@ var translations = {
         </span>
         Strengthen efforts to protect and safeguard the world’s cultural and natural heritage
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -307,7 +493,7 @@ var translations = {
         </span>
         By 2030, significantly reduce the number of deaths and the number of people affected and substantially decrease the direct economic losses relative to global gross domestic product caused by disasters, including water-related disasters, with a focus on protecting the poor and people in vulnerable situations
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -347,7 +533,7 @@ var translations = {
         </span>
         By 2030, reduce the adverse per capita environmental impact of cities, including by paying special attention to air quality and municipal and other waste management
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -387,7 +573,7 @@ var translations = {
         </span>
         By 2030, provide universal access to safe, inclusive and accessible, green and public spaces, in particular for women and children, older persons and persons with disabilities
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -427,7 +613,7 @@ var translations = {
         </span>
         Support positive economic, social and environmental links between urban, peri-urban and rural areas by strengthening national and regional development planning
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -453,7 +639,7 @@ var translations = {
         </span>
         By 2020, substantially increase the number of cities and human settlements adopting and implementing integrated policies and plans towards inclusion, resource efficiency, mitigation and adaptation to climate change, resilience to disasters, and develop and implement, in line with the Sendai Framework for Disaster Risk Reduction 2015–2030, holistic disaster risk management at all levels
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -493,7 +679,7 @@ var translations = {
         </span>
         Support least developed countries, including through financial and technical assistance, in building sustainable and resilient buildings utilizing local materials
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -564,12 +750,12 @@ var translations = {
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/assets/js/sdg.js?v=20210527104749'></script>
+<script src='/assets/js/sdg.js?v=20210527105809'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20210527104749"></script><script>
+    <script src="/assets/js/custom.js?v=20210527105809"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

@@ -127,7 +127,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20210527104749">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20210527105809">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -141,8 +141,175 @@ var translations = {
 <body class="language-hr layout-goal-by-target">
 <!-- <div class="container"> -->
 
+<script>translations['header'] = {"alpha":"Alfa","default_contrast":"Zadani kontrast","disable_high_contrast":"Onemogući visoki kontrast","disclaimer":"Ova internet stranica se razvija. Pozdravljamo vaše povratne informacije.","enable_high_contrast":"Omogući visoki kontrast","high_contrast":"Visok kontrast","skip_link":"Prijeđi na glavni sadržaj","tag_line":"17 ciljeva za transformiranje našeg svijeta"};</script>
+
+<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Prijeđi na glavni sadržaj</a>
+<div id="disclaimer">
+</div>
+
+<header role="banner">
+  <div class="container">
+
+    <div class="logo-and-mobile-widgets">
+      <a class="navbar-brand" href="/hr/" id="home">
+        <img src="/assets/img/logo/hr/SDG_logo.png" alt="Ciljevi održivog razvoja - 17 ciljeva za transformiranje našeg svijeta" />
+      </a>
+
+      <div class="mobile-widgets">
+        <ul id='accessibility-nav' class='contrast-switcher'></ul><div class="language-toggle-mobile">
+          <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown ">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Hrvatski</span>
+      <span class="language-abbreviation">hr</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
+    <ul class="dropdown-menu"><li>
+            <a href="/3/">
+              English
+            </a>
+          </li><li>
+            <a href="/bs/3/">
+              Bosanski
+            </a>
+          </li><li>
+            <a href="/sr/3/">
+              Српски
+            </a>
+          </li></ul>
+  </div>
+</div>
+
+        </div></div>
+    </div>
+
+    <nav class="navbar navbar-default" id="main-nav">
+
+      <ul class="top-level">
+        <li id="menuToggle"
+            aria-label=""
+            aria-haspopup="true">
+          <button data-target="menu-mobile" aria-expanded="false">Izbornik</button>
+          <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
+    <a href="/hr/">HOME</a>
+    </li><li class="nav-link ">
+    <a href="/hr/about">O nama</a>
+    </li><li class="nav-link ">
+    <a href="/hr/faq">FAQ</a>
+    </li><li class="language-toggle-menu-header">
+    
+
+
+
+
+
+  <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown ">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Hrvatski</span>
+      <span class="language-abbreviation">hr</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
+    <ul class="dropdown-menu"><li>
+            <a href="/3/">
+              English
+            </a>
+          </li><li>
+            <a href="/bs/3/">
+              Bosanski
+            </a>
+          </li><li>
+            <a href="/sr/3/">
+              Српски
+            </a>
+          </li></ul>
+  </div>
+</div>
+
+
+
+</li>
+</ul>
+
+        </li>
+        <li id="searchToggle"
+            aria-label=""
+            aria-haspopup="true">
+          <button data-target="search-mobile" aria-expanded="false">Pretraživanje</button>
+          <div id="search-mobile" class="menu-target">
+  <form action="/hr/search">
+    <label class="sr-only" for="indicator_search-mobile">Pretraživanje</label>
+    <input type="text" name="q" id="indicator_search-mobile" title="Pretraživanje" /><!--
+    --><button aria-label="Pretraživanje" id="search-mobile-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
+  </form>
+</div>
+
+        </li>
+      </ul>
+
+      <div id="search" class="menu-target">
+  <form action="/hr/search">
+    <label class="sr-only" for="indicator_search">Pretraživanje</label>
+    <input type="text" name="q" id="indicator_search" title="Pretraživanje" /><!--
+    --><button aria-label="Pretraživanje" id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
+  </form>
+</div>
+
+
+      <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
+    <a href="/hr/">HOME</a>
+    </li><li class="nav-link ">
+    <a href="/hr/about">O nama</a>
+    </li><li class="nav-link ">
+    <a href="/hr/faq">FAQ</a>
+    </li><li class="language-toggle-menu-header">
+    
+
+
+
+
+
+  <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown ">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Hrvatski</span>
+      <span class="language-abbreviation">hr</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
+    <ul class="dropdown-menu"><li>
+            <a href="/3/">
+              English
+            </a>
+          </li><li>
+            <a href="/bs/3/">
+              Bosanski
+            </a>
+          </li><li>
+            <a href="/sr/3/">
+              Српски
+            </a>
+          </li></ul>
+  </div>
+</div>
+
+
+
+</li>
+</ul>
+
+
+    </nav>
+  </div>
+
+</header>
+<div id="top" tabindex=-1></div>
+
 
 <div class="container">
+    <ol class="breadcrumb">
+  
+  <li><a href="/hr/">Naslovna</a></li>
+  <li class="active">Cilj 3</li>
+  
+</ol>
+
     
     
 <div class="previous-next-links row">
@@ -164,6 +331,25 @@ var translations = {
     
 </div>
 
+<div class="heading goal-banner goal-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-4 col-md-3 col-lg-2 goal-tiles">
+                <img src="https://popdata.work/assets/img/goals/hr/3.png"
+                    alt="Zdrav život i dobrobit - Cilj 3"
+                    id="goal-3"
+                    class="goal-icon-image goal-icon-image-png" />
+            </div>
+            <div class="col-xs-8 col-md-9 col-lg-10">
+                <h1>
+                    <span class="hidden-sm hidden-md hidden-lg">Cilj 3:
+                    </span>Obezbijediti zdrav život i promovisati dobrobit svih ljudi, svih životnih dobi
+                </h1>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div id="main-content" class="container goal-indicators goal-3 goal-by-target" role="main">
 
     
@@ -171,10 +357,10 @@ var translations = {
 
 
     <div class="visible-md-block visible-lg-block">
-        <div class="col-md-12">
+        <div class="col-md-6">
             <h2>Podciljevi</h2>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-6">
             <h2>Indikatori</h2>
         </div>
     </div>
@@ -189,7 +375,7 @@ var translations = {
         </span>
         Do 2030. godine smanjiti globalnu stopu smrtnosti kod majki na manje od 70 na 100.000 živorođenih
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -229,7 +415,7 @@ var translations = {
         </span>
         Do 2030. godine okončati smrtne slučajeve koji se mogu spriječiti kod novorođenčadi i djece mlađe od 5 godina gde će sve zemlјe imati za cilј smanjenje neonatalne smrtnosti na ne više od 12 na 1000 živorođenih i smrtnosti dece ispod 5 godina na ne više od 25 na 1000 živorođenih
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -269,7 +455,7 @@ var translations = {
         </span>
         Do 2030. godine okončati epidemije AIDS-a, tuberkuloze, malarije i zanemarenih tropskih bolesti i nastaviti borbu protiv hepatitisa, bolesti koje se prenose vodom i ostalih zaraznih bolesti
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -351,7 +537,7 @@ var translations = {
         </span>
         Do 2030. godine smanjiti za jednu trećinu broj prijevremenih smrtnih slučajeva od nezaraznih bolesti kroz prevenciju i liječenje i promovisati mentalno zdravlje i blagostanje
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -391,7 +577,7 @@ var translations = {
         </span>
         Pojačati prevenciju zloupotrebe supstanci i liječenje posljedica takve zloupotrebe, uključujući i zloupotrebu opojnih droga i štetnu upotrebu alkohola
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -431,7 +617,7 @@ var translations = {
         </span>
         Do 2020. godine prepoloviti broj globalnih smrtnih slučajeva i povreda u saobraćajnim nesrećama
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -457,7 +643,7 @@ var translations = {
         </span>
         Do 2030. godine obezbijediti univerzalni pristup uslugama zaštite seksualnog i reproduktivnog zdravlja, uključujući planiranje porodice, informisanje i obrazovanje, te integraciju reproduktivnog zdravlja u nacionalne strategije i programe
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -497,7 +683,7 @@ var translations = {
         </span>
         Postići univerzalni obuhvat zdravstvenog osiguranja, uključujući zaštitu od finansijskog rizika, pristup kvalitetnim osnovnim zdravstvenim uslugama i pristup sigurnim, efikasnim, kvalitetnim i pristupačnim osnovnim lijekovima i vakcinama za sve
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -537,7 +723,7 @@ var translations = {
         </span>
         Do 2030. godine značajno smanjiti broj smrtnih slučajeva i oboljenja od opasnih hemikalija i zagađenja vazduha, vode i tla i zagađenja
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -591,7 +777,7 @@ var translations = {
         </span>
         Ojačati provedbu „Okvirne konvencije Svjetske zdravstvene organizacije o kontroli duhana“ u svim državama, po potrebi
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -617,7 +803,7 @@ var translations = {
         </span>
         Podržati istraživanje i razvoj vakcina i lijekova za zarazne i nezarazne bolesti koje prvenstveno pogađaju zemlje u razvoju, pružiti pristup pristupačnim osnovnim lijekovima i vakcinama, u skladu s "Deklaracijom iz Dohe o Sporazumu o trgovinskim aspektima prava intelektualne svojine (TRIPS) i javnom zdravstvu", kojom se potvrđuje pravo zemalja u razvoju da u potpunosti iskoriste odredbe "Sporazuma o trgovinskim aspektima prava intelektualnog vlasništva" koje se odnose na fleksibilnost u zaštiti javnog zdravlja, a posebno osiguravaju pristupa lijekovima za sve
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -671,7 +857,7 @@ var translations = {
         </span>
         Značajno povećati financiranje u oblasti zdravstva i regrutovanje, razvijanje, obučavanje i zadržavanje zdravstvenih radnika u zemljama u razvoju, posebno u najnerazvijenijim zemljama i malim ostrvskim državama u razvoju
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -697,7 +883,7 @@ var translations = {
         </span>
         Ojačati kapacitete svih zemalja, a posebno zemalja u razvoju, za rano upozoravanje, smanjivanje rizika i upravljanje nacionalnim i globalnim zdravstvenim rizicima
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -782,12 +968,12 @@ var translations = {
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Pretraživanje';</script>
 
-<script src='/assets/js/sdg.js?v=20210527104749'></script>
+<script src='/assets/js/sdg.js?v=20210527105809'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20210527104749"></script><script>
+    <script src="/assets/js/custom.js?v=20210527105809"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

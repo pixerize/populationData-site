@@ -127,7 +127,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20210527104749">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20210527105809">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -141,8 +141,175 @@ var translations = {
 <body class="language-sr layout-goal-by-target">
 <!-- <div class="container"> -->
 
+<script>translations['header'] = {"alpha":"Алфа","default_contrast":"Задани контраст","disable_high_contrast":"Онемогући високи контраст","disclaimer":"Ова интернет страница се развија. Поздрављамо ваше <a href=\"mailto:%email_address\">повратне информације</a>.","enable_high_contrast":"Омогући високи контраст","high_contrast":"Висок контраст","skip_link":"Пријеђи на главни садржај","tag_line":"17 циљева за трансформирање нашег свијета"};</script>
+
+<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Пријеђи на главни садржај</a>
+<div id="disclaimer">
+</div>
+
+<header role="banner">
+  <div class="container">
+
+    <div class="logo-and-mobile-widgets">
+      <a class="navbar-brand" href="/sr/" id="home">
+        <img src="/assets/img/logo/sr/SDG_logo.png" alt="Циљеви одрживог развоја - 17 циљева за трансформирање нашег свијета" />
+      </a>
+
+      <div class="mobile-widgets">
+        <ul id='accessibility-nav' class='contrast-switcher'></ul><div class="language-toggle-mobile">
+          <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown ">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Српски</span>
+      <span class="language-abbreviation">sr</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
+    <ul class="dropdown-menu"><li>
+            <a href="/15/">
+              English
+            </a>
+          </li><li>
+            <a href="/bs/15/">
+              Bosanski
+            </a>
+          </li><li>
+            <a href="/hr/15/">
+              Hrvatski
+            </a>
+          </li></ul>
+  </div>
+</div>
+
+        </div></div>
+    </div>
+
+    <nav class="navbar navbar-default" id="main-nav">
+
+      <ul class="top-level">
+        <li id="menuToggle"
+            aria-label=""
+            aria-haspopup="true">
+          <button data-target="menu-mobile" aria-expanded="false">Мени</button>
+          <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
+    <a href="/sr/">HOME</a>
+    </li><li class="nav-link ">
+    <a href="/sr/about">О нама</a>
+    </li><li class="nav-link ">
+    <a href="/sr/faq">FAQ</a>
+    </li><li class="language-toggle-menu-header">
+    
+
+
+
+
+
+  <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown ">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Српски</span>
+      <span class="language-abbreviation">sr</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
+    <ul class="dropdown-menu"><li>
+            <a href="/15/">
+              English
+            </a>
+          </li><li>
+            <a href="/bs/15/">
+              Bosanski
+            </a>
+          </li><li>
+            <a href="/hr/15/">
+              Hrvatski
+            </a>
+          </li></ul>
+  </div>
+</div>
+
+
+
+</li>
+</ul>
+
+        </li>
+        <li id="searchToggle"
+            aria-label=""
+            aria-haspopup="true">
+          <button data-target="search-mobile" aria-expanded="false">Претраживање</button>
+          <div id="search-mobile" class="menu-target">
+  <form action="/sr/search">
+    <label class="sr-only" for="indicator_search-mobile">Претраживање</label>
+    <input type="text" name="q" id="indicator_search-mobile" title="Претраживање" /><!--
+    --><button aria-label="Претраживање" id="search-mobile-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
+  </form>
+</div>
+
+        </li>
+      </ul>
+
+      <div id="search" class="menu-target">
+  <form action="/sr/search">
+    <label class="sr-only" for="indicator_search">Претраживање</label>
+    <input type="text" name="q" id="indicator_search" title="Претраживање" /><!--
+    --><button aria-label="Претраживање" id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
+  </form>
+</div>
+
+
+      <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
+    <a href="/sr/">HOME</a>
+    </li><li class="nav-link ">
+    <a href="/sr/about">О нама</a>
+    </li><li class="nav-link ">
+    <a href="/sr/faq">FAQ</a>
+    </li><li class="language-toggle-menu-header">
+    
+
+
+
+
+
+  <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown ">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Српски</span>
+      <span class="language-abbreviation">sr</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
+    <ul class="dropdown-menu"><li>
+            <a href="/15/">
+              English
+            </a>
+          </li><li>
+            <a href="/bs/15/">
+              Bosanski
+            </a>
+          </li><li>
+            <a href="/hr/15/">
+              Hrvatski
+            </a>
+          </li></ul>
+  </div>
+</div>
+
+
+
+</li>
+</ul>
+
+
+    </nav>
+  </div>
+
+</header>
+<div id="top" tabindex=-1></div>
+
 
 <div class="container">
+    <ol class="breadcrumb">
+  
+  <li><a href="/sr/">Насловна</a></li>
+  <li class="active">Циљ 15</li>
+  
+</ol>
+
     
     
 <div class="previous-next-links row">
@@ -164,6 +331,25 @@ var translations = {
     
 </div>
 
+<div class="heading goal-banner goal-15">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-4 col-md-3 col-lg-2 goal-tiles">
+                <img src="https://popdata.work/assets/img/goals/sr/15.png"
+                    alt="Очување живота на земљи - Циљ 15"
+                    id="goal-15"
+                    class="goal-icon-image goal-icon-image-png" />
+            </div>
+            <div class="col-xs-8 col-md-9 col-lg-10">
+                <h1>
+                    <span class="hidden-sm hidden-md hidden-lg">Циљ 15:
+                    </span>Одрживо управљати шумама, сузбијати дезертификацију, зауставити и преокренути деградацију земљишта и спријечити даљи губитак биолошке разноликости
+                </h1>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div id="main-content" class="container goal-indicators goal-15 goal-by-target" role="main">
 
     
@@ -171,10 +357,10 @@ var translations = {
 
 
     <div class="visible-md-block visible-lg-block">
-        <div class="col-md-12">
+        <div class="col-md-6">
             <h2>Подциљеви</h2>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-6">
             <h2>Индикатори</h2>
         </div>
     </div>
@@ -189,7 +375,7 @@ var translations = {
         </span>
         До 2020. године осигурати очување, обнављање и одрживо кориштење копнених и унутрашњих слатководних екосистема и њихових услуга, посебно шума, мочвара, планина и сушних подручја, у складу са обавезама према међународним уговорима
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -229,7 +415,7 @@ var translations = {
         </span>
         До 2020. године промовисати имплементацију одрживог управљања свим врстама шума, зауставити крчење шума, обновити уништене шуме и знатно повећати пошумљавање на глобалном нивоу
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -255,7 +441,7 @@ var translations = {
         </span>
         До 2030. године  борити се против дезертификације, обнављати деградирано земљиште и тло, укључујући земљиште под утицајем дезертификације, суша и поплава, и тежити да се у свијету неутрализује деградација земљишта
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -281,7 +467,7 @@ var translations = {
         </span>
         До 2030. године осигурати очување планинских екосистема, укључујући њихов биодиверзитет, како би се њихови капацитети унаприједили тако да пружају корист која има суштински значај за одрживи развој.
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -321,7 +507,7 @@ var translations = {
         </span>
         Подузети хитне и значајне активности за смањивање деградације природних станишта, зауставити губитак биодиверзитета и, до 2020. године, заштитити угрожене врсте и спријечити њихово изумирање
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -347,7 +533,7 @@ var translations = {
         </span>
         Промовисати правично и једнако дијељење користи које произлазе из употребе генетских ресурса и промовисати одговарајући приступ таквим ресурсима, како је међународно договорено
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -373,7 +559,7 @@ var translations = {
         </span>
         Подузети хитне мјере за заустављање криволова и трговине заштићеним животињским и биљним врстама и бавити се питањима потражње и понуде илегалних производа израђених од дивљих животиња
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -399,7 +585,7 @@ var translations = {
         </span>
         До 2020. године увести мјере како би се значајно умањио утицај инванзивних страних врста на копнене и водне екосистеме те контролисати или искорјенити приоритетне врсте
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -425,7 +611,7 @@ var translations = {
         </span>
         До 2020. године интегрисати вриједности екосистема и биодиверзитета у национално и локално планирање, развојне процесе, стратегије за смањење сиромаштва и извјештаје
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -451,7 +637,7 @@ var translations = {
         </span>
         Мобилисати и значајно повећати финанцијска средства из свих извора ради очувања и одрживог коришћења биодиверзитета и екосистема
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -477,7 +663,7 @@ var translations = {
         </span>
         Мобилизирати значајне ресурсе из свих извора и на свим нивоима за финансирање одрживог управљања шумама и пружити одговарајуће потицаје земљама у развоју да унаприједе такво управљање, укључујући очување и пошумљавање
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -503,7 +689,7 @@ var translations = {
         </span>
         EУнаприједити глобалну подршку напорима који се улажу у борбу против криволова и трговине заштићеним врстама, укључујући повећање капацитета локалних заједница у остваривању одрживих могућности за живот
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -574,12 +760,12 @@ var translations = {
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Претраживање';</script>
 
-<script src='/assets/js/sdg.js?v=20210527104749'></script>
+<script src='/assets/js/sdg.js?v=20210527105809'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20210527104749"></script><script>
+    <script src="/assets/js/custom.js?v=20210527105809"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

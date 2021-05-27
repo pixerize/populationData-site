@@ -127,7 +127,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20210527104749">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20210527105809">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -141,8 +141,175 @@ var translations = {
 <body class="language-bs layout-goal-by-target">
 <!-- <div class="container"> -->
 
+<script>translations['header'] = {"alpha":"Alfa","default_contrast":"Zadani kontrast","disable_high_contrast":"Onemogući visoki kontrast","disclaimer":"Ova internet stranica se razvija. Pozdravljamo vaše <a href=\"mailto:%email_address\">povratne informacije</a>.","enable_high_contrast":"Omogući visoki kontrast","high_contrast":"Visok kontrast","skip_link":"Prijeđi na glavni sadržaj","tag_line":"17 ciljeva za transformiranje našeg svijeta"};</script>
+
+<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Prijeđi na glavni sadržaj</a>
+<div id="disclaimer">
+</div>
+
+<header role="banner">
+  <div class="container">
+
+    <div class="logo-and-mobile-widgets">
+      <a class="navbar-brand" href="/bs/" id="home">
+        <img src="/assets/img/logo/bs/SDG_logo.png" alt="Ciljevi održivog razvoja - 17 ciljeva za transformiranje našeg svijeta" />
+      </a>
+
+      <div class="mobile-widgets">
+        <ul id='accessibility-nav' class='contrast-switcher'></ul><div class="language-toggle-mobile">
+          <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown ">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Bosanski</span>
+      <span class="language-abbreviation">bs</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
+    <ul class="dropdown-menu"><li>
+            <a href="/16/">
+              English
+            </a>
+          </li><li>
+            <a href="/sr/16/">
+              Српски
+            </a>
+          </li><li>
+            <a href="/hr/16/">
+              Hrvatski
+            </a>
+          </li></ul>
+  </div>
+</div>
+
+        </div></div>
+    </div>
+
+    <nav class="navbar navbar-default" id="main-nav">
+
+      <ul class="top-level">
+        <li id="menuToggle"
+            aria-label=""
+            aria-haspopup="true">
+          <button data-target="menu-mobile" aria-expanded="false">Meni</button>
+          <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
+    <a href="/bs/">HOME</a>
+    </li><li class="nav-link ">
+    <a href="/bs/about">O nama</a>
+    </li><li class="nav-link ">
+    <a href="/bs/faq">FAQ</a>
+    </li><li class="language-toggle-menu-header">
+    
+
+
+
+
+
+  <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown ">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Bosanski</span>
+      <span class="language-abbreviation">bs</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
+    <ul class="dropdown-menu"><li>
+            <a href="/16/">
+              English
+            </a>
+          </li><li>
+            <a href="/sr/16/">
+              Српски
+            </a>
+          </li><li>
+            <a href="/hr/16/">
+              Hrvatski
+            </a>
+          </li></ul>
+  </div>
+</div>
+
+
+
+</li>
+</ul>
+
+        </li>
+        <li id="searchToggle"
+            aria-label=""
+            aria-haspopup="true">
+          <button data-target="search-mobile" aria-expanded="false">Pretraživanje</button>
+          <div id="search-mobile" class="menu-target">
+  <form action="/bs/search">
+    <label class="sr-only" for="indicator_search-mobile">Pretraživanje</label>
+    <input type="text" name="q" id="indicator_search-mobile" title="Pretraživanje" /><!--
+    --><button aria-label="Pretraživanje" id="search-mobile-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
+  </form>
+</div>
+
+        </li>
+      </ul>
+
+      <div id="search" class="menu-target">
+  <form action="/bs/search">
+    <label class="sr-only" for="indicator_search">Pretraživanje</label>
+    <input type="text" name="q" id="indicator_search" title="Pretraživanje" /><!--
+    --><button aria-label="Pretraživanje" id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
+  </form>
+</div>
+
+
+      <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
+    <a href="/bs/">HOME</a>
+    </li><li class="nav-link ">
+    <a href="/bs/about">O nama</a>
+    </li><li class="nav-link ">
+    <a href="/bs/faq">FAQ</a>
+    </li><li class="language-toggle-menu-header">
+    
+
+
+
+
+
+  <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown ">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Bosanski</span>
+      <span class="language-abbreviation">bs</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
+    <ul class="dropdown-menu"><li>
+            <a href="/16/">
+              English
+            </a>
+          </li><li>
+            <a href="/sr/16/">
+              Српски
+            </a>
+          </li><li>
+            <a href="/hr/16/">
+              Hrvatski
+            </a>
+          </li></ul>
+  </div>
+</div>
+
+
+
+</li>
+</ul>
+
+
+    </nav>
+  </div>
+
+</header>
+<div id="top" tabindex=-1></div>
+
 
 <div class="container">
+    <ol class="breadcrumb">
+  
+  <li><a href="/bs/">Naslovna</a></li>
+  <li class="active">Cilj 16</li>
+  
+</ol>
+
     
     
 <div class="previous-next-links row">
@@ -164,6 +331,25 @@ var translations = {
     
 </div>
 
+<div class="heading goal-banner goal-16">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-4 col-md-3 col-lg-2 goal-tiles">
+                <img src="https://popdata.work/assets/img/goals/bs/16.png"
+                    alt="Mir i pravda - Cilj 16"
+                    id="goal-16"
+                    class="goal-icon-image goal-icon-image-png" />
+            </div>
+            <div class="col-xs-8 col-md-9 col-lg-10">
+                <h1>
+                    <span class="hidden-sm hidden-md hidden-lg">Cilj 16:
+                    </span>Promovirati mirna i inkluzivna društva za održivi razvoj, osigurati pristup pravdi za sve i izgraditi efikasne, odgovorne i inkluzivne institucije na svim nivoima
+                </h1>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div id="main-content" class="container goal-indicators goal-16 goal-by-target" role="main">
 
     
@@ -171,10 +357,10 @@ var translations = {
 
 
     <div class="visible-md-block visible-lg-block">
-        <div class="col-md-12">
+        <div class="col-md-6">
             <h2>Podciljevi</h2>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-6">
             <h2>Indikatori</h2>
         </div>
     </div>
@@ -189,7 +375,7 @@ var translations = {
         </span>
         Svuda značajno smanjiti sve oblike nasilja i s tim povezane stope smrtnosti
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -257,7 +443,7 @@ var translations = {
         </span>
         Okončati zloupotrebu i eksploataciju djece, trgovinu djecom i sve oblike nasilja i torture nad djecom
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -311,7 +497,7 @@ var translations = {
         </span>
         Promovisati vladavinu prava na nacionalnom i međunarodnom nivou i svima osigurati jednak pristup pravdi
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -351,7 +537,7 @@ var translations = {
         </span>
         Do 2030. godine značajno smanjiti nezakonite tokove novca i oružja, poboljšati pronalaženje i vraćanje ukradene imovine i boriti se protiv svih oblika organizovanog kriminala
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -391,7 +577,7 @@ var translations = {
         </span>
         Značajno smanjiti korupciju i podmićivanje u svim njihovim pojavnim oblicima
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -431,7 +617,7 @@ var translations = {
         </span>
         Razviti djelotvorne, odgovorne i transparentne institucije na svim nivoima
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -471,7 +657,7 @@ var translations = {
         </span>
         Osigurajte odgovorno, inkluzivno, participativno i reprezentativno donošenje odluka na svim nivoima
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -511,7 +697,7 @@ var translations = {
         </span>
         Proširiti i povećati učešće zemalja u razvoju u institucijama globalnog upravljanja
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -537,7 +723,7 @@ var translations = {
         </span>
         Do 2030. godine za sve obezbjediti zakonski identitet, uključujući registraciju prilikom rođenja
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -563,7 +749,7 @@ var translations = {
         </span>
         Osigurati javni pristup informacijama i zaštitu osnovnih sloboda, u skladu sa nacionalnim zakonodavstvom i međunarodnim sporazumima
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -603,7 +789,7 @@ var translations = {
         </span>
         Ojačati relevantne nacionalne institucije, uključujući i međunarodnu saradnju, za izgradnju kapaciteta na svim nivoima, posebno u zemljama u razvoju, radi sprečavanja nasilja i borbe protiv terorizma i kriminala
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -629,7 +815,7 @@ var translations = {
         </span>
         Promovirati i provoditi nediskriminacijske zakone i politike za održivi razvoj
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -700,12 +886,12 @@ var translations = {
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Pretraživanje';</script>
 
-<script src='/assets/js/sdg.js?v=20210527104749'></script>
+<script src='/assets/js/sdg.js?v=20210527105809'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20210527104749"></script><script>
+    <script src="/assets/js/custom.js?v=20210527105809"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

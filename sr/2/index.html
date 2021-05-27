@@ -127,7 +127,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20210527104749">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20210527105809">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -141,8 +141,175 @@ var translations = {
 <body class="language-sr layout-goal-by-target">
 <!-- <div class="container"> -->
 
+<script>translations['header'] = {"alpha":"Алфа","default_contrast":"Задани контраст","disable_high_contrast":"Онемогући високи контраст","disclaimer":"Ова интернет страница се развија. Поздрављамо ваше <a href=\"mailto:%email_address\">повратне информације</a>.","enable_high_contrast":"Омогући високи контраст","high_contrast":"Висок контраст","skip_link":"Пријеђи на главни садржај","tag_line":"17 циљева за трансформирање нашег свијета"};</script>
+
+<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Пријеђи на главни садржај</a>
+<div id="disclaimer">
+</div>
+
+<header role="banner">
+  <div class="container">
+
+    <div class="logo-and-mobile-widgets">
+      <a class="navbar-brand" href="/sr/" id="home">
+        <img src="/assets/img/logo/sr/SDG_logo.png" alt="Циљеви одрживог развоја - 17 циљева за трансформирање нашег свијета" />
+      </a>
+
+      <div class="mobile-widgets">
+        <ul id='accessibility-nav' class='contrast-switcher'></ul><div class="language-toggle-mobile">
+          <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown ">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Српски</span>
+      <span class="language-abbreviation">sr</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
+    <ul class="dropdown-menu"><li>
+            <a href="/2/">
+              English
+            </a>
+          </li><li>
+            <a href="/bs/2/">
+              Bosanski
+            </a>
+          </li><li>
+            <a href="/hr/2/">
+              Hrvatski
+            </a>
+          </li></ul>
+  </div>
+</div>
+
+        </div></div>
+    </div>
+
+    <nav class="navbar navbar-default" id="main-nav">
+
+      <ul class="top-level">
+        <li id="menuToggle"
+            aria-label=""
+            aria-haspopup="true">
+          <button data-target="menu-mobile" aria-expanded="false">Мени</button>
+          <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
+    <a href="/sr/">HOME</a>
+    </li><li class="nav-link ">
+    <a href="/sr/about">О нама</a>
+    </li><li class="nav-link ">
+    <a href="/sr/faq">FAQ</a>
+    </li><li class="language-toggle-menu-header">
+    
+
+
+
+
+
+  <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown ">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Српски</span>
+      <span class="language-abbreviation">sr</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
+    <ul class="dropdown-menu"><li>
+            <a href="/2/">
+              English
+            </a>
+          </li><li>
+            <a href="/bs/2/">
+              Bosanski
+            </a>
+          </li><li>
+            <a href="/hr/2/">
+              Hrvatski
+            </a>
+          </li></ul>
+  </div>
+</div>
+
+
+
+</li>
+</ul>
+
+        </li>
+        <li id="searchToggle"
+            aria-label=""
+            aria-haspopup="true">
+          <button data-target="search-mobile" aria-expanded="false">Претраживање</button>
+          <div id="search-mobile" class="menu-target">
+  <form action="/sr/search">
+    <label class="sr-only" for="indicator_search-mobile">Претраживање</label>
+    <input type="text" name="q" id="indicator_search-mobile" title="Претраживање" /><!--
+    --><button aria-label="Претраживање" id="search-mobile-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
+  </form>
+</div>
+
+        </li>
+      </ul>
+
+      <div id="search" class="menu-target">
+  <form action="/sr/search">
+    <label class="sr-only" for="indicator_search">Претраживање</label>
+    <input type="text" name="q" id="indicator_search" title="Претраживање" /><!--
+    --><button aria-label="Претраживање" id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
+  </form>
+</div>
+
+
+      <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
+    <a href="/sr/">HOME</a>
+    </li><li class="nav-link ">
+    <a href="/sr/about">О нама</a>
+    </li><li class="nav-link ">
+    <a href="/sr/faq">FAQ</a>
+    </li><li class="language-toggle-menu-header">
+    
+
+
+
+
+
+  <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown ">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Српски</span>
+      <span class="language-abbreviation">sr</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
+    <ul class="dropdown-menu"><li>
+            <a href="/2/">
+              English
+            </a>
+          </li><li>
+            <a href="/bs/2/">
+              Bosanski
+            </a>
+          </li><li>
+            <a href="/hr/2/">
+              Hrvatski
+            </a>
+          </li></ul>
+  </div>
+</div>
+
+
+
+</li>
+</ul>
+
+
+    </nav>
+  </div>
+
+</header>
+<div id="top" tabindex=-1></div>
+
 
 <div class="container">
+    <ol class="breadcrumb">
+  
+  <li><a href="/sr/">Насловна</a></li>
+  <li class="active">Циљ 2</li>
+  
+</ol>
+
     
     
 <div class="previous-next-links row">
@@ -164,6 +331,25 @@ var translations = {
     
 </div>
 
+<div class="heading goal-banner goal-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-4 col-md-3 col-lg-2 goal-tiles">
+                <img src="https://popdata.work/assets/img/goals/sr/2.png"
+                    alt="Свијет без глади - Циљ 2"
+                    id="goal-2"
+                    class="goal-icon-image goal-icon-image-png" />
+            </div>
+            <div class="col-xs-8 col-md-9 col-lg-10">
+                <h1>
+                    <span class="hidden-sm hidden-md hidden-lg">Циљ 2:
+                    </span>Окончати глад, постићи сигурност у опскрби храном, унаприједити квалитет исхране и промовисати одрживу пољопривреду
+                </h1>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div id="main-content" class="container goal-indicators goal-2 goal-by-target" role="main">
 
     
@@ -171,10 +357,10 @@ var translations = {
 
 
     <div class="visible-md-block visible-lg-block">
-        <div class="col-md-12">
+        <div class="col-md-6">
             <h2>Подциљеви</h2>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-6">
             <h2>Индикатори</h2>
         </div>
     </div>
@@ -189,7 +375,7 @@ var translations = {
         </span>
         До 2030. године окончати глад и осигурати приступ свим људима, а посебно сиромашнима и лицима у стањима рањивости, укључујући новорођенчад, да имају приступ безбедној, нутритивној и довољној исхрани током цијеле године
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -229,7 +415,7 @@ var translations = {
         </span>
         До 2030. године окончати све облике неухрањености, укључујући постизање, до 2025. године, међународно договорених циљева који се односе на заостајање у тјелесном развоју код дјeце млађе од 5 година, и усмјерити пажњу на нутритивне потребе адолесценткиња, трудница и дојиља као и старијих лица
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -269,7 +455,7 @@ var translations = {
         </span>
         До 2030. године удвостручити пољопривредну продуктивност и приходе малих произвођача хране, а посебно жена, старосједилачког становништва, породичних пољопривредних произвођача, сточара и рибара, укључујући кроз сигуран и једнак приступ земљишту, других производних ресурса и улагања, знања, финанцијских услуга, тржишта и могућности за остваривање додатне вриједности и запошљавање ван пољопривреде
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -309,7 +495,7 @@ var translations = {
         </span>
         До 2030. године осигурати одрживе системе производње хране и примијенити еластичне пољопривредне праксе које повећавају продуктивност и производњу, помажу у одржавању екосистема, јачају капацитете за прилагођавање на климатске промјене, екстремне временске увјете, сушу, поплаве и друге катастрофе и које поступно побољшавају квалитета земљишта и тла
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -335,7 +521,7 @@ var translations = {
         </span>
         До 2020. године одржавати генетску разноликост сјемена, култивисаних билјака и узгајаних и домаћих животиња, и њихових сродних дивљих врста, укључених преко правилно вођених и разноврсних банака сјемена и биљака на националном, регионалном и међународном нивоу, те промовисати приступ и правичну и једнаку пођелу користи које произлазе из употребе генетских ресурса и сродних традиционалних знања, а према међународном договору
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -375,7 +561,7 @@ var translations = {
         </span>
         Повећати улагања, укључена кроз појачану међународну сарадњу, у руралну инфраструктуру, пољопривредна истраживања и услуге проширења, развој технологија и банака биљног и сточног генетског материјала како би се унаприједили пољопривредни производни капацитети у земљама у развоју,  а посебно у најнеразвијенијим земљама
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -415,7 +601,7 @@ var translations = {
         </span>
         Исправити и спријечити трговинска ограничења и деформације на свјетским пољопривредним тржиштима, укључених преко паралелних елиминисања свих врста извозних субвенција у пољопривреди и свих извозних мјера са еквивалентним ефектом, у складу са овлаштењима из „Развојне агенде из Дохе“.
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -441,7 +627,7 @@ var translations = {
         </span>
         Усвојити мјере како би се осигурало правилно функционирање тржишта прехрамбених производа и њихових деривата и олакшао правовремени приступ тржишним информацијама, укључујући резерве хране, како би се помогло у ограничавању екстремне нестабилности цијена хране
     </div>
-    <div class="indicator-cards col-md-12 row no-gutters">
+    <div class="indicator-cards single-indicators col-md-12 row no-gutters">
         
 
         
@@ -512,12 +698,12 @@ var translations = {
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Претраживање';</script>
 
-<script src='/assets/js/sdg.js?v=20210527104749'></script>
+<script src='/assets/js/sdg.js?v=20210527105809'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20210527104749"></script><script>
+    <script src="/assets/js/custom.js?v=20210527105809"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
