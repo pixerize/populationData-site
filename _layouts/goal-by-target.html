@@ -22,14 +22,14 @@
     {% assign goal_indicators = page.indicators | where: 'goal_number', page.goal.number | group_by: 'target_number' %}
     {% for group in goal_indicators %}
     {% assign target = group.name | sdg_lookup %}
-    <div class="indicator-cards target goal-target col-md-6">
+    <div class="indicator-cards target goal-target col-md-12">
         <span class="indicator-card-number">
             <label class="hidden-md hidden-lg">{{ page.t.general.target }}</label>
             {{ target.number }}
         </span>
         {{ target.name }}
     </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
+    <div class="indicator-cards col-md-12 row no-gutters">
         {% for indicator in group.items %}
 
         {% assign tag_classes = "" | split: "," %}
