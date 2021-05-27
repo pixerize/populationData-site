@@ -79,7 +79,7 @@ header {
     background: $blue;
     width: 100%;
     border-radius: 0;
-    padding: 15px 15px;
+    padding: 15px 25px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -111,7 +111,7 @@ header {
     }
 
     .menu-target {
-        width: 600px;
+        width: 585px;
         margin: 0 !important;
     }
 
@@ -142,7 +142,7 @@ header {
 
     .language-toggle-menu-header {
         position: absolute;
-        right: 130px;
+        right: 25px;
     }
 
     .language-toggle-dropdown:before {
