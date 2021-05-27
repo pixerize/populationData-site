@@ -202,6 +202,9 @@ header {
     }
 }
 
+.goal-1.goal-banner {
+    background-color: transparent;
+}
 
 
 //sharpen the resized images Chrome
@@ -210,11 +213,12 @@ img {
     transform: translateZ(0px);
 }
 
-/*This to remove */
+/*Items to be remove */
 
-.zip-download-container, footer, .goal-tiles .row:not(:first-child), .disclaimer-alert, .contrast, p.lead-copy {
+.zip-download-container, footer, .goal-tiles .row:not(:first-child), .disclaimer-alert, .contrast, p.lead-copy, ol.breadcrumb {
+     {
     display: none !important;
-}
+    }
 
 div#main-content {
 
