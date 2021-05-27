@@ -2543,7 +2543,7 @@ header .navbar ul.navbar-nav > li.active > a {
 header ul#menu {
   width: 100%; }
 header .menu-target {
-  width: 300px;
+  width: 600px;
   margin: 0 !important; }
 header #search form {
   margin-top: 0; }
@@ -2560,6 +2560,17 @@ header #search-btn {
 header #search input {
   border: unset;
   max-width: 200px; }
+header .language-toggle-menu-header {
+  position: absolute;
+  right: 130px; }
+header .language-toggle-dropdown:before {
+  content: "";
+  height: 50px;
+  width: 2px;
+  background: #ffffffad;
+  position: absolute;
+  left: -17px;
+  top: -9px; }
 
 .site-intro {
   background: unset; }
