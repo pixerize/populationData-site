@@ -2526,7 +2526,7 @@ header #main-nav {
   background: #5B92E5;
   width: 100%;
   border-radius: 0;
-  padding: 15px 15px;
+  padding: 15px 25px;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
@@ -2546,7 +2546,7 @@ header .navbar ul.navbar-nav > li.active > a {
 header ul#menu {
   width: 100%; }
 header .menu-target {
-  width: 600px;
+  width: 585px;
   margin: 0 !important; }
 header #search form {
   margin-top: 0; }
@@ -2565,7 +2565,7 @@ header #search input {
   max-width: 200px; }
 header .language-toggle-menu-header {
   position: absolute;
-  right: 130px; }
+  right: 25px; }
 header .language-toggle-dropdown:before {
   content: "";
   height: 50px;
