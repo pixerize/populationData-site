@@ -36,6 +36,8 @@ body {
 
 #main-content {
 
+    background: transparent;
+
     h1 {
         font-size: 90px;
         font-weight: 600;
@@ -51,7 +53,7 @@ body {
         .no-gutters {
             img:not(#goal-18) {
                 transition: all 150ms ease-in-out;
-                box-shadow: unset;
+                box-shadow: unset !important;
             }
 
             img:not(#goal-18):hover {
