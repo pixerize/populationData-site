@@ -5,6 +5,7 @@ $yellow: #ffcc29;
 
 body {
     background: #fff;
+    background: url(https://popdata.work/assets/img/other/popbg.jpg);
 }
 
 .navbar-brand {
@@ -48,12 +49,11 @@ body {
         
         .no-gutters {
             img:not(#goal-18) {
-                box-shadow: 1px 5px 5px 0px rgba(5, 5, 5, 0.3);
                 transition: all 150ms ease-in-out;
+                box-shadow: unset;
             }
 
             img:not(#goal-18):hover {
-                box-shadow: 0px 5px 10px 0px rgba(5, 5, 5, 0.6);
                 -webkit-transform: translate(0, -4px);
                 transform: translate(0, -4px);
                 -webkit-transition: all 150ms ease-in-out;
