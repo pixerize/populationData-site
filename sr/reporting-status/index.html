@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="sr" class="no-js">
     <head>
         <meta charset="utf-8">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CArray.from%2CSet"></script>
+        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CArray.from%2CSet%2CArray.prototype.findIndex"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
         <script>
@@ -30,6 +30,12 @@ var opensdg = {
   dataRounding: function(value) {
     // Alterations go here.
     return value;
+  },
+
+  // A hook which can be used to alter the data before it is displayed on charts/tables.
+  dataDisplayAlterations: [],
+  dataDisplayAlter: function(callback) {
+    this.dataDisplayAlterations.push(callback);
   },
 
   language: 'sr',
@@ -127,7 +133,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20210530220935">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20210530221753">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -191,11 +197,11 @@ var translations = {
           <button data-target="menu-mobile" aria-expanded="false">Мени</button>
           <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
     <a href="/sr/">HOME</a>
-    </li><li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/sr/about">О нама</a>
-    </li><li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/sr/faq">FAQ</a>
-    </li><li class="language-toggle-menu-header">
+</li><li class="language-toggle-menu-header">
     
 
 
@@ -256,11 +262,11 @@ var translations = {
 
       <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
     <a href="/sr/">HOME</a>
-    </li><li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/sr/about">О нама</a>
-    </li><li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/sr/faq">FAQ</a>
-    </li><li class="language-toggle-menu-header">
+</li><li class="language-toggle-menu-header">
     
 
 
@@ -326,8 +332,9 @@ var translations = {
   <div class="goal goal-overall">
     <div class="details">
         <h2 class="status-goal">
-            Укупни статус извјештавања <span class="total"><span>245</span> индикатори</span>
+            Укупни статус извјештавања
         </h2>
+        <span class="total"><span>245</span> индикатори</span>
         <div class="summary">
             <div class="statuses"><div>
                 <span class="status complete"><span class="status-inner">146</span></span><strong>Извијештено онлине</strong><span class="value">60%</span>
@@ -359,14 +366,14 @@ var translations = {
   <h2>Статус према циљу</h2><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/sr/1">
-        <img src="https://popdata.work/assets/img/goals/sr/1.png" alt="Свијет без сиромаштва - Циљ 1" width="100" height="100" class="goal-icon-1"/>
+        <img src="https://popdata.work/assets/img/goals/sr/1.png" alt="Свијет без сиромаштва - Циљ 1" width="100" height="100" class="goal-icon-1 goal-icon-image goal-icon-image-png"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/sr/1">Свијет без сиромаштва</a>
-            <span class="total">14 индикатори</span>
         </h3>
+        <span class="total">14 индикатори</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">6</span></span><strong>Извијештено онлине</strong><span class="value">43%</span>
@@ -398,14 +405,14 @@ var translations = {
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/sr/2">
-        <img src="https://popdata.work/assets/img/goals/sr/2.png" alt="Свијет без глади - Циљ 2" width="100" height="100" class="goal-icon-2"/>
+        <img src="https://popdata.work/assets/img/goals/sr/2.png" alt="Свијет без глади - Циљ 2" width="100" height="100" class="goal-icon-2 goal-icon-image goal-icon-image-png"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/sr/2">Свијет без глади</a>
-            <span class="total">13 индикатори</span>
         </h3>
+        <span class="total">13 индикатори</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">7</span></span><strong>Извијештено онлине</strong><span class="value">54%</span>
@@ -437,14 +444,14 @@ var translations = {
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/sr/3">
-        <img src="https://popdata.work/assets/img/goals/sr/3.png" alt="Здравље и благостање - Циљ 3" width="100" height="100" class="goal-icon-3"/>
+        <img src="https://popdata.work/assets/img/goals/sr/3.png" alt="Здравље и благостање - Циљ 3" width="100" height="100" class="goal-icon-3 goal-icon-image goal-icon-image-png"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/sr/3">Здравље и благостање</a>
-            <span class="total">28 индикатори</span>
         </h3>
+        <span class="total">28 индикатори</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">26</span></span><strong>Извијештено онлине</strong><span class="value">93%</span>
@@ -476,14 +483,14 @@ var translations = {
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/sr/4">
-        <img src="https://popdata.work/assets/img/goals/sr/4.png" alt="Квалитетно образовање - Циљ 4" width="100" height="100" class="goal-icon-4"/>
+        <img src="https://popdata.work/assets/img/goals/sr/4.png" alt="Квалитетно образовање - Циљ 4" width="100" height="100" class="goal-icon-4 goal-icon-image goal-icon-image-png"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/sr/4">Квалитетно образовање</a>
-            <span class="total">12 индикатори</span>
         </h3>
+        <span class="total">12 индикатори</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">7</span></span><strong>Извијештено онлине</strong><span class="value">58%</span>
@@ -515,14 +522,14 @@ var translations = {
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/sr/5">
-        <img src="https://popdata.work/assets/img/goals/sr/5.png" alt="Родна равноправност - Циљ 5" width="100" height="100" class="goal-icon-5"/>
+        <img src="https://popdata.work/assets/img/goals/sr/5.png" alt="Родна равноправност - Циљ 5" width="100" height="100" class="goal-icon-5 goal-icon-image goal-icon-image-png"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/sr/5">Родна равноправност</a>
-            <span class="total">14 индикатори</span>
         </h3>
+        <span class="total">14 индикатори</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">4</span></span><strong>Извијештено онлине</strong><span class="value">29%</span>
@@ -554,14 +561,14 @@ var translations = {
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/sr/6">
-        <img src="https://popdata.work/assets/img/goals/sr/6.png" alt="Чиста вода и санитарни услови - Циљ 6" width="100" height="100" class="goal-icon-6"/>
+        <img src="https://popdata.work/assets/img/goals/sr/6.png" alt="Чиста вода и санитарни услови - Циљ 6" width="100" height="100" class="goal-icon-6 goal-icon-image goal-icon-image-png"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/sr/6">Чиста вода и санитарни услови</a>
-            <span class="total">11 индикатори</span>
         </h3>
+        <span class="total">11 индикатори</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">10</span></span><strong>Извијештено онлине</strong><span class="value">91%</span>
@@ -593,14 +600,14 @@ var translations = {
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/sr/7">
-        <img src="https://popdata.work/assets/img/goals/sr/7.png" alt="Приступачна енергија из чистих извора - Циљ 7" width="100" height="100" class="goal-icon-7"/>
+        <img src="https://popdata.work/assets/img/goals/sr/7.png" alt="Приступачна енергија из чистих извора - Циљ 7" width="100" height="100" class="goal-icon-7 goal-icon-image goal-icon-image-png"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/sr/7">Приступачна енергија из чистих извора</a>
-            <span class="total">6 индикатори</span>
         </h3>
+        <span class="total">6 индикатори</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">4</span></span><strong>Извијештено онлине</strong><span class="value">67%</span>
@@ -632,14 +639,14 @@ var translations = {
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/sr/8">
-        <img src="https://popdata.work/assets/img/goals/sr/8.png" alt="Достојанствен рад и економски раст - Циљ 8" width="100" height="100" class="goal-icon-8"/>
+        <img src="https://popdata.work/assets/img/goals/sr/8.png" alt="Достојанствен рад и економски раст - Циљ 8" width="100" height="100" class="goal-icon-8 goal-icon-image goal-icon-image-png"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/sr/8">Достојанствен рад и економски раст</a>
-            <span class="total">16 индикатори</span>
         </h3>
+        <span class="total">16 индикатори</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">11</span></span><strong>Извијештено онлине</strong><span class="value">69%</span>
@@ -671,14 +678,14 @@ var translations = {
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/sr/9">
-        <img src="https://popdata.work/assets/img/goals/sr/9.png" alt="Индустрија, иновације и инфраструктура - Циљ 9" width="100" height="100" class="goal-icon-9"/>
+        <img src="https://popdata.work/assets/img/goals/sr/9.png" alt="Индустрија, иновације и инфраструктура - Циљ 9" width="100" height="100" class="goal-icon-9 goal-icon-image goal-icon-image-png"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/sr/9">Индустрија, иновације и инфраструктура</a>
-            <span class="total">12 индикатори</span>
         </h3>
+        <span class="total">12 индикатори</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">11</span></span><strong>Извијештено онлине</strong><span class="value">92%</span>
@@ -710,14 +717,14 @@ var translations = {
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/sr/10">
-        <img src="https://popdata.work/assets/img/goals/sr/10.png" alt="Смањење неједнакости - Циљ 10" width="100" height="100" class="goal-icon-10"/>
+        <img src="https://popdata.work/assets/img/goals/sr/10.png" alt="Смањење неједнакости - Циљ 10" width="100" height="100" class="goal-icon-10 goal-icon-image goal-icon-image-png"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/sr/10">Смањење неједнакости</a>
-            <span class="total">13 индикатори</span>
         </h3>
+        <span class="total">13 индикатори</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">9</span></span><strong>Извијештено онлине</strong><span class="value">69%</span>
@@ -749,14 +756,14 @@ var translations = {
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/sr/11">
-        <img src="https://popdata.work/assets/img/goals/sr/11.png" alt="Одрживи градови и заједнице - Циљ 11" width="100" height="100" class="goal-icon-11"/>
+        <img src="https://popdata.work/assets/img/goals/sr/11.png" alt="Одрживи градови и заједнице - Циљ 11" width="100" height="100" class="goal-icon-11 goal-icon-image goal-icon-image-png"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/sr/11">Одрживи градови и заједнице</a>
-            <span class="total">15 индикатори</span>
         </h3>
+        <span class="total">15 индикатори</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">6</span></span><strong>Извијештено онлине</strong><span class="value">40%</span>
@@ -788,14 +795,14 @@ var translations = {
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/sr/12">
-        <img src="https://popdata.work/assets/img/goals/sr/12.png" alt="Одговорна потрошња и производња - Циљ 12" width="100" height="100" class="goal-icon-12"/>
+        <img src="https://popdata.work/assets/img/goals/sr/12.png" alt="Одговорна потрошња и производња - Циљ 12" width="100" height="100" class="goal-icon-12 goal-icon-image goal-icon-image-png"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/sr/12">Одговорна потрошња и производња</a>
-            <span class="total">13 индикатори</span>
         </h3>
+        <span class="total">13 индикатори</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">5</span></span><strong>Извијештено онлине</strong><span class="value">38%</span>
@@ -827,14 +834,14 @@ var translations = {
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/sr/13">
-        <img src="https://popdata.work/assets/img/goals/sr/13.png" alt="Очување климе - Циљ 13" width="100" height="100" class="goal-icon-13"/>
+        <img src="https://popdata.work/assets/img/goals/sr/13.png" alt="Очување климе - Циљ 13" width="100" height="100" class="goal-icon-13 goal-icon-image goal-icon-image-png"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/sr/13">Очување климе</a>
-            <span class="total">7 индикатори</span>
         </h3>
+        <span class="total">7 индикатори</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">1</span></span><strong>Извијештено онлине</strong><span class="value">14%</span>
@@ -866,14 +873,14 @@ var translations = {
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/sr/14">
-        <img src="https://popdata.work/assets/img/goals/sr/14.png" alt="Очување воденог свијета - Циљ 14" width="100" height="100" class="goal-icon-14"/>
+        <img src="https://popdata.work/assets/img/goals/sr/14.png" alt="Очување воденог свијета - Циљ 14" width="100" height="100" class="goal-icon-14 goal-icon-image goal-icon-image-png"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/sr/14">Очување воденог свијета</a>
-            <span class="total">10 индикатори</span>
         </h3>
+        <span class="total">10 индикатори</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">1</span></span><strong>Извијештено онлине</strong><span class="value">10%</span>
@@ -905,14 +912,14 @@ var translations = {
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/sr/15">
-        <img src="https://popdata.work/assets/img/goals/sr/15.png" alt="Очување живота на земљи - Циљ 15" width="100" height="100" class="goal-icon-15"/>
+        <img src="https://popdata.work/assets/img/goals/sr/15.png" alt="Очување живота на земљи - Циљ 15" width="100" height="100" class="goal-icon-15 goal-icon-image goal-icon-image-png"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/sr/15">Очување живота на земљи</a>
-            <span class="total">14 индикатори</span>
         </h3>
+        <span class="total">14 индикатори</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">12</span></span><strong>Извијештено онлине</strong><span class="value">86%</span>
@@ -944,14 +951,14 @@ var translations = {
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/sr/16">
-        <img src="https://popdata.work/assets/img/goals/sr/16.png" alt="Мир, правда и снажне институције - Циљ 16" width="100" height="100" class="goal-icon-16"/>
+        <img src="https://popdata.work/assets/img/goals/sr/16.png" alt="Мир, правда и снажне институције - Циљ 16" width="100" height="100" class="goal-icon-16 goal-icon-image goal-icon-image-png"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/sr/16">Мир, правда и снажне институције</a>
-            <span class="total">23 индикатори</span>
         </h3>
+        <span class="total">23 индикатори</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">12</span></span><strong>Извијештено онлине</strong><span class="value">52%</span>
@@ -983,14 +990,14 @@ var translations = {
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/sr/17">
-        <img src="https://popdata.work/assets/img/goals/sr/17.png" alt="Партнерством до циља - Циљ 17" width="100" height="100" class="goal-icon-17"/>
+        <img src="https://popdata.work/assets/img/goals/sr/17.png" alt="Партнерством до циља - Циљ 17" width="100" height="100" class="goal-icon-17 goal-icon-image goal-icon-image-png"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/sr/17">Партнерством до циља</a>
-            <span class="total">24 индикатори</span>
         </h3>
+        <span class="total">24 индикатори</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">14</span></span><strong>Извијештено онлине</strong><span class="value">58%</span>
@@ -1068,7 +1075,7 @@ var translations = {
 <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
 <script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
@@ -1082,12 +1089,12 @@ var translations = {
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Претраживање';</script>
 
-<script src='/assets/js/sdg.js?v=20210530220935'></script>
+<script src='/assets/js/sdg.js?v=20210530221753'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20210530220935"></script><script>
+    <script src="/assets/js/custom.js?v=20210530221753"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
@@ -1128,10 +1135,12 @@ $(function() {
               graphAnnotations: domData.graphannotations,
               indicatorDownloads: domData.indicatordownloads,
               compositeBreakdownLabel: domData.compositebreakdownlabel,
+              precision: domData.precision,
             }),
             view  = new indicatorView(model, {
               rootElement: '#indicatorData',
               legendElement: '#plotLegend',
+              decimalSeparator: '',
               maxChartHeight: 420,
               tableColumnDefs: [
                 { maxCharCount: 25 }, // nowrap

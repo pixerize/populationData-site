@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="bs" class="no-js">
     <head>
         <meta charset="utf-8">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CArray.from%2CSet"></script>
+        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CArray.from%2CSet%2CArray.prototype.findIndex"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
         <script>
@@ -30,6 +30,12 @@ var opensdg = {
   dataRounding: function(value) {
     // Alterations go here.
     return value;
+  },
+
+  // A hook which can be used to alter the data before it is displayed on charts/tables.
+  dataDisplayAlterations: [],
+  dataDisplayAlter: function(callback) {
+    this.dataDisplayAlterations.push(callback);
   },
 
   language: 'bs',
@@ -127,7 +133,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20210530220935">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20210530221753">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -191,11 +197,11 @@ var translations = {
           <button data-target="menu-mobile" aria-expanded="false">Meni</button>
           <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
     <a href="/bs/">HOME</a>
-    </li><li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/bs/about">O nama</a>
-    </li><li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/bs/faq">FAQ</a>
-    </li><li class="language-toggle-menu-header">
+</li><li class="language-toggle-menu-header">
     
 
 
@@ -256,11 +262,11 @@ var translations = {
 
       <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
     <a href="/bs/">HOME</a>
-    </li><li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/bs/about">O nama</a>
-    </li><li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/bs/faq">FAQ</a>
-    </li><li class="language-toggle-menu-header">
+</li><li class="language-toggle-menu-header">
     
 
 
@@ -326,8 +332,9 @@ var translations = {
   <div class="goal goal-overall">
     <div class="details">
         <h2 class="status-goal">
-            Ukupni status izvještavanja <span class="total"><span>245</span> indikatori</span>
+            Ukupni status izvještavanja
         </h2>
+        <span class="total"><span>245</span> indikatori</span>
         <div class="summary">
             <div class="statuses"><div>
                 <span class="status complete"><span class="status-inner">146</span></span><strong>Izviješteno online</strong><span class="value">60%</span>
@@ -359,14 +366,14 @@ var translations = {
   <h2>Status prema cilju</h2><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/bs/1">
-        <img src="https://popdata.work/assets/img/goals/bs/1.png" alt="Okončati siromaštvo - Cilj 1" width="100" height="100" class="goal-icon-1"/>
+        <img src="https://popdata.work/assets/img/goals/bs/1.png" alt="Okončati siromaštvo - Cilj 1" width="100" height="100" class="goal-icon-1 goal-icon-image goal-icon-image-png"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/bs/1">Okončati siromaštvo</a>
-            <span class="total">14 indikatori</span>
         </h3>
+        <span class="total">14 indikatori</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">6</span></span><strong>Izviješteno online</strong><span class="value">43%</span>
@@ -398,14 +405,14 @@ var translations = {
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/bs/2">
-        <img src="https://popdata.work/assets/img/goals/bs/2.png" alt="Okončati glad - Cilj 2" width="100" height="100" class="goal-icon-2"/>
+        <img src="https://popdata.work/assets/img/goals/bs/2.png" alt="Okončati glad - Cilj 2" width="100" height="100" class="goal-icon-2 goal-icon-image goal-icon-image-png"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/bs/2">Okončati glad</a>
-            <span class="total">13 indikatori</span>
         </h3>
+        <span class="total">13 indikatori</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">7</span></span><strong>Izviješteno online</strong><span class="value">54%</span>
@@ -437,14 +444,14 @@ var translations = {
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/bs/3">
-        <img src="https://popdata.work/assets/img/goals/bs/3.png" alt="Zdrav život i dobrobit - Cilj 3" width="100" height="100" class="goal-icon-3"/>
+        <img src="https://popdata.work/assets/img/goals/bs/3.png" alt="Zdrav život i dobrobit - Cilj 3" width="100" height="100" class="goal-icon-3 goal-icon-image goal-icon-image-png"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/bs/3">Zdrav život i dobrobit</a>
-            <span class="total">28 indikatori</span>
         </h3>
+        <span class="total">28 indikatori</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">26</span></span><strong>Izviješteno online</strong><span class="value">93%</span>
@@ -476,14 +483,14 @@ var translations = {
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/bs/4">
-        <img src="https://popdata.work/assets/img/goals/bs/4.png" alt="Kvalitetno obrazovanje - Cilj 4" width="100" height="100" class="goal-icon-4"/>
+        <img src="https://popdata.work/assets/img/goals/bs/4.png" alt="Kvalitetno obrazovanje - Cilj 4" width="100" height="100" class="goal-icon-4 goal-icon-image goal-icon-image-png"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/bs/4">Kvalitetno obrazovanje</a>
-            <span class="total">12 indikatori</span>
         </h3>
+        <span class="total">12 indikatori</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">7</span></span><strong>Izviješteno online</strong><span class="value">58%</span>
@@ -515,14 +522,14 @@ var translations = {
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/bs/5">
-        <img src="https://popdata.work/assets/img/goals/bs/5.png" alt="Rodna ravnopravnost - Cilj 5" width="100" height="100" class="goal-icon-5"/>
+        <img src="https://popdata.work/assets/img/goals/bs/5.png" alt="Rodna ravnopravnost - Cilj 5" width="100" height="100" class="goal-icon-5 goal-icon-image goal-icon-image-png"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/bs/5">Rodna ravnopravnost</a>
-            <span class="total">14 indikatori</span>
         </h3>
+        <span class="total">14 indikatori</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">4</span></span><strong>Izviješteno online</strong><span class="value">29%</span>
@@ -554,14 +561,14 @@ var translations = {
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/bs/6">
-        <img src="https://popdata.work/assets/img/goals/bs/6.png" alt="Pitka voda i sanitarni uslovi - Cilj 6" width="100" height="100" class="goal-icon-6"/>
+        <img src="https://popdata.work/assets/img/goals/bs/6.png" alt="Pitka voda i sanitarni uslovi - Cilj 6" width="100" height="100" class="goal-icon-6 goal-icon-image goal-icon-image-png"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/bs/6">Pitka voda i sanitarni uslovi</a>
-            <span class="total">11 indikatori</span>
         </h3>
+        <span class="total">11 indikatori</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">10</span></span><strong>Izviješteno online</strong><span class="value">91%</span>
@@ -593,14 +600,14 @@ var translations = {
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/bs/7">
-        <img src="https://popdata.work/assets/img/goals/bs/7.png" alt="Pristupačna i čista energija - Cilj 7" width="100" height="100" class="goal-icon-7"/>
+        <img src="https://popdata.work/assets/img/goals/bs/7.png" alt="Pristupačna i čista energija - Cilj 7" width="100" height="100" class="goal-icon-7 goal-icon-image goal-icon-image-png"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/bs/7">Pristupačna i čista energija</a>
-            <span class="total">6 indikatori</span>
         </h3>
+        <span class="total">6 indikatori</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">4</span></span><strong>Izviješteno online</strong><span class="value">67%</span>
@@ -632,14 +639,14 @@ var translations = {
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/bs/8">
-        <img src="https://popdata.work/assets/img/goals/bs/8.png" alt="Dostojanstven rad i održiv ekonomski rast - Cilj 8" width="100" height="100" class="goal-icon-8"/>
+        <img src="https://popdata.work/assets/img/goals/bs/8.png" alt="Dostojanstven rad i održiv ekonomski rast - Cilj 8" width="100" height="100" class="goal-icon-8 goal-icon-image goal-icon-image-png"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/bs/8">Dostojanstven rad i održiv ekonomski rast</a>
-            <span class="total">16 indikatori</span>
         </h3>
+        <span class="total">16 indikatori</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">11</span></span><strong>Izviješteno online</strong><span class="value">69%</span>
@@ -671,14 +678,14 @@ var translations = {
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/bs/9">
-        <img src="https://popdata.work/assets/img/goals/bs/9.png" alt="Industrija, inovacija i infrastruktura - Cilj 9" width="100" height="100" class="goal-icon-9"/>
+        <img src="https://popdata.work/assets/img/goals/bs/9.png" alt="Industrija, inovacija i infrastruktura - Cilj 9" width="100" height="100" class="goal-icon-9 goal-icon-image goal-icon-image-png"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/bs/9">Industrija, inovacija i infrastruktura</a>
-            <span class="total">12 indikatori</span>
         </h3>
+        <span class="total">12 indikatori</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">11</span></span><strong>Izviješteno online</strong><span class="value">92%</span>
@@ -710,14 +717,14 @@ var translations = {
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/bs/10">
-        <img src="https://popdata.work/assets/img/goals/bs/10.png" alt="Smanjiti nejednakost - Cilj 10" width="100" height="100" class="goal-icon-10"/>
+        <img src="https://popdata.work/assets/img/goals/bs/10.png" alt="Smanjiti nejednakost - Cilj 10" width="100" height="100" class="goal-icon-10 goal-icon-image goal-icon-image-png"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/bs/10">Smanjiti nejednakost</a>
-            <span class="total">13 indikatori</span>
         </h3>
+        <span class="total">13 indikatori</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">9</span></span><strong>Izviješteno online</strong><span class="value">69%</span>
@@ -749,14 +756,14 @@ var translations = {
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/bs/11">
-        <img src="https://popdata.work/assets/img/goals/bs/11.png" alt="Izdržljiviji gradovi i naselja - Cilj 11" width="100" height="100" class="goal-icon-11"/>
+        <img src="https://popdata.work/assets/img/goals/bs/11.png" alt="Izdržljiviji gradovi i naselja - Cilj 11" width="100" height="100" class="goal-icon-11 goal-icon-image goal-icon-image-png"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/bs/11">Izdržljiviji gradovi i naselja</a>
-            <span class="total">15 indikatori</span>
         </h3>
+        <span class="total">15 indikatori</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">6</span></span><strong>Izviješteno online</strong><span class="value">40%</span>
@@ -788,14 +795,14 @@ var translations = {
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/bs/12">
-        <img src="https://popdata.work/assets/img/goals/bs/12.png" alt="Održiva potrošnja i proizvodnja - Cilj 12" width="100" height="100" class="goal-icon-12"/>
+        <img src="https://popdata.work/assets/img/goals/bs/12.png" alt="Održiva potrošnja i proizvodnja - Cilj 12" width="100" height="100" class="goal-icon-12 goal-icon-image goal-icon-image-png"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/bs/12">Održiva potrošnja i proizvodnja</a>
-            <span class="total">13 indikatori</span>
         </h3>
+        <span class="total">13 indikatori</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">5</span></span><strong>Izviješteno online</strong><span class="value">38%</span>
@@ -827,14 +834,14 @@ var translations = {
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/bs/13">
-        <img src="https://popdata.work/assets/img/goals/bs/13.png" alt="Akciju u suzbijanju klimatskih promjena - Cilj 13" width="100" height="100" class="goal-icon-13"/>
+        <img src="https://popdata.work/assets/img/goals/bs/13.png" alt="Akciju u suzbijanju klimatskih promjena - Cilj 13" width="100" height="100" class="goal-icon-13 goal-icon-image goal-icon-image-png"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/bs/13">Akciju u suzbijanju klimatskih promjena</a>
-            <span class="total">7 indikatori</span>
         </h3>
+        <span class="total">7 indikatori</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">1</span></span><strong>Izviješteno online</strong><span class="value">14%</span>
@@ -866,14 +873,14 @@ var translations = {
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/bs/14">
-        <img src="https://popdata.work/assets/img/goals/bs/14.png" alt="Život pod vodom - Cilj 14" width="100" height="100" class="goal-icon-14"/>
+        <img src="https://popdata.work/assets/img/goals/bs/14.png" alt="Život pod vodom - Cilj 14" width="100" height="100" class="goal-icon-14 goal-icon-image goal-icon-image-png"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/bs/14">Život pod vodom</a>
-            <span class="total">10 indikatori</span>
         </h3>
+        <span class="total">10 indikatori</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">1</span></span><strong>Izviješteno online</strong><span class="value">10%</span>
@@ -905,14 +912,14 @@ var translations = {
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/bs/15">
-        <img src="https://popdata.work/assets/img/goals/bs/15.png" alt="Život na tlu - Cilj 15" width="100" height="100" class="goal-icon-15"/>
+        <img src="https://popdata.work/assets/img/goals/bs/15.png" alt="Život na tlu - Cilj 15" width="100" height="100" class="goal-icon-15 goal-icon-image goal-icon-image-png"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/bs/15">Život na tlu</a>
-            <span class="total">14 indikatori</span>
         </h3>
+        <span class="total">14 indikatori</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">12</span></span><strong>Izviješteno online</strong><span class="value">86%</span>
@@ -944,14 +951,14 @@ var translations = {
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/bs/16">
-        <img src="https://popdata.work/assets/img/goals/bs/16.png" alt="Mir i pravda - Cilj 16" width="100" height="100" class="goal-icon-16"/>
+        <img src="https://popdata.work/assets/img/goals/bs/16.png" alt="Mir i pravda - Cilj 16" width="100" height="100" class="goal-icon-16 goal-icon-image goal-icon-image-png"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/bs/16">Mir i pravda</a>
-            <span class="total">23 indikatori</span>
         </h3>
+        <span class="total">23 indikatori</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">12</span></span><strong>Izviješteno online</strong><span class="value">52%</span>
@@ -983,14 +990,14 @@ var translations = {
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/bs/17">
-        <img src="https://popdata.work/assets/img/goals/bs/17.png" alt="Partnerstvo za održivi razvoj - Cilj 17" width="100" height="100" class="goal-icon-17"/>
+        <img src="https://popdata.work/assets/img/goals/bs/17.png" alt="Partnerstvo za održivi razvoj - Cilj 17" width="100" height="100" class="goal-icon-17 goal-icon-image goal-icon-image-png"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/bs/17">Partnerstvo za održivi razvoj</a>
-            <span class="total">24 indikatori</span>
         </h3>
+        <span class="total">24 indikatori</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">14</span></span><strong>Izviješteno online</strong><span class="value">58%</span>
@@ -1068,7 +1075,7 @@ var translations = {
 <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
 <script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
@@ -1082,12 +1089,12 @@ var translations = {
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Pretraživanje';</script>
 
-<script src='/assets/js/sdg.js?v=20210530220935'></script>
+<script src='/assets/js/sdg.js?v=20210530221753'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20210530220935"></script><script>
+    <script src="/assets/js/custom.js?v=20210530221753"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
@@ -1128,10 +1135,12 @@ $(function() {
               graphAnnotations: domData.graphannotations,
               indicatorDownloads: domData.indicatordownloads,
               compositeBreakdownLabel: domData.compositebreakdownlabel,
+              precision: domData.precision,
             }),
             view  = new indicatorView(model, {
               rootElement: '#indicatorData',
               legendElement: '#plotLegend',
+              decimalSeparator: '',
               maxChartHeight: 420,
               tableColumnDefs: [
                 { maxCharCount: 25 }, // nowrap

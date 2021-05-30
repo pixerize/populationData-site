@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="sr" class="no-js">
     <head>
         <meta charset="utf-8">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CArray.from%2CSet"></script>
+        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CArray.from%2CSet%2CArray.prototype.findIndex"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
         <script>
@@ -11,7 +11,7 @@
 var opensdg = {
 
   // A base URL for asynchronous calls to SDG data.
-  remoteDataBaseUrl: 'https://pixerize.github.io/populationData-data/hr',
+  remoteDataBaseUrl: 'https://pixerize.github.io/populationData-data/sr',
 
   chartConfigAlterations: [],
   // A hook which can be used to modify the configuration for Chart.js.
@@ -32,7 +32,13 @@ var opensdg = {
     return value;
   },
 
-  language: 'hr',
+  // A hook which can be used to alter the data before it is displayed on charts/tables.
+  dataDisplayAlterations: [],
+  dataDisplayAlter: function(callback) {
+    this.dataDisplayAlterations.push(callback);
+  },
+
+  language: 'sr',
 };
 
 // For backwards compatibility, some of these might need to be global.
@@ -97,7 +103,7 @@ var translations = {
         ================================================== -->
 
         
-    <title>Indikatori za ciljeve održivog razvoja</title>
+    <title>Индикатори за циљеве одрживог развоја</title>
 
 
 
@@ -127,7 +133,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20210530220935">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20210530221753">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -138,12 +144,12 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
     </head>
-<body class="language-hr layout-goals">
+<body class="language-sr layout-goals">
 <!-- <div class="container"> -->
 
-<script>translations['header'] = {"alpha":"Alfa","default_contrast":"Zadani kontrast","disable_high_contrast":"Onemogući visoki kontrast","disclaimer":"Ova internet stranica se razvija. Pozdravljamo vaše povratne informacije.","enable_high_contrast":"Omogući visoki kontrast","high_contrast":"Visok kontrast","skip_link":"Prijeđi na glavni sadržaj","tag_line":"17 ciljeva za transformiranje našeg svijeta"};</script>
+<script>translations['header'] = {"alpha":"Алфа","default_contrast":"Задани контраст","disable_high_contrast":"Онемогући високи контраст","disclaimer":"Ова интернет страница се развија. Поздрављамо ваше <a href=\"mailto:%email_address\">повратне информације</a>.","enable_high_contrast":"Омогући високи контраст","high_contrast":"Висок контраст","skip_link":"Пријеђи на главни садржај","tag_line":"17 циљева за трансформирање нашег свијета"};</script>
 
-<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Prijeđi na glavni sadržaj</a>
+<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Пријеђи на главни садржај</a>
 <div id="disclaimer">
 </div>
 
@@ -151,8 +157,8 @@ var translations = {
   <div class="container">
 
     <div class="logo-and-mobile-widgets">
-      <a class="navbar-brand" href="/hr/" id="home">
-        <img src="/assets/img/logo/hr/SDG_logo.png" alt="Ciljevi održivog razvoja - 17 ciljeva za transformiranje našeg svijeta" />
+      <a class="navbar-brand" href="/sr/" id="home">
+        <img src="/assets/img/logo/sr/SDG_logo.png" alt="Циљеви одрживог развоја - 17 циљева за трансформирање нашег свијета" />
       </a>
 
       <div class="mobile-widgets">
@@ -161,19 +167,19 @@ var translations = {
   
   <div class="btn-group language-toggle-dropdown ">
     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Hrvatski</span>
-      <span class="language-abbreviation">hr</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
+      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Српски</span>
+      <span class="language-abbreviation">sr</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
     <ul class="dropdown-menu"><li>
-            <a href="/goals/">
+            <a href="/goalss/">
               English
             </a>
           </li><li>
-            <a href="/bs/goals/">
+            <a href="/bs/goalss/">
               Bosanski
             </a>
           </li><li>
-            <a href="/sr/goals/">
-              Српски
+            <a href="/hr/goalss/">
+              Hrvatski
             </a>
           </li></ul>
   </div>
@@ -188,14 +194,14 @@ var translations = {
         <li id="menuToggle"
             aria-label=""
             aria-haspopup="true">
-          <button data-target="menu-mobile" aria-expanded="false">Izbornik</button>
+          <button data-target="menu-mobile" aria-expanded="false">Мени</button>
           <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
-    <a href="/hr/">HOME</a>
-    </li><li class="nav-link ">
-    <a href="/hr/about">O nama</a>
-    </li><li class="nav-link ">
-    <a href="/hr/faq">FAQ</a>
-    </li><li class="language-toggle-menu-header">
+    <a href="/sr/">HOME</a>
+</li><li class="nav-link ">
+    <a href="/sr/about">О нама</a>
+</li><li class="nav-link ">
+    <a href="/sr/faq">FAQ</a>
+</li><li class="language-toggle-menu-header">
     
 
 
@@ -206,19 +212,19 @@ var translations = {
   
   <div class="btn-group language-toggle-dropdown ">
     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Hrvatski</span>
-      <span class="language-abbreviation">hr</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
+      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Српски</span>
+      <span class="language-abbreviation">sr</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
     <ul class="dropdown-menu"><li>
-            <a href="/goals/">
+            <a href="/goalss/">
               English
             </a>
           </li><li>
-            <a href="/bs/goals/">
+            <a href="/bs/goalss/">
               Bosanski
             </a>
           </li><li>
-            <a href="/sr/goals/">
-              Српски
+            <a href="/hr/goalss/">
+              Hrvatski
             </a>
           </li></ul>
   </div>
@@ -233,12 +239,12 @@ var translations = {
         <li id="searchToggle"
             aria-label=""
             aria-haspopup="true">
-          <button data-target="search-mobile" aria-expanded="false">Pretraživanje</button>
+          <button data-target="search-mobile" aria-expanded="false">Претраживање</button>
           <div id="search-mobile" class="menu-target">
-  <form action="/hr/search">
-    <label class="sr-only" for="indicator_search-mobile">Pretraživanje</label>
-    <input type="text" name="q" id="indicator_search-mobile" title="Pretraživanje" /><!--
-    --><button aria-label="Pretraživanje" id="search-mobile-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
+  <form action="/sr/search">
+    <label class="sr-only" for="indicator_search-mobile">Претраживање</label>
+    <input type="text" name="q" id="indicator_search-mobile" title="Претраживање" /><!--
+    --><button aria-label="Претраживање" id="search-mobile-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
   </form>
 </div>
 
@@ -246,21 +252,21 @@ var translations = {
       </ul>
 
       <div id="search" class="menu-target">
-  <form action="/hr/search">
-    <label class="sr-only" for="indicator_search">Pretraživanje</label>
-    <input type="text" name="q" id="indicator_search" title="Pretraživanje" /><!--
-    --><button aria-label="Pretraživanje" id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
+  <form action="/sr/search">
+    <label class="sr-only" for="indicator_search">Претраживање</label>
+    <input type="text" name="q" id="indicator_search" title="Претраживање" /><!--
+    --><button aria-label="Претраживање" id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
   </form>
 </div>
 
 
       <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
-    <a href="/hr/">HOME</a>
-    </li><li class="nav-link ">
-    <a href="/hr/about">O nama</a>
-    </li><li class="nav-link ">
-    <a href="/hr/faq">FAQ</a>
-    </li><li class="language-toggle-menu-header">
+    <a href="/sr/">HOME</a>
+</li><li class="nav-link ">
+    <a href="/sr/about">О нама</a>
+</li><li class="nav-link ">
+    <a href="/sr/faq">FAQ</a>
+</li><li class="language-toggle-menu-header">
     
 
 
@@ -271,19 +277,19 @@ var translations = {
   
   <div class="btn-group language-toggle-dropdown ">
     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Hrvatski</span>
-      <span class="language-abbreviation">hr</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
+      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Српски</span>
+      <span class="language-abbreviation">sr</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
     <ul class="dropdown-menu"><li>
-            <a href="/goals/">
+            <a href="/goalss/">
               English
             </a>
           </li><li>
-            <a href="/bs/goals/">
+            <a href="/bs/goalss/">
               Bosanski
             </a>
           </li><li>
-            <a href="/sr/goals/">
-              Српски
+            <a href="/hr/goalss/">
+              Hrvatski
             </a>
           </li></ul>
   </div>
@@ -305,7 +311,7 @@ var translations = {
 
     <h1>
   
-    Ciljevi
+    Циљеви
   
 </h1>
 
@@ -316,111 +322,111 @@ var translations = {
         <div class="row no-gutters">
             
             <div class="col-xs-4 col-md-2 goal-tile">
-                <a href="/hr/1">
-                    <img src="https://popdata.work/assets/img/goals/hr/1.png" id="goal-1" alt="Okončati siromaštvo - Cilj 1" />
+                <a href="/sr/1">
+                    <img src="https://popdata.work/assets/img/goals/sr/1.png" id="goal-1" alt="Свијет без сиромаштва - Циљ 1" class="goal-icon-image goal-icon-image-png" />
                 </a>
             </div>
             
             <div class="col-xs-4 col-md-2 goal-tile">
-                <a href="/hr/2">
-                    <img src="https://popdata.work/assets/img/goals/hr/2.png" id="goal-2" alt="Okončati glad - Cilj 2" />
+                <a href="/sr/2">
+                    <img src="https://popdata.work/assets/img/goals/sr/2.png" id="goal-2" alt="Свијет без глади - Циљ 2" class="goal-icon-image goal-icon-image-png" />
                 </a>
             </div>
             
             <div class="col-xs-4 col-md-2 goal-tile">
-                <a href="/hr/3">
-                    <img src="https://popdata.work/assets/img/goals/hr/3.png" id="goal-3" alt="Zdrav život i dobrobit - Cilj 3" />
+                <a href="/sr/3">
+                    <img src="https://popdata.work/assets/img/goals/sr/3.png" id="goal-3" alt="Здравље и благостање - Циљ 3" class="goal-icon-image goal-icon-image-png" />
                 </a>
             </div>
             
             <div class="col-xs-4 col-md-2 goal-tile">
-                <a href="/hr/4">
-                    <img src="https://popdata.work/assets/img/goals/hr/4.png" id="goal-4" alt="Kvalitetno obrazovanje - Cilj 4" />
+                <a href="/sr/4">
+                    <img src="https://popdata.work/assets/img/goals/sr/4.png" id="goal-4" alt="Квалитетно образовање - Циљ 4" class="goal-icon-image goal-icon-image-png" />
                 </a>
             </div>
             
             <div class="col-xs-4 col-md-2 goal-tile">
-                <a href="/hr/5">
-                    <img src="https://popdata.work/assets/img/goals/hr/5.png" id="goal-5" alt="Rodna ravnopravnost - Cilj 5" />
+                <a href="/sr/5">
+                    <img src="https://popdata.work/assets/img/goals/sr/5.png" id="goal-5" alt="Родна равноправност - Циљ 5" class="goal-icon-image goal-icon-image-png" />
                 </a>
             </div>
             
             <div class="col-xs-4 col-md-2 goal-tile">
-                <a href="/hr/6">
-                    <img src="https://popdata.work/assets/img/goals/hr/6.png" id="goal-6" alt="Pitka voda i sanitarni uslovi - Cilj 6" />
+                <a href="/sr/6">
+                    <img src="https://popdata.work/assets/img/goals/sr/6.png" id="goal-6" alt="Чиста вода и санитарни услови - Циљ 6" class="goal-icon-image goal-icon-image-png" />
                 </a>
             </div>
             
             <div class="col-xs-4 col-md-2 goal-tile">
-                <a href="/hr/7">
-                    <img src="https://popdata.work/assets/img/goals/hr/7.png" id="goal-7" alt="Pristupačna i čista energija - Cilj 7" />
+                <a href="/sr/7">
+                    <img src="https://popdata.work/assets/img/goals/sr/7.png" id="goal-7" alt="Приступачна енергија из чистих извора - Циљ 7" class="goal-icon-image goal-icon-image-png" />
                 </a>
             </div>
             
             <div class="col-xs-4 col-md-2 goal-tile">
-                <a href="/hr/8">
-                    <img src="https://popdata.work/assets/img/goals/hr/8.png" id="goal-8" alt="Dostojanstven rad i održiv ekonomski rast - Cilj 8" />
+                <a href="/sr/8">
+                    <img src="https://popdata.work/assets/img/goals/sr/8.png" id="goal-8" alt="Достојанствен рад и економски раст - Циљ 8" class="goal-icon-image goal-icon-image-png" />
                 </a>
             </div>
             
             <div class="col-xs-4 col-md-2 goal-tile">
-                <a href="/hr/9">
-                    <img src="https://popdata.work/assets/img/goals/hr/9.png" id="goal-9" alt="Industrija, inovacija i infrastruktura - Cilj 9" />
+                <a href="/sr/9">
+                    <img src="https://popdata.work/assets/img/goals/sr/9.png" id="goal-9" alt="Индустрија, иновације и инфраструктура - Циљ 9" class="goal-icon-image goal-icon-image-png" />
                 </a>
             </div>
             
             <div class="col-xs-4 col-md-2 goal-tile">
-                <a href="/hr/10">
-                    <img src="https://popdata.work/assets/img/goals/hr/10.png" id="goal-10" alt="Smanjiti nejednakost - Cilj 10" />
+                <a href="/sr/10">
+                    <img src="https://popdata.work/assets/img/goals/sr/10.png" id="goal-10" alt="Смањење неједнакости - Циљ 10" class="goal-icon-image goal-icon-image-png" />
                 </a>
             </div>
             
             <div class="col-xs-4 col-md-2 goal-tile">
-                <a href="/hr/11">
-                    <img src="https://popdata.work/assets/img/goals/hr/11.png" id="goal-11" alt="Izdržljiviji gradovi i naselja - Cilj 11" />
+                <a href="/sr/11">
+                    <img src="https://popdata.work/assets/img/goals/sr/11.png" id="goal-11" alt="Одрживи градови и заједнице - Циљ 11" class="goal-icon-image goal-icon-image-png" />
                 </a>
             </div>
             
             <div class="col-xs-4 col-md-2 goal-tile">
-                <a href="/hr/12">
-                    <img src="https://popdata.work/assets/img/goals/hr/12.png" id="goal-12" alt="Održiva potrošnja i proizvodnja - Cilj 12" />
+                <a href="/sr/12">
+                    <img src="https://popdata.work/assets/img/goals/sr/12.png" id="goal-12" alt="Одговорна потрошња и производња - Циљ 12" class="goal-icon-image goal-icon-image-png" />
                 </a>
             </div>
             
             <div class="col-xs-4 col-md-2 goal-tile">
-                <a href="/hr/13">
-                    <img src="https://popdata.work/assets/img/goals/hr/13.png" id="goal-13" alt="Akciju u suzbijanju klimatskih promjena - Cilj 13" />
+                <a href="/sr/13">
+                    <img src="https://popdata.work/assets/img/goals/sr/13.png" id="goal-13" alt="Очување климе - Циљ 13" class="goal-icon-image goal-icon-image-png" />
                 </a>
             </div>
             
             <div class="col-xs-4 col-md-2 goal-tile">
-                <a href="/hr/14">
-                    <img src="https://popdata.work/assets/img/goals/hr/14.png" id="goal-14" alt="Život pod vodom - Cilj 14" />
+                <a href="/sr/14">
+                    <img src="https://popdata.work/assets/img/goals/sr/14.png" id="goal-14" alt="Очување воденог свијета - Циљ 14" class="goal-icon-image goal-icon-image-png" />
                 </a>
             </div>
             
             <div class="col-xs-4 col-md-2 goal-tile">
-                <a href="/hr/15">
-                    <img src="https://popdata.work/assets/img/goals/hr/15.png" id="goal-15" alt="Život na tlu - Cilj 15" />
+                <a href="/sr/15">
+                    <img src="https://popdata.work/assets/img/goals/sr/15.png" id="goal-15" alt="Очување живота на земљи - Циљ 15" class="goal-icon-image goal-icon-image-png" />
                 </a>
             </div>
             
             <div class="col-xs-4 col-md-2 goal-tile">
-                <a href="/hr/16">
-                    <img src="https://popdata.work/assets/img/goals/hr/16.png" id="goal-16" alt="Mir i pravda - Cilj 16" />
+                <a href="/sr/16">
+                    <img src="https://popdata.work/assets/img/goals/sr/16.png" id="goal-16" alt="Мир, правда и снажне институције - Циљ 16" class="goal-icon-image goal-icon-image-png" />
                 </a>
             </div>
             
             <div class="col-xs-4 col-md-2 goal-tile">
-                <a href="/hr/17">
-                    <img src="https://popdata.work/assets/img/goals/hr/17.png" id="goal-17" alt="Partnerstvo za održivi razvoj - Cilj 17" />
+                <a href="/sr/17">
+                    <img src="https://popdata.work/assets/img/goals/sr/17.png" id="goal-17" alt="Партнерством до циља - Циљ 17" class="goal-icon-image goal-icon-image-png" />
                 </a>
             </div>
             
             
             
             <div class="col-xs-4 col-md-2 goal-tile">
-                <img src="https://popdata.work/assets/img/goals/hr/18.png" id="goal-18" alt="The Global Goals for Sustainable Development" />
+                <img src="https://popdata.work/assets/img/goals/sr/18.png" id="goal-18" alt="The Global Goals for Sustainable Development" class="goal-icon-image goal-icon-image-png" />
             </div>
             
         </div>
@@ -432,15 +438,15 @@ var translations = {
       <div class="col-xs-12">
         <div id="footerLinks">
           <ul>
-            <li><a href="https://open-sdg.org">Izgrađeno pomoću Open SDG-a</a></li>
+            <li><a href="https://open-sdg.org">Изграђено помоћу Open SDG-a</a></li>
             
               <li>
                 
-                  <a href="mailto:sdg@bhas.gov.ba" target="_blank">Kontaktirajte nas</a>
+                  <a href="mailto:sdg@bhas.gov.ba" target="_blank">Контактирајте нас</a>
                 
                 </li>
               <li>
-                <a href="/hr/about/cookies-and-privacy/">Kolačići</a>
+                <a href="/sr/about/cookies-and-privacy/">Колачићи</a>
                 
                 </li>
               
@@ -463,7 +469,7 @@ var translations = {
 <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
 <script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
@@ -472,17 +478,17 @@ var translations = {
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
 <script>translations['general'] = translations['general'] || {};
-    translations['general']['hide'] = 'Sakriti';</script>
+    translations['general']['hide'] = 'Сакрити';</script>
 
 <script>translations['search'] = translations['search'] || {};
-    translations['search']['search'] = 'Pretraživanje';</script>
+    translations['search']['search'] = 'Претраживање';</script>
 
-<script src='/assets/js/sdg.js?v=20210530220935'></script>
+<script src='/assets/js/sdg.js?v=20210530221753'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20210530220935"></script><script>
+    <script src="/assets/js/custom.js?v=20210530221753"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
@@ -523,10 +529,12 @@ $(function() {
               graphAnnotations: domData.graphannotations,
               indicatorDownloads: domData.indicatordownloads,
               compositeBreakdownLabel: domData.compositebreakdownlabel,
+              precision: domData.precision,
             }),
             view  = new indicatorView(model, {
               rootElement: '#indicatorData',
               legendElement: '#plotLegend',
+              decimalSeparator: '',
               maxChartHeight: 420,
               tableColumnDefs: [
                 { maxCharCount: 25 }, // nowrap
