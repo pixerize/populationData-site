@@ -2,12 +2,12 @@
   {
     "goal": {
       "id": "1",
-      "title": "POPULATION",
+      "title": "POPULATION DATA",
       "indicators": [
         
         {
           "id": "1-1-1",
-          "title": "Number of population in Bosniaand Herzegovina by age and sex",
+          "title": "Number of population in Bosnia and Herzegovina by age and sex",
           "description": "",
           "keywords": "",
           "href": "/1-1-1",
@@ -15,7 +15,7 @@
         },
         {
           "id": "1-2-1",
-          "title": "Proportion of population living below the national poverty line, by sex and age",
+          "title": "Number of population in Bosnia and Herzegovina by entity, age and sex",
           "description": "",
           "keywords": "",
           "href": "/1-2-1",
@@ -23,7 +23,7 @@
         },
         {
           "id": "1-3-1",
-          "title": "Proportion of population covered by social protection floors/systems, by sex, distinguishing children, unemployed persons, older persons, persons with disabilities, pregnant women, newborns, work-injury victims and the poor and the vulnerable",
+          "title": "Number of population in Bosnia and Herzegovina by age groups and sex",
           "description": "",
           "keywords": "",
           "href": "/1-3-1",
@@ -31,7 +31,7 @@
         },
         {
           "id": "1-4-1",
-          "title": "Proportion of population living in households with access to basic services",
+          "title": "Number of population in Bosnia and Herzegovina by entity, age groups and sex",
           "description": "",
           "keywords": "",
           "href": "/1-4-1",
@@ -39,7 +39,7 @@
         },
         {
           "id": "1-5-1",
-          "title": "Number of deaths, missing persons and directly affected persons attributed to disasters per 100,000 population",
+          "title": "Number of population in Bosnia and Herzegovina by municipality, age groups and sex",
           "description": "",
           "keywords": "",
           "href": "/1-5-1",
@@ -47,7 +47,7 @@
         },
         {
           "id": "1-a-1",
-          "title": "Total official development assistance grants from all donors that focus on poverty reduction as a share of the recipient country’s gross national income",
+          "title": "Proportion of domestically generated resources allocated by the government directly to poverty reduction programmes",
           "description": "",
           "keywords": "",
           "href": "/1-a-1",
@@ -391,7 +391,7 @@
         },
         {
           "id": "3-d-2",
-          "title": "Percentage of bloodstream infections due to selected antimicrobial-resistant organisms",
+          "title": "global_indicators.3-d-2-title",
           "description": "",
           "keywords": "",
           "href": "/3-d-2",
@@ -767,7 +767,7 @@
         },
         {
           "id": "7-b-1",
-          "title": "Installed renewable energy-generating capacity in developing countries (in watts per capita)",
+          "title": "Investments in energy efficiency as a proportion of GDP and the amount of foreign direct investment in financial transfer for infrastructure and technology to sustainable development services",
           "description": "",
           "keywords": "",
           "href": "/7-b-1",
@@ -1087,7 +1087,7 @@
         },
         {
           "id": "10-7-3",
-          "title": "Number of people who died or disappeared in the process of migration towards an international destination",
+          "title": "global_indicators.10-7-3-title",
           "description": "",
           "keywords": "",
           "href": "/10-7-3",
@@ -1095,7 +1095,7 @@
         },
         {
           "id": "10-7-4",
-          "title": "Proportion of the population who are refugees, by country of origin",
+          "title": "global_indicators.10-7-4-title",
           "description": "",
           "keywords": "",
           "href": "/10-7-4",
@@ -1223,7 +1223,7 @@
         },
         {
           "id": "11-a-1",
-          "title": "Number of countries that have national urban policies or regional development plans that (a) respond to population dynamics; (b) ensure balanced territorial development; and (c) increase local fiscal space",
+          "title": "Proportion of population living in cities that implement urban and regional development plans integrating population projections and resource needs, by size of city",
           "description": "",
           "keywords": "",
           "href": "/11-a-1",
@@ -1343,7 +1343,7 @@
         },
         {
           "id": "12-a-1",
-          "title": "Installed renewable energy-generating capacity in developing countries (in watts per capita)",
+          "title": "Amount of support to developing countries on research and development for sustainable consumption and production and environmentally sound technologies",
           "description": "",
           "keywords": "",
           "href": "/12-a-1",
@@ -1439,7 +1439,7 @@
         
         {
           "id": "14-1-1",
-          "title": "(a) Index of coastal eutrophication; and (b) plastic debris density",
+          "title": "Index of coastal eutrophication and floating plastic debris density",
           "description": "",
           "keywords": "",
           "href": "/14-1-1",
@@ -2039,7 +2039,7 @@
         
         {
           "id": "gross-domestic-product",
-          "title": "Gross domestic product – production approach",
+          "title": "global_indicators.18-c-1-title",
           "description": "",
           "keywords": "",
           "href": "/covid-19-impact/gross-domestic-product",
@@ -2055,7 +2055,7 @@
         
         {
           "id": "revenue-from-indirect-taxes",
-          "title": "Revenues from indirect taxes",
+          "title": "global_indicators.18-c-2-title",
           "description": "",
           "keywords": "",
           "href": "/covid-19-impact/revenue-from-indirect-taxes",
@@ -2071,7 +2071,7 @@
         
         {
           "id": "bih-exports-imports",
-          "title": "Exports and imports in BiH during 2019 and 2020, by months",
+          "title": "global_indicators.18-c-3-title",
           "description": "",
           "keywords": "",
           "href": "/covid-19-impact/bih-exports-imports",
@@ -2087,7 +2087,7 @@
         
         {
           "id": "industrial-turnover",
-          "title": "Industrial turnover – year-on-year grow rates calculated on basis of working-day adjusted indices",
+          "title": "global_indicators.18-c-4-title",
           "description": "",
           "keywords": "",
           "href": "/covid-19-impact/industrial-turnover",
@@ -2103,7 +2103,7 @@
         
         {
           "id": "monthly-producer-price",
-          "title": "Monthly Producer Price Index",
+          "title": "global_indicators.18-c-5-title",
           "description": "",
           "keywords": "",
           "href": "/covid-19-impact/monthly-producer-price",
@@ -2119,7 +2119,7 @@
         
         {
           "id": "retail-trade-indices",
-          "title": "Retail trade indices, 2015 =100",
+          "title": "global_indicators.18-c-6-title",
           "description": "",
           "keywords": "",
           "href": "/covid-19-impact/retail-trade-indices",
@@ -2135,7 +2135,7 @@
         
         {
           "id": "average-monthly-earnings",
-          "title": "Average monthly earnings of persons in employment",
+          "title": "global_indicators.18-c-7-title",
           "description": "",
           "keywords": "",
           "href": "/covid-19-impact/average-monthly-earnings",
@@ -2151,7 +2151,7 @@
         
         {
           "id": "labour-force-of-bih",
-          "title": "Labour force of BiH, according to administrative sources",
+          "title": "global_indicators.18-c-8-title",
           "description": "",
           "keywords": "",
           "href": "/covid-19-impact/labour-force-of-bih",
@@ -2167,7 +2167,7 @@
         
         {
           "id": "road-transport",
-          "title": "Road transport, railway transport and air transport",
+          "title": "global_indicators.18-c-9-title",
           "description": "",
           "keywords": "",
           "href": "/covid-19-impact/road-transport",
@@ -2183,7 +2183,7 @@
         
         {
           "id": "cross-border-traffic",
-          "title": "Cross-border traffic of passenger road motor vehicles and passengers",
+          "title": "global_indicators.18-c-10-title",
           "description": "",
           "keywords": "",
           "href": "/covid-19-impact/cross-border-traffic",
@@ -2199,7 +2199,7 @@
         
         {
           "id": "tourist-nights",
-          "title": "Tourist nights",
+          "title": "global_indicators.18-c-11-title",
           "description": "",
           "keywords": "",
           "href": "/covid-19-impact/tourist-nights",
@@ -2215,7 +2215,7 @@
         
         {
           "id": "electricity-supply",
-          "title": "Electricity supply",
+          "title": "global_indicators.18-c-12-title",
           "description": "",
           "keywords": "",
           "href": "/covid-19-impact/electricity-supply",
@@ -2231,7 +2231,7 @@
         
         {
           "id": "value-of-agricultural-products",
-          "title": "Value of agricultural products sold on green markets by groups of products",
+          "title": "global_indicators.18-c-13-title",
           "description": "",
           "keywords": "",
           "href": "/covid-19-impact/value-of-agricultural-products",
