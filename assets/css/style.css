@@ -2756,7 +2756,7 @@ img {
   transform: translateZ(0px); }
 
 /*Items to be remove */
-.zip-download-container, footer, .goal-tiles .row:not(:first-child), .disclaimer-alert, .contrast, p.lead-copy, ol.breadcrumb {
+.zip-download-container, footer, .goal-tiles .row:not(:first-child), .disclaimer-alert, .contrast, p.lead-copy, ol.breadcrumb, .goal-indicators .goal-target {
   display: none !important; }
 
 div#main-content > p {
