@@ -2697,7 +2697,7 @@ header {
     margin-top: 0; }
   header .dropdown-toggle {
     background: #5B92E5 !important;
-    color: #fff;
+    color: #fff !important;
     text-transform: uppercase; }
     header .dropdown-toggle:hover {
       color: #ffcc29; }
