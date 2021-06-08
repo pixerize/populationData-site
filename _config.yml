@@ -1,4 +1,4 @@
-# Config by Djordje Sajlovic (GITHUB: pixerize)
+# Config by Djordje Sajlovic
 # Jekyll configuration for Open SDG platform.
 # Doing the Quick start? Here are the settings to update during installation:
 # Replace the baseurl with the name of this repository. For example, if the repository is named
@@ -27,7 +27,7 @@ languages:
 
 # Tell the Remote Theme plugin to use the Open SDG platform (Jekyll theme).
 # Recommended: set this to a particular "release" of Open SDG. For example:
-remote_theme: pixerize/open-sdg@1.4.0-dev
+remote_theme: pixerize/open-sdg@1.3.1
 #remote_theme: open-sdg/open-sdg@master
 #remote_theme: brockfanning/open-sdg@bosnia-feature-set
 
