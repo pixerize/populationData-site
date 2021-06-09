@@ -181,4 +181,4 @@ data_fields:
   series: SERIES
   units: UNIT_MEASURE
 
-graph_color_set: accessible
+graph_color_set: popdata
