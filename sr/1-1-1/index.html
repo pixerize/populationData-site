@@ -138,7 +138,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20210616082344">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20210616093945">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -481,12 +481,12 @@ var translations = {
   data-id="1-1-1"
   data-country="BiH"
   data-charttitle="Проценат становништва који живе испод међународне линије сиромаштва по полу, старости, статусу запослења и географској локацији (урбано/рурално)"
-  data-charttitles="[{&quot;series&quot;:&quot;Запослено становништво испод међународне линије сиромаштва&quot;,&quot;title&quot;:&quot;Запослено становништво испод међународне линије сиромаштва&quot;},{&quot;series&quot;:&quot;Удио становништва које живи испод међународне линије сиромаштва&quot;,&quot;title&quot;:&quot;Удио становништва које живи испод међународне линије сиромаштва&quot;}]"
+  data-charttitles="null"
   data-measurementunit=""
   data-showdata="true"
   data-graphtype="line"
   data-geocoderegex=""
-  data-showmap="false"
+  data-showmap=""
   data-startvalues="null"
   data-graphlimits="null"
   data-stackeddisaggregation=""
@@ -537,8 +537,6 @@ var translations = {
 
   <div id="datatableFooter">
     
-    <p>Извор: UNSTATS</p>
-    
     
     
     
@@ -586,7 +584,7 @@ data-event-label="Change to Table tab"
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Запослено становништво испод међународне линије сиромаштва</h4>
+          <h4 id="chart-heading" class="chart-title">Проценат становништва који живе испод међународне линије сиромаштва по полу, старости, статусу запослења и географској локацији (урбано/рурално)</h4>
           <div id="chart" class="plot-container">
             
 <canvas
@@ -822,9 +820,6 @@ opensdg.chartConfigAlter(function(config, info) {
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-        <dt>Извор:</dt>
-        <dd>UNSTATS</dd>
-        
 
         
 
@@ -860,9 +855,6 @@ opensdg.chartConfigAlter(function(config, info) {
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
-        
-        <dt>Извор:</dt>
-        <dd>UNSTATS</dd>
         
 
         
@@ -1112,10 +1104,6 @@ data-event-label="Change to Sources tab"
             
 
             
-              <a href="https://github.com/pixerize/populationData-data/commit/b67138c8ecfd1abdd05eaab155e86d5141ec9f85" target="_blank">
-                2021-06-16: see changes on GitHub <span class="visuallyhidden">отвара се у новом прозору</span>
-              </a>
-            
 
           
         </td>
@@ -1138,10 +1126,6 @@ data-event-label="Change to Sources tab"
             
             
 
-            
-              <a href="https://github.com/pixerize/populationData-data/commit/570c989ea7da159c107749c487bf2f87db1e7d73" target="_blank">
-                2021-05-30: see changes on GitHub <span class="visuallyhidden">отвара се у новом прозору</span>
-              </a>
             
 
           
@@ -1272,7 +1256,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Број индикатора </th>
         <td>
           
-            <p>1.1.1</p>
+            
 
           
         </td>
@@ -1286,7 +1270,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Назив подциља </th>
         <td>
           
-            <p>До 2030. године свуда и за све људе искорјенити екстремно сиромаштво (екстремно сиромашни су људи који живе са мање од 1,25 долара на дан)</p>
+            
 
           
         </td>
@@ -1328,7 +1312,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">UN- ов означени степен </th>
         <td>
           
-            <p>1</p>
+            
 
           
         </td>
@@ -1342,7 +1326,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">UN кустос агенција </th>
         <td>
           
-            <p>World Bank (WB); International Labour Organization (ILO)</p>
+            
 
           
         </td>
@@ -1361,10 +1345,6 @@ data-event-label="Change to Sources tab"
             
             
 
-            
-              <a href="https://unstats.un.org/sdgs/metadata/files/Metadata-01-01-01a.pdf" target="_blank">
-                United Nations Sustainable Development Goals Metadata (pdf 894kB) <span class="visuallyhidden">отвара се у новом прозору</span>
-              </a>
             
 
           
@@ -1485,272 +1465,6 @@ data-event-label="Change to Sources tab"
 
 
 
-  <div class="row">
-  
-    
-    
-    <div class="col-md-6">
-      
-      <table class="table">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
-      
-      <tr>
-        <th scope="row">Организација </th>
-        <td>
-          
-            <p>UNSTATS</p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      <tr>
-        <th scope="row">Периодичност </th>
-        <td>
-          
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      <tr>
-        <th scope="row">Посљедњи доступни подаци </th>
-        <td>
-          
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      <tr>
-        <th scope="row">Географска покривеност </th>
-        <td>
-          
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      <tr>
-        <th scope="row">Линк до извора података </th>
-        <td>
-          
-            
-            
-            
-            
-
-            
-              <a href="https://unstats.un.org/sdgs/indicators/database/" target="_blank">
-                Link to source <span class="visuallyhidden">отвара се у новом прозору</span>
-              </a>
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      
-  
-      
-      
-      <tr>
-        <th scope="row">Датум издавања </th>
-        <td>
-          
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      <tr>
-        <th scope="row">Сљедеће издање </th>
-        <td>
-          
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      <tr>
-        <th scope="row">Статистичка класификација </th>
-        <td>
-          
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      <tr>
-        <th scope="row">Контакт подаци </th>
-        <td>
-          
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      <tr>
-        <th scope="row">Остале информације </th>
-        <td>
-          
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-</table>
-
-    </div>
-    
-  </div>
-
 
 </div>
 
@@ -1836,12 +1550,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Претраживање';</script>
 
-<script src='/assets/js/sdg.js?v=20210616082344'></script>
+<script src='/assets/js/sdg.js?v=20210616093945'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20210616082344"></script><script>
+    <script src="/assets/js/custom.js?v=20210616093945"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
