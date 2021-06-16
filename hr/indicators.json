@@ -326,4 +326,68 @@
           "status": "complete"
         }]
     }
+  },
+  {
+    "goal": {
+      "id": "3",
+      "title": "Obezbijediti zdrav život i promovisati dobrobit svih ljudi, svih životnih dobi",
+      "indicators": [
+        
+        {
+          "id": "3-1-1",
+          "title": "Srazmjer djece i mladih: (a) u razredima 2/3; (b) na kraju osnovnog; i (c) na kraju nižeg srednjeg obrazovanja koja postižu najmanje minimalnog nivoa znanja u (i) čitanju i (ii) matematici, po polu",
+          "description": "",
+          "keywords": "",
+          "href": "/hr/3-1-1",
+          "status": "complete"
+        }]
+    }
+  },
+  {
+    "goal": {
+      "id": "4",
+      "title": "Osigurati inkluzivno i kvalitetno obrazovanje i promovisati mogućnost cjeloživotnog učenja",
+      "indicators": [
+        
+        {
+          "id": "4-1-1",
+          "title": "Srazmjer djece i mladih: (a) u razredima 2/3; (b) na kraju osnovnog; i (c) na kraju nižeg srednjeg obrazovanja koja postižu najmanje minimalnog nivoa znanja u (i) čitanju i (ii) matematici, po polu",
+          "description": "",
+          "keywords": "",
+          "href": "/hr/4-1-1",
+          "status": "complete"
+        }]
+    }
+  },
+  {
+    "goal": {
+      "id": "5",
+      "title": "Postići rodnu ravnopravnost i osnaživati sve žene i djevojčice",
+      "indicators": [
+        
+        {
+          "id": "5-1-1",
+          "title": "Postojali ili ne zakonski okviri su za promociju, provođenje i nadgledanje jednakost i nediskriminaciju na osnovu pola",
+          "description": "",
+          "keywords": "",
+          "href": "/hr/5-1-1",
+          "status": "complete"
+        }]
+    }
+  },
+  {
+    "goal": {
+      "id": "6",
+      "title": "Osigurati sanitarne uslove i pristup pitkoj vodi za sve",
+      "indicators": [
+        
+        {
+          "id": "6-1-1",
+          "title": "Udio stanovništva koji koristi usluge bezbijednog upravljanja pitkom vodom",
+          "description": "",
+          "keywords": "",
+          "href": "/hr/6-1-1",
+          "status": "complete"
+        }]
+    }
   }]
