@@ -6,19 +6,19 @@
       "indicators": [
         
         {
-          "id": "1-1-1",
-          "title": "Procenat stanovništva koji žive ispod međunarodne linije siromaštva po polu, starosti, statusu zaposlenja i geografskoj lokaciji (urbano/ruralno)",
+          "id": "1-1",
+          "title": "global_indicators.1-1-title",
           "description": "",
           "keywords": "",
-          "href": "/hr/1-1-1",
+          "href": "/hr/1-1",
           "status": "complete"
         },
         {
-          "id": "1-1-14 ",
-          "title": "global_indicators.1-1-14 -title",
+          "id": "1-1-1",
+          "title": "global_indicators.1-1-title",
           "description": "",
           "keywords": "",
-          "href": "/hr/1-1-14 ",
+          "href": "/hr/1-1-1",
           "status": "complete"
         },
         {
@@ -123,6 +123,14 @@
           "description": "",
           "keywords": "",
           "href": "/hr/1-14-1",
+          "status": "complete"
+        },
+        {
+          "id": "1-14-1 ",
+          "title": "global_indicators.1-14-1 -title",
+          "description": "",
+          "keywords": "",
+          "href": "/hr/1-14-1 ",
           "status": "complete"
         },
         {

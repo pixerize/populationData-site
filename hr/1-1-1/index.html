@@ -107,7 +107,7 @@ var translations = {
         
         Indikator 1.1.1 -
         
-        Procenat stanovništva koji žive ispod međunarodne linije siromaštva po polu, starosti, statusu zaposlenja i geografskoj lokaciji (urbano/ruralno) - Indikatori za ciljeve održivog razvoja
+        global_indicators.1-1-title - Indikatori za ciljeve održivog razvoja
     </title>
 
 
@@ -138,7 +138,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20210616094032">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20210616120036">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -424,13 +424,13 @@ var translations = {
     
 <div class="previous-next-links row">
     <div class="col-xs-3 col-md-3 col-lg-4 pull-left text-left">
-        <a class="btn btn-primary" href="/hr/covid-19-impact/value-of-agricultural-products" aria-labelledby="previous-link">
+        <a class="btn btn-primary" href="/hr/1-1" aria-labelledby="previous-link">
             <i class="fa fa-chevron-left" aria-hidden="true"></i>
             <span id="previous-link" class="hidden-sm hidden-xs">Prethodni indikator</span>
         </a>
     </div>
     <div class="col-xs-3 col-md-3 col-lg-4 pull-right text-right">
-        <a class="btn btn-primary" href="/hr/1-1-14 " aria-labelledby="next-link">
+        <a class="btn btn-primary" href="/hr/1-2-1" aria-labelledby="next-link">
             <i class="fa fa-chevron-right" aria-hidden="true"></i>
             <span id="next-link" class="hidden-sm hidden-xs">Sljedeći indikator</span>
         </a>
@@ -456,7 +456,7 @@ var translations = {
             
             Indikator 1.1.1
             
-            <span class="lead-copy">Procenat stanovništva koji žive ispod međunarodne linije siromaštva po polu, starosti, statusu zaposlenja i geografskoj lokaciji (urbano/ruralno)</span>
+            <span class="lead-copy">global_indicators.1-1-title</span>
           </h1>
         </div>
       </div>
@@ -480,13 +480,13 @@ var translations = {
   data-indicatorid='indicator_1-1-1'
   data-id="1-1-1"
   data-country="BiH"
-  data-charttitle="Procenat stanovništva koji žive ispod međunarodne linije siromaštva po polu, starosti, statusu zaposlenja i geografskoj lokaciji (urbano/ruralno)"
-  data-charttitles="null"
+  data-charttitle="global_indicators.1-1-title"
+  data-charttitles="[{&quot;series&quot;:&quot;Zaposleno stanovništvo ispod međunarodne linije siromaštva&quot;,&quot;title&quot;:&quot;Zaposleno stanovništvo ispod međunarodne linije siromaštva&quot;},{&quot;series&quot;:&quot;Udio stanovništva koje živi ispod međunarodne linije siromaštva&quot;,&quot;title&quot;:&quot;Udio stanovništva koje živi ispod međunarodne linije siromaštva&quot;}]"
   data-measurementunit=""
   data-showdata="true"
   data-graphtype="line"
   data-geocoderegex=""
-  data-showmap=""
+  data-showmap="false"
   data-startvalues="null"
   data-graphlimits="null"
   data-stackeddisaggregation=""
@@ -525,7 +525,7 @@ var translations = {
 
     <h3>Headline data</h3>
     <table class="table-responsive table table-hover dataTable no-footer" role="grid">
-      <caption>Procenat stanovništva koji žive ispod međunarodne linije siromaštva po polu, starosti, statusu zaposlenja i geografskoj lokaciji (urbano/ruralno)</caption>
+      <caption>global_indicators.1-1-title</caption>
       <thead>
         
       </thead>
@@ -536,6 +536,8 @@ var translations = {
   </div>
 
   <div id="datatableFooter">
+    
+    <p>Izvor: UNSTATS</p>
     
     
     
@@ -584,7 +586,7 @@ data-event-label="Change to Table tab"
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Procenat stanovništva koji žive ispod međunarodne linije siromaštva po polu, starosti, statusu zaposlenja i geografskoj lokaciji (urbano/ruralno)</h4>
+          <h4 id="chart-heading" class="chart-title">Zaposleno stanovništvo ispod međunarodne linije siromaštva</h4>
           <div id="chart" class="plot-container">
             
 <canvas
@@ -820,6 +822,9 @@ opensdg.chartConfigAlter(function(config, info) {
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
+        <dt>Izvor:</dt>
+        <dd>UNSTATS</dd>
+        
 
         
 
@@ -855,6 +860,9 @@ opensdg.chartConfigAlter(function(config, info) {
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
+        
+        <dt>Izvor:</dt>
+        <dd>UNSTATS</dd>
         
 
         
@@ -1104,6 +1112,10 @@ data-event-label="Change to Sources tab"
             
 
             
+              <a href="https://github.com/pixerize/populationData-data/commit/b67138c8ecfd1abdd05eaab155e86d5141ec9f85" target="_blank">
+                2021-06-16: see changes on GitHub <span class="visuallyhidden">otvara se u novom prozoru</span>
+              </a>
+            
 
           
         </td>
@@ -1126,6 +1138,10 @@ data-event-label="Change to Sources tab"
             
             
 
+            
+              <a href="https://github.com/pixerize/populationData-data/commit/558bb14d402cbd0f0b30fbb3292adcd9ee703d5f" target="_blank">
+                2021-06-16: see changes on GitHub <span class="visuallyhidden">otvara se u novom prozoru</span>
+              </a>
             
 
           
@@ -1242,7 +1258,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Naziv indikatora </th>
         <td>
           
-            <p>Procenat stanovništva koji žive ispod međunarodne linije siromaštva po polu, starosti, statusu zaposlenja i geografskoj lokaciji (urbano/ruralno)</p>
+            <p>global_indicators.1-1-title</p>
 
           
         </td>
@@ -1256,7 +1272,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Broj indikatora </th>
         <td>
           
-            
+            <p>1.1</p>
 
           
         </td>
@@ -1270,7 +1286,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Naziv podcilja </th>
         <td>
           
-            
+            <p>Do 2030. godine svuda i za sve ljude iskorjeniti ekstremno siromaštvo (ekstremno siromašni su ljudi koji žive sa manje od 1,25 dolara na dan)</p>
 
           
         </td>
@@ -1312,7 +1328,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">UN-ov označeni stepen </th>
         <td>
           
-            
+            <p>1</p>
 
           
         </td>
@@ -1326,7 +1342,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">UN kustos agencija </th>
         <td>
           
-            
+            <p>World Bank (WB); International Labour Organization (ILO)</p>
 
           
         </td>
@@ -1345,6 +1361,10 @@ data-event-label="Change to Sources tab"
             
             
 
+            
+              <a href="https://unstats.un.org/sdgs/metadata/files/Metadata-01-01-01a.pdf" target="_blank">
+                United Nations Sustainable Development Goals Metadata (pdf 894kB) <span class="visuallyhidden">otvara se u novom prozoru</span>
+              </a>
             
 
           
@@ -1465,6 +1485,272 @@ data-event-label="Change to Sources tab"
 
 
 
+  <div class="row">
+  
+    
+    
+    <div class="col-md-6">
+      
+      <table class="table">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+      
+      <tr>
+        <th scope="row">Organizacija </th>
+        <td>
+          
+            <p>UNSTATS</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Periodičnost </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Posljednji dostupni podaci </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Geografska pokrivenost </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Link do izvora podataka </th>
+        <td>
+          
+            
+            
+            
+            
+
+            
+              <a href="https://unstats.un.org/sdgs/indicators/database/" target="_blank">
+                Link to source <span class="visuallyhidden">otvara se u novom prozoru</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Datum izdavanja </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Sljedeće izdanje </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Statistička klasifikacija </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Kontakt podaci </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Ostale informacije </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</table>
+
+    </div>
+    
+  </div>
+
 
 </div>
 
@@ -1550,12 +1836,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Pretraživanje';</script>
 
-<script src='/assets/js/sdg.js?v=20210616094032'></script>
+<script src='/assets/js/sdg.js?v=20210616120036'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20210616094032"></script><script>
+    <script src="/assets/js/custom.js?v=20210616120036"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
