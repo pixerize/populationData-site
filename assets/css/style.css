@@ -2753,10 +2753,15 @@ header {
 .goal-1.goal-banner {
   background-color: transparent; }
 
+.goal-tiles a:focus, .nav-link a:focus {
+  background: unset !important;
+  box-shadow: none !important;
+  color: #ffcc29; }
+
 img {
   transform: translateZ(0px); }
 
-/*Items to be remove */
+/*Items to be removed */
 .zip-download-container, footer, .goal-tiles .row:not(:first-child), .disclaimer-alert, .contrast, p.lead-copy, ol.breadcrumb {
   display: none !important; }
 
