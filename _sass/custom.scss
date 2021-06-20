@@ -222,9 +222,10 @@ header {
     background-color: transparent;
 }
 
-.goal-tiles a:focus {
+.goal-tiles a:focus, .nav-link a:focus {
     background: unset !important;
     box-shadow: none !important;
+    color: $yellow;
 }
 
 
