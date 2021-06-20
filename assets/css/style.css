@@ -2753,14 +2753,10 @@ header {
 .goal-1.goal-banner {
   background-color: transparent; }
 
-[contentEditable="true"]:focus, [href]:focus, [tabindex]:focus, iframe:focus, input:focus, button:focus {
-  background: unset !important;
-  box-shadow: none !important; }
-
 img {
   transform: translateZ(0px); }
 
-/*Items to be removed */
+/*Items to be remove */
 .zip-download-container, footer, .goal-tiles .row:not(:first-child), .disclaimer-alert, .contrast, p.lead-copy, ol.breadcrumb {
   display: none !important; }
 
