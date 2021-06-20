@@ -39,14 +39,16 @@ header .container {
     }
 }
 
-#main-content {
-    
+.layout-frontpage {
     height: 69vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background: transparent;
+}
+
+#main-content {
 
     h1 {
         font-size: 70px;
