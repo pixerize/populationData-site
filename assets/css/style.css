@@ -2635,7 +2635,7 @@ header .container {
 
   .logo-and-mobile-widgets .mobile-widgets {
     bottom: 20px; } }
-.layout-frontpage {
+.layout-frontpage #main-content {
   height: 69vh;
   display: flex;
   flex-direction: column;
