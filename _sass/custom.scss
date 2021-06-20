@@ -18,7 +18,6 @@ body {
 
 header .container {
     padding-top: 10px;
-
 }
 
 @media (min-width: $bp-tablet + 1px) {
@@ -41,14 +40,19 @@ header .container {
 }
 
 #main-content {
-
+    
+    height: 69vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background: transparent;
 
     h1 {
-        font-size: 65px;
+        font-size: 70px;
         font-weight: 600;
         line-height: 1.3;
-        margin-bottom: 35px;
+        margin-bottom: 65px;
     }
 
     .goal-tiles {
