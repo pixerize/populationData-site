@@ -7,12 +7,18 @@ body {
     background: #fff;
     background: url(https://popdata.work/assets/img/other/popbg.jpg);
     background-size: cover;
+    padding-top: 0;
 }
 
 .navbar-brand {
     display: block;
     width: 75%;
     max-width: 310px;
+}
+
+header .container {
+    padding-top: 10px;
+
 }
 
 @media (min-width: $bp-tablet + 1px) {
