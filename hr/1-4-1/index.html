@@ -138,7 +138,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20210620202210">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20210620202852">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -430,7 +430,7 @@ var translations = {
         </a>
     </div>
     <div class="col-xs-3 col-md-3 col-lg-4 pull-right text-right">
-        <a class="btn btn-primary" href="/hr/1-7-1" aria-labelledby="next-link">
+        <a class="btn btn-primary" href="/hr/1-11-1" aria-labelledby="next-link">
             <i class="fa fa-chevron-right" aria-hidden="true"></i>
             <span id="next-link" class="hidden-sm hidden-xs">Sljedeći indikator</span>
         </a>
@@ -484,9 +484,9 @@ var translations = {
   data-charttitles="null"
   data-measurementunit=""
   data-showdata="true"
-  data-graphtype="line"
+  data-graphtype="bar"
   data-geocoderegex=""
-  data-showmap=""
+  data-showmap="false"
   data-startvalues="null"
   data-graphlimits="null"
   data-stackeddisaggregation=""
@@ -773,40 +773,32 @@ opensdg.chartConfigAlter(function(config, info) {
 </script>
 
 <script>
-// For line charts, add the vertical line hover functionality.
 opensdg.chartConfigAlter(function(config, info) {
+  if (info.stackedDisaggregation) {
     var overrides = {
-        options: {
-            tooltips: {
-                intersect: false,
-                axis: 'x'
-            },
-        },
-        plugins: [{
-            beforeDatasetsDraw: function(chart) {
-                if (chart.tooltip._active && chart.tooltip._active.length) {
-                    var activePoint = chart.tooltip._active[0],
-                        ctx = chart.ctx,
-                        x = activePoint.tooltipPosition().x,
-                        topY = chart.scales['y-axis-0'].top,
-                        bottomY = chart.scales['y-axis-0'].bottom;
-
-                    // draw line
-                    ctx.save();
-                    ctx.beginPath();
-                    ctx.moveTo(x, topY);
-                    ctx.lineTo(x, bottomY);
-                    ctx.lineWidth = 2;
-                    ctx.strokeStyle = '#757575';
-                    ctx.setLineDash([5, 2]);
-                    ctx.stroke();
-                    ctx.restore();
-                }
-            }
-        }],
+      options: {
+        scales: {
+          xAxes: [{ stacked: true }],
+          yAxes: [{ stacked: true }],
+        }
+      }
     };
+    // If we have stackedDisaggregation, we need to group datasets into stacks.
+    config.data.datasets.forEach(function(dataset) {
+      var disaggregation = $.extend({}, dataset.disaggregation);
+      // We're going to "stringify" each combination of disaggregations in order
+      // to place them in their own "stacks". To place "stacked" disaggregations
+      // into the same stack, we set them as "samestack" before stringifying.
+      // Note that the string "samestack" is completely arbitrary.
+      if (typeof disaggregation[info.stackedDisaggregation] !== 'undefined') {
+        disaggregation[info.stackedDisaggregation] = 'samestack';
+      }
+      // Use the disaggregation as a unique id for each stack.
+      dataset.stack = JSON.stringify(disaggregation);
+    });
     // Add these overrides onto the normal config, and return it.
     $.extend(true, config, overrides);
+  }
 });
 </script>
 
@@ -1104,6 +1096,10 @@ data-event-label="Change to Sources tab"
             
 
             
+              <a href="https://github.com/pixerize/populationData-data/commit/15380606bfa52ed0dbf63c08e08cd908bc8e7657" target="_blank">
+                2021-06-19: see changes on GitHub <span class="visuallyhidden">otvara se u novom prozoru</span>
+              </a>
+            
 
           
         </td>
@@ -1126,6 +1122,10 @@ data-event-label="Change to Sources tab"
             
             
 
+            
+              <a href="https://github.com/pixerize/populationData-data/commit/bb9b2896b1843a336fea0b6e75ef9f3dd9382f36" target="_blank">
+                2021-06-20: see changes on GitHub <span class="visuallyhidden">otvara se u novom prozoru</span>
+              </a>
             
 
           
@@ -1256,7 +1256,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Broj indikatora </th>
         <td>
           
-            
+            <p>1.4.1</p>
 
           
         </td>
@@ -1270,7 +1270,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Naziv podcilja </th>
         <td>
           
-            
+            <p>Do 2030. godine osigurati da da svi muškarci i žene, а posebno siromašni i ranjivi, imaju jednaka prava na ekonomske resurse, kao i pristup osnovnim uslugama, vlasništvu i upravljanju zemljištem, odnosno drugim oblicima vlasništva, nasljedstvu, prirodnim bogatstvima, odgovarajućim novim tehnologijama i finansijskim uslugama, uključujući mikrofinansiranje</p>
 
           
         </td>
@@ -1312,7 +1312,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">UN-ov označeni stepen </th>
         <td>
           
-            
+            <p>1</p>
 
           
         </td>
@@ -1326,7 +1326,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">UN kustos agencija </th>
         <td>
           
-            
+            <p>United Nations Office for Disaster Reduction (UNISDR)</p>
 
           
         </td>
@@ -1345,6 +1345,10 @@ data-event-label="Change to Sources tab"
             
             
 
+            
+              <a href="https://unstats.un.org/sdgs/metadata/files/Metadata-01-05-01.pdf " target="_blank">
+                United Nations Sustainable Development Goals Metadata (PDF 224 KB) <span class="visuallyhidden">otvara se u novom prozoru</span>
+              </a>
             
 
           
@@ -1465,6 +1469,268 @@ data-event-label="Change to Sources tab"
 
 
 
+  <div class="row">
+  
+    
+    
+    <div class="col-md-6">
+      
+      <table class="table">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+      
+      <tr>
+        <th scope="row">Organizacija </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Periodičnost </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Posljednji dostupni podaci </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Geografska pokrivenost </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Link do izvora podataka </th>
+        <td>
+          
+            
+            
+            
+            
+
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Datum izdavanja </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Sljedeće izdanje </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Statistička klasifikacija </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Kontakt podaci </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Ostale informacije </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</table>
+
+    </div>
+    
+  </div>
+
 
 </div>
 
@@ -1550,12 +1816,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Pretraživanje';</script>
 
-<script src='/assets/js/sdg.js?v=20210620202210'></script>
+<script src='/assets/js/sdg.js?v=20210620202852'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20210620202210"></script><script>
+    <script src="/assets/js/custom.js?v=20210620202852"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
