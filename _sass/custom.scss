@@ -222,6 +222,11 @@ header {
     background-color: transparent;
 }
 
+[contentEditable="true"]:focus, [href]:focus, [tabindex]:focus, iframe:focus, input:focus, button:focus {
+    background: unset !important;
+    box-shadow: none !important;
+}
+
 
 //sharpen the resized images Chrome
 
@@ -229,7 +234,8 @@ img {
     transform: translateZ(0px);
 }
 
-/*Items to be remove */
+/*Items to be removed */
+
 
 .zip-download-container, footer, .goal-tiles .row:not(:first-child), .disclaimer-alert, .contrast, p.lead-copy, ol.breadcrumb {
     display: none !important;
