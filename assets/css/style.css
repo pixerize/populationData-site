@@ -2756,7 +2756,7 @@ header {
 .goal-tiles a:focus, .nav-link a:focus {
   background: unset !important;
   box-shadow: none !important;
-  color: #ffcc29; }
+  color: #ffcc29 !important; }
 
 img {
   transform: translateZ(0px); }
