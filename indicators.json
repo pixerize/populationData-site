@@ -15,7 +15,7 @@
         },
         {
           "id": "1-1-2",
-          "title": "global_indicators.1-1-2-title",
+          "title": "Population by entity, age and sex",
           "description": "",
           "keywords": "",
           "href": "/1-1-2",
@@ -23,7 +23,7 @@
         },
         {
           "id": "1-1-3",
-          "title": "global_indicators.1-1-3-title",
+          "title": "Population by age groups and sex",
           "description": "",
           "keywords": "",
           "href": "/1-1-3",
@@ -31,7 +31,7 @@
         },
         {
           "id": "1-1-4",
-          "title": "global_indicators.1-1-4-title",
+          "title": "Population by entity, age groups and sex",
           "description": "",
           "keywords": "",
           "href": "/1-1-4",
@@ -39,7 +39,7 @@
         },
         {
           "id": "1-1-5",
-          "title": "global_indicators.1-1-5-title",
+          "title": "Population by municipality, age groups and sex",
           "description": "",
           "keywords": "",
           "href": "/1-1-5",
@@ -47,7 +47,7 @@
         },
         {
           "id": "1-1-6",
-          "title": "global_indicators.1-1-6-title",
+          "title": "Population pyramid by age groups and sex",
           "description": "",
           "keywords": "",
           "href": "/1-1-6",
@@ -55,7 +55,7 @@
         },
         {
           "id": "1-2-1",
-          "title": "Population by entity, age and sex",
+          "title": "Live births and deaths by entity and sex",
           "description": "",
           "keywords": "",
           "href": "/1-2-1",
@@ -63,7 +63,7 @@
         },
         {
           "id": "1-2-2",
-          "title": "Proportion of men, women and children of all ages living in poverty in all its dimensions according to national definitions",
+          "title": "Natural growth rate by entity",
           "description": "",
           "keywords": "",
           "href": "/1-2-2",
@@ -71,7 +71,7 @@
         },
         {
           "id": "1-3-1",
-          "title": "Population by age groups and sex",
+          "title": "Dependency ratios at state and entity level by sex",
           "description": "",
           "keywords": "",
           "href": "/1-3-1",
@@ -79,7 +79,7 @@
         },
         {
           "id": "1-4-1",
-          "title": "Population by entity, age groups and sex",
+          "title": "Crude birth rate by entity",
           "description": "",
           "keywords": "",
           "href": "/1-4-1",
@@ -87,7 +87,7 @@
         },
         {
           "id": "1-7-1",
-          "title": "Live births and deaths by entity and sex",
+          "title": "global_indicators.1-7-1-title",
           "description": "",
           "keywords": "",
           "href": "/1-7-1",
@@ -95,7 +95,7 @@
         },
         {
           "id": "1-8-1",
-          "title": "Natural growth rate by entity",
+          "title": "global_indicators.1-8-1-title",
           "description": "",
           "keywords": "",
           "href": "/1-8-1",
@@ -103,7 +103,7 @@
         },
         {
           "id": "1-9-1",
-          "title": "Dependency ratios at state and entity level by sex",
+          "title": "global_indicators.1-9-1-title",
           "description": "",
           "keywords": "",
           "href": "/1-9-1",
@@ -111,7 +111,7 @@
         },
         {
           "id": "1-10-1",
-          "title": "Crude birth rate in Bosnia and Herzegovina by entity",
+          "title": "global_indicators.1-10-1-title",
           "description": "",
           "keywords": "",
           "href": "/1-10-1",
