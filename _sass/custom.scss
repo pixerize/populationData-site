@@ -222,7 +222,7 @@ header {
     background-color: transparent;
 }
 
-[contentEditable="true"]:focus, [href]:focus, [tabindex]:focus, iframe:focus, input:focus, button:focus {
+.goal-tiles a:focus {
     background: unset !important;
     box-shadow: none !important;
 }
