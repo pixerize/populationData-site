@@ -236,9 +236,19 @@ header {
     }
 }
 
-.goal-1.goal-banner {
+.goal-banner {
     background-color: transparent;
+
+    .row {
+        background: $blue !important;
+
+        h1 {
+            color: #fff;
+        }
+    }
 }
+
+
 
 .goal-tiles a:focus, .nav-link a:focus {
     background: unset !important;
