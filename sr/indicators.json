@@ -366,20 +366,4 @@
           "status": "complete"
         }]
     }
-  },
-  {
-    "goal": {
-      "id": "7",
-      "title": "Осигурати приступ материјално приступачној, поузданој, одрживој и модерној енергији за све",
-      "indicators": [
-        
-        {
-          "id": "7-1-1",
-          "title": "Udio stanovništva sa pristupom električnoj energiji",
-          "description": "",
-          "keywords": "",
-          "href": "/sr/7-1-1",
-          "status": "complete"
-        }]
-    }
   }]
