@@ -2644,10 +2644,10 @@ header .container {
   background: transparent; }
 
 .goal-banner {
-  background: transparent; }
+  background: transparent !important; }
 
 #main-content {
-  background: transparent; }
+  background: transparent !important; }
   #main-content h1 {
     font-size: 70px;
     font-weight: 600;
