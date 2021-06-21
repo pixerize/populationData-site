@@ -218,7 +218,7 @@
   {
     "goal": {
       "id": "2",
-      "title": "End hunger, achieve food security and improved nutrition and promote sustainable agriculture",
+      "title": "POPULATION PROJECTION",
       "indicators": [
         
         {
@@ -242,7 +242,7 @@
   {
     "goal": {
       "id": "3",
-      "title": "Ensure healthy lives and promote well-being for all at all ages",
+      "title": "HEALTH",
       "indicators": [
         
         {
@@ -258,7 +258,7 @@
   {
     "goal": {
       "id": "4",
-      "title": "Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all",
+      "title": "VIOLENCE",
       "indicators": [
         
         {
@@ -306,7 +306,7 @@
   {
     "goal": {
       "id": "5",
-      "title": "Achieve gender equality and empower all women and girls",
+      "title": "EDUCATION",
       "indicators": [
         
         {
@@ -354,7 +354,7 @@
   {
     "goal": {
       "id": "6",
-      "title": "Ensure availability and sustainable management of water and sanitation for all",
+      "title": "ECONOMIC, POVERTY AND ACTIVITY",
       "indicators": [
         
         {
