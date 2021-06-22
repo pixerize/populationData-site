@@ -2638,6 +2638,7 @@ function getPrecision(precisions, selectedUnit, selectedSeries) {
     // restrict count if it exceeds the limit:
     if(datasets.length > this.maxDatasetCount) {
       datasetCountExceedsMax = true;
+      $("html, body").animate({ scrollTop: 0 }, "slow");
     }
 
     this.updateChartTitle();
@@ -2751,10 +2752,8 @@ var indicatorView = function (model, options) {
 
     if(view_obj._model.showData) {
 
-      $("html, body").animate({ scrollTop: 0 }, "slow");
-
       $('#dataset-size-warning')[args.datasetCountExceedsMax ? 'show' : 'hide']();
-
+      
       if(!view_obj._chartInstance) {
         view_obj.createPlot(args);
       } else {
