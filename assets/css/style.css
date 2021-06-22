@@ -2765,8 +2765,12 @@ header {
 .goal-tiles img {
   background: transparent !important; }
 
-.goal-1.goal-banner {
+.goal-banner {
   background-color: transparent; }
+  .goal-banner .row {
+    background: #5B92E5 !important; }
+    .goal-banner .row h1 {
+      color: #fff; }
 
 .goal-tiles a:focus, .nav-link a:focus {
   background: unset !important;
