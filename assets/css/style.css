@@ -2768,9 +2768,15 @@ header {
 .goal-banner {
   background-color: transparent; }
   .goal-banner .row {
-    background: #5B92E5 !important; }
+    background: #5B92E5 !important;
+    display: flex;
+    align-items: center; }
     .goal-banner .row h1 {
-      color: #fff; }
+      color: #fff;
+      margin-top: 0; }
+    .goal-banner .row img {
+      background: transparent !important;
+      filter: brightness(0) invert(1); }
 
 .goal-tiles a:focus, .nav-link a:focus {
   background: unset !important;
