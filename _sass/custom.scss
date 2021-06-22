@@ -241,9 +241,17 @@ header {
 
     .row {
         background: $blue !important;
+        display: flex;
+        align-items: center;
 
         h1 {
             color: #fff;
+            margin-top: 0;
+        }
+
+        img {
+            background: transparent !important;
+            filter: brightness(0) invert(1);
         }
     }
 }
