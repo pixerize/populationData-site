@@ -223,7 +223,7 @@
         
         {
           "id": "2-1-1",
-          "title": "Prevalence of undernourishment",
+          "title": "Projected population by age and sex",
           "description": "",
           "keywords": "",
           "href": "/2-1-1",
@@ -231,7 +231,7 @@
         },
         {
           "id": "2-1-2",
-          "title": "Prevalence of moderate or severe food insecurity in the population, based on the Food Insecurity Experience Scale (FIES)",
+          "title": "Projected population by age groups and sex",
           "description": "",
           "keywords": "",
           "href": "/2-1-2",
@@ -247,7 +247,7 @@
         
         {
           "id": "3-1-1",
-          "title": "Population over 15 years of age by educational attainment and sex",
+          "title": "Work in progress",
           "description": "",
           "keywords": "",
           "href": "/3-1-1",
@@ -271,7 +271,7 @@
         
         {
           "id": "4-1-1",
-          "title": "Population over 15 years of age by educational attainment and sex",
+          "title": "Work in progress",
           "description": "",
           "keywords": "",
           "href": "/4-1-1",
@@ -287,7 +287,7 @@
         
         {
           "id": "5-1-1",
-          "title": "GDP (BAM) per type",
+          "title": "Population over 15 years of age by educational attainment and sex",
           "description": "",
           "keywords": "",
           "href": "/5-1-1",
@@ -295,7 +295,7 @@
         },
         {
           "id": "5-1-2",
-          "title": "GDP per foreign currencies and type (EUR)",
+          "title": "Population enrolled in formal educational institutions by sex and type of educational institution",
           "description": "",
           "keywords": "",
           "href": "/5-1-2",
@@ -303,7 +303,7 @@
         },
         {
           "id": "5-1-3",
-          "title": "GDP per foreign currencies and type (USD)",
+          "title": "Population 25-64 years of age enrolled in non-formal, adult education by age groups and sex",
           "description": "",
           "keywords": "",
           "href": "/5-1-3",
@@ -311,7 +311,7 @@
         },
         {
           "id": "5-1-4",
-          "title": "Number of illiterate population over 10 years of age by age groups and sex",
+          "title": "global_indicators.4-1-4-title",
           "description": "",
           "keywords": "",
           "href": "/5-1-4",
@@ -319,7 +319,7 @@
         },
         {
           "id": "5-1-5",
-          "title": "global_indicators.5-1-5-title",
+          "title": "Population 15-24 years of age not in employment, education or training (NEET) by sex",
           "description": "",
           "keywords": "",
           "href": "/5-1-5",
@@ -335,7 +335,7 @@
         
         {
           "id": "6-1-1",
-          "title": "Labour force participation rate (Percentage of active population (labour force) in working age population (15-64) by age group and sex)",
+          "title": "GDP (BAM) per type",
           "description": "",
           "keywords": "",
           "href": "/6-1-1",
@@ -343,7 +343,7 @@
         },
         {
           "id": "6-1-2",
-          "title": "Employment-to-population ratio (Percentage of employed population in working age population (15-64) by age group and sex)",
+          "title": "GDP per foreign currencies and type (EUR)",
           "description": "",
           "keywords": "",
           "href": "/6-1-2",
@@ -351,7 +351,7 @@
         },
         {
           "id": "6-1-3",
-          "title": "Unemployment rate (Percentage of unemployed population in active population (labour force) by age group and sex)",
+          "title": "GDP per foreign currencies and type (USD)",
           "description": "",
           "keywords": "",
           "href": "/6-1-3",
@@ -359,7 +359,7 @@
         },
         {
           "id": "6-2-1",
-          "title": "Proportion of population using safely managed sanitation services, including a handwashing facility with soap and water",
+          "title": "Percentage of households living in relative poverty",
           "description": "",
           "keywords": "",
           "href": "/6-2-1",
@@ -367,7 +367,7 @@
         },
         {
           "id": "6-2-2",
-          "title": "global_indicators.6-2-2-title",
+          "title": "Percentage of population living in relative poverty by sex",
           "description": "",
           "keywords": "",
           "href": "/6-2-2",
@@ -375,7 +375,7 @@
         },
         {
           "id": "6-3-1",
-          "title": "Proportion of wastewater safely treated",
+          "title": "Labour force participation rate (Percentage of active population (labour force) in working age population (15-64) by age group and sex)",
           "description": "",
           "keywords": "",
           "href": "/6-3-1",
@@ -383,7 +383,7 @@
         },
         {
           "id": "6-3-2",
-          "title": "Proportion of bodies of water with good ambient water quality",
+          "title": "Employment-to-population ratio (Percentage of employed population in working age population (15-64) by age group and sex)",
           "description": "",
           "keywords": "",
           "href": "/6-3-2",
@@ -391,7 +391,7 @@
         },
         {
           "id": "6-3-3",
-          "title": "global_indicators.6-3-3-title",
+          "title": "Unemployment rate (Percentage of unemployed population in active population (labour force) by age group and sex)",
           "description": "",
           "keywords": "",
           "href": "/6-3-3",
