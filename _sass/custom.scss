@@ -264,6 +264,20 @@ header {
     color: $yellow !important;
 }
 
+.goal-target {
+    background: $blue;
+    color: #fff !important;
+    padding: 5px !important;
+    border: unset !important;
+
+    .indicator-card-number {
+        display: none !important;
+    }
+}
+
+
+
+
 
 //sharpen the resized images Chrome
 
