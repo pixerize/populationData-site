@@ -110,123 +110,83 @@
           "status": "complete"
         },
         {
-          "id": "1-12-1",
-          "title": "Ukupni grantovi službene razvojne pomoći svih donatora koji su usmjereni na smanjenje siromaštva kao udio u bruto nacionalnom dohotku zemlje primaoca",
+          "id": "1-5-1",
+          "title": "Broj smrti, nestalih osoba i direktno pogođenih lica pripisanih katastrofama na 100.000 stanovnika",
           "description": "",
           "keywords": "",
-          "href": "/hr/1-12-1",
+          "href": "/hr/1-5-1",
           "status": "complete"
         },
         {
-          "id": "1-13-1",
-          "title": "Ukupni grantovi službene razvojne pomoći svih donatora koji su usmjereni na smanjenje siromaštva kao udio u bruto nacionalnom dohotku zemlje primaoca",
+          "id": "1-5-2",
+          "title": "Direktni ekonomski gubitak uzrokovan nesrećama u odnosu na globalni bruto domaći proizvod (BDP)",
           "description": "",
           "keywords": "",
-          "href": "/hr/1-13-1",
+          "href": "/hr/1-5-2",
           "status": "complete"
         },
         {
-          "id": "1-14-1",
-          "title": "Ukupni grantovi službene razvojne pomoći svih donatora koji su usmjereni na smanjenje siromaštva kao udio u bruto nacionalnom dohotku zemlje primaoca",
+          "id": "1-5-3",
+          "title": "Broj zemalja koje usvajaju i implementiraju nacionalne strategije za smanjenje rizika od katastrofa u skladu sa Sendai Okvirom za smanjenje rizika od katastrofa 2015-2030",
           "description": "",
           "keywords": "",
-          "href": "/hr/1-14-1",
+          "href": "/hr/1-5-3",
           "status": "complete"
         },
         {
-          "id": "1-14-1 ",
-          "title": "global_indicators.1-14-1 -title",
+          "id": "1-5-4",
+          "title": "Udio lokalnih samouprava koje usvajaju i sprovode strategije za smanjenje rizika od katastrofa u skladu sa nacionalnim strategijama za smanjenje rizika od katastrofa",
           "description": "",
           "keywords": "",
-          "href": "/hr/1-14-1 ",
+          "href": "/hr/1-5-4",
           "status": "complete"
         },
         {
-          "id": "1-15-1",
-          "title": "Ukupni grantovi službene razvojne pomoći svih donatora koji su usmjereni na smanjenje siromaštva kao udio u bruto nacionalnom dohotku zemlje primaoca",
+          "id": "1-6-1",
+          "title": "global_indicators.1-6-1-title",
           "description": "",
           "keywords": "",
-          "href": "/hr/1-15-1",
+          "href": "/hr/1-6-1",
           "status": "complete"
         },
         {
-          "id": "1-16-1",
-          "title": "Ukupni grantovi službene razvojne pomoći svih donatora koji su usmjereni na smanjenje siromaštva kao udio u bruto nacionalnom dohotku zemlje primaoca",
+          "id": "1-6-2",
+          "title": "global_indicators.1-6-2-title",
           "description": "",
           "keywords": "",
-          "href": "/hr/1-16-1",
+          "href": "/hr/1-6-2",
           "status": "complete"
         },
         {
-          "id": "1-17-1",
-          "title": "Ukupni grantovi službene razvojne pomoći svih donatora koji su usmjereni na smanjenje siromaštva kao udio u bruto nacionalnom dohotku zemlje primaoca",
+          "id": "1-7-1",
+          "title": "global_indicators.1-7-1-title",
           "description": "",
           "keywords": "",
-          "href": "/hr/1-17-1",
+          "href": "/hr/1-7-1",
           "status": "complete"
         },
         {
-          "id": "1-18-1",
-          "title": "Ukupni grantovi službene razvojne pomoći svih donatora koji su usmjereni na smanjenje siromaštva kao udio u bruto nacionalnom dohotku zemlje primaoca",
+          "id": "1-8-1",
+          "title": "global_indicators.1-8-1-title",
           "description": "",
           "keywords": "",
-          "href": "/hr/1-18-1",
+          "href": "/hr/1-8-1",
           "status": "complete"
         },
         {
-          "id": "1-19-1",
-          "title": "Ukupni grantovi službene razvojne pomoći svih donatora koji su usmjereni na smanjenje siromaštva kao udio u bruto nacionalnom dohotku zemlje primaoca",
+          "id": "1-8-3",
+          "title": "global_indicators.1-8-3-title",
           "description": "",
           "keywords": "",
-          "href": "/hr/1-19-1",
+          "href": "/hr/1-8-3",
           "status": "complete"
         },
         {
-          "id": "1-20-1",
-          "title": "Ukupni grantovi službene razvojne pomoći svih donatora koji su usmjereni na smanjenje siromaštva kao udio u bruto nacionalnom dohotku zemlje primaoca",
+          "id": "1-9-1",
+          "title": "global_indicators.1-9-1-title",
           "description": "",
           "keywords": "",
-          "href": "/hr/1-20-1",
-          "status": "complete"
-        },
-        {
-          "id": "1-21-1",
-          "title": "Ukupni grantovi službene razvojne pomoći svih donatora koji su usmjereni na smanjenje siromaštva kao udio u bruto nacionalnom dohotku zemlje primaoca",
-          "description": "",
-          "keywords": "",
-          "href": "/hr/1-21-1",
-          "status": "complete"
-        },
-        {
-          "id": "1-22-1",
-          "title": "Ukupni grantovi službene razvojne pomoći svih donatora koji su usmjereni na smanjenje siromaštva kao udio u bruto nacionalnom dohotku zemlje primaoca",
-          "description": "",
-          "keywords": "",
-          "href": "/hr/1-22-1",
-          "status": "complete"
-        },
-        {
-          "id": "1-23-1",
-          "title": "Ukupni grantovi službene razvojne pomoći svih donatora koji su usmjereni na smanjenje siromaštva kao udio u bruto nacionalnom dohotku zemlje primaoca",
-          "description": "",
-          "keywords": "",
-          "href": "/hr/1-23-1",
-          "status": "complete"
-        },
-        {
-          "id": "1-24-1",
-          "title": "Ukupni grantovi službene razvojne pomoći svih donatora koji su usmjereni na smanjenje siromaštva kao udio u bruto nacionalnom dohotku zemlje primaoca",
-          "description": "",
-          "keywords": "",
-          "href": "/hr/1-24-1",
-          "status": "complete"
-        },
-        {
-          "id": "1-25-1",
-          "title": "Ukupni grantovi službene razvojne pomoći svih donatora koji su usmjereni na smanjenje siromaštva kao udio u bruto nacionalnom dohotku zemlje primaoca",
-          "description": "",
-          "keywords": "",
-          "href": "/hr/1-25-1",
+          "href": "/hr/1-9-1",
           "status": "complete"
         }]
     }
