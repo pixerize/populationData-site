@@ -2783,6 +2783,14 @@ header {
   box-shadow: none !important;
   color: #ffcc29 !important; }
 
+.goal-target {
+  background: #5B92E5;
+  color: #fff !important;
+  padding: 5px !important;
+  border: unset !important; }
+  .goal-target .indicator-card-number {
+    display: none !important; }
+
 img {
   transform: translateZ(0px); }
 
