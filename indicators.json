@@ -143,7 +143,7 @@
         },
         {
           "id": "1-6-1",
-          "title": "global_indicators.1-6-1-title",
+          "title": "Crude death rate",
           "description": "",
           "keywords": "",
           "href": "/1-6-1",
@@ -255,7 +255,7 @@
         },
         {
           "id": "3-3-1",
-          "title": "Number of new HIV infections per 1,000 uninfected population, by sex, age and key populations",
+          "title": "MISC",
           "description": "",
           "keywords": "",
           "href": "/3-3-1",
@@ -271,7 +271,7 @@
         },
         {
           "id": "3-5-1",
-          "title": "Number of persons with disabilities by age and sex",
+          "title": "Persons with disabilities by age and sex",
           "description": "",
           "keywords": "",
           "href": "/3-5-1",
@@ -279,7 +279,7 @@
         },
         {
           "id": "3-5-2",
-          "title": "Harmful use of alcohol, defined according to the national context as alcohol per capita consumption (aged 15 years and older) within a calendar year in litres of pure alcohol",
+          "title": "Persons with disabilities by age groups",
           "description": "",
           "keywords": "",
           "href": "/3-5-2",
