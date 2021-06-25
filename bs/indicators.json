@@ -246,14 +246,6 @@
           "status": "complete"
         },
         {
-          "id": "3-1-4",
-          "title": "global_indicators.3-1-4-title",
-          "description": "",
-          "keywords": "",
-          "href": "/bs/3-1-4",
-          "status": "complete"
-        },
-        {
           "id": "3-2-1",
           "title": "Stopa smrtnosti ispod pet godina",
           "description": "",
@@ -262,19 +254,19 @@
           "status": "complete"
         },
         {
-          "id": "3-2-2",
-          "title": "Stopa neonatalne smrtnosti",
+          "id": "3-3-1",
+          "title": "Broj novih HIV infekcija na 1.000 neinficiranih stanovnika, po polu, starosti i ključnim populacijama",
           "description": "",
           "keywords": "",
-          "href": "/bs/3-2-2",
+          "href": "/bs/3-3-1",
           "status": "complete"
         },
         {
-          "id": "3-2-2 copy",
-          "title": "global_indicators.3-2-2 copy-title",
+          "id": "3-4-1",
+          "title": "Stopa smrtnosti koja se pripisuje kardiovaskularnim bolestima, karcinomu, dijabetesu ili hroničnim respiratornim bolestima",
           "description": "",
           "keywords": "",
-          "href": "/bs/3-2-2 copy",
+          "href": "/bs/3-4-1",
           "status": "complete"
         }]
     }

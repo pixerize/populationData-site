@@ -246,14 +246,6 @@
           "status": "complete"
         },
         {
-          "id": "3-1-4",
-          "title": "global_indicators.3-1-4-title",
-          "description": "",
-          "keywords": "",
-          "href": "/3-1-4",
-          "status": "complete"
-        },
-        {
           "id": "3-2-1",
           "title": "Under‐five mortality rate",
           "description": "",
@@ -262,19 +254,19 @@
           "status": "complete"
         },
         {
-          "id": "3-2-2",
-          "title": "Neonatal mortality rate",
+          "id": "3-3-1",
+          "title": "Number of new HIV infections per 1,000 uninfected population, by sex, age and key populations",
           "description": "",
           "keywords": "",
-          "href": "/3-2-2",
+          "href": "/3-3-1",
           "status": "complete"
         },
         {
-          "id": "3-2-2 copy",
-          "title": "global_indicators.3-2-2 copy-title",
+          "id": "3-4-1",
+          "title": "Mortality rate attributed to cardiovascular disease, cancer, diabetes or chronic respiratory disease",
           "description": "",
           "keywords": "",
-          "href": "/3-2-2 copy",
+          "href": "/3-4-1",
           "status": "complete"
         }]
     }
