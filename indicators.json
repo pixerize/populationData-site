@@ -103,7 +103,7 @@
         },
         {
           "id": "1-4-4",
-          "title": "Number of births by teenage mothers by age group",
+          "title": "Births by teenage mothers by age group",
           "description": "",
           "keywords": "",
           "href": "/1-4-4",
@@ -151,7 +151,7 @@
         },
         {
           "id": "1-6-2",
-          "title": "Number of infant deaths and mortality by sex",
+          "title": "Infant deaths and mortality by sex",
           "description": "",
           "keywords": "",
           "href": "/1-6-2",
@@ -167,7 +167,7 @@
         },
         {
           "id": "1-8-1",
-          "title": "Number of marriages marriage rate",
+          "title": "Marriages",
           "description": "",
           "keywords": "",
           "href": "/1-8-1",
@@ -175,7 +175,7 @@
         },
         {
           "id": "1-8-3",
-          "title": "Number of divorces and divorce rate",
+          "title": "Divorces",
           "description": "",
           "keywords": "",
           "href": "/1-8-3",
@@ -183,7 +183,7 @@
         },
         {
           "id": "1-9-1",
-          "title": "Number of households",
+          "title": "Households",
           "description": "",
           "keywords": "",
           "href": "/1-9-1",
@@ -223,7 +223,7 @@
         
         {
           "id": "3-1-1",
-          "title": "Number of deaths by cause of death and sex",
+          "title": "Deaths by cause of death and sex",
           "description": "",
           "keywords": "",
           "href": "/3-1-1",
@@ -231,7 +231,7 @@
         },
         {
           "id": "3-1-2",
-          "title": "Number of deaths by cause of death per 100,000 population",
+          "title": "Deaths by cause of death per 100,000 population",
           "description": "",
           "keywords": "",
           "href": "/3-1-2",
@@ -335,7 +335,7 @@
         },
         {
           "id": "5-1-4",
-          "title": "Number of illiterate population over 10 years of age by age groups and sex",
+          "title": "Illiterate population over 10 years of age by age groups and sex",
           "description": "",
           "keywords": "",
           "href": "/5-1-4",
