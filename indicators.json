@@ -55,7 +55,7 @@
         },
         {
           "id": "1-2-1",
-          "title": "Vital statistics by state/entity and sex",
+          "title": "Vital statistics by sex",
           "description": "",
           "keywords": "",
           "href": "/1-2-1",
@@ -63,7 +63,7 @@
         },
         {
           "id": "1-2-2",
-          "title": "Natural growth rate by entity",
+          "title": "Natural growth rate",
           "description": "",
           "keywords": "",
           "href": "/1-2-2",
@@ -71,7 +71,7 @@
         },
         {
           "id": "1-3-1",
-          "title": "Dependency ratios at state and entity level by sex",
+          "title": "Dependency ratios by sex",
           "description": "",
           "keywords": "",
           "href": "/1-3-1",
@@ -79,7 +79,7 @@
         },
         {
           "id": "1-4-1",
-          "title": "Crude birth rate by entity",
+          "title": "Crude birth rate",
           "description": "",
           "keywords": "",
           "href": "/1-4-1",
@@ -111,7 +111,7 @@
         },
         {
           "id": "1-5-1",
-          "title": "Average age of mothers at first birth by entity",
+          "title": "Average age of mothers at first birth",
           "description": "",
           "keywords": "",
           "href": "/1-5-1",
@@ -119,7 +119,7 @@
         },
         {
           "id": "1-5-2",
-          "title": "Average age of population by entity and sex",
+          "title": "Average age of population by sex",
           "description": "",
           "keywords": "",
           "href": "/1-5-2",
@@ -127,7 +127,7 @@
         },
         {
           "id": "1-5-3",
-          "title": "Average age at death by entity and sex",
+          "title": "Average age at death by sex",
           "description": "",
           "keywords": "",
           "href": "/1-5-3",
@@ -135,7 +135,7 @@
         },
         {
           "id": "1-5-4",
-          "title": "Average age at first marriage by entity and sex",
+          "title": "Average age at first marriage by sex",
           "description": "",
           "keywords": "",
           "href": "/1-5-4",
