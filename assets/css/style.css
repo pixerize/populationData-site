@@ -2673,6 +2673,9 @@ header .container {
       -ms-transition: all 150ms ease-in-out;
       -o-transition: all 150ms ease-in-out;
       transition: all 150ms ease-in-out; }
+  #main-content #dataset-size-warning {
+    background: red;
+    color: #fff; }
 
 .breadcrumb {
   margin-top: 15px; }
