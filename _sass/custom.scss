@@ -213,10 +213,6 @@ a {
 //main icons
 .goal-tiles {
 
-    a {
-
-    }
-
     p {
         position: absolute;
         font-size: 20px;
@@ -242,6 +238,10 @@ a {
         h1 {
             color: #fff;
             margin-top: 0;
+
+            .lead-copy {
+                display: inline;
+            }
         }
 
         img {
