@@ -18,6 +18,17 @@ body {
 
 header .container {
     padding-top: 10px;
+
+    .supp-by {
+        height: 110px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+
+        img {
+            padding-left: 10px;
+        }
+    }
 }
 
 @media (min-width: $bp-tablet + 1px) {
