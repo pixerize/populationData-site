@@ -227,6 +227,12 @@ a {
     }
 }
 
+#national {
+    tr:nth-child(1), tr:nth-child(3), tr:nth-child(4), tr:nth-child(6), tr:nth-child(7), tr:nth-child(8), tr:nth-child(9), tr:nth-child(11), tr:nth-child(3) {
+        display: none;
+    }
+}
+
 .goal-banner {
     background-color: transparent;
 
