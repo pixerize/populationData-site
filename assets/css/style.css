@@ -2768,6 +2768,8 @@ a {
     .goal-banner .row h1 {
       color: #fff;
       margin-top: 0; }
+      .goal-banner .row h1 .lead-copy {
+        display: inline; }
     .goal-banner .row img {
       background: transparent !important;
       filter: brightness(0) invert(1); }
