@@ -8,20 +8,30 @@ $( document ).ready(function() {
 //remove metadata details indicator page
 $( document ).ready(function() {
   $("#national tr:nth-child(1)").remove();
+  $("#national tr:nth-child(2)").remove();
   $("#national tr:nth-child(3)").remove();
-  $("#national tr:nth-child(4)").remove();
+  $("#national tr:nth-child(5)").remove();
   $("#national tr:nth-child(6)").remove();
   $("#national tr:nth-child(7)").remove();
   $("#national tr:nth-child(8)").remove();
-  $("#national tr:nth-child(9)").remove();
   $("#national tr:nth-child(11)").remove();
 });
 
 $( document ).ready(function() {
-  $("#source tr").each(function(){
+  var date = '';
+  $("td a").each(function(){
+    date = $(this).text().substring(17, 27);
+    $(this).html(date).attr('href', '#');
+  });
+});
+
+$( document ).ready(function() {
+  $("#sources tr").each(function(){
   $("tr:nth-child("+2+")").remove();
   });
 });
+
+
 //end of metadata details
 
 $( document ).ready(function() {
