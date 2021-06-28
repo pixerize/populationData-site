@@ -95,6 +95,11 @@ header .container {
             }
         }
     }
+
+    #dataset-size-warning {
+        background: red;
+        color: #fff;
+    }
 }
 
 .breadcrumb {
@@ -271,10 +276,6 @@ a {
         display: inline !important;
     }
 }
-
-
-
-
 
 //sharpen the resized images Chrome
 
