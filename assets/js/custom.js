@@ -19,7 +19,7 @@ $( document ).ready(function() {
 
 $( document ).ready(function() {
   var date = '';
-  $("td a").each(function(){
+  $("#national td a").each(function(){
     date = $(this).text().substring(17, 27);
     $(this).html(date).attr('href', '#');
   });
