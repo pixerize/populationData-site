@@ -18,7 +18,7 @@ $( document ).ready(function() {
 });
 
 $( document ).ready(function() {
-  $("#national tr").each(function(){
+  $("#source tr").each(function(){
   $("tr:nth-child("+2+")").remove();
   });
 });
