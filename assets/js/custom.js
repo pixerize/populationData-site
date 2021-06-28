@@ -21,7 +21,7 @@ $( document ).ready(function() {
   var date = '';
   $("#national td a").each(function(){
     date = $(this).text().substring(17, 27);
-    $(this).html(date).attr('href', '#');
+    $(this).html(date).removeAttr("href");
   });
 });
 
