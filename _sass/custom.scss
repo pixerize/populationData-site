@@ -206,40 +206,24 @@ header {
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 //main icons
 .goal-tiles {
-    & > div div {
-        &:after {
-            position: absolute;
-            bottom: -40px;
-            left: 48%;
-            font-size: 20px;
-            text-transform: uppercase;
-            transform: translateX(-50%);
-            text-align: center;
-            width: 190px;
-        }
 
-        &:nth-child(1):after {
-            content: "Population";
-        }
-        &:nth-child(2):after {
-            content: "Population Projections";
-            bottom: -67px;
-        }
-        &:nth-child(3):after {
-            content: "Health";
-        }
-        &:nth-child(4):after {
-            content: "Violence";
-        }
-        &:nth-child(5):after {
-            content: "Education";
-        }
-        &:nth-child(6):after {
-            content: "ECONOMIC, POVERTY AND LABOUR FORCE";
-            bottom: -95px;
-        }
+    a {
+
+    }
+
+    p {
+        position: absolute;
+        font-size: 20px;
+        text-transform: uppercase;
+        text-align: center;
+        width: 100%;
+        color: #000;
     }
 
     img {
