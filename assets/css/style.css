@@ -2759,6 +2759,9 @@ a {
 .goal-tiles img {
   background: transparent !important; }
 
+#national tr:nth-child(1), #national tr:nth-child(3), #national tr:nth-child(4), #national tr:nth-child(6), #national tr:nth-child(7), #national tr:nth-child(8), #national tr:nth-child(9), #national tr:nth-child(11), #national tr:nth-child(3) {
+  display: none; }
+
 .goal-banner {
   background-color: transparent; }
   .goal-banner .row {
