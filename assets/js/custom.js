@@ -9,12 +9,12 @@ $( document ).ready(function() {
 $( document ).ready(function() {
   $("#national tr:nth-child(1)").remove();
   $("#national tr:nth-child(2)").remove();
+  $("#national tr:nth-child(2)").remove();
   $("#national tr:nth-child(3)").remove();
-  $("#national tr:nth-child(5)").remove();
-  $("#national tr:nth-child(6)").remove();
-  $("#national tr:nth-child(7)").remove();
-  $("#national tr:nth-child(8)").remove();
-  $("#national tr:nth-child(11)").remove();
+  $("#national tr:nth-child(3)").remove();
+  $("#national tr:nth-child(3)").remove();
+  $("#national tr:nth-child(3)").remove();
+  $("#national tr:nth-child(4)").remove();
 });
 
 $( document ).ready(function() {
