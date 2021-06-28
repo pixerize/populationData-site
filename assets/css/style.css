@@ -2751,7 +2751,7 @@ header {
 .goal-tiles > div div:nth-child(1):after {
   content: "Population"; }
 .goal-tiles > div div:nth-child(2):after {
-  content: "Population Projection";
+  content: "Population Projections";
   bottom: -67px; }
 .goal-tiles > div div:nth-child(3):after {
   content: "Health"; }
@@ -2760,7 +2760,7 @@ header {
 .goal-tiles > div div:nth-child(5):after {
   content: "Education"; }
 .goal-tiles > div div:nth-child(6):after {
-  content: "Economic, Poverty and Activity";
+  content: "ECONOMIC, POVERTY AND LABOUR FORCE";
   bottom: -95px; }
 .goal-tiles img {
   background: transparent !important; }
