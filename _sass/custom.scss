@@ -74,6 +74,10 @@ header .container {
         margin-bottom: 65px;
     }
 
+    .btn-download {
+        background: $blue !important;
+    }
+
     .goal-tiles {
 
         margin-bottom: 150px;
@@ -286,7 +290,7 @@ img {
 /*Items to be removed */
 
 
-.zip-download-container, footer, .goal-tiles .row:not(:first-child), .disclaimer-alert, .contrast, p.lead-copy, ol.breadcrumb {
+.zip-download-container, footer, .goal-tiles .row:not(:first-child), .disclaimer-alert, .contrast, p.lead-copy, ol.breadcrumb, div#chartSelectionDownload a  {
     display: none !important;
     }
 
