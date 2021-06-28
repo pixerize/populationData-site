@@ -2796,7 +2796,9 @@ header {
   padding: 5px !important;
   border: unset !important; }
   .goal-target .indicator-card-number {
-    display: none !important; }
+    border: unset !important;
+    color: #fff !important;
+    display: inline !important; }
 
 img {
   transform: translateZ(0px); }
