@@ -27,7 +27,7 @@ $( document ).ready(function() {
 
 $( document ).ready(function() {
   $("#sources tr").each(function(){
-  $("tr:nth-child("+2+")").remove();
+  $("#sources tr:nth-child("+2+")").remove();
   });
 });
 
