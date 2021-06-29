@@ -5,9 +5,15 @@ $yellow: #ffcc29;
 
 body {
     background: #fff;
-    background: url(https://popdata.work/assets/img/other/popbg.jpg);
+    background: url(../assets/img/other/popbg.jpg);
     background-size: cover;
     padding-top: 0;
+}
+
+#back-to-top {
+    background: $blue;
+    background: url(../assets/img/other/back-to-top.png);
+    background-size: cover;
 }
 
 .navbar-brand {
