@@ -375,7 +375,7 @@
         
         {
           "id": "6-1-1",
-          "title": "GDP (millions)",
+          "title": "Gross Domestic Product - Total (millions)",
           "description": "",
           "keywords": "",
           "href": "/6-1-1",
@@ -383,7 +383,7 @@
         },
         {
           "id": "6-1-2",
-          "title": "GDP",
+          "title": "Gross Domestic Product - Per capita",
           "description": "",
           "keywords": "",
           "href": "/6-1-2",
@@ -391,7 +391,7 @@
         },
         {
           "id": "6-1-3",
-          "title": "GDP",
+          "title": "Real GDP growth",
           "description": "",
           "keywords": "",
           "href": "/6-1-3",
