@@ -159,7 +159,7 @@
         },
         {
           "id": "1-6-2",
-          "title": "Infant mortality by sex",
+          "title": "Infant (up to 12 months of age) mortality by sex",
           "description": "",
           "keywords": "",
           "href": "/1-6-2",
@@ -167,7 +167,7 @@
         },
         {
           "id": "1-6-3",
-          "title": "global_indicators.1-6-3-title",
+          "title": "Infant (up to 12 months of age) mortality rate",
           "description": "",
           "keywords": "",
           "href": "/1-6-3",
@@ -191,7 +191,7 @@
         },
         {
           "id": "1-8-2",
-          "title": "global_indicators.1-8-2-title",
+          "title": "Marriage rate",
           "description": "",
           "keywords": "",
           "href": "/1-8-2",
@@ -207,7 +207,7 @@
         },
         {
           "id": "1-8-4",
-          "title": "global_indicators.1-8-4-title",
+          "title": "Divorce rate (per 1,000 marriages)",
           "description": "",
           "keywords": "",
           "href": "/1-8-4",
