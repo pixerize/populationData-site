@@ -2613,13 +2613,13 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
 
 body {
   background: #fff;
-  background: url(../assets/img/other/popbg.jpg);
+  background: url(/assets/img/other/popbg.jpg);
   background-size: cover;
   padding-top: 0; }
 
 #back-to-top {
   background: #5B92E5;
-  background: url(../assets/img/other/back-to-top.png);
+  background: url(/assets/img/other/back-to-top.png);
   background-size: cover; }
 
 .navbar-brand {
