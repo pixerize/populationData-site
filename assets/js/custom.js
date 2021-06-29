@@ -31,6 +31,13 @@ $( document ).ready(function() {
   });
 });
 
+//back to top button
+
+$(document).ready(function () {
+  $('#back-to-top').click(function (e) {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+  });
+});
 
 //end of metadata details
 
