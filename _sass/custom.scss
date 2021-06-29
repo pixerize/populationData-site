@@ -22,6 +22,11 @@ body {
     background-position: center;
     border: 1px solid $blue;
     border-radius: 50%;
+    transition: .3s;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
 }
 
 [href]:focus, [tabindex]:focus, iframe:focus, input:focus, button:focus {
