@@ -11,9 +11,17 @@ body {
 }
 
 #back-to-top {
-    background: $blue;
-    background: url(/assets/img/other/back-to-top.png);
-    background-size: cover;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #fff url(/assets/img/other/back-to-top.png);
+    background-size: contain;
+    height: 40px;
+    width: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid $blue;
+    border-radius: 50%;
 }
 
 .navbar-brand {
@@ -110,12 +118,6 @@ header .container {
         background: red;
         color: #fff;
     }
-}
-
-a#back-to-top {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
 }
 
 .breadcrumb {
