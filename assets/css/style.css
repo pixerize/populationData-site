@@ -2628,7 +2628,10 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   border: 1px solid #5B92E5;
-  border-radius: 50%; }
+  border-radius: 50%;
+  transition: .3s; }
+  #back-to-top:hover {
+    transform: translateY(-5px); }
 
 [href]:focus, [tabindex]:focus, iframe:focus, input:focus, button:focus {
   background-color: unset !important;
