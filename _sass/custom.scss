@@ -7,12 +7,28 @@ body {
     background: #fff;
     background: url(https://popdata.work/assets/img/other/popbg.jpg);
     background-size: cover;
+    padding-top: 0;
 }
 
 .navbar-brand {
     display: block;
     width: 75%;
     max-width: 310px;
+}
+
+header .container {
+    padding-top: 10px;
+
+    .supp-by {
+        height: 110px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+
+        img {
+            padding-left: 10px;
+        }
+    }
 }
 
 @media (min-width: $bp-tablet + 1px) {
@@ -34,16 +50,32 @@ body {
     }
 }
 
+.layout-frontpage  #main-content{
+    height: 69vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+}
+
+.goal-banner {
+    background: transparent !important;
+}
+
 #main-content {
 
-    background: transparent;
+    background: transparent !important;
 
     h1 {
-        font-size: 90px;
+        font-size: 70px;
         font-weight: 600;
         line-height: 1.3;
-        margin-bottom: 35px;
-        margin: 0 0 100px;
+        margin-bottom: 65px;
+    }
+
+    .btn-download {
+        background: $blue !important;
     }
 
     .goal-tiles {
@@ -66,6 +98,11 @@ body {
                 transition: all 150ms ease-in-out;
             }
         }
+    }
+
+    #dataset-size-warning {
+        background: red;
+        color: #fff;
     }
 }
 
@@ -174,42 +211,24 @@ header {
 
 .site-intro {
     background: unset;
+    min-height: 140px;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
 }
 
 //main icons
 .goal-tiles {
-    & > div div {
-        &:after {
-            position: absolute;
-            bottom: -40px;
-            left: 48%;
-            font-size: 20px;
-            text-transform: uppercase;
-            transform: translateX(-50%);
-            text-align: center;
-            width: 190px;
-        }
 
-        &:nth-child(1):after {
-            content: "Population";
-        }
-        &:nth-child(2):after {
-            content: "Population Projection";
-            bottom: -67px;
-        }
-        &:nth-child(3):after {
-            content: "Health";
-        }
-        &:nth-child(4):after {
-            content: "Violence";
-        }
-        &:nth-child(5):after {
-            content: "Education";
-        }
-        &:nth-child(6):after {
-            content: "Economic, Povery and Activity";
-            bottom: -95px;
-        }
+    p {
+        position: absolute;
+        font-size: 20px;
+        text-transform: uppercase;
+        text-align: center;
+        width: 100%;
+        color: #000;
     }
 
     img {
@@ -217,10 +236,50 @@ header {
     }
 }
 
-.goal-1.goal-banner {
+.goal-banner {
     background-color: transparent;
+
+    .row {
+        background: $blue !important;
+        display: flex;
+        align-items: center;
+
+        h1 {
+            color: #fff;
+            margin-top: 0;
+
+            .lead-copy {
+                display: inline;
+            }
+        }
+
+        img {
+            background: transparent !important;
+            filter: brightness(0) invert(1);
+        }
+    }
 }
 
+
+
+.goal-tiles a:focus, .nav-link a:focus {
+    background: unset !important;
+    box-shadow: none !important;
+    color: $yellow !important;
+}
+
+.goal-target {
+    background: $blue;
+    color: #fff !important;
+    padding: 5px !important;
+    border: unset !important;
+
+    .indicator-card-number {
+        border: unset !important;
+        color: #fff !important;
+        display: inline !important;
+    }
+}
 
 //sharpen the resized images Chrome
 
@@ -228,9 +287,10 @@ img {
     transform: translateZ(0px);
 }
 
-/*Items to be remove */
+/*Items to be removed */
 
-.zip-download-container, footer, .goal-tiles .row:not(:first-child), .disclaimer-alert, .contrast, p.lead-copy, ol.breadcrumb, .goal-indicators .goal-target {
+
+.zip-download-container, footer, .goal-tiles .row:not(:first-child), .disclaimer-alert, .contrast, p.lead-copy, ol.breadcrumb, div#chartSelectionDownload a  {
     display: none !important;
     }
 

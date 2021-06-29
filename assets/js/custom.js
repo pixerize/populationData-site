@@ -5,6 +5,35 @@ $( document ).ready(function() {
   $("a[href*='/17-6-2']").parent().remove();
 });
 
+//remove metadata details indicator page
+$( document ).ready(function() {
+  $("#national tr:nth-child(1)").remove();
+  $("#national tr:nth-child(2)").remove();
+  $("#national tr:nth-child(2)").remove();
+  $("#national tr:nth-child(3)").remove();
+  $("#national tr:nth-child(3)").remove();
+  $("#national tr:nth-child(3)").remove();
+  $("#national tr:nth-child(3)").remove();
+  $("#national tr:nth-child(4)").remove();
+});
+
+$( document ).ready(function() {
+  var date = '';
+  $("#national td a").each(function(){
+    date = $(this).text().substring(17, 27);
+    $(this).html(date).removeAttr("href");
+  });
+});
+
+$( document ).ready(function() {
+  $("#sources tr").each(function(){
+  $("#sources tr:nth-child("+2+")").remove();
+  });
+});
+
+
+//end of metadata details
+
 $( document ).ready(function() {
   opensdg.chartConfigAlter(function(config, info) {
     var overrides = {
@@ -62,3 +91,5 @@ $( document ).ready(function() {
     return newLabel;
   }
 });
+
+

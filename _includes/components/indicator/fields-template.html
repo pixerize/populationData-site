@@ -21,7 +21,28 @@
             <button data-type="select">{{ page.t.indicator.select_all }}</button>
             <button data-type="clear">{{ page.t.indicator.clear_all }}</button>
           </div>
+<<<<<<< HEAD
            <% console.log(fieldItem.values) %>
+=======
+          <% 
+          //sort numerically by value
+          function compare( a, b ) {
+            a = parseInt(a.value);
+            b = parseInt(b.value);
+            
+            if ( a < b ){
+              return -1;
+            } else if ( a > b){
+              return 1;
+            } else if (a == 0) {
+              return -1;
+            }
+            return 0;
+          }
+          fieldItem.values.sort( compare )
+          %>
+
+>>>>>>> c51efc6844e2f4f1fc4df3f1e5611a692b54b8f9
           <% _.each(fieldItem.values, function(item) { %>
             <label>
               <input type="checkbox" <%=item.checked ? 'checked' : ''%> value="<%=item.value%>" data-field="<%=fieldItem.field%>" /><%=translations.t(item.value)%>
