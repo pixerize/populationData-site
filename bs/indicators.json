@@ -190,11 +190,27 @@
           "status": "complete"
         },
         {
+          "id": "1-8-2",
+          "title": "global_indicators.1-8-2-title",
+          "description": "",
+          "keywords": "",
+          "href": "/bs/1-8-2",
+          "status": "complete"
+        },
+        {
           "id": "1-8-3",
           "title": "global_indicators.1-8-3-title",
           "description": "",
           "keywords": "",
           "href": "/bs/1-8-3",
+          "status": "complete"
+        },
+        {
+          "id": "1-8-4",
+          "title": "global_indicators.1-8-4-title",
+          "description": "",
+          "keywords": "",
+          "href": "/bs/1-8-4",
           "status": "complete"
         },
         {
