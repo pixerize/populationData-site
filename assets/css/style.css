@@ -2679,6 +2679,11 @@ header .container {
     background: red;
     color: #fff; }
 
+a#back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px; }
+
 .breadcrumb {
   margin-top: 15px; }
 
