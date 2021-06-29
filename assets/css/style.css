@@ -2630,6 +2630,10 @@ body {
   border: 1px solid #5B92E5;
   border-radius: 50%; }
 
+[href]:focus, [tabindex]:focus, iframe:focus, input:focus, button:focus {
+  background-color: unset !important;
+  box-shadow: unset !important; }
+
 .navbar-brand {
   display: block;
   width: 75%;
