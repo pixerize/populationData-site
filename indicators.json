@@ -383,10 +383,18 @@
         },
         {
           "id": "3-5-2",
-          "title": "Persons with disabilities by age groups and sex",
+          "title": "Harmful use of alcohol, defined according to the national context as alcohol per capita consumption (aged 15 years and older) within a calendar year in litres of pure alcohol",
           "description": "",
           "keywords": "",
           "href": "/3-5-2",
+          "status": "complete"
+        },
+        {
+          "id": "3-7-1",
+          "title": "Harmful use of alcohol, defined according to the national context as alcohol per capita consumption (aged 15 years and older) within a calendar year in litres of pure alcohol",
+          "description": "",
+          "keywords": "",
+          "href": "/3-7-1",
           "status": "complete"
         }]
     }
