@@ -406,6 +406,14 @@
           "status": "complete"
         },
         {
+          "id": "3-4-2",
+          "title": "Suicide mortality rate",
+          "description": "",
+          "keywords": "",
+          "href": "/3-4-2",
+          "status": "complete"
+        },
+        {
           "id": "3-5-1",
           "title": "Persons with disabilities by age and sex",
           "description": "",
@@ -419,6 +427,46 @@
           "description": "",
           "keywords": "",
           "href": "/3-5-2",
+          "status": "complete"
+        },
+        {
+          "id": "3-5-3",
+          "title": "global_indicators.3-5-3-title",
+          "description": "",
+          "keywords": "",
+          "href": "/3-5-3",
+          "status": "complete"
+        },
+        {
+          "id": "3-5-4",
+          "title": "global_indicators.3-5-4-title",
+          "description": "",
+          "keywords": "",
+          "href": "/3-5-4",
+          "status": "complete"
+        },
+        {
+          "id": "3-5-5",
+          "title": "global_indicators.3-5-5-title",
+          "description": "",
+          "keywords": "",
+          "href": "/3-5-5",
+          "status": "complete"
+        },
+        {
+          "id": "3-5-6",
+          "title": "global_indicators.3-5-6-title",
+          "description": "",
+          "keywords": "",
+          "href": "/3-5-6",
+          "status": "complete"
+        },
+        {
+          "id": "3-5-7",
+          "title": "global_indicators.3-5-7-title",
+          "description": "",
+          "keywords": "",
+          "href": "/3-5-7",
           "status": "complete"
         },
         {

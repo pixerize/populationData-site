@@ -406,6 +406,14 @@
           "status": "complete"
         },
         {
+          "id": "3-4-2",
+          "title": "Стопа смртности самоубистава",
+          "description": "",
+          "keywords": "",
+          "href": "/sr/3-4-2",
+          "status": "complete"
+        },
+        {
           "id": "3-5-1",
           "title": "Покривање интервенцијских третмана (фармаколошке, психосоцијалне,рехабилитационе и накнадне услуге) за поремећаје употребе супстанци",
           "description": "",
@@ -419,6 +427,46 @@
           "description": "",
           "keywords": "",
           "href": "/sr/3-5-2",
+          "status": "complete"
+        },
+        {
+          "id": "3-5-3",
+          "title": "global_indicators.3-5-3-title",
+          "description": "",
+          "keywords": "",
+          "href": "/sr/3-5-3",
+          "status": "complete"
+        },
+        {
+          "id": "3-5-4",
+          "title": "global_indicators.3-5-4-title",
+          "description": "",
+          "keywords": "",
+          "href": "/sr/3-5-4",
+          "status": "complete"
+        },
+        {
+          "id": "3-5-5",
+          "title": "global_indicators.3-5-5-title",
+          "description": "",
+          "keywords": "",
+          "href": "/sr/3-5-5",
+          "status": "complete"
+        },
+        {
+          "id": "3-5-6",
+          "title": "global_indicators.3-5-6-title",
+          "description": "",
+          "keywords": "",
+          "href": "/sr/3-5-6",
+          "status": "complete"
+        },
+        {
+          "id": "3-5-7",
+          "title": "global_indicators.3-5-7-title",
+          "description": "",
+          "keywords": "",
+          "href": "/sr/3-5-7",
           "status": "complete"
         },
         {
