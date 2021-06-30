@@ -311,10 +311,18 @@
         },
         {
           "id": "3-1-3",
-          "title": "Stillbirths by sex",
+          "title": "Stillbirths",
           "description": "",
           "keywords": "",
           "href": "/3-1-3",
+          "status": "complete"
+        },
+        {
+          "id": "3-1-4",
+          "title": "Stilbirth rate",
+          "description": "",
+          "keywords": "",
+          "href": "/3-1-4",
           "status": "complete"
         },
         {
