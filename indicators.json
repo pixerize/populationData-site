@@ -247,7 +247,7 @@
         },
         {
           "id": "2-1-3",
-          "title": "global_indicators.2-1-3-title",
+          "title": "Projected dependency ratios by sex",
           "description": "",
           "keywords": "",
           "href": "/2-1-3",
@@ -255,7 +255,7 @@
         },
         {
           "id": "2-1-4",
-          "title": "global_indicators.2-1-4-title",
+          "title": "Projected vital statistics by sex",
           "description": "",
           "keywords": "",
           "href": "/2-1-4",
@@ -263,7 +263,7 @@
         },
         {
           "id": "2-1-5",
-          "title": "global_indicators.2-1-5-title",
+          "title": "Projected crude birth rate",
           "description": "",
           "keywords": "",
           "href": "/2-1-5",
@@ -271,7 +271,7 @@
         },
         {
           "id": "2-1-6",
-          "title": "global_indicators.2-1-6-title",
+          "title": "Projected crude death rate",
           "description": "",
           "keywords": "",
           "href": "/2-1-6",
@@ -279,7 +279,7 @@
         },
         {
           "id": "2-1-7",
-          "title": "global_indicators.2-1-7-title",
+          "title": "Projected average age of population",
           "description": "",
           "keywords": "",
           "href": "/2-1-7",
@@ -327,7 +327,7 @@
         },
         {
           "id": "3-2-1",
-          "title": "Number of cases",
+          "title": "Cervical cancer",
           "description": "",
           "keywords": "",
           "href": "/3-2-1",
@@ -335,7 +335,7 @@
         },
         {
           "id": "3-2-2",
-          "title": "Neonatal mortality rate",
+          "title": "Cervical cancer per 100,000 female population",
           "description": "",
           "keywords": "",
           "href": "/3-2-2",
@@ -343,7 +343,7 @@
         },
         {
           "id": "3-2-3",
-          "title": "global_indicators.3-2-3-title",
+          "title": "Breast cancer",
           "description": "",
           "keywords": "",
           "href": "/3-2-3",
@@ -351,7 +351,7 @@
         },
         {
           "id": "3-2-4",
-          "title": "global_indicators.3-2-4-title",
+          "title": "Breast cancer per 100,000 female population",
           "description": "",
           "keywords": "",
           "href": "/3-2-4",
@@ -359,7 +359,7 @@
         },
         {
           "id": "3-3-1",
-          "title": "MISC",
+          "title": "Incidence of syphilis",
           "description": "",
           "keywords": "",
           "href": "/3-3-1",
@@ -367,7 +367,7 @@
         },
         {
           "id": "3-3-2",
-          "title": "Tuberculosis incidence per 100,000 population",
+          "title": "Incidence of gonorrhoea",
           "description": "",
           "keywords": "",
           "href": "/3-3-2",
@@ -375,7 +375,7 @@
         },
         {
           "id": "3-3-3",
-          "title": "Malaria incidence per 1,000 population",
+          "title": "Incidence of AIDS",
           "description": "",
           "keywords": "",
           "href": "/3-3-3",
@@ -383,7 +383,7 @@
         },
         {
           "id": "3-3-4",
-          "title": "Hepatitis B incidence per 100,000 population",
+          "title": "Incidence of HIV",
           "description": "",
           "keywords": "",
           "href": "/3-3-4",
@@ -391,7 +391,7 @@
         },
         {
           "id": "3-3-5",
-          "title": "Number of people requiring interventions against neglected tropical diseases",
+          "title": "Incidence of HIV per 100,000 population",
           "description": "",
           "keywords": "",
           "href": "/3-3-5",
@@ -399,7 +399,7 @@
         },
         {
           "id": "3-4-1",
-          "title": "Type of sewage",
+          "title": "Caesarean sections",
           "description": "",
           "keywords": "",
           "href": "/3-4-1",
@@ -407,7 +407,7 @@
         },
         {
           "id": "3-4-2",
-          "title": "Suicide mortality rate",
+          "title": "Caesarean sections per 1,000 live births",
           "description": "",
           "keywords": "",
           "href": "/3-4-2",
@@ -415,7 +415,7 @@
         },
         {
           "id": "3-5-1",
-          "title": "Persons with disabilities by age and sex",
+          "title": "Beds in hospitals",
           "description": "",
           "keywords": "",
           "href": "/3-5-1",
@@ -423,7 +423,7 @@
         },
         {
           "id": "3-5-2",
-          "title": "Harmful use of alcohol, defined according to the national context as alcohol per capita consumption (aged 15 years and older) within a calendar year in litres of pure alcohol",
+          "title": "Beds in hospitals per 100,000 population",
           "description": "",
           "keywords": "",
           "href": "/3-5-2",
@@ -431,7 +431,7 @@
         },
         {
           "id": "3-5-3",
-          "title": "global_indicators.3-5-3-title",
+          "title": "Medical doctors in public institutions",
           "description": "",
           "keywords": "",
           "href": "/3-5-3",
@@ -439,7 +439,7 @@
         },
         {
           "id": "3-5-4",
-          "title": "global_indicators.3-5-4-title",
+          "title": "Medical doctors in public institutions per 100,000 population",
           "description": "",
           "keywords": "",
           "href": "/3-5-4",
@@ -447,7 +447,7 @@
         },
         {
           "id": "3-5-5",
-          "title": "global_indicators.3-5-5-title",
+          "title": "General practitioners",
           "description": "",
           "keywords": "",
           "href": "/3-5-5",
@@ -455,7 +455,7 @@
         },
         {
           "id": "3-5-6",
-          "title": "global_indicators.3-5-6-title",
+          "title": "Population per general practitioner",
           "description": "",
           "keywords": "",
           "href": "/3-5-6",
@@ -463,7 +463,7 @@
         },
         {
           "id": "3-5-7",
-          "title": "global_indicators.3-5-7-title",
+          "title": "Midviwes",
           "description": "",
           "keywords": "",
           "href": "/3-5-7",
@@ -471,10 +471,34 @@
         },
         {
           "id": "3-6-1",
-          "title": "Death rate due to road traffic injuries",
+          "title": "Contraceptive prevalence rate",
           "description": "",
           "keywords": "",
           "href": "/3-6-1",
+          "status": "complete"
+        },
+        {
+          "id": "3-6-2",
+          "title": "Contraceptive prevalence rate",
+          "description": "",
+          "keywords": "",
+          "href": "/3-6-2",
+          "status": "complete"
+        },
+        {
+          "id": "3-6-3",
+          "title": "Contraceptive prevalence rate",
+          "description": "",
+          "keywords": "",
+          "href": "/3-6-3",
+          "status": "complete"
+        },
+        {
+          "id": "3-6-4",
+          "title": "Contraceptive prevalence rate",
+          "description": "",
+          "keywords": "",
+          "href": "/3-6-4",
           "status": "complete"
         },
         {
