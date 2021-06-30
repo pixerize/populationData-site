@@ -334,6 +334,30 @@
           "status": "complete"
         },
         {
+          "id": "3-2-2",
+          "title": "Neonatal mortality rate",
+          "description": "",
+          "keywords": "",
+          "href": "/3-2-2",
+          "status": "complete"
+        },
+        {
+          "id": "3-2-3",
+          "title": "global_indicators.3-2-3-title",
+          "description": "",
+          "keywords": "",
+          "href": "/3-2-3",
+          "status": "complete"
+        },
+        {
+          "id": "3-2-4",
+          "title": "global_indicators.3-2-4-title",
+          "description": "",
+          "keywords": "",
+          "href": "/3-2-4",
+          "status": "complete"
+        },
+        {
           "id": "3-3-1",
           "title": "MISC",
           "description": "",
