@@ -328,6 +328,19 @@ div#main-content {
         }
     }
 
+    .navbar .top-level > li {
+        width: 100%;
+    }
+
+    .navbar #search-mobile {
+        width: 100%;
+
+        .button {
+            background-color: $blue;
+            border: 1.25px solid $blue;
+        }
+    }
+
     .navbar-brand {
         display: block;
         width: 69%;
