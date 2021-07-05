@@ -2821,6 +2821,11 @@ div#main-content h2 {
     font-size: 30px;
     padding: 10px 0 0; }
 
+  .layout-indicator h1 {
+    font-size: 25px;
+    line-height: 1.3 !important;
+    padding: 10px 0 0; }
+
   header .container {
     padding-top: 0; }
 
