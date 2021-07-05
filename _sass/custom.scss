@@ -329,7 +329,27 @@ div#main-content {
         bottom: 20px;
     }
 
-    #main-content h1 {
-        font-size: 40px;
+    .layout-frontpage{
+        #main-content {
+            height: 100%;
+
+        h1 {
+            font-size: 40px;
+            }
+        }
+
+        .col-xs-6 {
+            min-height: 220px;
+        }
+
+        .logo-and-mobile-widgets {
+            min-height: 150px;
+        }
+
+    }
+
+
+    .supp-by {
+        display: none !important;
     }
 }
