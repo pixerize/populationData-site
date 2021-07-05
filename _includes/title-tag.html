@@ -3,7 +3,7 @@
         {{ page.indicator.name | escape }} - {{ site.title | t | escape }}
     </title>
 {% elsif page.goal %}
-    <title>{{ page.goal.short | escape }} - {{ site.title | t | escape }}</title>
+    <title>{{ page.goal.name | escape }} - {{ site.title | t | escape }}</title>
 {% elsif page.title and page.title != '' %}
     <title>{{ page.title | t | escape }} - {{ site.title | t | escape }}</title>
 {% else %}
