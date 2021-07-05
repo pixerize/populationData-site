@@ -2823,7 +2823,16 @@ div#main-content h2 {
   .mobile-widgets {
     position: static !important; }
     .mobile-widgets .dropdown-menu {
-      left: 50px; }
+      left: -50px; }
+
+  .navbar .top-level > li {
+    width: 100%; }
+
+  .navbar #search-mobile {
+    width: 100%; }
+    .navbar #search-mobile .button {
+      background-color: #5B92E5;
+      border: 1.25px solid #5B92E5; }
 
   .navbar-brand {
     display: block;
