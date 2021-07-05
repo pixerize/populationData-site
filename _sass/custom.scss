@@ -350,8 +350,8 @@ div#main-content {
         width: 100%;
 
         .button {
-            background-color: $blue;
-            border: 1.25px solid $blue;
+            background-color: $blue !important;
+            border: 1.25px solid $blue !important;
         }
     }
 
