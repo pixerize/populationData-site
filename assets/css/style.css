@@ -2816,9 +2816,14 @@ div#main-content > p {
 div#main-content h2 {
   display: none; }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   header .container {
     padding-top: 0; }
+
+  .mobile-widgets {
+    position: static !important; }
+    .mobile-widgets .dropdown-menu {
+      left: 50px; }
 
   .navbar-brand {
     display: block;
@@ -2827,14 +2832,18 @@ div#main-content h2 {
   .logo-and-mobile-widgets .mobile-widgets {
     bottom: 20px; }
 
+  li#menuToggle {
+    display: none; }
+
   .layout-frontpage #main-content {
     height: 100%; }
     .layout-frontpage #main-content h1 {
       font-size: 40px; }
   .layout-frontpage .col-xs-6 {
     min-height: 220px; }
-  .layout-frontpage .logo-and-mobile-widgets {
-    min-height: 150px; }
+
+  .logo-and-mobile-widgets {
+    min-height: 140px; }
 
   .supp-by {
     display: none !important; } }
