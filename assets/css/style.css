@@ -2817,13 +2817,17 @@ div#main-content h2 {
   display: none; }
 
 @media (max-width: 991px) {
+  .layout-goal-by-target h1 {
+    font-size: 30px;
+    padding: 10px 0 0; }
+
   header .container {
     padding-top: 0; }
 
   .mobile-widgets {
     position: static !important; }
     .mobile-widgets .dropdown-menu {
-      left: 50px; }
+      left: -50px; }
 
   .navbar .top-level > li {
     width: 100%; }
@@ -2841,7 +2845,7 @@ div#main-content h2 {
   .logo-and-mobile-widgets .mobile-widgets {
     bottom: 20px; }
 
-  li#menuToggle {
+  li#menuToggle, label.hidden-md.hidden-lg {
     display: none; }
 
   .layout-frontpage #main-content {
