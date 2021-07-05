@@ -316,6 +316,14 @@ div#main-content {
 }
 
 @media (max-width: $bp-tablet) {
+
+    .layout-goal-by-target {
+        h1 {
+            font-size: 30px;
+            padding: 10px 0 0;
+        }
+    }
+
     header .container {
         padding-top: 0;
     }
@@ -350,7 +358,7 @@ div#main-content {
         bottom: 20px;
     }
 
-    li#menuToggle {
+    li#menuToggle, label.hidden-md.hidden-lg  {
         display: none;
     }
 
