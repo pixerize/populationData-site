@@ -55,25 +55,6 @@ header .container {
     }
 }
 
-@media (min-width: $bp-tablet + 1px) {
-
-}
-
-@media (max-width: $bp-tablet) {
-    header .container {
-        padding-top: 0;
-    }
-
-    .navbar-brand {
-        display: block;
-        width: 69%;
-    }
-
-    .logo-and-mobile-widgets .mobile-widgets {
-        bottom: 20px;
-    }
-}
-
 .layout-frontpage  #main-content{
     height: 69vh;
     display: flex;
@@ -326,5 +307,29 @@ div#main-content {
 
     h2 {
         display: none;
+    }
+}
+
+
+@media (min-width: $bp-tablet + 1px) {
+
+}
+
+@media (max-width: $bp-tablet) {
+    header .container {
+        padding-top: 0;
+    }
+
+    .navbar-brand {
+        display: block;
+        width: 69%;
+    }
+
+    .logo-and-mobile-widgets .mobile-widgets {
+        bottom: 20px;
+    }
+
+    #main-content h1 {
+        font-size: 40px;
     }
 }
