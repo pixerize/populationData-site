@@ -1,4 +1,4 @@
-$bp-tablet: 768px;
+$bp-tablet: 991px;
 $blue: #5B92E5;
 $yellow: #ffcc29;
 
@@ -320,6 +320,14 @@ div#main-content {
         padding-top: 0;
     }
 
+    .mobile-widgets {
+        position: static !important;
+
+        .dropdown-menu {
+            left: 50px;
+        }
+    }
+
     .navbar-brand {
         display: block;
         width: 69%;
@@ -327,6 +335,10 @@ div#main-content {
 
     .logo-and-mobile-widgets .mobile-widgets {
         bottom: 20px;
+    }
+
+    li#menuToggle {
+        display: none;
     }
 
     .layout-frontpage{
@@ -342,10 +354,10 @@ div#main-content {
             min-height: 220px;
         }
 
-        .logo-and-mobile-widgets {
-            min-height: 150px;
-        }
+    }
 
+    .logo-and-mobile-widgets {
+        min-height: 140px;
     }
 
 
