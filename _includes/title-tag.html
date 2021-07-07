@@ -1,0 +1,11 @@
+{% if page.indicator %}
+    <title>
+        {{ page.indicator.name | escape }} - {{ site.title | t | escape }}
+    </title>
+{% elsif page.goal %}
+    <title>{{ page.goal.name | escape }} - {{ site.title | t | escape }}</title>
+{% elsif page.title and page.title != '' %}
+    <title>{{ page.title | t | escape }} - {{ site.title | t | escape }}</title>
+{% else %}
+    <title>{{ site.title | t | escape }}</title>
+{% endif %}
