@@ -1,1 +1,1 @@
-Icons on croatian
+english icons
