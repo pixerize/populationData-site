@@ -135,7 +135,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20210707111427">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20210707112204">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -327,6 +327,24 @@ var translations = {
             <button data-type="select">Означи све</button>
             <button data-type="clear">Обриши све</button>
           </div>
+           <% console.log(fieldItem.values) %>
+          <% 
+          //sort numerically by value
+          function compare( a, b ) {
+            a = parseInt(a.value);
+            b = parseInt(b.value);
+            
+            if ( a < b ){
+              return -1;
+            } else if ( a > b){
+              return 1;
+            } else if (a == 0) {
+              return -1;
+            }
+            return 0;
+          }
+          fieldItem.values.sort( compare )
+          %>
           <% _.each(fieldItem.values, function(item) { %>
             <label>
               <input type="checkbox" <%=item.checked ? 'checked' : ''%> value="<%=item.value%>" data-field="<%=fieldItem.field%>" /><%=translations.t(item.value)%>
@@ -1777,12 +1795,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Претраживање';</script>
 
-<script src='/assets/js/sdg.js?v=20210707111427'></script>
+<script src='/assets/js/sdg.js?v=20210707112204'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20210707111427"></script><script>
+    <script src="/assets/js/custom.js?v=20210707112204"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
