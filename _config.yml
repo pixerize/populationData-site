@@ -113,7 +113,7 @@ menu:
 #  - path: /reporting-status
 #    translation_key: menu.reporting_status
   - path: /
-    translation_key: HOME
+    translation_key: menu.home
 #  - path: /about
 #    translation_key: menu.about
 #  - path: /faq
