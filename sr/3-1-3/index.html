@@ -131,7 +131,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20210710222952">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20210710224249">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -382,10 +382,10 @@ data-event-label="high"
       </div>
       <div class="variable-options">
         <fieldset>
-          <legend class="sr-only"> - <%=translations.t(fieldItem.field)%></legend>
+          <legend class="sr-only">Подкатегорије - <%=translations.t(fieldItem.field)%></legend>
           <div>
-            <button data-type="select"></button>
-            <button data-type="clear"></button>
+            <button data-type="select">Означи све</button>
+            <button data-type="clear">Обриши све</button>
           </div>
            <% console.log(fieldItem.values) %>
           <% 
@@ -414,10 +414,10 @@ data-event-label="high"
       </div>
 
       <% if(allowedFields.indexOf(fieldItem.field) == -1) { %>
-        <div class="variable-hint" id="variable-hint-<%=fieldItem.field.replace(/ /g, '-')%>">
+        <div class="variable-hint" id="variable-hint-<%=fieldItem.field.replace(/ /g, '-')%>">Доступно када '<%= translations.t(_.find(edges, { To: fieldItem.field }).From) %>' је означено
         </div>
         <div class="no-data-hint" id="no-data-hint-<%=fieldItem.field.replace(/ /g, '-')%>">
-          
+          Нема опција због горњих филтера
         </div>
       <% }%>
 
@@ -427,9 +427,9 @@ data-event-label="high"
 
 <script type="text/template" id="units_template">
   <% if(units.length) { %>
-    <h4></h4>
+    <h4>Мјерна јединица</h4>
     <fieldset>
-      <legend class="sr-only"></legend>
+      <legend class="sr-only">Мјерна јединица</legend>
       <% _.each(units, function(unitsItem, index) { %>
         <% var checked = (selectedUnit) ? (selectedUnit==unitsItem) : (index==0); %>
         <label><input type="radio" name="unit" value="<%=unitsItem%>" tabindex=0 <%=checked ? 'checked' : ''%> /> <%=translations.t(unitsItem)%></label>
@@ -440,9 +440,9 @@ data-event-label="high"
 
 <script type="text/template" id="series_template">
   <% if(serieses.length) { %>
-    <h4></h4>
+    <h4>Серије</h4>
     <fieldset>
-      <legend class="sr-only"></legend>
+      <legend class="sr-only">Серије</legend>
       <% _.each(serieses, function(seriesItem, index) { %>
         <% var checked = (selectedSeries) ? (selectedSeries==seriesItem) : (index==0); %>
         <label><input type="radio" name="series" value="<%=seriesItem%>" tabindex=0 <%=checked ? 'checked' : ''%> /> <%=translations.t(seriesItem)%></label>
@@ -451,7 +451,7 @@ data-event-label="high"
   <% } %>
 </script>
 
-<script>translations['indicator'] = {"data_not_available":"Ови подаци нису на располагању. Одаберите додатне подкатегорије.","national_metadata":"Метаподаци","national_metadata_blurb":" ","next":"Сљедећи стат","previous":"Претходни стат","sources":"Извор","unit":"Јединица"};</script>
+<script>translations['indicator'] = {"chart":"Графикон","clear_all":"Обриши све","clear_selections":"Обриши означено","data_not_available":"Ови подаци нису на располагању. Одаберите додатне подкатегорије.","dataset_size_warning":"Превише је скупова података за приказ на графикону. Неће бити приказане све док не уклоните неке одабире.","download_chart":"Преузмите графикон CSV","download_chart_image":"Преузми слику графикона","download_chart_image_title":"Преузми графикон као слику","download_csv":"Преузми CSV","download_csv_title":"Преузми као CSV","download_geojson":"Преузми GeoJSON","download_geojson_title":"Преузми као GeoJSON","download_headline":"Преузмите CSV наслов","download_headline_title":"Преузми податке о наслову као CSV","download_source":"Преузми извор CSV","download_source_sdmx":"Преузми извор SDMX","download_source_sdmx_title":"Преузми изворне податке као SDMX","download_source_title":"Преузми изворне податке као CSV","download_table":"Преузмите табелу CSV","edit":"Уреди","edit_data":"Уреди податке","edit_metadata":"Уреди метаподатке","footnote":"Фуснота","geographical_area":"Географско подручје","global_metadata":"Глобални метаподаци","global_metadata_blurb":"Ова таблица пружа информације о метаподацима за СДГ индикаторе како их је дефинисала Статистичка комисија УН-а. Комплетне глобалне метаподатке пружа Ођел за статистику УН-a.","legend_help":"Кликните на легенду како бисте уклонили поједине линије с графикона.","loading":"Учитавање","loading_map":"Учитавање мапе","map":"Мапа","national_metadata":"Mетаподаци","national_metadata_blurb":" ","next":"Сљедећи стат","no_data_hint":"Нема опција због горњих филтера","previous":"Претходни стат","select_all":"Означи све","series":"Серије","series_help":"Одаберите категорије из  падајућег менија испод како бисте виђели различите пођеле података. Неки неће бити доступни док се не одабере виши степен.","source":"Извор","sources":"Извор","sub_categories":"Подкатегорије","table":"Табела","unit":"Јединица","unit_of_measurement":"Мјерна јединица","units_type":"Тип јединице","variable_hint":"Доступно када '%field' је означено","view_indicator_list":"Погледајте листу индикатора овог циља"};</script>
 
 <script>translations['data'] = {"2_members":"2 члана","3_members":"3 члана","4_members":"4 члана","5_members":"5 чланова","6_members":"6 чланова","7_members":"7 чланова","8+_members":"8+ чланова","ACTIVITY_RATES":"Стопе активности","ADMIN_AREA":"Административно подручје","AGE":"Старосна доб","AGE_GROUP_OF_WOMEN":"Старосна група жена","AGE_OF_MOTHER":"Старосна доб мајке","Age":"Старосна доб","BD":"Брчко дистрикт БиХ","BIRTH":"Рађање","BIRTHS":"Витална статистика","BIRTHS_AND_DEATHS":"Рођење и смрт","Bothsex":"Оба пола","CAUSE_OF_DEATH":"Узрок смрти (према шифрама болести по МКБ-10)","DEATH":"Смрт","DEATHS":"Смртни случајеви","DIVORCES":"Развод брака","EDUCATION":"Ниво образовања","ENROLMENT":"Врста образовне установе","FBIH":"Федерација БиХ","FERTILITY_RATE":"Стопа фертилитета","FORM_OF_VIOLENCE":"Облик насиља","Female":"Ж","GRAND_TOTAL":"Свеукупно","INFANT_MORTALITY":"Смртност дојенчади (до навршене прве године живота) стопа смртности дојенчади","KG":"Килограми","LIVE_BIRTH":"Живорођени","MARRIAGES":"Бракови","MARRIAGE_BIRTH":"Брак и порођај","MARTIAL_STATUS":"Брачно стање","MICS_INDICATORS":"Индикатори истраживања вишеструких показатеља","MICS_NUMBER":"Метода","Male":"M","Month":"Мјесец","NATURAL_CHANGE":"Природно кретање","NUMBER":"Број","NUMBER_OF_HOUSEHOLDS_BY_HOUSEHOLD_SIZE":"Величина домаћинства","POVERTY_RATE":"Стопа сиромаштва","QUANTITY":"Количина","RS":"Република Српска","SOURCE_OF_WATER":"Извор воде","STILLBIRTH_RATE":"Стопа мртворођених","SURVEY_IMPLEMENTED_BY":"Истраживање провео","Sex":"Пол","TYPE_OF_FAMILY/HOUSEHOLD":"Врста породице /домаћинства","TYPE_OF_SEWAGE":"Врста канализације","TYPE_OF_TOILET":"Врста тоалета","Type":"Врста","UNIT_MEASURE":"Мјерна јединица","UNIT_MEASUREMENT":"Мјерна јединица","USD":"УСД","VITAL_STATISTICS":"Витална статистика","Value":"Вриједност","Year":"Година","_%":"% од укупно","_%_labour":"„% радне снаге“","_ALL":"Сви","accepting_attitudes_towards_people_living_with_hiv_(men_15-49)":"Ставови прихватања особа које живе са HIV-ом (мушкарци у доби 15-49)","accepting_attitudes_towards_people_living_with_hiv_(women_15-49)":"Ставови прихватања особа које живе са HIV-ом (жене у доби 15-49)","active_labour_force":"„Активна (радна снага) као % радно способног становништва“","advanced_schools_faculty_academy_university":"Напредне школе /факултет /академија /универзитет","age_specific_fertility_rates":"Стопе фертилитета према доби","alcohol_use_(men_15-49)":"Кориштење алкохола (мушкарци у доби 15-49)","alcohol_use_(women_15-49)":"Кориштење алкохола (жене у доби 15-49)","all":"Сви","all_methods":"Све методе","artesian_well":"Артешки бунар","average_number_of_hh_members":"Просјечан број чланова домаћинства","bottled_water_from_shop":"Флаширана вода из продавнице","boys_to_girls":"Дјечаци на 100 дјевојчица","certain_conditions_originating":"„(П00-П96) Одређена стања настала у перинаталном периоду“","children_pre_woman":"Број дјеце по жени","closed_septic_tank":"Затворена септичка јама","closed_septic_tank_with_overflow":"Затворена септичка јама са преливом","comprehensive_knowledge_about_hiv_prevention_(men_15-24)":"Свеобухватно знање о превенцији HIV-а (мушкарци у доби 15-24)","comprehensive_knowledge_about_hiv_prevention_(men_15-49)":"Свеобухватно знање о превенцији HIV-а (мушкарци у доби 15-49)","comprehensive_knowledge_about_hiv_prevention_(women_15-24)":"Свеобухватно знање о превенцији HIV-а (жене у доби 15-24)","comprehensive_knowledge_about_hiv_prevention_(women_15-49)":"Свеобухватно знање о превенцији HIV-а (жене у доби 15-49)","condom_use_during_sex_with_multiple_partners_(men_15-49)":"Употреба кондома приликом полних односа са више партнера (мушкарци у доби 15-49)","condom_use_during_sex_with_multiple_partners_(women_15-49)":"Употреба кондома приликом полних односа са више партнера (жене у доби 15-49)","condom_use_with_non-regular_partners_(men_15-24)":"Употреба кондома са нередовним партнерима (мушкарци у доби 15-24)","condom_use_with_non-regular_partners_(women_15-24)":"Употреба кондома са нередовним партнерима (жене у доби 15-24)","congenital_malformations_deformations":"„(Q00-Q99) Конгениталне малформације, деформитети и хромосомске абнормалности“","consensual_couple_with_children":"Консензуални пар са дјецом","consensual_couple_without_children":"Консензуални пар без дјеце","container_(water_tank)_":"Контејнер (цистерна)","contraceptive_prevalence_rate_(modern_methods)":"Стопа преваленце контрацепције (савремене методе)","contraceptive_prevalence_rate_(total)":"Стопа преваленце контрацепције (укупно)","contraceptive_prevalence_rate_(traditional_methods)":"Стопа преваленце контрацепције (традиционалне методе)","crude_birth_rate":"Сирова стопа наталитета","crude_death_rate":"Сирова стопа смртности","deaths":"Смрт","did_not_give_birth":"Нису рађале","diseases_of_the_blood":"„(Д50-Д89) Болести крви и крвотворних органа, као и поремећаји имунолошког система“","diseases_of_the_circulatory":"„(И00-И99) Болести циркулацијског система“","diseases_of_the_digestive":"„(К00-К93) Болести дигестивног система“","diseases_of_the_eye":"„(Х00-Х93) Болести ока, уха и аднекса\"","diseases_of_the_genitourinary":"„(Н00-Н99) Болести генитално-уринарног система“","diseases_of_the_musculoskeletal":"„(М00-М99) Болести мускулоскелетног система и везивног ткива“","diseases_of_the_nervous":"„(Г00-Г99) Болести нервног система“","diseases_of_the_respiratory":"„(Ј00-Ј99) Болести респираторног система“","diseases_of_the_skin":"„(Л00-Л99) Болести коже и поткожног ткива“","divorce_rate_(per_1,000_marriages)":"Стопа развода бракова (на 1.000 бракова)","divorced":"Разведен/а","drilled_(pipe)_well":"Избушени бунар (са водоводним цијевима)","drinking_fountain_connected_to_community_scheme":"Јавна чесма прикључена на водоводну мрежу у заједници","drinking_fountain_connected_to_own_pump_water_scheme":"Јавна чесма прикључена на властити систем водоснабдијевања","dug_well":"Ископани бунар","employed_as_of_working":"„Запослени као % радно способног становништва“","endocrine_metabolic_and_nutritional":"„(Е00-Е90) Ендокрине болести, болести исхране и болести метаболизма“","enrolment_in_high_school_education":"Средња школа","enrolment_in_higher_education":"Високо образовање /универзитет","enrolment_in_pre_school":"Предшколски одгој и образовање","enrolment_in_primary_school_education":"Основна школа","estimated_number_of_population":"Процјена становништва","external_causes_of_mortality":"„(В01-Y98) Спољни узроци смртности“","factors_influencing_health_status":"„(З00-З99) Фактори који утичу на здравствено стање и контакт са здравственом службом“","father_with_children":"Отац са дјецом","female_population":"Женско становништво","females_in_poverty":"„Жене у сиромаштву (%)“","gave_birth":"Рађале","happiness_(men_15-24)":"Срећа (жене у доби 15-24)","happiness_(women_15-24)":"Срећа (жене у доби 15-24)","health_indicators":"Индикатори здравља","higher_school_and_first_grade_of_faculty":"Високо образовање и прва година факултета","households_in_poverty":"„Домаћинства у сиромаштву (%)“","husband/partner_has_the_right_to_hit_or_beat_his_wife/partner_(men_15-49)":"Супруг/ партнер има право да удари или туче своју супругу/партнерицу (мушкарци у доби 15-49)","husband/partner_has_the_right_to_hit_or_beat_his_wife/partner_(women_15-49)":"Супруг/ партнер има право да удари или туче своју супругу/партнерицу (жене у доби 15-49)","in_marriage_birth":"Порођај у браку","inactive_as_of_working":"„Неактивни као % радно способног становништва“","incomplete_primary_education":"Непотпуно основно образовање","infant_(up_to_12_months_of_age)_mortality_rate":"Стопа смртности дојенчади (до навршене прве године живота)","infectious_and_parasitic":"„(А00-Б99) Заразне и паразитарне болести“","informal_union":"Неформална заједница","injuries_poisoning_and_consequences":"„(С00-Т98) Повреде, тровања и друге посљедице дејстава спољних фактора“","institutional_deliveries":"Порођај у здравственој установи","life_satisfaction_(men_15-24)":"Задовољство животом (мушкарци у доби 15-24)","life_satisfaction_(women_15-24)":"Задовољство животом (жене у доби 15-24)","live_births":"Живорођени","male_population":"Мушко становништво","males_in_poverty":"„Мушкарци у сиромаштву (%)“","marriage_before_age_15_(men_15-49)":"Брак прије навршених 15 година (мушкарци у доби 15-49)","marriage_before_age_15_(women_15-49)":"Брак прије навршених 15 година (жене у доби 15-49)","marriage_before_age_18_(men_20-49)":"Брак прије навршених 18 година (жене у доби 20-49)","marriage_before_age_18_(women_20-49)":"Брак прије навршених 18 година (жене у доби 20-49)","marriage_rate":"Стопа склопљених бракова","married":"У браку","married_couple_with_children":"Брачни пар са дјецом","married_couple_without_children":"Брачни пар без дјеце","mean_age":"Средња доб","men_aged_15-24_who_have_never_had_sex_":"Мушкарци у доби 15-24 који никад нису имали полни однос","mental_and_behavioural_disorders":"„(Ф00-Ф99) Душевни поремећаји и поремећаји понашања“","modern_methods":"Савремене методе","mother_with_children":"Мајка са дјецом","natural_increase":"Природни прираштај","neoplasms":"„(Ц00-Ц97,Д00-Д48) Неоплазме“","never_married":"Никад нису склопили брак","no_education":"Без образовања","no_sewage":"Без канализације","non-family/multi-person_households":"Вишечлано домаћинство/без породице","non-family/single_households":"Једночлано домаћинство/без породице","number_birth_rate":"Број на 1.000 становника","number_of_beds_in_hospitals":"Број болничких кревета","number_of_beds_in_hospitals_per_100000_population":"Број болничких кревета на 100.000 становника","number_of_caesarean_sections":"Број царских резова","number_of_caesarean_sections_per_1000_live_births":"Број царских резова на 1.000 живорођених","number_of_divorces":"Број развода бракова","number_of_general_practitioners":"Број доктора опште медицине","number_of_infant_deaths":"Број смртних случајева међу дојенчади","number_of_marriages":"Број склопљених бракова","number_of_medical_doctors_providing_health_care_in_public_institutions":"Број доктора медицине који пружају здравствене услуге у јавним установама","number_of_medical_doctors_providing_health_care_in_public_institutions_per_100000_population":"Број доктора медицине који пружају здравствене услуге у јавним установама на 100.000 становника","number_of_midwives":"Број бабица","number_of_new_cases_of_AIDS_clinically_diagnosed":"Број нових случајева клинички дијагностикованог АIDS-а","number_of_new_cases_of_HIV":"Број нових случајева HIV инфекције","number_of_new_cases_of_HIV_per_100000_population":"Број нових случајева HIV инфекције на 100.000 становника","number_of_new_cases_of_cervical_cancer":"Број нових случајева рака грлића материце","number_of_new_cases_of_cervical_cancer_per_100000_female_population":"Број нових случајева рака дојке на 100.000 жена","number_of_new_cases_of_female_breast_cancer":"Број нових случајева рака дојке код жена","number_of_new_cases_of_female_breast_cancer_per_100000":"Број нових случајева рака дојке код жена на 100.000 жена","number_of_new_cases_of_gonorrhea":"Број нових случајева гонореје","number_of_new_cases_of_syphilis":"Број нових случајева сифилиса","number_of_population_per_general_practitioner":"Број становника на једног доктора опште медицине","number_of_stillbirths":"Број мртворођених","of_total_for_age_group":"„% од укупно за старосну групу“","old_age_support_ratio":"Омјер економске подршке старијим лицима","older_persons_to_youth_ratio":"Омјер старијих и младих","other":"Друго","other_arrangements":"Друга рјешења","out_of_marriage_birth":"Порођај изван брака","per_1000":"На 1.000 живорођених","per_capita":"По глави становника","persons_with_disabilities":"Лица са инвалидитетом","persons_without_disabilities":"Лица са инвалидитетом","piped_water_in_the_dwelling_unit_connected_to_community_scheme":"Текућа вода у стамбеној јединици која се доводи путем водоводних цијеви прикључених на водоводну мрежу у заједници","piped_water_in_the_dwelling_unit_connected_to_own_pump_water_system":"Текућа вода у стамбеној јединици која се доводи путем водоводних цијеви прикључених на властити систем водоснабдијевања","piped_water_in_the_dwelling_unit_connected_to_rural_or_local_water_supply_system":"Текућа вода у стамбеној јединици која се доводи путем водоводних цијеви прикључених на рурални или локални систем водоснабдијевања","population_in_poverty":"„Становништво у сиромаштву (%)“","post_secondary_school_specialisation":"Специјализација након завршене средње школе","pregnancy_childbirth_and_the":"„(О00-О99) Трудноћа, порођај и постпорођајни период“","primary_school":"Основна школа","public_sewage":"Јавна канализација","real_gdp_growth":"Раст реалног БДП-а","regulated_water_spring":"Уређени извор воде","satisfied_demand_for_family_planning":"Задовољена потражња за планирањем породице","secondary_school":"Средња школа","sex_before_age_15_(men_15-24)":"Полни однос прије навршених 15 година (мушкарци у доби 15-24)","sex_before_age_15_(women_15-19-24)":"Полни однос прије навршених 15 година (жене у доби 15-19-24)","sex_with_multiple_partners_(men_15-49)":"Полни однос са више партнера (мушкарци у доби 15-49)","sex_with_multiple_partners_(women_15-49)":"Полни однос са више партнера (жене у доби 15-49)","sex_with_non-regular_partners_(men_15-24)":"Полни однос са нередовним партнерима (мушкарци у доби 15-24)","sex_with_non-regular_partners_(women_15-24)":"Полни однос са нередовним партнерима (жене у доби 15-24)","single_household":"1 члан","skilled_attendant_at_delivery":"Порођај у присуству стручног лица","status_unknown":"Статус непознат","street_drinking_fountain":"Јавна чесма на улици","symptoms_signs_and_abnormal":"„(Р00-Р99) Симптоми, знакови и абнормални клинички и лабораторијски налази који нису другдје класифицирани“","tobacco_use_(men_15-49)":"Кориштење дувана (мушкарци у доби 15-49)","tobacco_use_(women_15-49)":"Кориштење дувана (жене у доби 15-49)","total":"Укупно","total_15":"Укупно 15+","total_fertility_rate":"Укупна стопа фертилитета","total_illiterate":"Укупно неписмени","total_millions":"Укупно (у милионима)","total_population_(as_per_Public_Health_Institute_or_NSO_reports)":"Укупно становништво (према извјештајима Завода за јавно здравство или Завода/Агенције за статистику)","total_support_ratio":"Укупан омјер економске подршке","traditional_methods":"Традиционалне методе","unemployed_as_of_labour":"„Незапослени као % радне снаге“","unemployed_as_of_working":"„Незапослени као % радно способног становништва“","unknown":"Непознато","unknown_marital_status_birth":"Порођај при непознатом брачном статусу","unmet_need_for_family_planning":"Неостварена потреба за планирањем породице","widowed":"Удовац/удовица","women_aged_15-24_who_have_never_had_sex_":"Жене у доби 15-24 које никад нису имале полни однос","women_who_have_experienced_any_form_of_partner_violence_after_the_age_of_15_(ever)":"Жене које су доживјеле било који облик насиља од партнера након навршених 15 година живота (било када)","women_who_have_experienced_any_form_of_partner_violence_after_the_age_of_15_(past_12_months)":"Жене које су доживјеле било који облик насиља од партнера након навршених 15 година живота (у протеклих 12 мјесеци)","women_who_have_experienced_any_form_of_violence_after_the_age_of_15_(ever)":"Жене које су доживјеле било који облик насиља у доби од 15 година (било када)","women_who_have_experienced_any_form_of_violence_after_the_age_of_15_(ever)_-_18-24_years_of_age":"Жене које су доживјеле било који облик насиља након навршених 15 година живота (било када) – у доби 18-24","women_who_have_experienced_any_form_of_violence_after_the_age_of_15_(ever)_-_25-34_years_of_age":"Жене које су доживјеле било који облик насиља након навршених 15 година живота (било када) – у доби 25-34","women_who_have_experienced_any_form_of_violence_after_the_age_of_15_(ever)_-_35-44_years_of_age":"Жене које су доживјеле било који облик насиља након навршених 15 година живота (било када) – у доби 35-44","women_who_have_experienced_any_form_of_violence_after_the_age_of_15_(ever)_-_45-54_years_of_age":"Жене које су доживјеле било који облик насиља након навршених 15 година живота (било када) – у доби 45-54","women_who_have_experienced_any_form_of_violence_after_the_age_of_15_(ever)_-_55-64_years_of_age":"Жене које су доживјеле било који облик насиља након навршених 15 година живота (било када) – у доби 55-64","women_who_have_experienced_any_form_of_violence_after_the_age_of_15_(ever)_-_65+_years_of_age":"Жене које су доживјеле било који облик насиља након навршених 15 година живота (било када) – у доби 65+","women_who_have_experienced_any_form_of_violence_after_the_age_of_15_(ever)_-_rural_areas":"Жене које су доживјеле било који облик насиља након навршених 15 година живота (било када) – рурална подручја","women_who_have_experienced_any_form_of_violence_after_the_age_of_15_(ever)_-_urban_areas":"Жене које су доживјеле било који облик насиља након навршених 15 година живота (било када) – урбана подручја","women_who_have_experienced_any_form_of_violence_after_the_age_of_15_(past_12_months)":"Жене које су доживјеле било који облик насиља након навршених 15 година живота (у протеклих 12 мјесеци)","women_who_have_experienced_economic_violence_after_the_age_of_15_(ever)":"Жене које су доживјеле економско насиље након навршених 15 година живота (било када)","women_who_have_experienced_economic_violence_after_the_age_of_15_(past_12_months)":"Жене које су доживјеле економско насиље након навршених 15 година живота (у протеклих 12 мјесеци)","women_who_have_experienced_physical_violence_after_the_age_of_15_(ever)":"Жене које су доживјеле физичко насиље након навршених 15 година живота (било када)","women_who_have_experienced_physical_violence_after_the_age_of_15_(past_12_months)":"Жене које су доживјеле физичко насиље након навршених 15 година живота (у протеклих 12 мјесеци)","women_who_have_experienced_physical_violence_by_intimate_partner_(current_or_former_partner)_(ever)":"Жене које су доживјеле физичко насиље од интимног партнера (садашњег или бившег) (било када)","women_who_have_experienced_physical_violence_by_intimate_partner_(current_or_former_partner)_(past_12_months)":"Жене које су доживјеле физичко насиље од интимног партнера (садашњег или бившег) (у протеклих 12 мјесеци)","women_who_have_experienced_physical_violence_by_relatives_or_family_(other_than_intimate_partner)_(ever)":"Жене које су доживјеле физичко насиље од сродника или члана породице (осим интимног партнера) (било када)","women_who_have_experienced_physical_violence_in_broader_community_(not_intimate_partner)_(ever)":"Жене које су доживјеле физичко насиље у широј заједници (не од интимног партнера) (било када)","women_who_have_experienced_physical_violence_in_broader_community_(not_intimate_partner)_(past_12_months)":"Жене које су доживјеле физичко насиље у широј заједници (не од интимног партнера) (у протеклих 12 мјесеци)","women_who_have_experienced_physical_violence_in_broader_community_(not_relatives_or_intimate_partner)_(ever)":"Жене које су доживјеле физичко насиље у широј заједници (не од сродника или интимног партнера) (било када)","women_who_have_experienced_psychological_violence_after_the_age_of_15_(ever)":"Жене које су доживјеле психолошко насиље након навршених 15 година живота (било када)","women_who_have_experienced_psychological_violence_after_the_age_of_15_(past_12_months)":"Жене које су доживјеле психолошко насиље након навршених 15 година живота (у протеклих 12 мјесеци)","women_who_have_experienced_psychological_violence_by_intimate_partner_(current_or_former_partner)_(ever)":"Жене које су доживјеле психолошко насиље од интимног партнера (садашњег или бившег) (било када)","women_who_have_experienced_psychological_violence_by_intimate_partner_(current_or_former_partner)_(past_12_months)":"Жене које су доживјеле психолошко насиље од интимног партнера (садашњег или бившег) (у протеклих 12 мјесеци)","women_who_have_experienced_psychological_violence_by_relatives_or_family_(other_than_intimate_partner)_(ever)":"Жене које су доживјеле психолошко насиље од сродника или члана породице (осим интимног партнера) (било када)","women_who_have_experienced_psychological_violence_in_broader_community_(not_relatives_or_intimate_partner)_(ever)":"Жене које су доживјеле психолошко насиље у широј заједници (не од сродника или интимног партнера) (било када)","women_who_have_experienced_sexual_harassment_after_the_age_of_15_(ever)":"Жене које су доживјеле сексуално злостављање након навршених 15 година живота (било када)","women_who_have_experienced_sexual_harassment_after_the_age_of_15_(past_12_months)":"Жене које су доживјеле сексуално злостављање након навршених 15 година живота (у протеклих 12 мјесеци)","women_who_have_experienced_sexual_violence_after_the_age_of_15_(ever)":"Жене које су доживјеле сексуално насиље након навршених 15 година живота (било када)","women_who_have_experienced_sexual_violence_after_the_age_of_15_(past_12_months)":"Жене које су доживјеле сексуално насиље након навршених 15 година живота (у протеклих 12 мјесеци)","women_who_have_experienced_sexual_violence_by_intimate_partner_(current_or_former_partner)_(ever)":"Жене које су доживјеле сексуално насиље од интимног партнера (садашњег или бившег) (било када)","women_who_have_experienced_sexual_violence_by_intimate_partner_(current_or_former_partner)_(past_12_months)":"Жене које су доживјеле сексуално насиље од интимног партнера (садашњег или бившег) (у протеклих 12 мјесеци)","women_who_have_experienced_sexual_violence_in_broader_community_(not_intimate_partner)_(ever)":"Жене које су доживјеле сексуално насиље у широј заједници (не од интимног партнера) (било када)","women_who_have_experienced_sexual_violence_in_broader_community_(not_intimate_partner)_(past_12_months)":"Жене које су доживјеле сексуално насиље у широј заједници (не од интимног партнера) (у протеклих 12 мјесеци)","young_age_support_ratio":"Омјер економске подршке младима","young_men_aged_15-19_years_currently_married_or_in_union":"Млади мушкарци у доби 15-19 који су тренутно у браку или ванбрачној заједници","young_women_aged_15-19_years_currently_married_or_in_union":"Младе жене у доби 15-19 које су тренутно у браку или ванбрачној заједници"};</script>
 
@@ -473,7 +473,7 @@ data-event-label="high"
     <div class="row">
       
       <div class="col-xs-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-        <a href="/sr/3" title="">
+        <a href="/sr/3" title="Погледајте листу индикатора овог циља">
           <img src="https://popdata.work/assets/img/goals/sr/3.png" alt="global_goals.3-short -  3" id="goal-3" class="goal-icon-image goal-icon-image-png"/>
         </a>
       </div>
@@ -532,8 +532,8 @@ data-event-label="high"
 <div id="units"></div>
 <div id="toolbar">
   <span id="series-help">
-    <h4></h4>
-    <p></p>
+    <h4>Подкатегорије</h4>
+    <p>Одаберите категорије из  падајућег менија испод како бисте виђели различите пођеле података. Неки неће бити доступни док се не одабере виши степен.</p>
   </span>
   <div id="fields">
     <p class="async-loading" data-img="/assets/img/loading-small.gif"></p>
@@ -549,9 +549,9 @@ data-event-label="high"
 
   <div id="datatables">
 
-    <a href="https://pixerize.github.io/populationData-data/sr/headline/3-1-3.csv" class="btn btn-primary btn-download" download="indicator_3-1-3.csv" tabindex="0" role="button"></a>
+    <a href="https://pixerize.github.io/populationData-data/sr/headline/3-1-3.csv" class="btn btn-primary btn-download" download="indicator_3-1-3.csv" tabindex="0" role="button">Преузмите CSV наслов</a>
 
-    <a href="https://pixerize.github.io/populationData-data/sr/data/3-1-3.csv" class="btn btn-primary btn-download" style='float:left;margin-right:1em' download='indicator_3-1-3.csv' tabindex='0' role='button'></a>
+    <a href="https://pixerize.github.io/populationData-data/sr/data/3-1-3.csv" class="btn btn-primary btn-download" style='float:left;margin-right:1em' download='indicator_3-1-3.csv' tabindex='0' role='button'>Преузми извор CSV</a>
 
     <h3>Headline data</h3>
     <table class="table-responsive table table-hover dataTable no-footer" role="grid">
@@ -567,7 +567,7 @@ data-event-label="high"
 
   <div id="datatableFooter">
     
-    <p>: BHAS</p>
+    <p>Извор: BHAS</p>
     
     
     
@@ -592,14 +592,14 @@ data-event-label="high"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Chart tab"
- aria-describedby="table-alternative"></a>
+ aria-describedby="table-alternative">Графикон</a>
   </li>
   <li role="presentation" class="nav-item">
     <a class="nav-link" data-toggle="tab" id="tab-tableview" href="#tableview" aria-controls="tableview" role="tab" data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Table tab"
-></a>
+>Табела</a>
   </li></ul>
 
     <div class="tab-content data-view">
@@ -608,7 +608,7 @@ data-event-label="Change to Table tab"
 
     <div id="dataset-size-warning" style="display:none" role="alert">
       <i class="fa fa-bolt"><span class="sr-only"></span></i>
-      
+      Превише је скупова података за приказ на графикону. Неће бити приказане све док не уклоните неке одабире.
     </div>
 
     
@@ -852,7 +852,7 @@ opensdg.chartConfigAlter(function(config, info) {
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-        <dt>:</dt>
+        <dt>Извор:</dt>
         <dd>BHAS</dd>
         
 
@@ -869,8 +869,8 @@ opensdg.chartConfigAlter(function(config, info) {
         </div>
       </figure>
       <div id="chartSelectionDownload" class="clearfix">
-        <button id="btnSave" title="" class='btn btn-primary btn-download'>
-          
+        <button id="btnSave" title="Преузми графикон као слику" class='btn btn-primary btn-download'>
+          Преузми слику графикона
         </button>
       </div>
     </div>
@@ -891,7 +891,7 @@ opensdg.chartConfigAlter(function(config, info) {
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-        <dt>:</dt>
+        <dt>Извор:</dt>
         <dd>BHAS</dd>
         
 
@@ -923,7 +923,7 @@ opensdg.chartConfigAlter(function(config, info) {
 data-event-category="Tab change"
 data-event-action="Change metadata view"
 data-event-label="Change to National Metadata tab"
->Метаподаци</a>
+>Mетаподаци</a>
 </li>
 <li role="presentation" class="nav-item">
   <a class="nav-link" data-toggle="tab" id="tab-sources" href="#sources" aria-controls="sources" role="tab" data-on="click"
@@ -936,7 +936,7 @@ data-event-label="Change to Sources tab"
 
   
   <li role="presentation" class="nav-item">
-    <a class="nav-link" data-toggle="tab" href="#edit" aria-controls="edit" role="tab"></a>
+    <a class="nav-link" data-toggle="tab" href="#edit" aria-controls="edit" role="tab">Уреди</a>
   </li>
   
 </ul>
@@ -1266,7 +1266,7 @@ data-event-label="Change to Sources tab"
   <!-- Global Metadata -->
   <div>
     <article>
-      <p></p>
+      <p>Ова таблица пружа информације о метаподацима за СДГ индикаторе како их је дефинисала Статистичка комисија УН-а. Комплетне глобалне метаподатке пружа Ођел за статистику УН-a.</p>
       <table class="table">
   
   
@@ -1781,11 +1781,11 @@ data-event-label="Change to Sources tab"
   
 
 
-  <a class="btn btn-primary" href="http://prose.io/#pixerize/populationData-data/edit/master/data/indicator_3-1-3.csv"></a>
+  <a class="btn btn-primary" href="http://prose.io/#pixerize/populationData-data/edit/master/data/indicator_3-1-3.csv">Уреди податке</a>
   
 
   
-  <a class="btn btn-primary" href="http://prose.io/#pixerize/populationData-data/edit/master/meta/3-1-3.md"></a>
+  <a class="btn btn-primary" href="http://prose.io/#pixerize/populationData-data/edit/master/meta/3-1-3.md">Уреди метаподатке</a>
   
 
   
@@ -1847,12 +1847,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Претраживање';</script>
 
-<script src='/assets/js/sdg.js?v=20210710222952'></script>
+<script src='/assets/js/sdg.js?v=20210710224249'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20210710222952"></script><script>
+    <script src="/assets/js/custom.js?v=20210710224249"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
