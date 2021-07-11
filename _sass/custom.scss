@@ -418,6 +418,12 @@ html:lang(hr),html:lang(bs)  {
         max-width: 78%;
     }
 
+    html:lang(sr){
+        .navbar .top-level > li {
+            max-width: 76%;
+        }
+    }
+
     .logo-and-mobile-widgets .mobile-widgets {
         bottom: 20px;
     }
