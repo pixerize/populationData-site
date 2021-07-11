@@ -2954,24 +2954,22 @@ html:lang(hr) #main-content h1, html:lang(bs) #main-content h1 {
     .mobile-widgets .dropdown-menu {
       left: -50px; }
 
-  .navbar .top-level > li {
-    width: 100%; }
-
-  .navbar #search-mobile {
-    width: 100%; }
-    .navbar #search-mobile .button {
-      color: #fff !important;
-      background-color: #5B92E5 !important;
-      border: 1.25px solid #5B92E5 !important; }
+  .navbar #search-mobile .button {
+    color: #fff !important;
+    background-color: #5B92E5 !important;
+    border: 1.25px solid #5B92E5 !important; }
 
   .navbar-brand {
     display: block;
     width: 69%; }
 
+  .navbar .top-level > li {
+    width: unset; }
+
   .logo-and-mobile-widgets .mobile-widgets {
     bottom: 20px; }
 
-  li#menuToggle, label.hidden-md.hidden-lg {
+  label.hidden-md.hidden-lg {
     display: none; }
 
   .layout-frontpage #main-content {
