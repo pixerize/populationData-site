@@ -365,6 +365,14 @@ html:lang(hr),html:lang(bs)  {
         }
     }
 
+    html:lang(sr){
+        .layout-goal-by-target {
+            h1 {
+                font-size: 26px;
+            }
+        }
+    }
+
     .layout-indicator h1 {
         font-size: 25px;
         line-height: 1.3 !important;
