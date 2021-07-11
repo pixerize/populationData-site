@@ -310,6 +310,20 @@ div#main-content {
     }
 }
 
+//translation css issues
+
+html:lang(sr) {
+    #main-content h1 {
+        font-size: 55px;
+    }
+}
+
+html:lang(hr),html:lang(bs)  {
+    #main-content h1 {
+        font-size: 59px;
+    }
+}
+
 
 @media (min-width: $bp-tablet + 1px) {
 
