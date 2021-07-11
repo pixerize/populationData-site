@@ -406,6 +406,10 @@ html:lang(hr),html:lang(bs)  {
             border-color: #fff;
             outline: unset !important;
         }
+
+       li:not(.contrast) > a:hover {
+            border-bottom: 2px solid #ffffff;
+        }
     }
 
     .navbar-brand {
