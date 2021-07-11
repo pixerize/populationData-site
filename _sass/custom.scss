@@ -158,6 +158,11 @@ header {
     .navbar-brand {
         display: block;
         max-width: 170px;
+
+        &:focus {
+            outline: unset !important;
+            }
+        }
     }
 
     .navbar ul.navbar-nav > li > a {
