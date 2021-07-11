@@ -354,6 +354,10 @@ html:lang(hr),html:lang(bs)  {
 
 @media (max-width: $bp-tablet) {
 
+    .active button {
+        color: #fff !important;
+    }
+
     .layout-goal-by-target {
         h1 {
             font-size: 30px;
