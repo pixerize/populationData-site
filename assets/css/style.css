@@ -2981,7 +2981,4 @@ html:lang(hr) #main-content h1, html:lang(bs) #main-content h1 {
     min-height: 220px; }
 
   .logo-and-mobile-widgets {
-    min-height: 140px; }
-
-  .supp-by {
-    display: none !important; } }
+    min-height: 140px; } }
