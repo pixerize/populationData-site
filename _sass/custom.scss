@@ -354,8 +354,11 @@ html:lang(hr),html:lang(bs)  {
 
 @media (max-width: $bp-tablet) {
 
-    .active button {
-        color: #fff !important;
+    .active {
+        button, #menu-mobile, a {
+            color: #fff !important;
+            background: #4d7bc1 !important;
+        }
     }
 
     .layout-goal-by-target {
