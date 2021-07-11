@@ -2972,6 +2972,8 @@ html:lang(hr) #main-content h1, html:lang(bs) #main-content h1 {
     .navbar #search-mobile input#indicator_search-mobile {
       border-color: #fff;
       outline: unset !important; }
+    .navbar #search-mobile li:not(.contrast) > a:hover {
+      border-bottom: 2px solid #ffffff; }
 
   .navbar-brand {
     display: block;
