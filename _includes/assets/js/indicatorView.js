@@ -514,7 +514,7 @@ var indicatorView = function (model, options) {
     });
 
     this.createDownloadButton(chartInfo.selectionsTable, 'Chart', chartInfo.indicatorId, '#chartSelectionDownload');
-    this.createSourceButton(chartInfo.shortIndicatorId, '#chartSelectionDownload');
+    //this.createSourceButton(chartInfo.shortIndicatorId, '#chartSelectionDownload');
     this.createIndicatorDownloadButtons(chartInfo.indicatorDownloads, chartInfo.shortIndicatorId, '#chartSelectionDownload');
 
     $("#btnSave").click(function() {
@@ -706,7 +706,7 @@ var indicatorView = function (model, options) {
     this.createTable(chartInfo.selectionsTable, chartInfo.indicatorId, '#selectionsTable', true);
     $('#tableSelectionDownload').empty();
     this.createDownloadButton(chartInfo.selectionsTable, 'Table', chartInfo.indicatorId, '#tableSelectionDownload');
-    this.createSourceButton(chartInfo.shortIndicatorId, '#tableSelectionDownload');
+    //this.createSourceButton(chartInfo.shortIndicatorId, '#tableSelectionDownload');
     this.createIndicatorDownloadButtons(chartInfo.indicatorDownloads, chartInfo.shortIndicatorId, '#tableSelectionDownload');
   };
 
