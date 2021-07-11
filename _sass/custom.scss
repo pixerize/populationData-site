@@ -1,5 +1,6 @@
 $bp-tablet: 991px;
 $blue: #5B92E5;
+$dark-blue: #4d7bc1;
 $yellow: #ffcc29;
 
 
@@ -354,10 +355,10 @@ html:lang(hr),html:lang(bs)  {
 
 @media (max-width: $bp-tablet) {
 
-    .active {
+    #main-nav .active {
         button, #menu-mobile, a {
             color: #fff !important;
-            background: #4d7bc1 !important;
+            background: $dark-blue !important;
         }
     }
 
@@ -389,13 +390,11 @@ html:lang(hr),html:lang(bs)  {
 
     .navbar #search-mobile {
 
-        max-width: 120%;
-        background: #4d7bc1;
+        max-width: 100%;
 
-        .button {
-            color: #fff !important;
-            background-color: $blue !important;
-            border: 1.25px solid $blue !important;
+        button {
+            background-color: $dark-blue !important;
+            border: 1.25px solid #fff !important;
         }
     }
 
