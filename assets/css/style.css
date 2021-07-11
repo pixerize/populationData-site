@@ -2788,10 +2788,10 @@ header .container {
     background: #5B92E5 !important; }
   #main-content .goal-tiles {
     margin-bottom: 150px; }
-    #main-content .goal-tiles .no-gutters img:not(#goal-18) {
+    #main-content .goal-tiles .no-gutters img {
       transition: all 150ms ease-in-out;
       box-shadow: unset !important; }
-    #main-content .goal-tiles .no-gutters img:not(#goal-18):hover {
+    #main-content .goal-tiles .no-gutters img:hover {
       -webkit-transform: translate(0, -4px);
       transform: translate(0, -4px);
       -webkit-transition: all 150ms ease-in-out;
@@ -2802,6 +2802,9 @@ header .container {
   #main-content #dataset-size-warning {
     background: red;
     color: #fff; }
+
+.layout-search #main-content h1 {
+  font-size: 36px; }
 
 .breadcrumb {
   margin-top: 15px; }
