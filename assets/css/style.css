@@ -2970,14 +2970,19 @@ html:lang(hr) #main-content h1, html:lang(bs) #main-content h1 {
       background-color: #4d7bc1 !important;
       border: 1.25px solid #fff !important; }
     .navbar #search-mobile input#indicator_search-mobile {
-      border-color: #fff; }
+      border-color: #fff;
+      outline: unset !important; }
 
   .navbar-brand {
     display: block;
     width: 69%; }
 
   .navbar .top-level > li {
-    width: unset; }
+    width: unset;
+    max-width: 78%; }
+
+  html:lang(sr) .navbar .top-level > li {
+    max-width: 76%; }
 
   .logo-and-mobile-widgets .mobile-widgets {
     bottom: 20px; }
