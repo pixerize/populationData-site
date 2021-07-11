@@ -2830,6 +2830,8 @@ header {
   header .navbar-brand {
     display: block;
     max-width: 170px; }
+    header .navbar-brand:focus {
+      outline: unset !important; }
   header .navbar ul.navbar-nav > li > a {
     color: #fff;
     text-transform: uppercase; }
@@ -2936,6 +2938,9 @@ html:lang(sr) #main-content h1 {
 html:lang(hr) #main-content h1, html:lang(bs) #main-content h1 {
   font-size: 59px; }
 
+[contentEditable="true"]:focus, [href]:focus, [tabindex]:focus, iframe:focus, input:focus, button:focus {
+  color: #ffffff !important; }
+
 @media (max-width: 991px) {
   .layout-goal-by-target h1 {
     font-size: 30px;
@@ -2954,10 +2959,12 @@ html:lang(hr) #main-content h1, html:lang(bs) #main-content h1 {
     .mobile-widgets .dropdown-menu {
       left: -50px; }
 
-  .navbar #search-mobile .button {
-    color: #fff !important;
-    background-color: #5B92E5 !important;
-    border: 1.25px solid #5B92E5 !important; }
+  .navbar #search-mobile {
+    max-width: 120%; }
+    .navbar #search-mobile .button {
+      color: #fff !important;
+      background-color: #5B92E5 !important;
+      border: 1.25px solid #5B92E5 !important; }
 
   .navbar-brand {
     display: block;
