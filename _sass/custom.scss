@@ -154,7 +154,8 @@ header {
     justify-content: space-between;
     align-items: center;
     min-height: 80px;
-}
+    }
+    
     .navbar-brand {
         display: block;
         max-width: 170px;
@@ -163,7 +164,7 @@ header {
             outline: unset !important;
             }
         }
-    }
+    
 
     .navbar ul.navbar-nav > li > a {
         color: #fff;
