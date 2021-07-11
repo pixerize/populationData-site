@@ -2521,12 +2521,10 @@ function getPrecision(precisions, selectedUnit, selectedSeries) {
   this.indicatorDownloads = options.indicatorDownloads;
   this.compositeBreakdownLabel = options.compositeBreakdownLabel;
   this.precision = options.precision;
-  this.dataSchema = options.dataSchema;
 
   this.initialiseUnits = function() {
     if (this.hasUnits) {
       this.units = helpers.getUniqueValuesByProperty(helpers.UNIT_COLUMN, this.data);
-      helpers.sortFieldValueNames(helpers.UNIT_COLUMN, this.units, this.dataSchema);
       this.selectedUnit = this.units[0];
       this.fieldsByUnit = helpers.fieldsUsedByUnit(this.units, this.data, this.allColumns);
       this.dataHasUnitSpecificFields = helpers.dataHasUnitSpecificFields(this.fieldsByUnit);
@@ -2539,14 +2537,14 @@ function getPrecision(precisions, selectedUnit, selectedSeries) {
         this.chartTitle = this.selectedSeries;
       }
       this.data = helpers.getDataBySeries(this.allData, this.selectedSeries);
-      this.years = helpers.getUniqueValuesByProperty(helpers.YEAR_COLUMN, this.data).sort();
+      this.years = helpers.getUniqueValuesByProperty(helpers.YEAR_COLUMN, this.data);
       this.fieldsBySeries = helpers.fieldsUsedBySeries(this.serieses, this.data, this.allColumns);
       this.dataHasSeriesSpecificFields = helpers.dataHasSeriesSpecificFields(this.fieldsBySeries);
     }
   }
 
   this.initialiseFields = function() {
-    this.fieldItemStates = helpers.getInitialFieldItemStates(this.data, this.edgesData, this.allColumns, this.dataSchema);
+    this.fieldItemStates = helpers.getInitialFieldItemStates(this.data, this.edgesData, this.allColumns);
     this.validParentsByChild = helpers.validParentsByChild(this.edgesData, this.fieldItemStates, this.data);
     this.selectableFields = helpers.getFieldNames(this.fieldItemStates);
     this.allowedFields = helpers.getInitialAllowedFields(this.selectableFields, this.edgesData);
@@ -2559,7 +2557,6 @@ function getPrecision(precisions, selectedUnit, selectedSeries) {
   this.serieses = this.hasSerieses ? helpers.getUniqueValuesByProperty(helpers.SERIES_COLUMN, this.allData) : [];
   this.hasStartValues = Array.isArray(this.startValues) && this.startValues.length > 0;
   if (this.hasSerieses) {
-    helpers.sortFieldValueNames(helpers.SERIES_COLUMN, this.serieses, this.dataSchema);
     this.selectedSeries = this.serieses[0];
     if (this.hasStartValues) {
       this.selectedSeries = helpers.getSeriesFromStartValues(this.startValues) || this.selectedSeries;
@@ -2568,7 +2565,7 @@ function getPrecision(precisions, selectedUnit, selectedSeries) {
   }
   else {
     this.data = this.allData;
-    this.years = helpers.getUniqueValuesByProperty(helpers.YEAR_COLUMN, this.data).sort();
+    this.years = helpers.getUniqueValuesByProperty(helpers.YEAR_COLUMN, this.data);
   }
 
   // calculate some initial values:
@@ -2768,6 +2765,8 @@ function getPrecision(precisions, selectedUnit, selectedSeries) {
     // restrict count if it exceeds the limit:
     if(datasets.length > this.maxDatasetCount) {
       datasetCountExceedsMax = true;
+       let target = $('#indicator-main').offset().top;
+       $("html, body").animate({ scrollTop: target }, "slow");
     }
 
     this.updateChartTitle();
@@ -3346,7 +3345,7 @@ var indicatorView = function (model, options) {
       var filename = chartInfo.indicatorId + '.png',
           element = document.getElementById('chart-canvas'),
           footer = document.getElementById('selectionChartFooter'),
-          height = element.clientHeight + 50 + ((footer) ? footer.clientHeight : 0),
+          height = element.clientHeight + 100 + ((footer) ? footer.clientHeight : 0),
           width = element.clientWidth + 25;
       var options = {
         // These options fix the height, width, and position.
