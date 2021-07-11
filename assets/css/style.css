@@ -2804,7 +2804,7 @@ header .container {
     color: #fff; }
 
 .layout-search #main-content h1 {
-  font-size: 36px; }
+  font-size: 36px !important; }
 
 .breadcrumb {
   margin-top: 15px; }
