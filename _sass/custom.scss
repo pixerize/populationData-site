@@ -23,6 +23,7 @@ body {
     border: 1px solid $blue;
     border-radius: 50%;
     transition: .3s;
+    z-index: 999;
 
     &:hover {
         transform: translateY(-5px);
