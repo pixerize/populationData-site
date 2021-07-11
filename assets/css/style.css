@@ -2977,7 +2977,7 @@ html:lang(hr) #main-content h1, html:lang(bs) #main-content h1 {
   .layout-frontpage #main-content {
     height: 100%; }
     .layout-frontpage #main-content h1 {
-      font-size: 40px; }
+      font-size: 40px !important; }
   .layout-frontpage .col-xs-6 {
     min-height: 220px; }
 
