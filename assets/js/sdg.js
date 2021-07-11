@@ -1053,7 +1053,7 @@ opensdg.chartColors = function(indicatorId) {
                   'goal': this.goalColors[this.goalNumber-1],
                   'custom': customColorList,
     'accessible': ['cd7a00', '339966', '9966cc', '3ff002', 'e4e300', '054ce6'],
-    'popdata': ['00c0ff', 'cc4aff', '00c161', 'ff0028', '0050ff', 'ffa500']};};
+    'popdata': ['00c0ff', 'cc4aff', '00c161', 'ff0028', '0050ff', 'ffa500']};
   if(Object.keys(this.colorSets).indexOf(colorSet) == -1 || (colorSet=='custom' && customColorList == null)){
     return this.colorSets['default'];
   }
@@ -3265,11 +3265,10 @@ var indicatorView = function (model, options) {
         legendCallback: function(chart) {
             var text = [];
             text.push('<h5 class="sr-only">' + translations.indicator.plot_legend_description + '</h5>');
-            text.push('<ul id="legend" class="legend-for-' + chart.config.type + '-chart">');
+            text.push('<ul id="legend">');
             _.each(chart.data.datasets, function(dataset) {
               text.push('<li>');
-              text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + (dataset.headline ? ' headline' : '') + '" style="background-color: ' + dataset.borderColor + '">');
-              text.push('<span class="swatch-inner" style="background-color: ' + dataset.borderColor + '"></span>');
+              text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.borderColor + '">');
               text.push('</span>');
               text.push(translations.t(dataset.label));
               text.push('</li>');
@@ -3347,7 +3346,7 @@ var indicatorView = function (model, options) {
       var filename = chartInfo.indicatorId + '.png',
           element = document.getElementById('chart-canvas'),
           footer = document.getElementById('selectionChartFooter'),
-          height = element.clientHeight + 25 + ((footer) ? footer.clientHeight : 0),
+          height = element.clientHeight + 50 + ((footer) ? footer.clientHeight : 0),
           width = element.clientWidth + 25;
       var options = {
         // These options fix the height, width, and position.
