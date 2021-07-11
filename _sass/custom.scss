@@ -407,9 +407,6 @@ html:lang(hr),html:lang(bs)  {
             outline: unset !important;
         }
 
-       li:not(.contrast) > a:hover {
-            border-bottom: 2px solid #ffffff;
-        }
     }
 
     .navbar-brand {
@@ -417,9 +414,16 @@ html:lang(hr),html:lang(bs)  {
         width: 69%;
     }
 
-    .navbar .top-level > li {
-        width: unset;
-        max-width: 78%;
+    .navbar .top-level {
+
+        & > li {
+            width: unset;
+            max-width: 78%;
+        }
+
+        li:not(.contrast) > a:hover {
+            border-bottom: 2px solid #ffffff !important;
+        }
     }
 
     html:lang(sr){
