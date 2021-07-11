@@ -50,8 +50,20 @@ header .container {
         justify-content: flex-end;
         align-items: flex-end;
 
+        @media (max-width: 991px) {
+            position: absolute;
+            top: 76px;
+            right: 10px;
+            font-size: 12px;
+        }
+
         img {
             padding-left: 10px;
+
+            @media (max-width: 991px) {
+                max-width: 70px;
+                padding-left: 8px;
+            }
         }
     }
 }
