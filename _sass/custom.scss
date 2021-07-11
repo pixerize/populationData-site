@@ -51,6 +51,7 @@ header .container {
         align-items: flex-end;
 
         @media (max-width: 991px) {
+            height: unset;
             position: absolute;
             top: 76px;
             right: 10px;
