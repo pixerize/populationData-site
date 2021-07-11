@@ -132,6 +132,11 @@ header .container {
             h1 {
                 font-size: 36px !important;
             }
+
+            button#search-bar-on-page-btn {
+                background-color: $dark-blue;
+                border-color: $dark-blue;
+            }
     }
 }
 
