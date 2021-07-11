@@ -2754,6 +2754,7 @@ header .container {
     align-items: flex-end; }
     @media (max-width: 991px) {
       header .container .supp-by {
+        height: unset;
         position: absolute;
         top: 76px;
         right: 10px;
