@@ -2752,8 +2752,18 @@ header .container {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end; }
+    @media (max-width: 991px) {
+      header .container .supp-by {
+        position: absolute;
+        top: 76px;
+        right: 10px;
+        font-size: 12px; } }
     header .container .supp-by img {
       padding-left: 10px; }
+      @media (max-width: 991px) {
+        header .container .supp-by img {
+          max-width: 70px;
+          padding-left: 8px; } }
 
 .layout-frontpage #main-content {
   height: 69vh;
