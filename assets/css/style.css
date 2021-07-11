@@ -2918,6 +2918,12 @@ div#main-content > p {
 div#main-content h2 {
   display: none; }
 
+html:lang(sr) #main-content h1 {
+  font-size: 55px; }
+
+html:lang(hr) #main-content h1, html:lang(bs) #main-content h1 {
+  font-size: 59px; }
+
 @media (max-width: 991px) {
   .layout-goal-by-target h1 {
     font-size: 30px;
