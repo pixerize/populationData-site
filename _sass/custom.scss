@@ -370,12 +370,8 @@ html:lang(hr),html:lang(bs)  {
         }
     }
 
-    .navbar .top-level > li {
-        width: 100%;
-    }
 
     .navbar #search-mobile {
-        width: 100%;
 
         .button {
             color: #fff !important;
@@ -389,11 +385,15 @@ html:lang(hr),html:lang(bs)  {
         width: 69%;
     }
 
+    .navbar .top-level > li {
+        width: unset;
+    }
+
     .logo-and-mobile-widgets .mobile-widgets {
         bottom: 20px;
     }
 
-    li#menuToggle, label.hidden-md.hidden-lg  {
+    label.hidden-md.hidden-lg  {
         display: none;
     }
 
