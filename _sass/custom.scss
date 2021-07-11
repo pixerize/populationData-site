@@ -343,6 +343,9 @@ html:lang(hr),html:lang(bs)  {
     }
 }
 
+[contentEditable="true"]:focus, [href]:focus, [tabindex]:focus, iframe:focus, input:focus, button:focus {
+    color: #ffffff !important;
+}
 
 @media (min-width: $bp-tablet + 1px) {
 
@@ -377,6 +380,8 @@ html:lang(hr),html:lang(bs)  {
 
 
     .navbar #search-mobile {
+
+        max-width: 120%;
 
         .button {
             color: #fff !important;
