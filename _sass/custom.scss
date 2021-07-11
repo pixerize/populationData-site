@@ -103,12 +103,12 @@ header .container {
         margin-bottom: 150px;
         
         .no-gutters {
-            img:not(#goal-18) {
+            img {
                 transition: all 150ms ease-in-out;
                 box-shadow: unset !important;
             }
 
-            img:not(#goal-18):hover {
+            img:hover {
                 -webkit-transform: translate(0, -4px);
                 transform: translate(0, -4px);
                 -webkit-transition: all 150ms ease-in-out;
@@ -125,6 +125,17 @@ header .container {
         color: #fff;
     }
 }
+
+.layout-search {
+    #main-content {
+
+        background: transparent !important;
+    
+        h1 {
+            font-size: 36px;
+        }
+}
+
 
 .breadcrumb {
     margin-top: 15px;
