@@ -2942,7 +2942,7 @@ html:lang(hr) #main-content h1, html:lang(bs) #main-content h1 {
   color: #ffffff !important; }
 
 @media (max-width: 991px) {
-  .active button, .active #menu-mobile, .active a {
+  #main-nav .active button, #main-nav .active #menu-mobile, #main-nav .active a {
     color: #fff !important;
     background: #4d7bc1 !important; }
 
@@ -2964,12 +2964,10 @@ html:lang(hr) #main-content h1, html:lang(bs) #main-content h1 {
       left: -50px; }
 
   .navbar #search-mobile {
-    max-width: 120%;
-    background: #4d7bc1; }
-    .navbar #search-mobile .button {
-      color: #fff !important;
-      background-color: #5B92E5 !important;
-      border: 1.25px solid #5B92E5 !important; }
+    max-width: 100%; }
+    .navbar #search-mobile button {
+      background-color: #4d7bc1 !important;
+      border: 1.25px solid #fff !important; }
 
   .navbar-brand {
     display: block;
