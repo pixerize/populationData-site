@@ -2947,6 +2947,9 @@ html:lang(hr) #main-content h1, html:lang(bs) #main-content h1 {
     font-size: 30px;
     padding: 10px 0 0; }
 
+  html:lang(sr) .layout-goal-by-target h1 {
+    font-size: 26px; }
+
   .layout-indicator h1 {
     font-size: 25px;
     line-height: 1.3 !important;
