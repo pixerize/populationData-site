@@ -2942,6 +2942,9 @@ html:lang(hr) #main-content h1, html:lang(bs) #main-content h1 {
   color: #ffffff !important; }
 
 @media (max-width: 991px) {
+  .active button {
+    color: #fff !important; }
+
   .layout-goal-by-target h1 {
     font-size: 30px;
     padding: 10px 0 0; }
