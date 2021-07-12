@@ -14,6 +14,10 @@ We also check for "graph_stacked_disaggregation" here to support stacked bars.
 
         type: 'horizontalBar',
         options: {
+          tooltips: {
+                intersect: false,
+                axis: 'x'
+            },
           scales: {
             xAxes: [{
               stacked: true,
