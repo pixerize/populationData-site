@@ -17,12 +17,8 @@ opensdg.chartConfigAlter(function(config, info) {
         scales: {
           xAxes: [{ stacked: true,
             ticks: {
-          // return positive values           
-            callback: function(value, index, values) {
-             console.log(values);
-              return value < 0 ? -value : value;
-            }
-          }
+                    display: false //this will remove only the label
+                }
           }],
           yAxes: [{ stacked: true,
             ticks: {
