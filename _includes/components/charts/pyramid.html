@@ -11,6 +11,8 @@ We also check for "graph_stacked_disaggregation" here to support stacked bars.
 opensdg.chartConfigAlter(function(config, info) {
   if (info.stackedDisaggregation) {
     var overrides = {
+
+      type: 'horizontalBar',
       options: {
         scales: {
           xAxes: [{ stacked: true,
