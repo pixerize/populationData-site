@@ -18,19 +18,19 @@ We also check for "graph_stacked_disaggregation" here to support stacked bars.
             xAxes: [{
               stacked: true,
               ticks: {
-                // return positive values           
-                // callback: function (value, index, values) {
-                //   console.log(values);
-                //   return value < 0 ? -value : value;
-                // }
+                //return positive values           
+                callback: function (value, index, values) {
+                  console.log(values);
+                  return value < 0 ? -value : value;
+                }
                 
               }
             }],
             yAxes: [{
               stacked: true,
               ticks: {
-                reverse: true,
-                //display: false //this will remove only the label
+                //reverse: true,
+                display: false //this will remove only the label
               }
             }],
           }
