@@ -8,49 +8,51 @@ We also check for "graph_stacked_disaggregation" here to support stacked bars.
 {% include components/charts/graph_limits.html %}
 {% include components/charts/graph_annotations.html %}
 <script>
-opensdg.chartConfigAlter(function(config, info) {
-  if (info.stackedDisaggregation) {
-    var overrides = {
+  opensdg.chartConfigAlter(function (config, info) {
+    if (info.stackedDisaggregation) {
+      var overrides = {
 
-      type: 'horizontalBar',
-      options: {
-        scales: {
-          xAxes: [{ stacked: true,
-            ticks: {
-                    display: false //this will remove only the label
+        type: 'horizontalBar',
+        options: {
+          scales: {
+            xAxes: [{
+              stacked: true,
+              ticks: {
+                // return positive values           
+                callback: function (value, index, values) {
+                  console.log(values);
+                  return value < 0 ? -value : value;
                 }
-          }],
-          yAxes: [{ stacked: true,
-            ticks: {
-          // return positive values           
-            callback: function(value, index, values) {
-             console.log(values);
-              return value < 0 ? -value : value;
-            }
+              }
+            }],
+            yAxes: [{
+              stacked: true,
+              ticks: {
+                display: false //this will remove only the label
+              }
+            }],
           }
-          }],
         }
-      }
-    };
-    // If we have stackedDisaggregation, we need to group datasets into stacks.
-    config.data.datasets.forEach(function(dataset) {
-      var disaggregation = $.extend({}, dataset.disaggregation);
-      // We're going to "stringify" each combination of disaggregations in order
-      // to place them in their own "stacks". To place "stacked" disaggregations
-      // into the same stack, we set them as "samestack" before stringifying.
-      // Note that the string "samestack" is completely arbitrary.
-      if (typeof disaggregation[info.stackedDisaggregation] !== 'undefined') {
-        disaggregation[info.stackedDisaggregation] = 'samestack';
-      }
-      // Use the disaggregation as a unique id for each stack.
-      dataset.stack = JSON.stringify(disaggregation);
-    });
-    // Add these overrides onto the normal config, and return it.
-    $.extend(true, config, overrides);
-  }
-});
+      };
+      // If we have stackedDisaggregation, we need to group datasets into stacks.
+      config.data.datasets.forEach(function (dataset) {
+        var disaggregation = $.extend({}, dataset.disaggregation);
+        // We're going to "stringify" each combination of disaggregations in order
+        // to place them in their own "stacks". To place "stacked" disaggregations
+        // into the same stack, we set them as "samestack" before stringifying.
+        // Note that the string "samestack" is completely arbitrary.
+        if (typeof disaggregation[info.stackedDisaggregation] !== 'undefined') {
+          disaggregation[info.stackedDisaggregation] = 'samestack';
+        }
+        // Use the disaggregation as a unique id for each stack.
+        dataset.stack = JSON.stringify(disaggregation);
+      });
+      // Add these overrides onto the normal config, and return it.
+      $.extend(true, config, overrides);
+    }
+  });
 
-opensdg.chartConfigAlter(function(config) {
+  opensdg.chartConfigAlter(function (config) {
     console.log(config);
-});
+  });
 </script>
