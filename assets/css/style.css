@@ -2976,13 +2976,18 @@ html:lang(hr) #main-content h1, html:lang(bs) #main-content h1 {
     justify-content: center; }
     .navbar ul.top-level .nav-link {
       text-align: center; }
+      .navbar ul.top-level .nav-link a {
+        padding: 8px 0 !important; }
   .navbar #menu-mobile {
     display: block !important;
-    width: 100%; }
+    width: 100%;
+    background-color: #4d7bc1;
+    margin-bottom: 10px; }
   .navbar #search-mobile {
     display: block !important;
     max-width: 100%;
-    background-color: #4d7bc1 !important; }
+    background-color: #4d7bc1 !important;
+    padding: 10px; }
     .navbar #search-mobile button {
       background-color: #4d7bc1 !important;
       border: 1.25px solid #fff !important; }
@@ -2995,13 +3000,10 @@ html:lang(hr) #main-content h1, html:lang(bs) #main-content h1 {
     width: 69%; }
 
   .navbar .top-level > li {
-    width: unset;
-    max-width: 78%; }
+    width: 100%;
+    max-width: 100%; }
   .navbar .top-level li:not(.contrast) > a:hover {
     border-bottom: 2px solid #ffffff !important; }
-
-  html:lang(sr) .navbar .top-level > li {
-    max-width: 76%; }
 
   .logo-and-mobile-widgets .mobile-widgets {
     bottom: 20px; }
@@ -3018,3 +3020,13 @@ html:lang(hr) #main-content h1, html:lang(bs) #main-content h1 {
 
   .logo-and-mobile-widgets {
     min-height: 140px; } }
+@media (max-width: 768px) {
+  .navbar ul.top-level {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .navbar ul.top-level .nav-link {
+      text-align: center; }
+      .navbar ul.top-level .nav-link a {
+        padding: 8px 0 !important; } }
