@@ -99,4 +99,16 @@ $( document ).ready(function() {
   }
 });
 
+//set pyramid all age groups and both sex selected, 
+//set first year selected
+$(document).ready(function () {
+  $('input').each(function () {
+    if ($(this).attr('data-field') == "YEARS" && $(this).val() == 1971) {
+      $(this).prop('checked', true);
+    }
 
+    if ($(this).attr('data-field') == "AGE") {
+      $(this).prop('checked', true);
+    }
+  });
+});
