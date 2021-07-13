@@ -408,8 +408,21 @@ html:lang(hr),html:lang(bs)  {
 
     
     .navbar{
+        ul.top-level {
+            display: flex !important;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .nav-link {
+                text-align: center;
+            }
+        }
+
         #menu-mobile {
             display: block !important;
+            width: 100%;
+
         }
         #search-mobile {
             display: block !important;
