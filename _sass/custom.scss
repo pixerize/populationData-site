@@ -366,12 +366,6 @@ html:lang(hr),html:lang(bs)  {
 
 @media (max-width: $bp-tablet) {
 
-    #main-nav .active {
-        button, #menu-mobile, a {
-            color: #fff !important;
-            background: $dark-blue !important;
-        }
-    }
 
     .layout-goal-by-target {
         h1 {
@@ -451,9 +445,21 @@ html:lang(hr),html:lang(bs)  {
         min-height: 140px;
     }
 
+    #search {
+        width: 805px;
+    }
+
 }
 
 @media (max-width: 768px) {
+
+    
+    #main-nav .active {
+        button, #menu-mobile, a {
+            color: #fff !important;
+            background: $dark-blue !important;
+        }
+    }
 
     .navbar{
         ul.top-level {
