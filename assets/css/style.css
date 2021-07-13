@@ -2945,10 +2945,6 @@ html:lang(hr) #main-content h1, html:lang(bs) #main-content h1 {
   font-size: 59px; }
 
 @media (max-width: 991px) {
-  #main-nav .active button, #main-nav .active #menu-mobile, #main-nav .active a {
-    color: #fff !important;
-    background: #4d7bc1 !important; }
-
   .layout-goal-by-target h1 {
     font-size: 30px;
     padding: 10px 0 0; }
@@ -2993,8 +2989,15 @@ html:lang(hr) #main-content h1, html:lang(bs) #main-content h1 {
     min-height: 220px; }
 
   .logo-and-mobile-widgets {
-    min-height: 140px; } }
+    min-height: 140px; }
+
+  #search {
+    width: 805px; } }
 @media (max-width: 768px) {
+  #main-nav .active button, #main-nav .active #menu-mobile, #main-nav .active a {
+    color: #fff !important;
+    background: #4d7bc1 !important; }
+
   .navbar ul.top-level {
     display: flex !important;
     flex-direction: column;
