@@ -406,22 +406,27 @@ html:lang(hr),html:lang(bs)  {
         }
     }
 
-
-    .navbar #search-mobile {
-
-        max-width: 100%;
-        background-color: $dark-blue !important;
-
-        button {
+    
+    .navbar{
+        #menu-mobile {
+            display: block !important;
+        }
+        #search-mobile {
+            display: block !important;
+            max-width: 100%;
             background-color: $dark-blue !important;
-            border: 1.25px solid #fff !important;
+    
+            button {
+                background-color: $dark-blue !important;
+                border: 1.25px solid #fff !important;
+            }
+    
+            input#indicator_search-mobile {
+                border-color: #fff;
+                outline: unset !important;
+            }
+    
         }
-
-        input#indicator_search-mobile {
-            border-color: #fff;
-            outline: unset !important;
-        }
-
     }
 
     .navbar-brand {
