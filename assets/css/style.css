@@ -2987,7 +2987,9 @@ html:lang(hr) #main-content h1, html:lang(bs) #main-content h1 {
     display: block !important;
     max-width: 100%;
     background-color: #4d7bc1 !important;
-    padding: 10px; }
+    padding: 10px 0px 10px 10px; }
+    .navbar #search-mobile form {
+      margin: 0; }
     .navbar #search-mobile button {
       background-color: #4d7bc1 !important;
       border: 1.25px solid #fff !important; }
