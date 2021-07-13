@@ -416,18 +416,25 @@ html:lang(hr),html:lang(bs)  {
 
             .nav-link {
                 text-align: center;
+
+                a {
+                    padding: 8px 0 !important;
+                }
             }
         }
 
         #menu-mobile {
             display: block !important;
             width: 100%;
+            background-color: $dark-blue;
+            margin-bottom: 10px;
 
         }
         #search-mobile {
             display: block !important;
             max-width: 100%;
             background-color: $dark-blue !important;
+            padding: 10px;
     
             button {
                 background-color: $dark-blue !important;
@@ -450,18 +457,12 @@ html:lang(hr),html:lang(bs)  {
     .navbar .top-level {
 
         & > li {
-            width: unset;
-            max-width: 78%;
+            width: 100%;
+            max-width: 100%;
         }
 
         li:not(.contrast) > a:hover {
             border-bottom: 2px solid #ffffff !important;
-        }
-    }
-
-    html:lang(sr){
-        .navbar .top-level > li {
-            max-width: 76%;
         }
     }
 
@@ -490,6 +491,27 @@ html:lang(hr),html:lang(bs)  {
 
     .logo-and-mobile-widgets {
         min-height: 140px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    
+    .navbar{
+        ul.top-level {
+            display: flex !important;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .nav-link {
+                text-align: center;
+
+                a {
+                    padding: 8px 0 !important;
+                }
+            }
+        }
     }
 
 }
