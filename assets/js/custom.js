@@ -104,8 +104,8 @@ $(document).ready(function () {
   $('input').each(function () {
     if ($(this).attr('data-field') == "YEARS" && $(this).val() == 1971) {
       $(this).prop('checked', true);
+      console.log($(this));
     }
-
   }); 
   
   //set pyramid both sex selected
@@ -113,10 +113,11 @@ $(document).ready(function () {
 
     if ($(this).attr('data-field') == "Sex") {
       $(this).prop('checked', true);
+      console.log($(this));
     }
 
   });
-  
+
 //set pyramid all age groups selected
   $('input').each(function () {
 
