@@ -426,7 +426,7 @@ html:lang(hr),html:lang(bs)  {
         #menu-mobile {
             display: block !important;
             width: 100%;
-            background-color: $dark-blue;
+            background-color: $dark-blue !important;
             margin-bottom: 10px;
 
         }
@@ -509,6 +509,7 @@ html:lang(hr),html:lang(bs)  {
 
                 a {
                     padding: 8px 0 !important;
+                    background-color: $dark-blue !important;
                 }
             }
         }
