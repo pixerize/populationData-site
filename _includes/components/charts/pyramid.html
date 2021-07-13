@@ -64,4 +64,12 @@ We also check for "graph_stacked_disaggregation" here to support stacked bars.
   opensdg.chartConfigAlter(function (config) {
     console.log(config);
   });
+
+  $('input').each(function () {
+      if ($(this).attr('data-field') == "YEARS" && $(this).val() == 1971) {
+        $(this).prop('checked', true);
+      }
+
+    });
+
 </script>
