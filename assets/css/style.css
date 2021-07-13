@@ -2969,7 +2969,10 @@ html:lang(hr) #main-content h1, html:lang(bs) #main-content h1 {
     .mobile-widgets .dropdown-menu {
       left: -50px; }
 
+  .navbar #menu-mobile {
+    display: block !important; }
   .navbar #search-mobile {
+    display: block !important;
     max-width: 100%;
     background-color: #4d7bc1 !important; }
     .navbar #search-mobile button {
