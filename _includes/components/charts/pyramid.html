@@ -15,12 +15,12 @@ We also check for "graph_stacked_disaggregation" here to support stacked bars.
         type: 'horizontalBar',
         options: {
           tooltips: {
-                intersect: false,
-                axis: 'x'
-            },
-            hover: {
-              axis: 'x'
-            },
+            intersect: false,
+            axis: 'x'
+          },
+          hover: {
+            axis: 'x'
+          },
           scales: {
             xAxes: [{
               stacked: true,
@@ -30,7 +30,7 @@ We also check for "graph_stacked_disaggregation" here to support stacked bars.
                   console.log(values);
                   return value < 0 ? -value : value;
                 }
-                
+
               }
             }],
             yAxes: [{
@@ -66,14 +66,19 @@ We also check for "graph_stacked_disaggregation" here to support stacked bars.
   });
 
   //set first year in dropdown and all ages
-  $('input').each(function () {
-    if ($(this).attr('data-field') == "YEARS" && $(this).val() == 1971) {
-      $(this).prop('checked', true);
-    }
+  $(function () {
+    $('input').each(function () {
+      if ($(this).attr('data-field') == "YEARS" && $(this).val() == 1971) {
+        $(this).prop('checked', true);
+      }
 
-    if ($(this).attr('data-field') == "AGE") {
-      $(this).prop('checked', true);
-    }
+      if ($(this).attr('data-field') == "AGE") {
+        $(this).prop('checked', true);
+      }
+    });
   });
+
+
+
 
 </script>
