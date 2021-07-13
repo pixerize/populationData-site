@@ -407,52 +407,6 @@ html:lang(hr),html:lang(bs)  {
     }
 
     
-    .navbar{
-        ul.top-level {
-            display: flex !important;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-            .nav-link {
-                text-align: center;
-
-                a {
-                    padding: 8px 0 !important;
-                }
-            }
-        }
-
-        #menu-mobile {
-            display: block !important;
-            width: 100%;
-            background-color: $dark-blue !important;
-            margin-bottom: 10px;
-
-        }
-        #search-mobile {
-            display: block !important;
-            max-width: 100%;
-            background-color: $dark-blue !important;
-            padding: 10px 0px 10px 10px;
-
-            form {
-                margin: 0;
-            }
-    
-            button {
-                background-color: $dark-blue !important;
-                border: 1.25px solid #fff !important;
-            }
-    
-            input#indicator_search-mobile {
-                border-color: #fff;
-                outline: unset !important;
-            }
-    
-        }
-    }
-
     .navbar-brand {
         display: block;
         width: 69%;
@@ -500,9 +454,10 @@ html:lang(hr),html:lang(bs)  {
 }
 
 @media (max-width: 768px) {
-    
+
     .navbar{
         ul.top-level {
+
             display: flex !important;
             flex-direction: column;
             align-items: center;
@@ -515,7 +470,41 @@ html:lang(hr),html:lang(bs)  {
                     padding: 8px 0 !important;
                     background-color: $dark-blue !important;
                 }
+
             }
+            .active a {
+                font-weight: normal !important;
+                border: unset !important;
+            }
+        }
+
+        #menu-mobile {
+            display: block !important;
+            width: 100%;
+            background-color: $dark-blue !important;
+            margin-bottom: 10px !important;
+
+        }
+        #search-mobile {
+            display: block !important;
+            max-width: 100%;
+            background-color: $dark-blue !important;
+            padding: 10px 0px 10px 10px;
+
+            form {
+                margin: 0;
+            }
+    
+            button {
+                background-color: $dark-blue !important;
+                border: 1.25px solid #fff !important;
+            }
+    
+            input#indicator_search-mobile {
+                border-color: #fff;
+                outline: unset !important;
+            }
+    
         }
     }
 
