@@ -2981,7 +2981,7 @@ html:lang(hr) #main-content h1, html:lang(bs) #main-content h1 {
   .navbar #menu-mobile {
     display: block !important;
     width: 100%;
-    background-color: #4d7bc1;
+    background-color: #4d7bc1 !important;
     margin-bottom: 10px; }
   .navbar #search-mobile {
     display: block !important;
@@ -3029,4 +3029,5 @@ html:lang(hr) #main-content h1, html:lang(bs) #main-content h1 {
     .navbar ul.top-level .nav-link {
       text-align: center; }
       .navbar ul.top-level .nav-link a {
-        padding: 8px 0 !important; } }
+        padding: 8px 0 !important;
+        background-color: #4d7bc1 !important; } }
