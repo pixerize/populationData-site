@@ -2806,8 +2806,8 @@ header .container {
 .layout-search #main-content h1 {
   font-size: 36px !important; }
 .layout-search #main-content button#search-bar-on-page-btn {
-  background-color: #4d7bc1;
-  border-color: #4d7bc1; }
+  background-color: #5B92E5;
+  border-color: #5B92E5; }
 
 .breadcrumb {
   margin-top: 15px; }
@@ -2996,7 +2996,7 @@ html:lang(hr) #main-content h1, html:lang(bs) #main-content h1 {
 @media (max-width: 768px) {
   #main-nav .active button, #main-nav .active #menu-mobile, #main-nav .active a {
     color: #fff !important;
-    background: #4d7bc1 !important; }
+    background: #5B92E5 !important; }
 
   .navbar ul.top-level {
     display: flex !important;
@@ -3007,24 +3007,24 @@ html:lang(hr) #main-content h1, html:lang(bs) #main-content h1 {
       text-align: center; }
       .navbar ul.top-level .nav-link a {
         padding: 8px 0 !important;
-        background-color: #4d7bc1 !important; }
+        background-color: #5B92E5 !important; }
     .navbar ul.top-level .active a {
       font-weight: normal !important;
       border: unset !important; }
   .navbar #menu-mobile {
     display: block !important;
     width: 100%;
-    background-color: #4d7bc1 !important;
+    background-color: #5B92E5 !important;
     margin-bottom: 10px !important; }
   .navbar #search-mobile {
     display: block !important;
     max-width: 100%;
-    background-color: #4d7bc1 !important;
+    background-color: #5B92E5 !important;
     padding: 10px 0px 10px 10px; }
     .navbar #search-mobile form {
       margin: 0; }
     .navbar #search-mobile button {
-      background-color: #4d7bc1 !important;
+      background-color: #5B92E5 !important;
       border: 1.25px solid #fff !important; }
     .navbar #search-mobile input#indicator_search-mobile {
       border-color: #fff;
