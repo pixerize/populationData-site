@@ -134,8 +134,8 @@ header .container {
             }
 
             button#search-bar-on-page-btn {
-                background-color: $dark-blue;
-                border-color: $dark-blue;
+                background-color: $blue;
+                border-color: $blue;
             }
     }
 }
@@ -457,7 +457,7 @@ html:lang(hr),html:lang(bs)  {
     #main-nav .active {
         button, #menu-mobile, a {
             color: #fff !important;
-            background: $dark-blue !important;
+            background: $blue !important;
         }
     }
 
@@ -474,7 +474,7 @@ html:lang(hr),html:lang(bs)  {
 
                 a {
                     padding: 8px 0 !important;
-                    background-color: $dark-blue !important;
+                    background-color: $blue !important;
                 }
 
             }
@@ -487,14 +487,14 @@ html:lang(hr),html:lang(bs)  {
         #menu-mobile {
             display: block !important;
             width: 100%;
-            background-color: $dark-blue !important;
+            background-color: $blue !important;
             margin-bottom: 10px !important;
 
         }
         #search-mobile {
             display: block !important;
             max-width: 100%;
-            background-color: $dark-blue !important;
+            background-color: $blue !important;
             padding: 10px 0px 10px 10px;
 
             form {
@@ -502,7 +502,7 @@ html:lang(hr),html:lang(bs)  {
             }
     
             button {
-                background-color: $dark-blue !important;
+                background-color: $blue !important;
                 border: 1.25px solid #fff !important;
             }
     
