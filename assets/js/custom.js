@@ -100,32 +100,32 @@ $( document ).ready(function() {
 });
 
 //set first year selected
-// $(document).ready(function () {
-//   $('input').each(function () {
-//     if ($(this).attr('data-field') == "YEARS" && $(this).val() == 1971) {
-//       $(this).prop('checked', true);
-//       console.log($(this));
-//     }
-//   }); 
+$(document).ready(function () {
+  $('input').each(function () {
+    if ($(this).attr('data-field') == "YEARS" && $(this).val() == 1971) {
+      $(this).prop('checked', true);
+      console.log($(this));
+    }
+  }); 
   
-//   //set pyramid both sex selected
-//   $('input').each(function () {
+  //set pyramid both sex selected
+  $('input').each(function () {
 
-//     if ($(this).attr('data-field') == "Sex") {
-//       $(this).prop('checked', true);
-//       console.log($(this));
-//     }
+    if ($(this).attr('data-field') == "Sex") {
+      $(this).prop('checked', true);
+      console.log($(this));
+    }
 
-//   });
+  });
 
-// //set pyramid all age groups selected
-//   $('input').each(function () {
+//set pyramid all age groups selected
+  $('input').each(function () {
 
-//     if ($(this).attr('data-field') == "AGE") {
-//       $(this).prop('checked', true);
-//     }
+    if ($(this).attr('data-field') == "AGE") {
+      $(this).prop('checked', true);
+    }
 
-//   });
+  });
   
-// });
+});
 
