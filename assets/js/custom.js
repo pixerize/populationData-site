@@ -99,7 +99,6 @@ $( document ).ready(function() {
   }
 });
 
-//set pyramid all age groups and both sex selected, 
 //set first year selected
 $(document).ready(function () {
   $('input').each(function () {
@@ -107,9 +106,19 @@ $(document).ready(function () {
       $(this).prop('checked', true);
     }
 
+  }); 
+  
+  //set pyramid both sex selected
+  $('input').each(function () {
+
     if ($(this).attr('data-field') == "Sex") {
       $(this).prop('checked', true);
     }
+
+  });
+  
+//set pyramid all age groups selected
+  $('input').each(function () {
 
     if ($(this).attr('data-field') == "AGE") {
       $(this).prop('checked', true);
