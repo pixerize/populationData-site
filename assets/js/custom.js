@@ -104,7 +104,7 @@ $(document).ready(function () {
   $('input').each(function () {
     if ($(this).attr('data-field') == "Years" && $(this).val() == 1971) {
       $(this).prop('checked', true);
-      console.log($(this));
+      console.log($(this).val());
     }
   }); 
   
@@ -113,7 +113,7 @@ $(document).ready(function () {
 
     if ($(this).attr('data-field') == "Sex") {
       $(this).prop('checked', true);
-      console.log($(this));
+      console.log($(this).val());
     }
 
   });
