@@ -102,7 +102,7 @@ $( document ).ready(function() {
 //set first year selected
 $(document).ready(function () {
   $('input').each(function () {
-    if ($(this).attr('data-field') == "YEARS" && $(this).val() == 1971) {
+    if ($(this).attr('data-field') == "Years" && $(this).val() == 1971) {
       $(this).prop('checked', true);
       console.log($(this));
     }
