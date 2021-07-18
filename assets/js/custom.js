@@ -108,16 +108,6 @@ $(document).ready(function () {
     }
   }); 
   
-  //set pyramid both sex selected
-  $('input').each(function () {
-
-    if ($(this).attr('data-field') == "Sex") {
-      $(this).prop('checked', true);
-      console.log($(this).val());
-    }
-
-  });
-
 //set pyramid all age groups selected
   $('input').each(function () {
 
