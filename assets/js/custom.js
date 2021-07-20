@@ -105,8 +105,8 @@ $(document).ready(function () {
   var url = window.location.href;  
   console.log(url);
   if (url.search("1-1-6") != -1) {
-    $('#units h4').text('<h4>Census</h4>');
-    console.log('test') ;
+    $('#units').append('<h4>Census</h4>');
+    $('#units h4').remove();
    }
 
 });
