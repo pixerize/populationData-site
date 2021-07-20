@@ -19,6 +19,23 @@
         // Add these overrides onto the normal config.
         $.extend(true, config, overrides);
       }
+    } else {
+      if (info.graphLimits && info.graphLimits.length > 0) {
+        var overrides = {
+          options: {
+            scales: {
+              yAxes: [{
+                ticks: {
+                  min: info.graphLimits.minimum,
+                  max: 24,
+                }
+              }]
+            }
+          }
+        }
+        // Add these overrides onto the normal config.
+        $.extend(true, config, overrides);
+      }
     }
   });
 </script>
