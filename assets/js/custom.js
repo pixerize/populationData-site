@@ -102,15 +102,12 @@ $( document ).ready(function() {
 //set first year selected
 $(document).ready(function () {
   
-//set pyramid all age groups selected
-  $('input').each(function () {
-
-    if ($(this).attr('data-field') == "PYRAMID_AGE") {
-      $(this).prop('checked', true);
-      console.log ('test');
-    }
-
-  });
+  //set pyramid all age groups selected
+  var url = window.location.href;  
+  console.log(url);
+  if (url.search("1-1-6") != -1) {
+    $('#units h4').text('Census');
+  }
 
 });
 
