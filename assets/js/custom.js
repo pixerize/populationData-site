@@ -101,21 +101,16 @@ $( document ).ready(function() {
 
 //set first year selected
 $(document).ready(function () {
-  $('input').each(function () {
-    if ($(this).attr('data-field') == "Years" && $(this).val() == 1971) {
-      $(this).prop('checked', true);
-      console.log($(this).val());
-    }
-  }); 
   
 //set pyramid all age groups selected
   $('input').each(function () {
 
-    if ($(this).attr('data-field') == "AGE") {
+    if ($(this).attr('data-field') == "PYRAMID_AGE") {
       $(this).prop('checked', true);
+      console.log ('test');
     }
 
   });
-  console.log ('test');
+
 });
 
