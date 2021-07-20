@@ -1,47 +1,21 @@
 <script>
-  // Add a chart alteration to support the chart_graph_limits metadata field.
-  opensdg.chartConfigAlter(function (config, info) {
-    if (!info.stackedDisaggregation) {
-
-      if (info.graphLimits && info.graphLimits.length > 0) {
-        var overrides = {
-          options: {
-            scales: {
-              yAxes: [{
-                ticks: {
-                  min: info.graphLimits.minimum,
-                  max: info.graphLimits.maximum,
-                }
-              }]
+// Add a chart alteration to support the chart_graph_limits metadata field.
+opensdg.chartConfigAlter(function(config, info) {
+  if (info.graphLimits && info.graphLimits.length > 0) {
+    var overrides = {
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              min: info.graphLimits.minimum,
+              max: info.graphLimits.maximum,
             }
-          }
+          }]
         }
-        // Add these overrides onto the normal config.
-        $.extend(true, config, overrides);
-      }
-    } else {
-      if (info.graphLimits && info.graphLimits.length > 0) {
-        var overrides = {
-          options: {
-            scales: {
-              yAxes: [{
-                ticks: {
-                  min: info.graphLimits.minimum,
-                  max: 24,
-                }
-              }],
-              xAxes: [{
-                ticks: {
-                  min: info.graphLimits.minimum,
-                  max: 24,
-                }
-              }]
-            }
-          }
-        }
-        // Add these overrides onto the normal config.
-        $.extend(true, config, overrides);
       }
     }
-  });
+    // Add these overrides onto the normal config.
+    $.extend(true, config, overrides);
+  }
+});
 </script>
