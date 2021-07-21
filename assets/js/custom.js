@@ -105,12 +105,10 @@ $(document).ready(function () {
     var url = window.location.href;  
     console.log(url);
     if (url.search("1-1-6") != -1) {
-      $('#units').append('<h4>Census</h4>');
-      $('#units h4').remove();
+      $('#units h4').text('Census');
     }
 
-   }, 3000);
-
+   }, 500);
 
 });
 
