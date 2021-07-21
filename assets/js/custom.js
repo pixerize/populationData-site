@@ -108,7 +108,7 @@ $(document).ready(function () {
       $('#units h4').text('Census');
     }
 
-   }, 500);
+   }, 300);
 
 });
 
