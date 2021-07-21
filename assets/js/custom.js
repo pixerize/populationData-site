@@ -101,13 +101,16 @@ $( document ).ready(function() {
 
 //set first year selected
 $(document).ready(function () {
-  
-  var url = window.location.href;  
-  console.log(url);
-  if (url.search("1-1-6") != -1) {
-    $('#units').append('<h4>Census</h4>');
-    $('#units h4').remove();
-   }
+  setTimeout(function () { 
+    var url = window.location.href;  
+    console.log(url);
+    if (url.search("1-1-6") != -1) {
+      $('#units').append('<h4>Census</h4>');
+      $('#units h4').remove();
+    }
+
+   }, 3000);
+
 
 });
 
