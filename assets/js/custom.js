@@ -41,74 +41,77 @@ $(document).ready(function () {
 
 //end of metadata details
 
-$( document ).ready(function() {
-  opensdg.chartConfigAlter(function(config, info) {
-    var overrides = {
-      options: {
-        tooltips: {
-          callbacks: {
-            title: function(tooltipItem, data) {
-              var label = (Array.isArray(tooltipItem)) ? tooltipItem[0].label : tooltipItem.label;
-              return convertXAxisLabel(label);
-            }
-          }
-        },
-        scales: {
-          xAxes: [{
-            ticks: {
-              callback: function(value, index, values) {
-                return convertXAxisLabel(value);
-              }
-            },
-          }]
-        },
-      }
-    }
+// $( document ).ready(function() {
+//   opensdg.chartConfigAlter(function(config, info) {
+//     var overrides = {
+//       options: {
+//         tooltips: {
+//           callbacks: {
+//             title: function(tooltipItem, data) {
+//               var label = (Array.isArray(tooltipItem)) ? tooltipItem[0].label : tooltipItem.label;
+//               return convertXAxisLabel(label);
+//             }
+//           }
+//         },
+//         scales: {
+//           xAxes: [{
+//             ticks: {
+//               callback: function(value, index, values) {
+//                 return convertXAxisLabel(value);
+//               }
+//             },
+//           }]
+//         },
+//       }
+//     }
 
-    // Add these overrides onto the normal config.
-    $.extend(true, config, overrides);
-  });
+//     // Add these overrides onto the normal config.
+//     $.extend(true, config, overrides);
+//   });
 
-  opensdg.chartConfigAlter(function(config, info) {
-    // Force the "bar" type if there are less than 2 years of data.
-    if (config.type === 'line' && info.labels.length < 2) {
-      var overrides = {type: 'bar'}
-      $.extend(true, config, overrides);
-    }
-  });
+//   opensdg.chartConfigAlter(function(config, info) {
+//     // Force the "bar" type if there are less than 2 years of data.
+//     if (config.type === 'line' && info.labels.length < 2) {
+//       var overrides = {type: 'bar'}
+//       $.extend(true, config, overrides);
+//     }
+//   });
 
-  opensdg.tableConfigAlter(function(config, info) {
-    config.columnDefs = [
-      {
-        targets: 0,
-        render: function(data, type, row) {
-          return (type === 'display') ? convertXAxisLabel(data) : data;
-        }
-      }
-    ]
-  });
+//   opensdg.tableConfigAlter(function(config, info) {
+//     config.columnDefs = [
+//       {
+//         targets: 0,
+//         render: function(data, type, row) {
+//           return (type === 'display') ? convertXAxisLabel(data) : data;
+//         }
+//       }
+//     ]
+//   });
 
-  function convertXAxisLabel(label) {
-    let strVal = label.toString();
-    let newLabel = strVal;
-    if (strVal.length > 3 && strVal.charAt(1) == ")") {
-      newLabel = strVal.substring(2);
-    }
+//   function convertXAxisLabel(label) {
+//     let strVal = label.toString();
+//     let newLabel = strVal;
+//     if (strVal.length > 3 && strVal.charAt(1) == ")") {
+//       newLabel = strVal.substring(2);
+//     }
 
-    return newLabel;
-  }
-});
+//     return newLabel;
+//   }
+// });
 
-//set first year selected
+//pyramid chart alternations
 $(document).ready(function () {
-  setTimeout(function () { 
-    var url = window.location.href;  
+  setTimeout(function () {
+    var url = window.location.href;
     console.log(url);
     if (url.search("1-1-6") != -1) {
+      //rename Unit Measure 
       $('#units h4').text('Census');
+
+      //hide toolbar
+      $('#toolbar').css('display', 'none')
     }
 
-   }, 300);
+  }, 300);
 
 });
-

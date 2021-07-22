@@ -23,7 +23,6 @@ We also check for "graph_stacked_disaggregation" here to support stacked bars.
           },
           scales: {
             xAxes: [{
-              //stacked: true,
               ticks: {
                 //return positive values           
                 callback: function (value, index, values) {
@@ -35,11 +34,6 @@ We also check for "graph_stacked_disaggregation" here to support stacked bars.
             yAxes: [{
               stacked: true,
               ticks: {
-                callback: function (value, index, values) {
-                  console.log(values);
-                  return value < 0 ? -value : value;
-                },
-                //reverse: true,
                 display: false //this will remove only the label
               }
             }],
