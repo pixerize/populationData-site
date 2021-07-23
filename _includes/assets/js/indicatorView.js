@@ -493,7 +493,7 @@ var indicatorView = function (model, options) {
           callbacks: {
             label: function (tooltipItems, data) {
               if (data.stackedDisaggregation) { //pyramid in our case
-                //return data.datasets[tooltipItems.datasetIndex].label + ': ' + view_obj.alterDataDisplay(tooltipItems.xLabel, data, 'chart tooltip');
+                return data.datasets[tooltipItems.datasetIndex].label + ': ' + view_obj.alterDataDisplay(tooltipItems.xLabel, data, 'chart tooltip');
               } else {
                 return data.datasets[tooltipItems.datasetIndex].label + ': ' + view_obj.alterDataDisplay(tooltipItems.yLabel, data, 'chart tooltip');
               }
