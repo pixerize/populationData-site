@@ -11,30 +11,24 @@ We also check for "graph_stacked_disaggregation" here to support stacked bars.
   opensdg.chartConfigAlter(function (config, info) {
     if (info.stackedDisaggregation) {
       var overrides = {
-
+        //data: chartInfo.reverse(),
         type: 'horizontalBar',
         options: {
           tooltips: {
-            intersect: false,
-            axis: 'x'
-          },
-          hover: {
-            axis: 'x'
+            enabled: false
           },
           scales: {
             xAxes: [{
+              stacked: true,
               ticks: {
-                //return positive values           
+                //return positive values for males       
                 callback: function (value, index, values) {
                   return value < 0 ? -value : value;
-                }
+                },
               }
             }],
             yAxes: [{
-              stacked: true,
-              ticks: {
-                display: false //this will remove only the label
-              }
+              display: false,
             }],
           }
         }
@@ -58,7 +52,7 @@ We also check for "graph_stacked_disaggregation" here to support stacked bars.
   });
 
   opensdg.chartConfigAlter(function (config) {
-    console.log(config);
+    // console.log(config);
   });
 
 </script>

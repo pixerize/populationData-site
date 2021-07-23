@@ -17,9 +17,9 @@ var indicatorView = function (model, options) {
 
   $('.plot-container', this._rootElement).css('height', chartHeight + 'px');
 
-  $(document).ready(function() {
+  $(document).ready(function () {
     $(view_obj._rootElement).find('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-      if($(e.target).attr('href') == '#tableview') {
+      if ($(e.target).attr('href') == '#tableview') {
         setDataTableWidth($(view_obj._rootElement).find('#selectionsTable table'));
       } else {
         $($.fn.dataTable.tables(true)).css('width', '100%');
@@ -28,11 +28,11 @@ var indicatorView = function (model, options) {
     });
 
     // Provide the hide/show functionality for the sidebar.
-    $('.data-view .nav-link').on('click', function(e) {
+    $('.data-view .nav-link').on('click', function (e) {
       var $sidebar = $('.indicator-sidebar'),
-          $main = $('.indicator-main'),
-          hideSidebar = $(this).data('no-disagg'),
-          mobile = window.matchMedia("screen and (max-width: 990px)");
+        $main = $('.indicator-main'),
+        hideSidebar = $(this).data('no-disagg'),
+        mobile = window.matchMedia("screen and (max-width: 990px)");
       if (hideSidebar) {
         $sidebar.addClass('indicator-sidebar-hidden');
         $main.addClass('indicator-main-full');
@@ -54,11 +54,11 @@ var indicatorView = function (model, options) {
 
     view_obj._precision = args.precision;
 
-    if(view_obj._model.showData) {
+    if (view_obj._model.showData) {
 
       $('#dataset-size-warning')[args.datasetCountExceedsMax ? 'show' : 'hide']();
 
-      if(!view_obj._chartInstance) {
+      if (!view_obj._chartInstance) {
         view_obj.createPlot(args);
       } else {
         view_obj.updatePlot(args);
@@ -70,26 +70,26 @@ var indicatorView = function (model, options) {
     view_obj.updateChartTitle(args.chartTitle);
   });
 
-  this._model.onFieldsComplete.attach(function(sender, args) {
+  this._model.onFieldsComplete.attach(function (sender, args) {
     view_obj.initialiseFields(args);
 
-    if(args.hasGeoData && args.showMap) {
+    if (args.hasGeoData && args.showMap) {
       view_obj._mapView = new mapView();
       view_obj._mapView.initialise(args.indicatorId, args.precision, view_obj._decimalSeparator);
     }
   });
 
-  this._model.onUnitsComplete.attach(function(sender, args) {
+  this._model.onUnitsComplete.attach(function (sender, args) {
     view_obj.initialiseUnits(args);
   });
 
   if (this._model.onSeriesesComplete) {
-    this._model.onSeriesesComplete.attach(function(sender, args) {
+    this._model.onSeriesesComplete.attach(function (sender, args) {
       view_obj.initialiseSerieses(args);
     });
   }
 
-  this._model.onFieldsCleared.attach(function(sender, args) {
+  this._model.onFieldsCleared.attach(function (sender, args) {
     $(view_obj._rootElement).find(':checkbox').prop('checked', false);
     $(view_obj._rootElement).find('#clear')
       .addClass('disabled')
@@ -102,7 +102,7 @@ var indicatorView = function (model, options) {
     $(view_obj._rootElement).find('.selected').css('width', '0');
   });
 
-  this._model.onSelectionUpdate.attach(function(sender, args) {
+  this._model.onSelectionUpdate.attach(function (sender, args) {
     if (args.selectedFields.length) {
       $(view_obj._rootElement).find('#clear')
         .removeClass('disabled')
@@ -117,7 +117,7 @@ var indicatorView = function (model, options) {
     }
 
     // loop through the available fields:
-    $('.variable-selector').each(function(index, element) {
+    $('.variable-selector').each(function (index, element) {
       var currentField = $(element).data('field');
       var element = $(view_obj._rootElement).find('.variable-selector[data-field="' + currentField + '"]');
 
@@ -135,8 +135,8 @@ var indicatorView = function (model, options) {
 
   this._model.onFieldsStatusUpdated.attach(function (sender, args) {
 
-    _.each(args.data, function(fieldGroup) {
-      _.each(fieldGroup.values, function(fieldItem) {
+    _.each(args.data, function (fieldGroup) {
+      _.each(fieldGroup.values, function (fieldItem) {
         var element = $(view_obj._rootElement).find(':checkbox[value="' + fieldItem.value + '"][data-field="' + fieldGroup.field + '"]');
         element.parent().addClass(fieldItem.state).attr('data-has-data', fieldItem.hasData);
       });
@@ -144,8 +144,8 @@ var indicatorView = function (model, options) {
       var fieldGroupElement = $(view_obj._rootElement).find('.variable-selector[data-field="' + fieldGroup.field + '"]');
       fieldGroupElement.attr('data-has-data', fieldGroup.hasData);
       var fieldGroupButton = fieldGroupElement.find('> button'),
-          describedByCurrent = fieldGroupButton.attr('aria-describedby') || '',
-          noDataHintId = 'no-data-hint-' + fieldGroup.field.replace(/ /g, '-');
+        describedByCurrent = fieldGroupButton.attr('aria-describedby') || '',
+        noDataHintId = 'no-data-hint-' + fieldGroup.field.replace(/ /g, '-');
       if (!fieldGroup.hasData && !describedByCurrent.includes(noDataHintId)) {
         fieldGroupButton.attr('aria-describedby', describedByCurrent + ' ' + noDataHintId);
       }
@@ -158,13 +158,13 @@ var indicatorView = function (model, options) {
     });
   });
 
-  $(this._rootElement).on('click', '#clear', function() {
+  $(this._rootElement).on('click', '#clear', function () {
     view_obj._model.clearSelectedFields();
   });
 
   $(this._rootElement).on('click', '#fields label', function (e) {
 
-    if(!$(this).closest('.variable-selector').hasClass('disallowed')) {
+    if (!$(this).closest('.variable-selector').hasClass('disallowed')) {
       $(this).find(':checkbox').trigger('click');
     }
 
@@ -172,22 +172,23 @@ var indicatorView = function (model, options) {
     e.stopPropagation();
   });
 
-  $(this._rootElement).on('change', '#units input', function() {
+  //update on click dataset
+  $(this._rootElement).on('change', '#units input', function () {
     view_obj._model.updateSelectedUnit($(this).val());
   });
 
-  $(this._rootElement).on('change', '#serieses input', function() {
+  $(this._rootElement).on('change', '#serieses input', function () {
     view_obj._model.updateSelectedSeries($(this).val());
   });
 
   // generic helper function, used by clear all/select all and individual checkbox changes:
-  var updateWithSelectedFields = function() {
+  var updateWithSelectedFields = function () {
     view_obj._model.updateSelectedFields(_.chain(_.map($('#fields input:checked'), function (fieldValue) {
       return {
         value: $(fieldValue).val(),
         field: $(fieldValue).data('field')
       };
-    })).groupBy('field').map(function(value, key) {
+    })).groupBy('field').map(function (value, key) {
       return {
         field: key,
         values: _.map(value, 'value')
@@ -195,7 +196,7 @@ var indicatorView = function (model, options) {
     }).value());
   }
 
-  $(this._rootElement).on('click', '.variable-options button', function(e) {
+  $(this._rootElement).on('click', '.variable-options button', function (e) {
     var type = $(this).data('type');
     var $options = $(this).closest('.variable-options').find(':checkbox');
 
@@ -213,7 +214,7 @@ var indicatorView = function (model, options) {
     e.stopPropagation();
   });
 
-  $(this._rootElement).on('click', ':checkbox', function(e) {
+  $(this._rootElement).on('click', ':checkbox', function (e) {
 
     // don't permit disallowed selections:
     if ($(this).closest('.variable-selector').hasClass('disallowed')) {
@@ -225,7 +226,7 @@ var indicatorView = function (model, options) {
     e.stopPropagation();
   });
 
-  $(this._rootElement).on('click', '.variable-selector', function(e) {
+  $(this._rootElement).on('click', '.variable-selector', function (e) {
 
     var $button = $(e.target).closest('button');
     var $options = $(this).find('.variable-options');
@@ -242,14 +243,14 @@ var indicatorView = function (model, options) {
     e.stopPropagation();
   });
 
-  this.initialiseFields = function(args) {
-    var fieldsContainValues = args.fields.some(function(field) {
+  this.initialiseFields = function (args) {
+    var fieldsContainValues = args.fields.some(function (field) {
       return field.values.length > 0;
     });
     if (fieldsContainValues) {
       var template = _.template($("#item_template").html());
 
-      if(!$('button#clear').length) {
+      if (!$('button#clear').length) {
         $('<button id="clear" disabled="disabled" aria-disabled="true" class="disabled">' + translations.indicator.clear_selections + ' <i class="fa fa-remove"></i></button>').insertBefore('#fields');
       }
 
@@ -266,57 +267,57 @@ var indicatorView = function (model, options) {
     }
   };
 
-  this.initialiseUnits = function(args) {
+  this.initialiseUnits = function (args) {
     var template = _.template($('#units_template').html()),
-        units = args.units || [],
-        selectedUnit = args.selectedUnit || null;
+      units = args.units || [],
+      selectedUnit = args.selectedUnit || null;
 
     $('#units').html(template({
       units: units,
       selectedUnit: selectedUnit
     }));
 
-    if(!units.length) {
+    if (!units.length) {
       $(this._rootElement).addClass('no-units');
     }
   };
 
-  this.initialiseSerieses = function(args) {
+  this.initialiseSerieses = function (args) {
     var templateElement = $('#series_template');
     if (templateElement.length > 0) {
       var template = _.template(templateElement.html()),
-          serieses = args.serieses || [],
-          selectedSeries = args.selectedSeries || null;
+        serieses = args.serieses || [],
+        selectedSeries = args.selectedSeries || null;
 
       $('#serieses').html(template({
         serieses: serieses,
         selectedSeries: selectedSeries
       }));
 
-      if(!serieses.length) {
+      if (!serieses.length) {
         $(this._rootElement).addClass('no-serieses');
       }
     }
   };
 
-  this.alterChartConfig = function(config, info) {
-    opensdg.chartConfigAlterations.forEach(function(callback) {
+  this.alterChartConfig = function (config, info) {
+    opensdg.chartConfigAlterations.forEach(function (callback) {
       callback(config, info);
     });
   };
 
-  this.alterTableConfig = function(config, info) {
+  this.alterTableConfig = function (config, info) {
     // deprecated start
     if (typeof opensdg.tableConfigAlterations === 'undefined') {
       opensdg.tableConfigAlterations = [];
     }
     // deprecated end
-    opensdg.tableConfigAlterations.forEach(function(callback) {
+    opensdg.tableConfigAlterations.forEach(function (callback) {
       callback(config, info);
     });
   };
 
-  this.alterDataDisplay = function(value, info, context) {
+  this.alterDataDisplay = function (value, info, context) {
     // If value is empty, we will not alter it.
     if (value == null || value == undefined) {
       return value;
@@ -337,7 +338,7 @@ var indicatorView = function (model, options) {
       opensdg.dataDisplayAlterations = [];
     }
     // @deprecated end
-    opensdg.dataDisplayAlterations.forEach(function(callback) {
+    opensdg.dataDisplayAlterations.forEach(function (callback) {
       altered = callback(altered, info, context);
     });
     // Now apply our custom precision control if needed.
@@ -351,13 +352,28 @@ var indicatorView = function (model, options) {
     return altered;
   }
 
-  this.updateChartTitle = function(chartTitle) {
+  this.updateChartTitle = function (chartTitle) {
     if (typeof chartTitle !== 'undefined') {
       $('.chart-title').text(chartTitle);
     }
   }
 
-  this.updatePlot = function(chartInfo) {
+  this.updatePlot = function (chartInfo) {
+
+    //check if data is stacked eg pyramid chart type
+    if (chartInfo.stackedDisaggregation) {
+      for (var i = 0; i < chartInfo.datasets.length; i++) {
+        if (chartInfo.datasets[i].disaggregation.PYRAMID_SEX == "F") {
+          chartInfo.datasets[i].backgroundColor = "red";
+          chartInfo.datasets[i].borderColor = "red";
+        } else {
+          chartInfo.datasets[i].backgroundColor = "blue";
+          chartInfo.datasets[i].borderColor = "blue";
+        }
+      }
+      chartInfo.datasets.reverse();
+    }
+
     this.updateIndicatorDataViewStatus(view_obj._chartInstance.data.datasets, chartInfo.datasets);
     view_obj._chartInstance.data.datasets = chartInfo.datasets;
     view_obj._chartInstance.data.labels = chartInfo.labels;
@@ -365,7 +381,7 @@ var indicatorView = function (model, options) {
     // TODO: Investigate assets/js/chartjs/rescaler.js and why "allLabels" is needed.
     view_obj._chartInstance.data.allLabels = chartInfo.labels;
 
-    if(chartInfo.selectedUnit) {
+    if (chartInfo.selectedUnit) {
       view_obj._chartInstance.options.scales.yAxes[0].scaleLabel.labelString = translations.t(chartInfo.selectedUnit);
     }
 
@@ -389,8 +405,21 @@ var indicatorView = function (model, options) {
   };
 
 
-
   this.createPlot = function (chartInfo) {
+
+    //check if data is stacked eg pyramid chart type
+    if (chartInfo.stackedDisaggregation) {
+      for (var i = 0; i < chartInfo.datasets.length; i++) {
+        if (chartInfo.datasets[i].disaggregation.PYRAMID_SEX == "F") {
+          chartInfo.datasets[i].backgroundColor = "red";
+          chartInfo.datasets[i].borderColor = "red";
+        } else {
+          chartInfo.datasets[i].backgroundColor = "blue";
+          chartInfo.datasets[i].borderColor = "blue";
+        }
+      }
+      chartInfo.datasets.reverse();
+    }
 
     var that = this;
     var gridColor = that.getGridColor();
@@ -426,7 +455,7 @@ var indicatorView = function (model, options) {
             ticks: {
               suggestedMin: 0,
               fontColor: tickColor,
-              callback: function(value) {
+              callback: function (value) {
                 return view_obj.alterDataDisplay(value, undefined, 'chart y-axis tick');
               },
             },
@@ -437,19 +466,19 @@ var indicatorView = function (model, options) {
             }
           }]
         },
-        legendCallback: function(chart) {
-            var text = [];
-            text.push('<h5 class="sr-only">' + translations.indicator.plot_legend_description + '</h5>');
-            text.push('<ul id="legend">');
-            _.each(chart.data.datasets, function(dataset) {
-              text.push('<li>');
-              text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.borderColor + '">');
-              text.push('</span>');
-              text.push(translations.t(dataset.label));
-              text.push('</li>');
-            });
-            text.push('</ul>');
-            return text.join('');
+        legendCallback: function (chart) {
+          var text = [];
+          text.push('<h5 class="sr-only">' + translations.indicator.plot_legend_description + '</h5>');
+          text.push('<ul id="legend">');
+          _.each(chart.data.datasets, function (dataset) {
+            text.push('<li>');
+            text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.borderColor + '">');
+            text.push('</span>');
+            text.push(translations.t(dataset.label));
+            text.push('</li>');
+          });
+          text.push('</ul>');
+          return text.join('');
         },
         legend: {
           display: false
@@ -462,10 +491,14 @@ var indicatorView = function (model, options) {
         },
         tooltips: {
           callbacks: {
-            label: function(tooltipItems, data) {
-              return data.datasets[tooltipItems.datasetIndex].label + ': ' + view_obj.alterDataDisplay(tooltipItems.yLabel, data, 'chart tooltip');
+            label: function (tooltipItems, data) {
+              if (data.stackedDisaggregation) { //pyramid in our case
+                //return data.datasets[tooltipItems.datasetIndex].label + ': ' + view_obj.alterDataDisplay(tooltipItems.xLabel, data, 'chart tooltip');
+              } else {
+                return data.datasets[tooltipItems.datasetIndex].label + ': ' + view_obj.alterDataDisplay(tooltipItems.yLabel, data, 'chart tooltip');
+              }
             },
-            afterBody: function() {
+            afterBody: function () {
               var unit = view_obj._model.selectedUnit ? translations.t(view_obj._model.selectedUnit) : view_obj._model.measurementUnit;
               if (typeof unit !== 'undefined' && unit !== '') {
                 return '\n' + translations.indicator.unit + ': ' + unit;
@@ -486,7 +519,7 @@ var indicatorView = function (model, options) {
 
     this._chartInstance = new Chart($(this._rootElement).find('canvas'), chartConfig);
 
-    window.addEventListener('contrastChange', function(e) {
+    window.addEventListener('contrastChange', function (e) {
       var gridColor = that.getGridColor(e.detail);
       var tickColor = that.getTickColor(e.detail);
       that.updateHeadlineColor(e.detail, view_obj._chartInstance);
@@ -500,11 +533,11 @@ var indicatorView = function (model, options) {
     });
 
     Chart.pluginService.register({
-      afterDraw: function(chart) {
+      afterDraw: function (chart) {
         var $canvas = $(that._rootElement).find('canvas'),
-        font = '12px Arial',
-        canvas = $canvas.get(0),
-        ctx = canvas.getContext("2d");
+          font = '12px Arial',
+          canvas = $canvas.get(0),
+          ctx = canvas.getContext("2d");
 
         ctx.font = font;
         ctx.textAlign = 'left';
@@ -517,12 +550,12 @@ var indicatorView = function (model, options) {
     //this.createSourceButton(chartInfo.shortIndicatorId, '#chartSelectionDownload');
     this.createIndicatorDownloadButtons(chartInfo.indicatorDownloads, chartInfo.shortIndicatorId, '#chartSelectionDownload');
 
-    $("#btnSave").click(function() {
+    $("#btnSave").click(function () {
       var filename = chartInfo.indicatorId + '.png',
-          element = document.getElementById('chart-canvas'),
-          footer = document.getElementById('selectionChartFooter'),
-          height = element.clientHeight + 100 + ((footer) ? footer.clientHeight : 0),
-          width = element.clientWidth + 25;
+        element = document.getElementById('chart-canvas'),
+        footer = document.getElementById('selectionChartFooter'),
+        height = element.clientHeight + 100 + ((footer) ? footer.clientHeight : 0),
+        width = element.clientWidth + 25;
       var options = {
         // These options fix the height, width, and position.
         height: height,
@@ -534,12 +567,12 @@ var indicatorView = function (model, options) {
         scrollX: 0,
         scrollY: 0,
         // Allow a chance to alter the screenshot's HTML.
-        onclone: function(clone) {
+        onclone: function (clone) {
           // Add a body class so that the screenshot style can be custom.
           clone.body.classList.add('image-download-in-progress');
         },
         // Decide which elements to skip.
-        ignoreElements: function(el) {
+        ignoreElements: function (el) {
           // Keep all style, head, and link elements.
           var keepTags = ['STYLE', 'HEAD', 'LINK'];
           if (keepTags.indexOf(el.tagName) !== -1) {
@@ -555,9 +588,9 @@ var indicatorView = function (model, options) {
         }
       };
       // First convert the target to a canvas.
-      html2canvas(element, options).then(function(canvas) {
+      html2canvas(element, options).then(function (canvas) {
         // Then download that canvas as a PNG file.
-        canvas.toBlob(function(blob) {
+        canvas.toBlob(function (blob) {
           saveAs(blob, filename);
         });
       });
@@ -566,19 +599,19 @@ var indicatorView = function (model, options) {
     $(this._legendElement).html(view_obj._chartInstance.generateLegend());
   };
 
-  this.getHeadlineColor = function(contrast) {
+  this.getHeadlineColor = function (contrast) {
     return this.isHighContrast(contrast) ? '{{ site.graph_color_headline_high_contrast | default: "#FFDD00" }}' : '{{ site.graph_color_headline | default: "#00006a" }}';
   }
 
-  this.getGridColor = function(contrast) {
+  this.getGridColor = function (contrast) {
     return this.isHighContrast(contrast) ? '#222' : '#ddd';
   };
 
-  this.getTickColor = function(contrast) {
+  this.getTickColor = function (contrast) {
     return this.isHighContrast(contrast) ? '#fff' : '#000';
   }
 
-  this.isHighContrast = function(contrast) {
+  this.isHighContrast = function (contrast) {
     if (contrast) {
       return contrast === 'high';
     }
@@ -587,9 +620,9 @@ var indicatorView = function (model, options) {
     }
   };
 
-  this.updateGraphAnnotationColors = function(contrast, chartInfo) {
+  this.updateGraphAnnotationColors = function (contrast, chartInfo) {
     if (chartInfo.options.annotation) {
-      chartInfo.options.annotation.annotations.forEach(function(annotation) {
+      chartInfo.options.annotation.annotations.forEach(function (annotation) {
         if (contrast === 'default') {
           $.extend(true, annotation, annotation.defaultContrast);
         }
@@ -600,7 +633,7 @@ var indicatorView = function (model, options) {
     }
   };
 
-  this.updateHeadlineColor = function(contrast, chartInfo) {
+  this.updateHeadlineColor = function (contrast, chartInfo) {
     if (chartInfo.data.datasets.length > 0) {
       var firstDataset = chartInfo.data.datasets[0];
       var isHeadline = (typeof firstDataset.disaggregation === 'undefined');
@@ -616,7 +649,7 @@ var indicatorView = function (model, options) {
 
   this.toCsv = function (tableData) {
     var lines = [],
-    headings = _.map(tableData.headings, function(heading) { return '"' + translations.t(heading) + '"'; });
+      headings = _.map(tableData.headings, function (heading) { return '"' + translations.t(heading) + '"'; });
 
     lines.push(headings.join(','));
 
@@ -633,13 +666,13 @@ var indicatorView = function (model, options) {
     return lines.join('\n');
   };
 
-  var setDataTableWidth = function(table) {
-    table.find('thead th').each(function() {
+  var setDataTableWidth = function (table) {
+    table.find('thead th').each(function () {
       var textLength = $(this).text().length;
-      for(var loop = 0; loop < view_obj._tableColumnDefs.length; loop++) {
+      for (var loop = 0; loop < view_obj._tableColumnDefs.length; loop++) {
         var def = view_obj._tableColumnDefs[loop];
-        if(textLength < def.maxCharCount) {
-          if(!def.width) {
+        if (textLength < def.maxCharCount) {
+          if (!def.width) {
             $(this).css('white-space', 'nowrap');
           } else {
             $(this).css('width', def.width + 'px');
@@ -653,8 +686,8 @@ var indicatorView = function (model, options) {
     table.removeAttr('style width');
 
     var totalWidth = 0;
-    table.find('thead th').each(function() {
-      if($(this).data('width')) {
+    table.find('thead th').each(function () {
+      if ($(this).data('width')) {
         totalWidth += $(this).data('width');
       } else {
         totalWidth += $(this).width();
@@ -664,14 +697,14 @@ var indicatorView = function (model, options) {
     // ascertain whether the table should be width 100% or explicit width:
     var containerWidth = table.closest('.dataTables_wrapper').width();
 
-    if(totalWidth > containerWidth) {
+    if (totalWidth > containerWidth) {
       table.css('width', totalWidth + 'px');
     } else {
       table.css('width', '100%');
     }
   };
 
-  var initialiseDataTable = function(el, info) {
+  var initialiseDataTable = function (el, info) {
     var nonYearColumns = [];
     for (var i = 1; i < info.table.headings.length; i++) {
       nonYearColumns.push(i);
@@ -686,7 +719,7 @@ var indicatorView = function (model, options) {
       columnDefs: [
         {
           targets: nonYearColumns,
-          createdCell: function(td, cellData, rowData, row, col) {
+          createdCell: function (td, cellData, rowData, row, col) {
             $(td).text(view_obj.alterDataDisplay(cellData, rowData, 'table cell'));
           },
         },
@@ -702,7 +735,7 @@ var indicatorView = function (model, options) {
     setDataTableWidth(table);
   };
 
-  this.createSelectionsTable = function(chartInfo) {
+  this.createSelectionsTable = function (chartInfo) {
     this.createTable(chartInfo.selectionsTable, chartInfo.indicatorId, '#selectionsTable', true);
     $('#tableSelectionDownload').empty();
     this.createDownloadButton(chartInfo.selectionsTable, 'Table', chartInfo.indicatorId, '#tableSelectionDownload');
@@ -711,8 +744,8 @@ var indicatorView = function (model, options) {
   };
 
 
-  this.createDownloadButton = function(table, name, indicatorId, el) {
-    if(window.Modernizr.blobconstructor) {
+  this.createDownloadButton = function (table, name, indicatorId, el) {
+    if (window.Modernizr.blobconstructor) {
       var downloadKey = 'download_csv';
       if (name == 'Chart') {
         downloadKey = 'download_chart';
@@ -736,7 +769,7 @@ var indicatorView = function (model, options) {
       });
       if (window.navigator && window.navigator.msSaveBlob) {
         // Special behavior for IE.
-        downloadButton.on('click.openSdgDownload', function(event) {
+        downloadButton.on('click.openSdgDownload', function (event) {
           window.navigator.msSaveBlob(blob, fileName);
         });
       }
@@ -754,18 +787,18 @@ var indicatorView = function (model, options) {
       var id = indicatorId.replace('indicator_', '');
       var gaLabel = 'Download Headline CSV: ' + id;
       $(el).append($('<a />').text(translations.indicator.download_headline)
-      .attr(opensdg.autotrack('download_data_headline', 'Downloads', 'Download CSV', gaLabel))
-      .attr({
-        'href': opensdg.remoteDataBaseUrl + '/headline/' + id + '.csv',
-        'download': headlineId + '.csv',
-        'title': translations.indicator.download_headline_title,
-        'class': 'btn btn-primary btn-download',
-        'tabindex': 0
-      }));
+        .attr(opensdg.autotrack('download_data_headline', 'Downloads', 'Download CSV', gaLabel))
+        .attr({
+          'href': opensdg.remoteDataBaseUrl + '/headline/' + id + '.csv',
+          'download': headlineId + '.csv',
+          'title': translations.indicator.download_headline_title,
+          'class': 'btn btn-primary btn-download',
+          'tabindex': 0
+        }));
     }
   }
 
-  this.updateChartDownloadButton = function(table) {
+  this.updateChartDownloadButton = function (table) {
     if (typeof this._chartDownloadButton !== 'undefined') {
       var tableCsv = this.toCsv(table);
       var blob = new Blob([tableCsv], {
@@ -775,7 +808,7 @@ var indicatorView = function (model, options) {
       if (window.navigator && window.navigator.msSaveBlob) {
         // Special behavior for IE.
         this._chartDownloadButton.off('click.openSdgDownload')
-        this._chartDownloadButton.on('click.openSdgDownload', function(event) {
+        this._chartDownloadButton.on('click.openSdgDownload', function (event) {
           window.navigator.msSaveBlob(blob, fileName);
         });
       }
@@ -787,14 +820,14 @@ var indicatorView = function (model, options) {
     }
   }
 
-  this.updateIndicatorDataViewStatus = function(oldDatasets, newDatasets) {
+  this.updateIndicatorDataViewStatus = function (oldDatasets, newDatasets) {
     var status = '',
-        hasData = newDatasets.length > 0,
-        dataAdded = newDatasets.length > oldDatasets.length,
-        dataRemoved = newDatasets.length < oldDatasets.length,
-        getDatasetLabel = function(dataset) { return dataset.label; },
-        oldLabels = oldDatasets.map(getDatasetLabel),
-        newLabels = newDatasets.map(getDatasetLabel);
+      hasData = newDatasets.length > 0,
+      dataAdded = newDatasets.length > oldDatasets.length,
+      dataRemoved = newDatasets.length < oldDatasets.length,
+      getDatasetLabel = function (dataset) { return dataset.label; },
+      oldLabels = oldDatasets.map(getDatasetLabel),
+      newLabels = newDatasets.map(getDatasetLabel);
 
     if (!hasData) {
       status = translations.indicator.announce_data_not_available;
@@ -802,7 +835,7 @@ var indicatorView = function (model, options) {
     else if (dataAdded) {
       status = translations.indicator.announce_data_added;
       var addedLabels = [];
-      newLabels.forEach(function(label) {
+      newLabels.forEach(function (label) {
         if (!oldLabels.includes(label)) {
           addedLabels.push(label);
         }
@@ -812,7 +845,7 @@ var indicatorView = function (model, options) {
     else if (dataRemoved) {
       status = translations.indicator.announce_data_removed;
       var removedLabels = [];
-      oldLabels.forEach(function(label) {
+      oldLabels.forEach(function (label) {
         if (!newLabels.includes(label)) {
           removedLabels.push(label);
         }
@@ -826,20 +859,20 @@ var indicatorView = function (model, options) {
     }
   }
 
-  this.createSourceButton = function(indicatorId, el) {
+  this.createSourceButton = function (indicatorId, el) {
     var gaLabel = 'Download Source CSV: ' + indicatorId;
     $(el).append($('<a />').text(translations.indicator.download_source)
-    .attr(opensdg.autotrack('download_data_source', 'Downloads', 'Download CSV', gaLabel))
-    .attr({
-      'href': opensdg.remoteDataBaseUrl + '/data/' + indicatorId + '.csv',
-      'download': indicatorId + '.csv',
-      'title': translations.indicator.download_source_title,
-      'class': 'btn btn-primary btn-download',
-      'tabindex': 0
-    }));
+      .attr(opensdg.autotrack('download_data_source', 'Downloads', 'Download CSV', gaLabel))
+      .attr({
+        'href': opensdg.remoteDataBaseUrl + '/data/' + indicatorId + '.csv',
+        'download': indicatorId + '.csv',
+        'title': translations.indicator.download_source_title,
+        'class': 'btn btn-primary btn-download',
+        'tabindex': 0
+      }));
   }
 
-  this.createIndicatorDownloadButtons = function(indicatorDownloads, indicatorId, el) {
+  this.createIndicatorDownloadButtons = function (indicatorDownloads, indicatorId, el) {
     if (indicatorDownloads) {
       var buttonLabels = Object.keys(indicatorDownloads);
       for (var i = 0; i < buttonLabels.length; i++) {
@@ -848,19 +881,19 @@ var indicatorView = function (model, options) {
         var buttonLabelTranslated = translations.t(buttonLabel);
         var gaLabel = buttonLabel + ': ' + indicatorId;
         $(el).append($('<a />').text(buttonLabelTranslated)
-        .attr(opensdg.autotrack(buttonLabel, 'Downloads', buttonLabel, gaLabel))
-        .attr({
-          'href': opensdg.remoteDataBaseUrl + '/' + href,
-          'download': href.split('/').pop(),
-          'title': buttonLabelTranslated,
-          'class': 'btn btn-primary btn-download',
-          'tabindex': 0
-        }));
+          .attr(opensdg.autotrack(buttonLabel, 'Downloads', buttonLabel, gaLabel))
+          .attr({
+            'href': opensdg.remoteDataBaseUrl + '/' + href,
+            'download': href.split('/').pop(),
+            'title': buttonLabelTranslated,
+            'class': 'btn btn-primary btn-download',
+            'tabindex': 0
+          }));
       }
     }
   }
 
-  this.tableHasData = function(table) {
+  this.tableHasData = function (table) {
     for (var i = 0; i < table.data.length; i++) {
       if (table.data[i].length > 1) {
         return true;
@@ -869,16 +902,16 @@ var indicatorView = function (model, options) {
     return false;
   }
 
-  this.createTable = function(table, indicatorId, el) {
+  this.createTable = function (table, indicatorId, el) {
 
     options = options || {};
     var that = this,
-    table_class = options.table_class || 'table table-hover';
+      table_class = options.table_class || 'table table-hover';
 
     // clear:
     $(el).html('');
 
-    if(table && this.tableHasData(table)) {
+    if (table && this.tableHasData(table)) {
       var currentTable = $('<table />').attr({
         'class': table_class,
         'width': '100%'
@@ -888,14 +921,14 @@ var indicatorView = function (model, options) {
 
       var table_head = '<thead><tr>';
 
-      var getHeading = function(heading, index) {
+      var getHeading = function (heading, index) {
         var arrows = '<span class="sort"><i class="fa fa-sort-down"></i><i class="fa fa-sort-up"></i></span>';
         var button = '<span tabindex="0" role="button" aria-describedby="column-sort-info">' + translations.t(heading) + '</span>';
         return (!index) ? button + arrows : arrows + button;
       };
 
       table.headings.forEach(function (heading, index) {
-        table_head += '<th' + (!index ? '': ' class="table-value"') + ' scope="col">' + getHeading(heading, index) + '</th>';
+        table_head += '<th' + (!index ? '' : ' class="table-value"') + ' scope="col">' + getHeading(heading, index) + '</th>';
       });
 
       table_head += '</tr></thead>';
@@ -929,7 +962,7 @@ var indicatorView = function (model, options) {
 
       $(el).find('th')
         .removeAttr('tabindex')
-        .click(function() {
+        .click(function () {
           var sortDirection = $(this).attr('aria-sort');
           $(this).find('span[role="button"]').attr('aria-sort', sortDirection);
         });
@@ -940,8 +973,8 @@ var indicatorView = function (model, options) {
     }
   };
 
-  this.sortFieldGroup = function(fieldGroupElement) {
-    var sortLabels = function(a, b) {
+  this.sortFieldGroup = function (fieldGroupElement) {
+    var sortLabels = function (a, b) {
       var aObj = { hasData: $(a).attr('data-has-data'), text: $(a).text() };
       var bObj = { hasData: $(b).attr('data-has-data'), text: $(b).text() };
       if (aObj.hasData == bObj.hasData) {
@@ -950,7 +983,7 @@ var indicatorView = function (model, options) {
       return (aObj.hasData < bObj.hasData) ? 1 : -1;
     };
     fieldGroupElement.find('label')
-    .sort(sortLabels)
-    .appendTo(fieldGroupElement.find('#indicatorData .variable-options'));
+      .sort(sortLabels)
+      .appendTo(fieldGroupElement.find('#indicatorData .variable-options'));
   }
 };
