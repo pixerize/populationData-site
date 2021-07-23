@@ -343,8 +343,6 @@ this.getData = function (options) {
   }
 
 };
-};
-
 indicatorModel.prototype = {
   initialise: function () {
     this.getData({
