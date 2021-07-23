@@ -286,7 +286,12 @@ this.getData = function (options) {
   var selectionsTable = helpers.tableDataFromDatasets(datasets, this.years);
 
   var datasetCountExceedsMax = false;
-
+  // restrict count if it exceeds the limit:
+  if (datasets.length > this.maxDatasetCount) {
+    datasetCountExceedsMax = true;
+    let target = $('#indicator-main').offset().top;
+    $("html, body").animate({ scrollTop: target }, "slow");
+  }
 
   this.updateChartTitle();
 
@@ -316,13 +321,6 @@ this.getData = function (options) {
       precision: helpers.getPrecision(this.precision, this.selectedUnit, this.selectedSeries),
     });
   } else {
-    // restrict count if it exceeds the limit:
-    if (datasets.length > this.maxDatasetCount) {
-      datasetCountExceedsMax = true;
-      let target = $('#indicator-main').offset().top;
-      $("html, body").animate({ scrollTop: target }, "slow");
-    }
-
     this.onDataComplete.notify({
       datasetCountExceedsMax: datasetCountExceedsMax,
       datasets: datasets.filter(function (dataset) { return dataset.excess !== true }),
@@ -342,6 +340,7 @@ this.getData = function (options) {
     });
   }
 
+};
 };
 indicatorModel.prototype = {
   initialise: function () {
