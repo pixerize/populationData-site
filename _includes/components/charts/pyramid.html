@@ -14,8 +14,10 @@ We also check for "graph_stacked_disaggregation" here to support stacked bars.
         //data: chartInfo.reverse(),
         type: 'horizontalBar',
         options: {
-          legend: {
-            display: false
+          plugins: {
+                legend: {
+                   display: false
+                }
           },
           tooltips: {
             enabled: false
