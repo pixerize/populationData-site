@@ -1,6 +1,6 @@
 var indicatorModel = function (options) {
 
-  var helpers = {% include assets/js/model / helpers.js %}
+  var helpers = {% include assets/js/model/helpers.js %}
 
 // events:
 this.onDataComplete = new event(this);
@@ -285,13 +285,6 @@ this.getData = function (options) {
   var datasets = helpers.getDatasets(headline, filteredData, combinations, this.years, this.country, this.colors, this.selectableFields, this.colorAssignments);
   var selectionsTable = helpers.tableDataFromDatasets(datasets, this.years);
 
-  var datasetCountExceedsMax = false;
-  // restrict count if it exceeds the limit:
-  if (datasets.length > this.maxDatasetCount) {
-    datasetCountExceedsMax = true;
-    let target = $('#indicator-main').offset().top;
-    $("html, body").animate({ scrollTop: target }, "slow");
-  }
 
   this.updateChartTitle();
 
@@ -321,6 +314,16 @@ this.getData = function (options) {
       precision: helpers.getPrecision(this.precision, this.selectedUnit, this.selectedSeries),
     });
   } else {
+
+
+    var datasetCountExceedsMax = false;
+    // restrict count if it exceeds the limit:
+    if (datasets.length > this.maxDatasetCount) {
+      datasetCountExceedsMax = true;
+      let target = $('#indicator-main').offset().top;
+      $("html, body").animate({ scrollTop: target }, "slow");
+    }
+
     this.onDataComplete.notify({
       datasetCountExceedsMax: datasetCountExceedsMax,
       datasets: datasets.filter(function (dataset) { return dataset.excess !== true }),
