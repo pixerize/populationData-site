@@ -360,19 +360,6 @@ var indicatorView = function (model, options) {
 
   this.updatePlot = function (chartInfo) {
 
-    //check if data is stacked eg pyramid chart type
-    if (chartInfo.stackedDisaggregation) {
-      for (var i = 0; i < chartInfo.datasets.length; i++) {
-        if (chartInfo.datasets[i].disaggregation.PYRAMID_SEX == "F") {
-          chartInfo.datasets[i].backgroundColor = "red";
-          chartInfo.datasets[i].borderColor = "red";
-        } else {
-          chartInfo.datasets[i].backgroundColor = "blue";
-          chartInfo.datasets[i].borderColor = "blue";
-        }
-      }
-      chartInfo.datasets.reverse();
-    }
 
     this.updateIndicatorDataViewStatus(view_obj._chartInstance.data.datasets, chartInfo.datasets);
     view_obj._chartInstance.data.datasets = chartInfo.datasets;
@@ -406,20 +393,6 @@ var indicatorView = function (model, options) {
 
 
   this.createPlot = function (chartInfo) {
-
-    //check if data is stacked eg pyramid chart type
-    if (chartInfo.stackedDisaggregation) {
-      for (var i = 0; i < chartInfo.datasets.length; i++) {
-        if (chartInfo.datasets[i].disaggregation.PYRAMID_SEX == "F") {
-          chartInfo.datasets[i].backgroundColor = "red";
-          chartInfo.datasets[i].borderColor = "red";
-        } else {
-          chartInfo.datasets[i].backgroundColor = "blue";
-          chartInfo.datasets[i].borderColor = "blue";
-        }
-      }
-      chartInfo.datasets.reverse();
-    }
 
     var that = this;
     var gridColor = that.getGridColor();
@@ -493,7 +466,7 @@ var indicatorView = function (model, options) {
           callbacks: {
             label: function (tooltipItems, data) {
               if (data.stackedDisaggregation) { //pyramid in our case
-                return data.datasets[tooltipItems.datasetIndex].label + ': ' + view_obj.alterDataDisplay(tooltipItems.xLabel, data, 'chart tooltip');
+                //return data.datasets[tooltipItems.datasetIndex].label + ': ' + view_obj.alterDataDisplay(tooltipItems.xLabel, data, 'chart tooltip');
               } else {
                 return data.datasets[tooltipItems.datasetIndex].label + ': ' + view_obj.alterDataDisplay(tooltipItems.yLabel, data, 'chart tooltip');
               }

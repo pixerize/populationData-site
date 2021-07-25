@@ -1,6 +1,6 @@
 var indicatorModel = function (options) {
 
-  var helpers = {% include assets/js/model / helpers.js %}
+  var helpers = {% include assets/js/model/helpers.js %}
 
 // events:
 this.onDataComplete = new event(this);
@@ -296,7 +296,7 @@ this.getData = function (options) {
     selectionStates: []
   });
 
-  //console.log(this);
+  console.log(this);
   if (this.graphType == "pyramid") {
     this.onDataComplete.notify({
       datasetCountExceedsMax: datasetCountExceedsMax,
