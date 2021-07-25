@@ -37,7 +37,7 @@ $(document).ready(function () {
 $(document).ready(function () {
   setTimeout(function () {
     var url = window.location.href;
-    if (url.search("1-1-6") != -1) {
+    if (url.search("1-1-6") != -1 || url.search("2-1-8") != -1 ) {
 
       //rename Unit Measure 
       $('#units h4').text('Census');
@@ -47,6 +47,7 @@ $(document).ready(function () {
 
       //hide toolbar
       $('#toolbar').css('display', 'none')
+      $('#plotLegend').css('display', 'none')
     }
 
   }, 300);
