@@ -2930,7 +2930,7 @@ img {
   transform: translateZ(0px); }
 
 /*Items to be removed */
-.zip-download-container, footer, .goal-tiles .row:not(:first-child), .disclaimer-alert, .contrast, p.lead-copy, ol.breadcrumb, div#chartSelectionDownload a, span.hidden-sm.hidden-md.hidden-lg {
+div#plotLegend, .zip-download-container, footer, .goal-tiles .row:not(:first-child), .disclaimer-alert, .contrast, p.lead-copy, ol.breadcrumb, div#chartSelectionDownload a, span.hidden-sm.hidden-md.hidden-lg {
   display: none !important; }
 
 div#main-content > p {

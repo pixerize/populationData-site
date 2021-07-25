@@ -131,7 +131,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/populationData-site/assets/css/style.css?v=20210725012044">
+        <link rel="stylesheet" href="/populationData-site/assets/css/style.css?v=20210725194944">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -803,36 +803,47 @@ opensdg.chartConfigAlter(function(config, info) {
 
 <script>
   opensdg.chartConfigAlter(function (config, info) {
+    console.log(info)
+
+    //set red color for female, and blue for male
+     for (var i = 0; i < info.datasets.length; i++) {
+      if (info.datasets[i].disaggregation.PYRAMID_SEX == "F") {
+        info.datasets[i].backgroundColor = "red";
+        info.datasets[i].borderColor = "red";
+      } else {
+        info.datasets[i].backgroundColor = "blue";
+        info.datasets[i].borderColor = "blue";
+      }
+    }
+    info.datasets.reverse();
+
     if (info.stackedDisaggregation) {
       var overrides = {
-        //data: chartInfo.reverse(),
         type: 'horizontalBar',
         options: {
-          plugins: {
-                legend: {
-                   display: false
-                }
-          },
           tooltips: {
             enabled: false
           },
           scales: {
             xAxes: [{
+              scaleLabel: {
+                display: false,
+              },
               stacked: true,
               ticks: {
                 //return positive values for males       
-                callback: function (value, index, values) {
+                  callback: function (value, index, values) {
                   return value < 0 ? -value : value;
                 },
               }
             }],
             yAxes: [{
-              stacked: true,
-              //display: false,
+                //display: false,
             }],
           }
-        }
+        },
       };
+
       // If we have stackedDisaggregation, we need to group datasets into stacks.
       config.data.datasets.forEach(function (dataset) {
         var disaggregation = $.extend({}, dataset.disaggregation);
@@ -852,7 +863,7 @@ opensdg.chartConfigAlter(function(config, info) {
   });
 
   opensdg.chartConfigAlter(function (config) {
-    // console.log(config);
+   // console.log(config);
   });
 
 </script>
@@ -1857,12 +1868,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Pretraživanje';</script>
 
-<script src='/populationData-site/assets/js/sdg.js?v=20210725012044'></script>
+<script src='/populationData-site/assets/js/sdg.js?v=20210725194944'></script>
 
 
     
     
-    <script src="/populationData-site/assets/js/custom.js?v=20210725012044"></script><script>
+    <script src="/populationData-site/assets/js/custom.js?v=20210725194944"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
