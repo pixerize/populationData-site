@@ -37,17 +37,21 @@ $(document).ready(function () {
 $(document).ready(function () {
   setTimeout(function () {
     var url = window.location.href;
-    if (url.search("1-1-6") != -1 || url.search("2-1-8") != -1 ) {
+    if (url.search("1-1-6") != -1) {
 
       //rename Unit Measure 
       $('#units h4').text('Census');
+      $('th.sorting_1').css('display', 'none');
+      $('th.sorting_asc').css('display', 'none');
       // if (url.search('bs')) { //translation
       //   $('#units h4').text('Godina Censusa');
       // }
 
       //hide toolbar
-      $('#toolbar').css('display', 'none')
-      $('#plotLegend').css('display', 'none')
+    } else if (url.search("2-1-8") != -1) {
+      $('#units h4').text('Year of projection');
+      $('th.sorting_1').css('display', 'none');
+      $('th.sorting_asc').css('display', 'none');
     }
 
   }, 300);
