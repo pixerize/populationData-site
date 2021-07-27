@@ -43,7 +43,8 @@ $(document).ready(function () {
       $('#toolbar').css('display', 'none');
 
       //rename Unit Measure 
-      $('#units h4').text('Census');
+      $('#units h4').css('display', 'none');
+      $('.projection-pyramid').css('display', 'none');
       //remove year in table pyramid, and chart legend
       $('div#plotLegend').css('display', 'none');
       $('.data-view .nav-item:last-child').css('display', 'none');
@@ -54,12 +55,15 @@ $(document).ready(function () {
     } else if (url.search("2-1-8") != -1) {
 
 
-      //hide toolbar
+      //hide toolbar + legend, and rename unit measurement
       $('#toolbar').css('display', 'none');
       $('div#plotLegend').css('display', 'none');
-      $('#units h4').text('Year of projection');
+      $('#units h4').css('display', 'none');
+      $('.census-pyramid').css('display', 'none');
       //remove table tab 
       $('.data-view .nav-item:last-child').css('display', 'none');
+    } else {
+      $('.pyramid-units').css('display', 'none');
     }
 
   }, 300);
