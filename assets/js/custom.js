@@ -46,22 +46,21 @@ $(document).ready(function () {
       $('#units h4').text('Census');
       //remove year in table pyramid, and chart legend
       $('div#plotLegend').css('display', 'none');
-      $('th.sorting_1').css('display', 'none');
-      $('th.sorting_asc').css('display', 'none');
+      $('.nav-item:last-child').css('display', 'none');
       // if (url.search('bs')) { //translation
       //   $('#units h4').text('Godina Censusa');
       // }
 
     } else if (url.search("2-1-8") != -1) {
+
+
       //hide toolbar
       $('#toolbar').css('display', 'none');
       $('div#plotLegend').css('display', 'none');
       $('#units h4').text('Year of projection');
-      //remove year in table pyramid
-      $('th.sorting_1').css('display', 'none');
-      $('th.sorting_asc').css('display', 'none');
+      //remove table tab 
+      $('.nav-item:last-child').css('display', 'none');
     }
-
 
   }, 300);
 
