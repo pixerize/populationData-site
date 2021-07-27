@@ -1,6 +1,6 @@
 var indicatorModel = function (options) {
 
-  var helpers = {% include assets/js/model / helpers.js %}
+  var helpers = {% include assets/js/model/helpers.js %}
 
 // events:
 this.onDataComplete = new event(this);
