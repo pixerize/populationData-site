@@ -46,7 +46,7 @@ $(document).ready(function () {
       $('#units h4').text('Census');
       //remove year in table pyramid, and chart legend
       $('div#plotLegend').css('display', 'none');
-      $('.nav-item:last-child').css('display', 'none');
+      $('.data-view .nav-item:last-child').css('display', 'none');
       // if (url.search('bs')) { //translation
       //   $('#units h4').text('Godina Censusa');
       // }
@@ -59,7 +59,7 @@ $(document).ready(function () {
       $('div#plotLegend').css('display', 'none');
       $('#units h4').text('Year of projection');
       //remove table tab 
-      $('.nav-item:last-child').css('display', 'none');
+      $('.data-view .nav-item:last-child').css('display', 'none');
     }
 
   }, 300);
