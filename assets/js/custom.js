@@ -47,12 +47,13 @@ $(document).ready(function () {
       //   $('#units h4').text('Godina Censusa');
       // }
 
-      //hide toolbar
     } else if (url.search("2-1-8") != -1) {
       $('#units h4').text('Year of projection');
       $('th.sorting_1').css('display', 'none');
       $('th.sorting_asc').css('display', 'none');
     }
+    //hide toolbar
+    $('#toolbar').css('display', 'none');
 
   }, 300);
 
