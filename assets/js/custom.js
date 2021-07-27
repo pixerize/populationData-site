@@ -39,8 +39,12 @@ $(document).ready(function () {
     var url = window.location.href;
     if (url.search("1-1-6") != -1) {
 
+      //hide toolbar
+      $('#toolbar').css('display', 'none');
+
       //rename Unit Measure 
       $('#units h4').text('Census');
+      //remove year in table pyramid
       $('th.sorting_1').css('display', 'none');
       $('th.sorting_asc').css('display', 'none');
       // if (url.search('bs')) { //translation
@@ -48,12 +52,14 @@ $(document).ready(function () {
       // }
 
     } else if (url.search("2-1-8") != -1) {
+      //hide toolbar
+      $('#toolbar').css('display', 'none');
       $('#units h4').text('Year of projection');
+      //remove year in table pyramid
       $('th.sorting_1').css('display', 'none');
       $('th.sorting_asc').css('display', 'none');
     }
-    //hide toolbar
-    $('#toolbar').css('display', 'none');
+
 
   }, 300);
 
