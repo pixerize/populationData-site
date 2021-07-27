@@ -9,7 +9,6 @@ We also check for "graph_stacked_disaggregation" here to support stacked bars.
 {% include components/charts/graph_annotations.html %}
 <script>
   opensdg.chartConfigAlter(function (config, info) {
-    console.log(info)
 
     //set red color for female, and blue for male
      for (var i = 0; i < info.datasets.length; i++) {
@@ -21,6 +20,7 @@ We also check for "graph_stacked_disaggregation" here to support stacked bars.
         info.datasets[i].borderColor = "blue";
       }
     }
+    //reverse the order of data, so lower age ranges are printed last. We do this to get pyramid shape
     info.datasets.reverse();
 
     if (info.stackedDisaggregation) {
@@ -63,10 +63,6 @@ We also check for "graph_stacked_disaggregation" here to support stacked bars.
       // Add these overrides onto the normal config, and return it.
       $.extend(true, config, overrides);
     }
-  });
-
-  opensdg.chartConfigAlter(function (config) {
-   // console.log(config);
   });
 
 </script>
