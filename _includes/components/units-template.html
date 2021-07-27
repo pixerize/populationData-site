@@ -1,6 +1,8 @@
 <script type="text/template" id="units_template">
   <% if(units.length) { %>
     <h4>{{ page.t.indicator.unit_of_measurement }}</h4>
+    <h4 class="census_pyramid">{{ page.t.data.census_pyramid }}</h4>
+    <h4 class="projection_pyramid">{{ page.t.data.projection_pyramid }}</h4>
     <fieldset>
       <legend class="sr-only">{{ page.t.indicator.unit_of_measurement }}</legend>
       <% _.each(units, function(unitsItem, index) { %>
