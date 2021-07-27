@@ -1,20 +1,20 @@
-# Config by Djordje Sajlovic
+# Config by Djordje Sajlovic (github: pixerize)
 # Jekyll configuration for Open SDG platform.
 # Doing the Quick start? Here are the settings to update during installation:
 # Replace the baseurl with the name of this repository. For example, if the repository is named
 # "my-site-repository", then update the baseurl like so:
 # baseurl: "/my-site-repository"
-baseurl: "/populationData-site"
+baseurl: ""
 # The next line should be the URL of your data repository published site. To find this,
 # go to your data repository in Github, and click "Settings", then scroll down to the
 # "Github Pages" section. Copy/paste the link in the green section.
-remote_data_prefix: "https://pixerize.github.io/populationData-data"
+remote_data_prefix: "https://unfpacobih.github.io/populationData-data"
 # In the next few items, replace "open-sdg" with the name of your GitHub
 # organization, and "open-sdg-data-starter" with the name of your data repository.
 # URL for the "Edit Data" button on indicators.
-data_edit_url: http://prose.io/#pixerize/populationData-data/edit/master/data/indicator_[id].csv
+data_edit_url: http://prose.io/#UNFPACOBIH/populationData-data/edit/master/data/indicator_[id].csv
 # URL for the "Edit Metadata" button on indicators.
-metadata_edit_url: http://prose.io/#pixerize/populationData-data/edit/master/meta/[id].md
+metadata_edit_url: http://prose.io/#UNFPACOBIH/populationData-data/edit/master/meta/[id].md
 #
 # The list of languages that are translated. The first one is the default.
 languages:
@@ -27,9 +27,9 @@ languages:
 
 # Tell the Remote Theme plugin to use the Open SDG platform (Jekyll theme).
 # Recommended: set this to a particular "release" of Open SDG. For example:
-remote_theme: pixerize/open-sdg@1.4.0-dev
-#remote_theme: open-sdg/open-sdg@1.4.0
-#remote_theme: pixerize/open-sdg@1.5.0
+remote_theme: UNFPACOBIH/open-sdg@1.4.0-dev
+#remote_theme: open-sdg/open-sdg@master
+#remote_theme: UNFPACOBIH/open-sdg@1.5.0
 
 # Replace this title as needed.
 title: custom.indicator_title
@@ -67,9 +67,9 @@ analytics:
 
 # Replace the email addresses below.
 email_contacts:
-  questions: sdg@bhas.gov.ba
-  suggestions: sdg@bhas.gov.ba
-  functional: sdg@bhas.gov.ba
+  questions: bosnia-herzegovina.office@unfpa.org
+  suggestions: bosnia-herzegovina.office@unfpa.org
+  functional: bosnia-herzegovina.office@unfpa.org
 
 # International Support
 # Eg name: Australia and adjective: Australian
@@ -124,7 +124,7 @@ menu:
 #    translation_key: custom.covid
 
 footer_menu:
-  - path: mailto:sdg@bhas.gov.ba
+  - path: mailto:bosnia-herzegovina.office@unfpa.org
     translation_key: menu.contact_us
   - path: /about/cookies-and-privacy/
     translation_key: menu.cookies
