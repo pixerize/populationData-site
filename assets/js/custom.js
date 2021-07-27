@@ -66,6 +66,6 @@ $(document).ready(function () {
       $('.pyramid-units').css('display', 'none');
     }
 
-  }, 300);
+  }, 400);
 
 });
