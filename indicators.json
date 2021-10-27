@@ -276,14 +276,6 @@
           "keywords": "",
           "href": "/populationData-site/1-8-3",
           "status": "complete"
-        },
-        {
-          "id": "1-9-1",
-          "title": "Households",
-          "description": "",
-          "keywords": "",
-          "href": "/populationData-site/1-9-1",
-          "status": "complete"
         }]
     }
   },
@@ -586,7 +578,7 @@
   {
     "goal": {
       "id": "4",
-      "title": "VIOLENCE",
+      "title": "SOCIAL PROTECTION",
       "indicators": [
         
         {
@@ -650,7 +642,7 @@
   {
     "goal": {
       "id": "6",
-      "title": "ECONOMIC, POVERTY AND LABOUR FORCE",
+      "title": "ECONOMY",
       "indicators": [
         
         {
@@ -722,7 +714,7 @@
   {
     "goal": {
       "id": "7",
-      "title": "ECONOMIC, POVERTY AND LABOUR FORCE",
+      "title": "LABOUR FORCE AND LIVING STANDARD",
       "indicators": [
         
         {
@@ -738,7 +730,7 @@
   {
     "goal": {
       "id": "8",
-      "title": "ECONOMIC, POVERTY AND LABOUR FORCE",
+      "title": "VIOLENCE",
       "indicators": [
         
         {
