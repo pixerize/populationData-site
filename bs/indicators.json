@@ -158,30 +158,6 @@
           "status": "complete"
         },
         {
-          "id": "1-5-2",
-          "title": "Prosječna dob stanovništva, prema spolu",
-          "description": "",
-          "keywords": "",
-          "href": "/populationData-site/bs/1-5-2",
-          "status": "complete"
-        },
-        {
-          "id": "1-5-3",
-          "title": "Prosječna dob smrti, prema spolu",
-          "description": "",
-          "keywords": "",
-          "href": "/populationData-site/bs/1-5-3",
-          "status": "complete"
-        },
-        {
-          "id": "1-5-4",
-          "title": "Prosječna dob prilikom sklapanja prvog braka, prema spolu",
-          "description": "",
-          "keywords": "",
-          "href": "/populationData-site/bs/1-5-4",
-          "status": "complete"
-        },
-        {
           "id": "1-6-1",
           "title": "Sirova stopa smrtnosti",
           "description": "",
@@ -299,14 +275,6 @@
           "description": "",
           "keywords": "",
           "href": "/populationData-site/bs/1-8-3",
-          "status": "complete"
-        },
-        {
-          "id": "1-8-4",
-          "title": "Stopa razvoda braka (na 1.000 brakova)",
-          "description": "",
-          "keywords": "",
-          "href": "/populationData-site/bs/1-8-4",
           "status": "complete"
         },
         {

@@ -158,30 +158,6 @@
           "status": "complete"
         },
         {
-          "id": "1-5-2",
-          "title": "Просјечна доб становништва, према полу",
-          "description": "",
-          "keywords": "",
-          "href": "/populationData-site/sr/1-5-2",
-          "status": "complete"
-        },
-        {
-          "id": "1-5-3",
-          "title": "Просјечна доб смрти, према полу",
-          "description": "",
-          "keywords": "",
-          "href": "/populationData-site/sr/1-5-3",
-          "status": "complete"
-        },
-        {
-          "id": "1-5-4",
-          "title": "Просјечна доб приликом склапања првог брака, према полу",
-          "description": "",
-          "keywords": "",
-          "href": "/populationData-site/sr/1-5-4",
-          "status": "complete"
-        },
-        {
           "id": "1-6-1",
           "title": "Сирова стопа смртности",
           "description": "",
@@ -299,14 +275,6 @@
           "description": "",
           "keywords": "",
           "href": "/populationData-site/sr/1-8-3",
-          "status": "complete"
-        },
-        {
-          "id": "1-8-4",
-          "title": "Стопа развода брака (на 1.000 бракова)",
-          "description": "",
-          "keywords": "",
-          "href": "/populationData-site/sr/1-8-4",
           "status": "complete"
         },
         {
