@@ -654,4 +654,36 @@
           "status": "complete"
         }]
     }
+  },
+  {
+    "goal": {
+      "id": "7",
+      "title": "global_goals.7-title",
+      "indicators": [
+        
+        {
+          "id": "7-1-1",
+          "title": "Stopa nezaposlenosti (postotak nezaposlenog stanovništva u aktivnom stanovništvu (radnoj snazi), prema dobnoj skupini i spolu)",
+          "description": "",
+          "keywords": "",
+          "href": "/populationData-site/hr/7-1-1",
+          "status": "complete"
+        }]
+    }
+  },
+  {
+    "goal": {
+      "id": "8",
+      "title": "global_goals.8-title",
+      "indicators": [
+        
+        {
+          "id": "8-1-1",
+          "title": "Stopa nezaposlenosti (postotak nezaposlenog stanovništva u aktivnom stanovništvu (radnoj snazi), prema dobnoj skupini i spolu)",
+          "description": "",
+          "keywords": "",
+          "href": "/populationData-site/hr/8-1-1",
+          "status": "complete"
+        }]
+    }
   }]

@@ -7,7 +7,7 @@
         
         {
           "id": "1-1-1",
-          "title": "Population by age and sex",
+          "title": "Vital statistics by sex",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/1-1-1",
@@ -15,7 +15,7 @@
         },
         {
           "id": "1-1-2",
-          "title": "Population by entity, age and sex",
+          "title": "Natural growth rate",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/1-1-2",
@@ -55,7 +55,7 @@
         },
         {
           "id": "1-2-1",
-          "title": "Vital statistics by sex",
+          "title": "Crude birth rate",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/1-2-1",
@@ -651,6 +651,38 @@
           "description": "",
           "keywords": "",
           "href": "/populationData-site/6-3-3",
+          "status": "complete"
+        }]
+    }
+  },
+  {
+    "goal": {
+      "id": "7",
+      "title": "ECONOMIC, POVERTY AND LABOUR FORCE",
+      "indicators": [
+        
+        {
+          "id": "7-1-1",
+          "title": "Unemployment rate (Percentage of unemployed population in active population (labour force) by age group and sex)",
+          "description": "",
+          "keywords": "",
+          "href": "/populationData-site/7-1-1",
+          "status": "complete"
+        }]
+    }
+  },
+  {
+    "goal": {
+      "id": "8",
+      "title": "ECONOMIC, POVERTY AND LABOUR FORCE",
+      "indicators": [
+        
+        {
+          "id": "8-1-1",
+          "title": "Unemployment rate (Percentage of unemployed population in active population (labour force) by age group and sex)",
+          "description": "",
+          "keywords": "",
+          "href": "/populationData-site/8-1-1",
           "status": "complete"
         }]
     }
