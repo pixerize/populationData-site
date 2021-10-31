@@ -7,7 +7,7 @@
         
         {
           "id": "1-1-1",
-          "title": "Vital statistics by sex (live births, deaths, natural change)",
+          "title": "Proportion of population below the international poverty line, by sex, age, employment status and geographical location (urban/rural)",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/1-1-1",
@@ -15,7 +15,7 @@
         },
         {
           "id": "1-1-2",
-          "title": "Natural growth rate",
+          "title": "global_indicators.1-1-2-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/1-1-2",
@@ -23,7 +23,7 @@
         },
         {
           "id": "1-2-1",
-          "title": "Crude birth rate",
+          "title": "Proportion of population living below the national poverty line, by sex and age",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/1-2-1",
@@ -31,7 +31,7 @@
         },
         {
           "id": "1-2-2",
-          "title": "Total fertility rate",
+          "title": "Proportion of men, women and children of all ages living in poverty in all its dimensions according to national definitions",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/1-2-2",
@@ -39,7 +39,7 @@
         },
         {
           "id": "1-2-3",
-          "title": "Age-specific fertility rate",
+          "title": "global_indicators.1-2-3-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/1-2-3",
@@ -47,7 +47,7 @@
         },
         {
           "id": "1-2-4",
-          "title": "Sex ratio at birth",
+          "title": "global_indicators.1-2-4-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/1-2-4",
@@ -55,7 +55,7 @@
         },
         {
           "id": "1-2-5",
-          "title": "Births by teenage mothers by age group",
+          "title": "global_indicators.1-2-5-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/1-2-5",
@@ -63,7 +63,7 @@
         },
         {
           "id": "1-3-1",
-          "title": "Crude death rate",
+          "title": "Proportion of population covered by social protection floors/systems, by sex, distinguishing children, unemployed persons, older persons, persons with disabilities, pregnant women, newborns, work-injury victims and the poor and the vulnerable",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/1-3-1",
@@ -71,7 +71,7 @@
         },
         {
           "id": "1-3-2",
-          "title": "Infant (up to 12 months of age) mortality by sex",
+          "title": "global_indicators.1-3-2-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/1-3-2",
@@ -79,7 +79,7 @@
         },
         {
           "id": "1-3-3",
-          "title": "Infant (up to 12 months of age) mortality rate",
+          "title": "global_indicators.1-3-3-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/1-3-3",
@@ -87,7 +87,7 @@
         },
         {
           "id": "1-3-4",
-          "title": "Deaths by cause of death and sex",
+          "title": "global_indicators.1-3-4-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/1-3-4",
@@ -95,7 +95,7 @@
         },
         {
           "id": "1-3-5",
-          "title": "Stillbirths by sex",
+          "title": "global_indicators.1-3-5-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/1-3-5",
@@ -103,7 +103,7 @@
         },
         {
           "id": "1-3-6",
-          "title": "Stillbirth rate",
+          "title": "global_indicators.1-3-6-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/1-3-6",
@@ -111,7 +111,7 @@
         },
         {
           "id": "1-4-1",
-          "title": "Average age of mothers at first birth",
+          "title": "Proportion of population living in households with access to basic services",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/1-4-1",
@@ -119,7 +119,7 @@
         },
         {
           "id": "1-4-2",
-          "title": "Average age of population by sex",
+          "title": "Proportion of total adult population with secure tenure rights to land, with legally recognized documentation, and who perceive their rights to land as secure, by sex and by type of tenure",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/1-4-2",
@@ -127,7 +127,7 @@
         },
         {
           "id": "1-4-3",
-          "title": "Average age at death by sex",
+          "title": "global_indicators.1-4-3-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/1-4-3",
@@ -135,7 +135,7 @@
         },
         {
           "id": "1-4-4",
-          "title": "Average age at first marriage by sex",
+          "title": "global_indicators.1-4-4-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/1-4-4",
@@ -143,7 +143,7 @@
         },
         {
           "id": "1-4-5",
-          "title": "Average age at the time of divorce by sex",
+          "title": "global_indicators.1-4-5-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/1-4-5",
@@ -151,7 +151,7 @@
         },
         {
           "id": "1-5-1",
-          "title": "Life expectancy at birth by sex",
+          "title": "Number of deaths, missing persons and directly affected persons attributed to disasters per 100,000 population",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/1-5-1",
@@ -159,7 +159,7 @@
         },
         {
           "id": "1-6-1",
-          "title": "Marriages",
+          "title": "global_indicators.1-6-1-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/1-6-1",
@@ -167,7 +167,7 @@
         },
         {
           "id": "1-6-2",
-          "title": "Marriage rate",
+          "title": "global_indicators.1-6-2-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/1-6-2",
@@ -175,7 +175,7 @@
         },
         {
           "id": "1-6-3",
-          "title": "Divorces",
+          "title": "global_indicators.1-6-3-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/1-6-3",
@@ -183,7 +183,7 @@
         },
         {
           "id": "1-6-4",
-          "title": "Divorce rate",
+          "title": "global_indicators.1-6-4-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/1-6-4",
@@ -191,7 +191,7 @@
         },
         {
           "id": "1-7-1",
-          "title": "Projected population by age and sex",
+          "title": "global_indicators.1-7-1-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/1-7-1",
@@ -199,7 +199,7 @@
         },
         {
           "id": "1-7-2",
-          "title": "Projected population by age groups and sex",
+          "title": "global_indicators.1-7-2-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/1-7-2",
@@ -207,7 +207,7 @@
         },
         {
           "id": "1-7-3",
-          "title": "Projected dependency ratios by sex",
+          "title": "global_indicators.1-7-3-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/1-7-3",
@@ -215,7 +215,7 @@
         },
         {
           "id": "1-7-4",
-          "title": "Projected vital statistics by sex",
+          "title": "global_indicators.1-7-4-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/1-7-4",
@@ -223,7 +223,7 @@
         },
         {
           "id": "1-7-5",
-          "title": "Projected crude birth rate",
+          "title": "global_indicators.1-7-5-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/1-7-5",
@@ -231,7 +231,7 @@
         },
         {
           "id": "1-7-6",
-          "title": "Projected crude death rate",
+          "title": "global_indicators.1-7-6-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/1-7-6",
@@ -239,7 +239,7 @@
         },
         {
           "id": "1-7-7",
-          "title": "Projected average age of population",
+          "title": "global_indicators.1-7-7-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/1-7-7",
@@ -247,7 +247,7 @@
         },
         {
           "id": "1-7-8",
-          "title": "Projected population pyramid",
+          "title": "global_indicators.1-7-8-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/1-7-8",
@@ -255,7 +255,7 @@
         },
         {
           "id": "1-8-1",
-          "title": "Population estimates by age and sex",
+          "title": "global_indicators.1-8-1-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/1-8-1",
@@ -263,7 +263,7 @@
         },
         {
           "id": "1-8-2",
-          "title": "Population estimates by age groups and sex",
+          "title": "global_indicators.1-8-2-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/1-8-2",
@@ -271,7 +271,7 @@
         },
         {
           "id": "1-8-3",
-          "title": "Population estimates by city/municipality, age groups and sex",
+          "title": "global_indicators.1-8-3-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/1-8-3",
@@ -287,7 +287,7 @@
         
         {
           "id": "2-1-1",
-          "title": "Projected population by age and sex",
+          "title": "Prevalence of undernourishment",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/2-1-1",
@@ -295,7 +295,7 @@
         },
         {
           "id": "2-1-2",
-          "title": "Projected population by age groups and sex",
+          "title": "Prevalence of moderate or severe food insecurity in the population, based on the Food Insecurity Experience Scale (FIES)",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/2-1-2",
@@ -303,7 +303,7 @@
         },
         {
           "id": "2-1-3",
-          "title": "Projected dependency ratios by sex",
+          "title": "global_indicators.2-1-3-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/2-1-3",
@@ -311,7 +311,7 @@
         },
         {
           "id": "2-1-4",
-          "title": "Projected vital statistics by sex",
+          "title": "global_indicators.2-1-4-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/2-1-4",
@@ -319,7 +319,7 @@
         },
         {
           "id": "2-1-5",
-          "title": "Projected crude birth rate",
+          "title": "global_indicators.2-1-5-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/2-1-5",
@@ -327,7 +327,7 @@
         },
         {
           "id": "2-1-6",
-          "title": "Projected crude death rate",
+          "title": "global_indicators.2-1-6-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/2-1-6",
@@ -335,7 +335,7 @@
         },
         {
           "id": "2-1-7",
-          "title": "Projected average age of population",
+          "title": "global_indicators.2-1-7-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/2-1-7",
@@ -343,7 +343,7 @@
         },
         {
           "id": "2-1-8",
-          "title": "Projected population pyramid",
+          "title": "global_indicators.2-1-8-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/2-1-8",
@@ -359,7 +359,7 @@
         
         {
           "id": "3-1-1",
-          "title": "Deaths by cause of death and sex",
+          "title": "Maternal mortality ratio",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/3-1-1",
@@ -367,7 +367,7 @@
         },
         {
           "id": "3-1-2",
-          "title": "Deaths by cause of death per 100,000 population",
+          "title": "Proportion of births attended by skilled health personnel",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/3-1-2",
@@ -375,7 +375,7 @@
         },
         {
           "id": "3-1-3",
-          "title": "Stillbirths",
+          "title": "global_indicators.3-1-3-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/3-1-3",
@@ -383,7 +383,7 @@
         },
         {
           "id": "3-1-4",
-          "title": "Stilbirth rate",
+          "title": "global_indicators.3-1-4-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/3-1-4",
@@ -391,7 +391,7 @@
         },
         {
           "id": "3-2-1",
-          "title": "Cervical cancer",
+          "title": "Under‐five mortality rate",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/3-2-1",
@@ -399,7 +399,7 @@
         },
         {
           "id": "3-2-2",
-          "title": "Cervical cancer per 100,000 female population",
+          "title": "Neonatal mortality rate",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/3-2-2",
@@ -407,7 +407,7 @@
         },
         {
           "id": "3-2-3",
-          "title": "Breast cancer",
+          "title": "global_indicators.3-2-3-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/3-2-3",
@@ -415,7 +415,7 @@
         },
         {
           "id": "3-2-4",
-          "title": "Breast cancer per 100,000 female population",
+          "title": "global_indicators.3-2-4-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/3-2-4",
@@ -423,7 +423,7 @@
         },
         {
           "id": "3-3-1",
-          "title": "Incidence of syphilis",
+          "title": "Number of new HIV infections per 1,000 uninfected population, by sex, age and key populations",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/3-3-1",
@@ -431,7 +431,7 @@
         },
         {
           "id": "3-3-2",
-          "title": "Incidence of gonorrhoea",
+          "title": "Tuberculosis incidence per 100,000 population",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/3-3-2",
@@ -439,7 +439,7 @@
         },
         {
           "id": "3-3-3",
-          "title": "Incidence of AIDS",
+          "title": "Malaria incidence per 1,000 population",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/3-3-3",
@@ -447,7 +447,7 @@
         },
         {
           "id": "3-3-4",
-          "title": "Incidence of HIV",
+          "title": "Hepatitis B incidence per 100,000 population",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/3-3-4",
@@ -455,7 +455,7 @@
         },
         {
           "id": "3-3-5",
-          "title": "Incidence of HIV per 100,000 population",
+          "title": "Number of people requiring interventions against neglected tropical diseases",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/3-3-5",
@@ -463,7 +463,7 @@
         },
         {
           "id": "3-4-1",
-          "title": "Caesarean sections",
+          "title": "Mortality rate attributed to cardiovascular disease, cancer, diabetes or chronic respiratory disease",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/3-4-1",
@@ -471,7 +471,7 @@
         },
         {
           "id": "3-4-2",
-          "title": "Caesarean sections per 1,000 live births",
+          "title": "Suicide mortality rate",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/3-4-2",
@@ -479,7 +479,7 @@
         },
         {
           "id": "3-5-1",
-          "title": "Beds in hospitals",
+          "title": "Coverage of treatment interventions (pharmacological, psychosocial and rehabilitation and aftercare services) for substance use disorders",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/3-5-1",
@@ -487,7 +487,7 @@
         },
         {
           "id": "3-5-2",
-          "title": "Beds in hospitals per 100,000 population",
+          "title": "Harmful use of alcohol, defined according to the national context as alcohol per capita consumption (aged 15 years and older) within a calendar year in litres of pure alcohol",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/3-5-2",
@@ -495,7 +495,7 @@
         },
         {
           "id": "3-5-3",
-          "title": "Medical doctors in public institutions",
+          "title": "global_indicators.3-5-3-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/3-5-3",
@@ -503,7 +503,7 @@
         },
         {
           "id": "3-5-4",
-          "title": "Medical doctors in public institutions per 100,000 population",
+          "title": "global_indicators.3-5-4-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/3-5-4",
@@ -511,7 +511,7 @@
         },
         {
           "id": "3-5-5",
-          "title": "General practitioners",
+          "title": "global_indicators.3-5-5-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/3-5-5",
@@ -519,7 +519,7 @@
         },
         {
           "id": "3-5-6",
-          "title": "Population per general practitioner",
+          "title": "global_indicators.3-5-6-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/3-5-6",
@@ -527,7 +527,7 @@
         },
         {
           "id": "3-5-7",
-          "title": "Midviwes",
+          "title": "global_indicators.3-5-7-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/3-5-7",
@@ -535,7 +535,7 @@
         },
         {
           "id": "3-6-1",
-          "title": "Contraceptive prevalence rate",
+          "title": "Death rate due to road traffic injuries",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/3-6-1",
@@ -543,7 +543,7 @@
         },
         {
           "id": "3-6-2",
-          "title": "Unmet need for family planning",
+          "title": "global_indicators.3-6-2-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/3-6-2",
@@ -551,7 +551,7 @@
         },
         {
           "id": "3-6-3",
-          "title": "Satisfied demand for family planning",
+          "title": "global_indicators.3-6-3-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/3-6-3",
@@ -559,7 +559,7 @@
         },
         {
           "id": "3-6-4",
-          "title": "Skilled attendant at delivery",
+          "title": "global_indicators.3-6-4-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/3-6-4",
@@ -567,7 +567,7 @@
         },
         {
           "id": "3-7-1",
-          "title": "Persons with disabilities by age groups and sex",
+          "title": "Proportion of women of reproductive age (aged 15–49 years) who have their need for family planning satisfied with modern methods",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/3-7-1",
@@ -583,7 +583,7 @@
         
         {
           "id": "4-1-1",
-          "title": "Violence against women after the age of 15 (ever)",
+          "title": "Proportion of children and young people (a) in grades 2/3; (b) at the end of primary; and (c) at the end of lower secondary achieving at least a minimum proficiency level in (i) reading and (ii) mathematics, by sex",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/4-1-1",
@@ -599,7 +599,7 @@
         
         {
           "id": "5-1-1",
-          "title": "Population over 15 years of age by educational attainment and sex",
+          "title": "Whether or not legal frameworks are in place to promote, enforce and monitor equality and non‐discrimination on the basis of sex",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/5-1-1",
@@ -607,7 +607,7 @@
         },
         {
           "id": "5-1-2",
-          "title": "Population enrolled in formal educational institutions by sex and type of educational institution",
+          "title": "global_indicators.5-1-2-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/5-1-2",
@@ -615,7 +615,7 @@
         },
         {
           "id": "5-1-3",
-          "title": "Population 25-64 years of age enrolled in non-formal, adult education by age groups and sex",
+          "title": "global_indicators.5-1-3-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/5-1-3",
@@ -623,7 +623,7 @@
         },
         {
           "id": "5-1-4",
-          "title": "Illiterate population over 10 years of age by age groups and sex",
+          "title": "global_indicators.5-1-4-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/5-1-4",
@@ -631,7 +631,7 @@
         },
         {
           "id": "5-1-5",
-          "title": "Population 15-24 years of age not in employment, education or training (NEET) by sex",
+          "title": "global_indicators.5-1-5-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/5-1-5",
@@ -647,7 +647,7 @@
         
         {
           "id": "6-1-1",
-          "title": "Gross Domestic Product - Total (millions)",
+          "title": "Proportion of population using safely managed drinking water services",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/6-1-1",
@@ -655,7 +655,7 @@
         },
         {
           "id": "6-1-2",
-          "title": "Gross Domestic Product - Per capita",
+          "title": "global_indicators.6-1-2-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/6-1-2",
@@ -663,7 +663,7 @@
         },
         {
           "id": "6-1-3",
-          "title": "Real GDP growth",
+          "title": "global_indicators.6-1-3-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/6-1-3",
@@ -671,7 +671,7 @@
         },
         {
           "id": "6-2-1",
-          "title": "Households living in relative poverty",
+          "title": "Proportion of population using safely managed sanitation services, including a handwashing facility with soap and water",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/6-2-1",
@@ -679,7 +679,7 @@
         },
         {
           "id": "6-2-2",
-          "title": "Population living in relative poverty by sex",
+          "title": "global_indicators.6-2-2-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/6-2-2",
@@ -687,7 +687,7 @@
         },
         {
           "id": "6-3-1",
-          "title": "Labour force participation rate (Percentage of active population (labour force) in working age population (15-64) by age group and sex)",
+          "title": "Proportion of wastewater safely treated",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/6-3-1",
@@ -695,7 +695,7 @@
         },
         {
           "id": "6-3-2",
-          "title": "Employment-to-population ratio (Percentage of employed population in working age population (15-64) by age group and sex)",
+          "title": "Proportion of bodies of water with good ambient water quality",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/6-3-2",
@@ -703,7 +703,7 @@
         },
         {
           "id": "6-3-3",
-          "title": "Unemployment rate (Percentage of unemployed population in active population (labour force) by age group and sex)",
+          "title": "global_indicators.6-3-3-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/6-3-3",
@@ -719,7 +719,7 @@
         
         {
           "id": "7-1-1",
-          "title": "Unemployment rate (Percentage of unemployed population in active population (labour force) by age group and sex)",
+          "title": "global_indicators.6-3-3-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/7-1-1",
@@ -735,7 +735,7 @@
         
         {
           "id": "8-1-1",
-          "title": "Unemployment rate (Percentage of unemployed population in active population (labour force) by age group and sex)",
+          "title": "global_indicators.6-3-3-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/8-1-1",
