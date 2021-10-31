@@ -103,9 +103,18 @@ header .container {
         margin-bottom: 150px;
         
         .no-gutters {
+
+            &:first-child {
+                margin-bottom: 40px;
+            }
+
             img {
                 transition: all 150ms ease-in-out;
                 box-shadow: unset !important;
+                max-width: 50%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
             }
 
             img:hover {
@@ -331,7 +340,7 @@ img {
 /*Items to be removed */
 
 
-.zip-download-container, footer, .goal-tiles .row:not(:first-child), .disclaimer-alert, .contrast, p.lead-copy, ol.breadcrumb, div#chartSelectionDownload a, span.hidden-sm.hidden-md.hidden-lg {
+.zip-download-container, footer, .disclaimer-alert, .contrast, p.lead-copy, ol.breadcrumb, div#chartSelectionDownload a, span.hidden-sm.hidden-md.hidden-lg {
         display: none !important;
     }
 
