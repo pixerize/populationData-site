@@ -2788,9 +2788,15 @@ header .container {
     background: #5B92E5 !important; }
   #main-content .goal-tiles {
     margin-bottom: 150px; }
+    #main-content .goal-tiles .no-gutters:first-child {
+      margin-bottom: 40px; }
     #main-content .goal-tiles .no-gutters img {
       transition: all 150ms ease-in-out;
-      box-shadow: unset !important; }
+      box-shadow: unset !important;
+      max-width: 50%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto; }
     #main-content .goal-tiles .no-gutters img:hover {
       -webkit-transform: translate(0, -4px);
       transform: translate(0, -4px);
@@ -2930,7 +2936,7 @@ img {
   transform: translateZ(0px); }
 
 /*Items to be removed */
-.zip-download-container, footer, .goal-tiles .row:not(:first-child), .disclaimer-alert, .contrast, p.lead-copy, ol.breadcrumb, div#chartSelectionDownload a, span.hidden-sm.hidden-md.hidden-lg {
+.zip-download-container, footer, .disclaimer-alert, .contrast, p.lead-copy, ol.breadcrumb, div#chartSelectionDownload a, span.hidden-sm.hidden-md.hidden-lg {
   display: none !important; }
 
 div#main-content > p {
