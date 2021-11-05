@@ -131,7 +131,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/populationData-site/assets/css/style.css?v=20211105065812">
+        <link rel="stylesheet" href="/populationData-site/assets/css/style.css?v=20211105070415">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -510,7 +510,7 @@ data-event-label="high"
   data-charttitles="null"
   data-measurementunit=""
   data-showdata="true"
-  data-graphtype="line"
+  data-graphtype="pyramid"
   data-geocoderegex=""
   data-showmap="false"
   data-startvalues="[{&quot;field&quot;:&quot;PYRAMID_SEX&quot;,&quot;value&quot;:&quot;F&quot;},{&quot;field&quot;:&quot;PYRAMID_SEX&quot;,&quot;value&quot;:&quot;M&quot;},{&quot;field&quot;:&quot;PYRAMID_AGE&quot;,&quot;value&quot;:&quot;0-4&quot;},{&quot;field&quot;:&quot;PYRAMID_AGE&quot;,&quot;value&quot;:&quot;5-9&quot;},{&quot;field&quot;:&quot;PYRAMID_AGE&quot;,&quot;value&quot;:&quot;10-14&quot;},{&quot;field&quot;:&quot;PYRAMID_AGE&quot;,&quot;value&quot;:&quot;15-19&quot;},{&quot;field&quot;:&quot;PYRAMID_AGE&quot;,&quot;value&quot;:&quot;20-24&quot;},{&quot;field&quot;:&quot;PYRAMID_AGE&quot;,&quot;value&quot;:&quot;25-29&quot;},{&quot;field&quot;:&quot;PYRAMID_AGE&quot;,&quot;value&quot;:&quot;30-34&quot;},{&quot;field&quot;:&quot;PYRAMID_AGE&quot;,&quot;value&quot;:&quot;35-39&quot;},{&quot;field&quot;:&quot;PYRAMID_AGE&quot;,&quot;value&quot;:&quot;40-44&quot;},{&quot;field&quot;:&quot;PYRAMID_AGE&quot;,&quot;value&quot;:&quot;45-49&quot;},{&quot;field&quot;:&quot;PYRAMID_AGE&quot;,&quot;value&quot;:&quot;50-54&quot;},{&quot;field&quot;:&quot;PYRAMID_AGE&quot;,&quot;value&quot;:&quot;55-59&quot;},{&quot;field&quot;:&quot;PYRAMID_AGE&quot;,&quot;value&quot;:&quot;60-64&quot;},{&quot;field&quot;:&quot;PYRAMID_AGE&quot;,&quot;value&quot;:&quot;65-69&quot;},{&quot;field&quot;:&quot;PYRAMID_AGE&quot;,&quot;value&quot;:&quot;70-74&quot;},{&quot;field&quot;:&quot;PYRAMID_AGE&quot;,&quot;value&quot;:&quot;75-79&quot;},{&quot;field&quot;:&quot;PYRAMID_AGE&quot;,&quot;value&quot;:&quot;80-84&quot;},{&quot;field&quot;:&quot;PYRAMID_AGE&quot;,&quot;value&quot;:&quot;85-89&quot;},{&quot;field&quot;:&quot;PYRAMID_AGE&quot;,&quot;value&quot;:&quot;90-94&quot;},{&quot;field&quot;:&quot;PYRAMID_AGE&quot;,&quot;value&quot;:&quot;95-99&quot;},{&quot;field&quot;:&quot;PYRAMID_AGE&quot;,&quot;value&quot;:&quot;100-104&quot;}]"
@@ -806,43 +806,64 @@ opensdg.chartConfigAlter(function(config, info) {
 </script>
 
 <script>
-// For line charts, add the vertical line hover functionality.
-opensdg.chartConfigAlter(function(config, info) {
-    var overrides = {
+  opensdg.chartConfigAlter(function (config, info) {
+
+    //set red color for female, and blue for male
+     for (var i = 0; i < info.datasets.length; i++) {
+      if (info.datasets[i].disaggregation.PYRAMID_SEX == "F") {
+        info.datasets[i].backgroundColor = "red";
+        info.datasets[i].borderColor = "red";
+      } else {
+        info.datasets[i].backgroundColor = "blue";
+        info.datasets[i].borderColor = "blue";
+      }
+    }
+    //reverse the order of data, so lower age ranges are printed last. We do this to get pyramid shape
+    info.datasets.reverse();
+
+    if (info.stackedDisaggregation) {
+      var overrides = {
+        type: 'horizontalBar',
         options: {
-            tooltips: {
-                intersect: false,
-                axis: 'x'
-            },
+          tooltips: {
+            enabled: false
+          },
+          scales: {
+            xAxes: [{
+              stacked: true,
+              ticks: {
+                //return positive values for males       
+                  callback: function (value, index, values) {
+                  return value < 0 ? -value : value;
+                },
+              }
+            }],
+            yAxes: [{
+               
+            }],
+          }
         },
-        plugins: [{
-            beforeDatasetsDraw: function(chart) {
-                if (chart.tooltip._active && chart.tooltip._active.length) {
-                    var activePoint = chart.tooltip._active[0],
-                        ctx = chart.ctx,
-                        x = activePoint.tooltipPosition().x,
-                        topY = chart.scales['y-axis-0'].top,
-                        bottomY = chart.scales['y-axis-0'].bottom;
+      };
 
-                    // draw line
-                    ctx.save();
-                    ctx.beginPath();
-                    ctx.moveTo(x, topY);
-                    ctx.lineTo(x, bottomY);
-                    ctx.lineWidth = 2;
-                    ctx.strokeStyle = '#757575';
-                    ctx.setLineDash([5, 2]);
-                    ctx.stroke();
-                    ctx.restore();
-                }
-            }
-        }],
-    };
-    // Add these overrides onto the normal config, and return it.
-    $.extend(true, config, overrides);
-});
+      // If we have stackedDisaggregation, we need to group datasets into stacks.
+      config.data.datasets.forEach(function (dataset) {
+        var disaggregation = $.extend({}, dataset.disaggregation);
+        // We're going to "stringify" each combination of disaggregations in order
+        // to place them in their own "stacks". To place "stacked" disaggregations
+        // into the same stack, we set them as "samestack" before stringifying.
+        // Note that the string "samestack" is completely arbitrary.
+        if (typeof disaggregation[info.stackedDisaggregation] !== 'undefined') {
+          disaggregation[info.stackedDisaggregation] = 'samestack';
+        }
+        // Use the disaggregation as a unique id for each stack.
+        dataset.stack = JSON.stringify(disaggregation);
+      });
+      // Add these overrides onto the normal config, and return it.
+      $.extend(true, config, overrides);
+    }
+  });
+
 </script>
-
           </div>
           <div id="plotLegend"></div>
           
@@ -1161,8 +1182,8 @@ data-event-label="Change to Sources tab"
             
 
             
-              <a href="https://github.com/pixerize/populationData-data/commit/7ba24314b3b951ff5e81a52f54c604f90521d7d3" target="_blank">
-                2021-10-31: see changes on GitHub <span class="visuallyhidden"></span>
+              <a href="https://github.com/pixerize/populationData-data/commit/b52f5a9cd05d7a74e8a0dcc61076f8defcad9f96" target="_blank">
+                2021-11-05: see changes on GitHub <span class="visuallyhidden"></span>
               </a>
             
 
@@ -1383,10 +1404,6 @@ data-event-label="Change to Sources tab"
             
             
 
-            
-              <a href="https://unstats.un.org/sdgs/metadata/files/Metadata-02-01-02.pdf" target="_blank">
-                United Nations Sustainable Development Goals Metadata (PDF 426 KB) <span class="visuallyhidden"></span>
-              </a>
             
 
           
@@ -1622,10 +1639,6 @@ data-event-label="Change to Sources tab"
             
 
             
-              <a href="https://unstats.un.org/sdgs/indicators/database/" target="_blank">
-                Link to source <span class="visuallyhidden"></span>
-              </a>
-            
 
           
         </td>
@@ -1852,12 +1865,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Pretraživanje';</script>
 
-<script src='/populationData-site/assets/js/sdg.js?v=20211105065812'></script>
+<script src='/populationData-site/assets/js/sdg.js?v=20211105070415'></script>
 
 
     
     
-    <script src="/populationData-site/assets/js/custom.js?v=20211105065812"></script><script>
+    <script src="/populationData-site/assets/js/custom.js?v=20211105070415"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
