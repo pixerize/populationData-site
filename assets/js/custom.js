@@ -41,7 +41,6 @@ $(document).ready(function () {
 
       //hide toolbar
       $('#toolbar').css('display', 'none');
-
       //rename Unit Measure 
       $('#units h4').css('display', 'none');
       $('.projection-pyramid').css('display', 'none');
@@ -51,9 +50,7 @@ $(document).ready(function () {
       // if (url.search('bs')) { //translation
       //   $('#units h4').text('Godina Censusa');
       // }
-
     } else if (url.search("2-1-8") != -1) {
-
 
       //hide toolbar + legend, and rename unit measurement
       $('#toolbar').css('display', 'none');

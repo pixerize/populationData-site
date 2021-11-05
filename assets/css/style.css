@@ -2932,6 +2932,10 @@ a {
     color: #fff !important;
     display: inline !important; }
 
+.goal-indicators div span {
+  border-color: #e57908;
+  color: #e57908; }
+
 img {
   transform: translateZ(0px); }
 
