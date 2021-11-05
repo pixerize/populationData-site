@@ -2933,8 +2933,8 @@ a {
     display: inline !important; }
 
 .goal-indicators div span {
-  border-color: #e57908;
-  color: #e57908; }
+  border-color: #e57908 !important;
+  color: #e57908 !important; }
 
 img {
   transform: translateZ(0px); }
