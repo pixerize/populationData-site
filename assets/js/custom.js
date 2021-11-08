@@ -66,3 +66,29 @@ $(document).ready(function () {
   }, 400);
 
 });
+
+//redirect indicators
+$(document).ready(function () {
+  setTimeout(function () {
+    var url = window.location.href;
+    if (url.search("/3/") != -1) { //HEALTH
+      $('.goal-indicator a').each(function () {
+          url = $(this).attr('href');
+          oldLink = '3-1-1';
+          newLink = '1-3-2';
+          if (url.indexOf(oldLink) != -1) {
+            url = url.replace(oldLink, newLink);
+            $(this).attr('href', url)
+          }
+      });
+
+    } else if (url.search("2-1-8") != -1) {
+
+    
+    }
+
+  }, 400);
+
+});
+
+
