@@ -131,7 +131,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/populationData-site/assets/css/style.css?v=20211108071210">
+        <link rel="stylesheet" href="/populationData-site/assets/css/style.css?v=20211108071656">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -510,7 +510,7 @@ data-event-label="high"
   data-charttitles="null"
   data-measurementunit=""
   data-showdata="true"
-  data-graphtype="pyramid"
+  data-graphtype="line"
   data-geocoderegex=""
   data-showmap="false"
   data-startvalues="null"
@@ -806,64 +806,43 @@ opensdg.chartConfigAlter(function(config, info) {
 </script>
 
 <script>
-  opensdg.chartConfigAlter(function (config, info) {
-
-    //set red color for female, and blue for male
-     for (var i = 0; i < info.datasets.length; i++) {
-      if (info.datasets[i].disaggregation.PYRAMID_SEX == "F") {
-        info.datasets[i].backgroundColor = "red";
-        info.datasets[i].borderColor = "red";
-      } else {
-        info.datasets[i].backgroundColor = "blue";
-        info.datasets[i].borderColor = "blue";
-      }
-    }
-    //reverse the order of data, so lower age ranges are printed last. We do this to get pyramid shape
-    info.datasets.reverse();
-
-    if (info.stackedDisaggregation) {
-      var overrides = {
-        type: 'horizontalBar',
+// For line charts, add the vertical line hover functionality.
+opensdg.chartConfigAlter(function(config, info) {
+    var overrides = {
         options: {
-          tooltips: {
-            enabled: false
-          },
-          scales: {
-            xAxes: [{
-              stacked: true,
-              ticks: {
-                //return positive values for males       
-                  callback: function (value, index, values) {
-                  return value < 0 ? -value : value;
-                },
-              }
-            }],
-            yAxes: [{
-               
-            }],
-          }
+            tooltips: {
+                intersect: false,
+                axis: 'x'
+            },
         },
-      };
+        plugins: [{
+            beforeDatasetsDraw: function(chart) {
+                if (chart.tooltip._active && chart.tooltip._active.length) {
+                    var activePoint = chart.tooltip._active[0],
+                        ctx = chart.ctx,
+                        x = activePoint.tooltipPosition().x,
+                        topY = chart.scales['y-axis-0'].top,
+                        bottomY = chart.scales['y-axis-0'].bottom;
 
-      // If we have stackedDisaggregation, we need to group datasets into stacks.
-      config.data.datasets.forEach(function (dataset) {
-        var disaggregation = $.extend({}, dataset.disaggregation);
-        // We're going to "stringify" each combination of disaggregations in order
-        // to place them in their own "stacks". To place "stacked" disaggregations
-        // into the same stack, we set them as "samestack" before stringifying.
-        // Note that the string "samestack" is completely arbitrary.
-        if (typeof disaggregation[info.stackedDisaggregation] !== 'undefined') {
-          disaggregation[info.stackedDisaggregation] = 'samestack';
-        }
-        // Use the disaggregation as a unique id for each stack.
-        dataset.stack = JSON.stringify(disaggregation);
-      });
-      // Add these overrides onto the normal config, and return it.
-      $.extend(true, config, overrides);
-    }
-  });
-
+                    // draw line
+                    ctx.save();
+                    ctx.beginPath();
+                    ctx.moveTo(x, topY);
+                    ctx.lineTo(x, bottomY);
+                    ctx.lineWidth = 2;
+                    ctx.strokeStyle = '#757575';
+                    ctx.setLineDash([5, 2]);
+                    ctx.stroke();
+                    ctx.restore();
+                }
+            }
+        }],
+    };
+    // Add these overrides onto the normal config, and return it.
+    $.extend(true, config, overrides);
+});
 </script>
+
           </div>
           <div id="plotLegend"></div>
           
@@ -1182,8 +1161,8 @@ data-event-label="Change to Sources tab"
             
 
             
-              <a href="https://github.com/pixerize/populationData-data/commit/d79856ed2731a762126c5bd117eb3c3373a47606" target="_blank">
-                2021-10-31: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
+              <a href="https://github.com/pixerize/populationData-data/commit/70fddd7c39412bdfdb4fc3e10dbe7a822d3cef92" target="_blank">
+                2021-11-08: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
               </a>
             
 
@@ -1869,12 +1848,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/populationData-site/assets/js/sdg.js?v=20211108071210'></script>
+<script src='/populationData-site/assets/js/sdg.js?v=20211108071656'></script>
 
 
     
     
-    <script src="/populationData-site/assets/js/custom.js?v=20211108071210"></script><script>
+    <script src="/populationData-site/assets/js/custom.js?v=20211108071656"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
