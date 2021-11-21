@@ -7,7 +7,7 @@
         
         {
           "id": "1-1-1",
-          "title": "Stanovništvo prema dobi i spolu",
+          "title": "global_indicators.1-1-1-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/1-1-1",
@@ -15,7 +15,7 @@
         },
         {
           "id": "1-1-2",
-          "title": "Stanovništvo po entitetima, prema dobi i spolu",
+          "title": "global_indicators.1-1-2-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/1-1-2",
@@ -23,7 +23,7 @@
         },
         {
           "id": "1-2-1",
-          "title": "Vitalna statistika prema spolu",
+          "title": "global_indicators.1-2-1-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/1-2-1",
@@ -31,7 +31,7 @@
         },
         {
           "id": "1-2-2",
-          "title": "Stopa prirodnog rasta",
+          "title": "global_indicators.1-2-2-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/1-2-2",
@@ -63,7 +63,7 @@
         },
         {
           "id": "1-3-1",
-          "title": "Omjer ovisnosti prema spolu",
+          "title": "global_indicators.1-3-1-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/1-3-1",
@@ -111,7 +111,7 @@
         },
         {
           "id": "1-4-1",
-          "title": "Sirova stopa nataliteta",
+          "title": "global_indicators.1-4-1-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/1-4-1",
@@ -119,7 +119,7 @@
         },
         {
           "id": "1-4-2",
-          "title": "Ukupna stopa fertiliteta",
+          "title": "global_indicators.1-4-2-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/1-4-2",
@@ -127,7 +127,7 @@
         },
         {
           "id": "1-4-3",
-          "title": "Stopa fertiliteta prema dobi",
+          "title": "global_indicators.1-4-3-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/1-4-3",
@@ -135,7 +135,7 @@
         },
         {
           "id": "1-4-4",
-          "title": "Odnos spolova pri rođenju",
+          "title": "global_indicators.1-4-4-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/1-4-4",
@@ -143,7 +143,7 @@
         },
         {
           "id": "1-4-5",
-          "title": "Porođaj majki u tinejdžerskoj dobi, prema dobnoj skupini",
+          "title": "global_indicators.1-4-5-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/1-4-5",
@@ -151,7 +151,7 @@
         },
         {
           "id": "1-5-1",
-          "title": "Prosječna dob majki pri prvom porođaju",
+          "title": "global_indicators.1-5-1-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/1-5-1",
@@ -159,7 +159,7 @@
         },
         {
           "id": "1-6-1",
-          "title": "Sirova stopa smrtnosti",
+          "title": "global_indicators.1-6-1-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/1-6-1",
@@ -167,7 +167,7 @@
         },
         {
           "id": "1-6-2",
-          "title": "Smrtnost dojenčadi (do navršene prve godine života), prema spolu",
+          "title": "global_indicators.1-6-2-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/1-6-2",
@@ -175,7 +175,7 @@
         },
         {
           "id": "1-6-3",
-          "title": "Smrtnost dojenčadi (do navršene prve godine života)",
+          "title": "global_indicators.1-6-3-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/1-6-3",
@@ -191,7 +191,7 @@
         },
         {
           "id": "1-7-1",
-          "title": "Očekivana dužina života pri rođenju, prema spolu",
+          "title": "global_indicators.1-7-1-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/1-7-1",
@@ -255,7 +255,7 @@
         },
         {
           "id": "1-8-1",
-          "title": "Brak",
+          "title": "global_indicators.1-8-1-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/1-8-1",
@@ -263,7 +263,7 @@
         },
         {
           "id": "1-8-2",
-          "title": "Stopa sklapanja braka",
+          "title": "global_indicators.1-8-2-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/1-8-2",
@@ -271,7 +271,7 @@
         },
         {
           "id": "1-8-3",
-          "title": "Razvod braka",
+          "title": "global_indicators.1-8-3-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/1-8-3",
@@ -282,12 +282,12 @@
   {
     "goal": {
       "id": "2",
-      "title": "PROJICIRANJE STANOVNIŠTVA",
+      "title": "POPIS STANOVNIŠTVA",
       "indicators": [
         
         {
           "id": "2-1-1",
-          "title": "Projicirano stanovništvo, prema dobi i spolu",
+          "title": "global_indicators.2-1-1-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/2-1-1",
@@ -295,7 +295,7 @@
         },
         {
           "id": "2-1-2",
-          "title": "Projicirano stanovništvo, prema starosnoj grupi i spolu",
+          "title": "global_indicators.2-1-2-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/2-1-2",
@@ -303,7 +303,7 @@
         },
         {
           "id": "2-1-3",
-          "title": "Projicirane stope ovisnosti, prema spolu",
+          "title": "global_indicators.2-1-3-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/2-1-3",
@@ -311,7 +311,7 @@
         },
         {
           "id": "2-1-4",
-          "title": "Projicirana vitalna statistika, prema spolu",
+          "title": "global_indicators.2-1-4-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/2-1-4",
@@ -319,7 +319,7 @@
         },
         {
           "id": "2-1-5",
-          "title": "Projicirana sirova stopa nataliteta",
+          "title": "global_indicators.2-1-5-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/2-1-5",
@@ -327,7 +327,7 @@
         },
         {
           "id": "2-1-6",
-          "title": "Projicirana sirova stopa mortaliteta",
+          "title": "global_indicators.2-1-6-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/2-1-6",
@@ -407,7 +407,7 @@
         
         {
           "id": "3-1-1",
-          "title": "Smrt prema uzroku smrti i spolu",
+          "title": "global_indicators.3-1-1-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/3-1-1",
@@ -415,7 +415,7 @@
         },
         {
           "id": "3-1-2",
-          "title": "Projicirana na 100.000 stanovnika",
+          "title": "global_indicators.3-1-2-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/3-1-2",
@@ -423,7 +423,7 @@
         },
         {
           "id": "3-1-3",
-          "title": "Mrtvorođeni",
+          "title": "global_indicators.3-1-3-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/3-1-3",
@@ -431,7 +431,7 @@
         },
         {
           "id": "3-1-4",
-          "title": "Stopa mrtvorođenih",
+          "title": "global_indicators.3-1-4-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/3-1-4",
@@ -447,7 +447,7 @@
         },
         {
           "id": "3-2-1",
-          "title": "Rak vrata maternice",
+          "title": "global_indicators.3-2-1-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/3-2-1",
@@ -455,7 +455,7 @@
         },
         {
           "id": "3-2-2",
-          "title": "Rak vrata maternice na 100.000 pripadnica ženske populacije",
+          "title": "global_indicators.3-2-2-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/3-2-2",
@@ -463,7 +463,7 @@
         },
         {
           "id": "3-2-3",
-          "title": "Rak dojke",
+          "title": "global_indicators.3-2-3-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/3-2-3",
@@ -471,7 +471,7 @@
         },
         {
           "id": "3-2-4",
-          "title": "Rak dojke na 100.000 pripadnica ženske populacije",
+          "title": "global_indicators.3-2-4-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/3-2-4",
@@ -479,7 +479,7 @@
         },
         {
           "id": "3-3-1",
-          "title": "Incidencija sifilisa",
+          "title": "global_indicators.3-3-1-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/3-3-1",
@@ -487,7 +487,7 @@
         },
         {
           "id": "3-3-2",
-          "title": "Incidencija gonoreje",
+          "title": "global_indicators.3-3-2-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/3-3-2",
@@ -495,7 +495,7 @@
         },
         {
           "id": "3-3-3",
-          "title": "Incidencija AIDS-a",
+          "title": "global_indicators.3-3-3-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/3-3-3",
@@ -503,7 +503,7 @@
         },
         {
           "id": "3-3-4",
-          "title": "Incidencija HIV-a",
+          "title": "global_indicators.3-3-4-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/3-3-4",
@@ -511,7 +511,7 @@
         },
         {
           "id": "3-3-5",
-          "title": "Incidencija HIV-a na 100.000 stanovnika",
+          "title": "global_indicators.3-3-5-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/3-3-5",
@@ -519,7 +519,7 @@
         },
         {
           "id": "3-4-1",
-          "title": "Carski rez",
+          "title": "global_indicators.3-4-1-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/3-4-1",
@@ -527,7 +527,7 @@
         },
         {
           "id": "3-4-2",
-          "title": "Carski rez na 1.000 živorođenih",
+          "title": "global_indicators.3-4-2-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/3-4-2",
@@ -535,7 +535,7 @@
         },
         {
           "id": "3-5-1",
-          "title": "Bolnički kreveti",
+          "title": "global_indicators.3-5-1-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/3-5-1",
@@ -543,7 +543,7 @@
         },
         {
           "id": "3-5-2",
-          "title": "Bolnički kreveti na 100.000 stanovnika",
+          "title": "global_indicators.3-5-2-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/3-5-2",
@@ -551,7 +551,7 @@
         },
         {
           "id": "3-5-3",
-          "title": "Doktori medicine u javnim ustanovama",
+          "title": "global_indicators.3-5-3-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/3-5-3",
@@ -559,7 +559,7 @@
         },
         {
           "id": "3-5-4",
-          "title": "Doktori medicine u javnim ustanovama na 100.000 stanovnika",
+          "title": "global_indicators.3-5-4-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/3-5-4",
@@ -567,7 +567,7 @@
         },
         {
           "id": "3-5-5",
-          "title": "Doktori opće medicine",
+          "title": "global_indicators.3-5-5-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/3-5-5",
@@ -575,7 +575,7 @@
         },
         {
           "id": "3-5-6",
-          "title": "Broj stanovnika na jednog doktora opće medicine",
+          "title": "global_indicators.3-5-6-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/3-5-6",
@@ -583,7 +583,7 @@
         },
         {
           "id": "3-5-7",
-          "title": "Primalje",
+          "title": "global_indicators.3-5-7-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/3-5-7",
@@ -591,7 +591,7 @@
         },
         {
           "id": "3-6-1",
-          "title": "Stopa prevalencije kontracepcije",
+          "title": "global_indicators.3-6-1-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/3-6-1",
@@ -599,7 +599,7 @@
         },
         {
           "id": "3-6-2",
-          "title": "Neostvarena potreba za planiranjem obitelji",
+          "title": "global_indicators.3-6-2-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/3-6-2",
@@ -607,7 +607,7 @@
         },
         {
           "id": "3-6-3",
-          "title": "Zadovoljena potražnja za planiranjem obitelji",
+          "title": "global_indicators.3-6-3-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/3-6-3",
@@ -615,7 +615,7 @@
         },
         {
           "id": "3-6-4",
-          "title": "Porođaj u nazočnosti stručne osobe",
+          "title": "global_indicators.3-6-4-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/3-6-4",
@@ -623,7 +623,7 @@
         },
         {
           "id": "3-7-1",
-          "title": "Osobe s invaliditetom prema dobi i spolu",
+          "title": "global_indicators.3-7-1-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/3-7-1",
@@ -634,12 +634,12 @@
   {
     "goal": {
       "id": "4",
-      "title": "NASILJE",
+      "title": "SOCIJALNA SKRB",
       "indicators": [
         
         {
           "id": "4-1-1",
-          "title": "Nasilje nad ženama nakon navršenih 15 godina života (bilo kad)",
+          "title": "global_indicators.4-1-1-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/4-1-1",
@@ -695,7 +695,7 @@
         
         {
           "id": "5-1-1",
-          "title": "Stanovništvo u dobi iznad 15 godina, prema dostignutoj razini obrazovanja i spolu",
+          "title": "global_indicators.5-1-1-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/5-1-1",
@@ -703,7 +703,7 @@
         },
         {
           "id": "5-1-2",
-          "title": "Stanovništvo upisano u formalne obrazovne ustanove, prema spolu i vrsti obrazovne ustanove",
+          "title": "global_indicators.5-1-2-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/5-1-2",
@@ -711,7 +711,7 @@
         },
         {
           "id": "5-1-3",
-          "title": "Stanovništvo u dobi od 25-64 godine upisano u neformalno obrazovanje odraslih, prema dobi i spolu",
+          "title": "global_indicators.5-1-3-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/5-1-3",
@@ -719,7 +719,7 @@
         },
         {
           "id": "5-1-4",
-          "title": "Nepismeno stanovništvo u dobi iznad 10 godina, prema dobnoj skupini i spolu",
+          "title": "global_indicators.5-1-4-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/5-1-4",
@@ -914,12 +914,12 @@
   {
     "goal": {
       "id": "6",
-      "title": "GOSPODARSTVO, SIROMAŠTVO I RADNA SNAGA",
+      "title": "GOSPODARSTVO",
       "indicators": [
         
         {
           "id": "6-1-1",
-          "title": "Bruto domaći proizvod - ukupno (u milijunima)",
+          "title": "global_indicators.6-1-1-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/6-1-1",
@@ -927,7 +927,7 @@
         },
         {
           "id": "6-1-2",
-          "title": "Bruto domaći proizvod – po glavi stanovništva",
+          "title": "global_indicators.6-1-2-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/6-1-2",
@@ -935,7 +935,7 @@
         },
         {
           "id": "6-1-3",
-          "title": "Rast realnog BDP-a",
+          "title": "global_indicators.6-1-3-title",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/hr/6-1-3",
@@ -946,7 +946,7 @@
   {
     "goal": {
       "id": "7",
-      "title": "global_goals.7-title",
+      "title": "RADNA SNAGA I ŽIVOTNI STANDARD",
       "indicators": [
         
         {
@@ -994,7 +994,7 @@
   {
     "goal": {
       "id": "8",
-      "title": "global_goals.8-title",
+      "title": "NASILJE",
       "indicators": [
         
         {
