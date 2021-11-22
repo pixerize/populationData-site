@@ -69,21 +69,37 @@ $(document).ready(function () {
 
 //redirect indicators
 $(document).ready(function () {
+
+  function replaceLinks(url, oldLink, newLink){
+    if (url.indexOf(oldLink) != -1) {
+      url = url.replace(oldLink, newLink);
+    }
+    return url;
+  }
+
   setTimeout(function () {
     var url = window.location.href;
     if (url.search("/3/") != -1) { //HEALTH
       $('.goal-indicator a').each(function () {
           url = $(this).attr('href');
-          oldLink = '3-1-1';
-          newLink = '1-3-2';
-          if (url.indexOf(oldLink) != -1) {
-            url = url.replace(oldLink, newLink);
-            $(this).attr('href', url)
-          }
+          url = replaceLinks(url, '3-1-1', '1-3-2');
+          url = replaceLinks(url, '3-1-2', '1-3-3');
+          url = replaceLinks(url, '3-1-3', '1-3-4');
+          url = replaceLinks(url, '3-1-4', '1-3-5');
+          url = replaceLinks(url, '3-1-5', '1-3-6');
+          url = replaceLinks(url, '3-7-1', '2-5-1');
+
+          $(this).attr('href', url)
       });
 
-    } else if (url.search("2-1-8") != -1) {
+    } else if (url.search("/5/") != -1) { //EDUCATION
+      $('.goal-indicator a').each(function () {
+        url = $(this).attr('href');
+        url = replaceLinks(url, '5-7-3', '2-4-1');
+        url = replaceLinks(url, '5-7-4', '2-4-2');
 
+        $(this).attr('href', url)
+      });
     
     }
 
