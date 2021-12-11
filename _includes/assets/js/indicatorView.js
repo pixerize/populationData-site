@@ -573,7 +573,7 @@ var indicatorView = function (model, options) {
   };
 
   this.getHeadlineColor = function (contrast) {
-    return this.isHighContrast(contrast) ? '{{ site.graph_color_headline_high_contrast | default: "#FFDD00" }}' : '{{ site.graph_color_headline | default: "#00006a" }}';
+     return this.isHighContrast(contrast) ? '{{ site.graph_color_headline_high_contrast | default: "#FFDD00" }}' : '{{ site.graph_color_headline | default: "#00c0ff" }}';
   }
 
   this.getGridColor = function (contrast) {
