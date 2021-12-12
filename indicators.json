@@ -590,6 +590,22 @@
           "status": "complete"
         },
         {
+          "id": "3-5-8",
+          "title": "Specialist doctors employed in health care institutions",
+          "description": "",
+          "keywords": "",
+          "href": "/populationData-site/3-5-8",
+          "status": "complete"
+        },
+        {
+          "id": "3-5-9",
+          "title": "Specialist doctors employed in health care institutions per 100,000 population",
+          "description": "",
+          "keywords": "",
+          "href": "/populationData-site/3-5-9",
+          "status": "complete"
+        },
+        {
           "id": "3-6-1",
           "title": "Contraceptive prevalence rate",
           "description": "",
