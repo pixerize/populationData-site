@@ -1054,7 +1054,7 @@ this.colorSets = {
   'goal': this.goalColors[this.goalNumber - 1],
   'custom': customColorList,
   'accessible': ['cd7a00', '339966', '9966cc', '3ff002', 'e4e300', '054ce6'],
-  'popdata': ['00c0ff', 'cc4aff', '00c161', 'ff0028', '0050ff', 'ffa500', 'FFA500', '000000', '8931EF', 'FF00BD', 'afcedb', '9acd32', '86beda', '964B00', 'fd3a4a', 'db7093', 'ffff9f', '7F8778', 'a67b5b']
+  'popdata': ['00c0ff', 'cc4aff', '00c161', 'ff0028', '0050ff', 'ffa500', '000000', '8931EF', 'FF00BD', 'afcedb', '9acd32', '86beda', '964B00', 'fd3a4a', 'db7093', 'ffff9f', '7F8778', 'a67b5b']
 };
 if (Object.keys(this.colorSets).indexOf(colorSet) == -1 || (colorSet == 'custom' && customColorList == null)) {
   return this.colorSets['default'];
