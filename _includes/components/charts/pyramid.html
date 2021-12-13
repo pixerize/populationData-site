@@ -8,8 +8,13 @@ We also check for "graph_stacked_disaggregation" here to support stacked bars.
 {% include components/charts/graph_limits.html %}
 {% include components/charts/graph_annotations.html %}
 <script>
+
   opensdg.chartConfigAlter(function (config, info) {
 
+   // info.labels = ['123', 'aaaa', 'dawdwa'];
+
+    console.log(config);
+    console.log(info);
     //set red color for female, and blue for male
      for (var i = 0; i < info.datasets.length; i++) {
       if (info.datasets[i].disaggregation.PYRAMID_SEX == "F") {
@@ -41,8 +46,20 @@ We also check for "graph_stacked_disaggregation" here to support stacked bars.
               }
             }],
             yAxes: [{
-               
-            }],
+              display: true,
+              scaleShowLabels: true,
+              ticks: {
+                display: true,
+                suggestedMin: 0,
+                fontColor: '#cccccc',
+                callback: function (value) {
+                  return
+                },
+              },
+              scaleLabel: {
+                display: true
+              }
+            }]
           }
         },
       };

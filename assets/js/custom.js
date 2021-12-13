@@ -26,19 +26,17 @@ $(document).ready(function () {
 });
 
 //back to top button
-
 $(document).ready(function () {
   $('#back-to-top').click(function (e) {
     $("html, body").animate({ scrollTop: 0 }, "slow");
   });
 });
 
-
 //pyramid chart alternations
 $(document).ready(function () {
   setTimeout(function () {
     var url = window.location.href;
-    if (url.search("1-1-6") != -1) {
+    if (url.search("1-1-8") != -1) {
 
       //hide toolbar
       $('#toolbar').css('display', 'none');
@@ -51,7 +49,7 @@ $(document).ready(function () {
       // if (url.search('bs')) { //translation
       //   $('#units h4').text('Godina Censusa');
       // }
-    } else if (url.search("2-1-8") != -1) {
+    } else if (url.search("2-1-4") != -1) {
 
       //hide toolbar + legend, and rename unit measurement
       $('#toolbar').css('display', 'none');
