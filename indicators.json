@@ -967,7 +967,7 @@
         
         {
           "id": "7-1-1",
-          "title": "Labour force participation rate (Percentage of active population (labour force) in working age population (15-64) by age group and sex)",
+          "title": "Labour force participation rate - percentage of active population (labour force) in working age population by age group and sex",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/7-1-1",
@@ -975,7 +975,7 @@
         },
         {
           "id": "7-1-2",
-          "title": "Employment-to-population ratio (Percentage of employed population in working age population (15-64) by age group and sex)",
+          "title": "Employment-to-population ratio - percentage of employed population in working age population by age group and sex",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/7-1-2",
@@ -983,7 +983,7 @@
         },
         {
           "id": "7-1-3",
-          "title": "Unemployment rate (Percentage of unemployed population in active population (labour force) by age group and sex)",
+          "title": "Unemployment rate - percentage of unemployed population in active population (labour force) by age group and sex",
           "description": "",
           "keywords": "",
           "href": "/populationData-site/7-1-3",
