@@ -248,7 +248,7 @@
         {
           "id": "1-7-8",
           "title": "Projicirana populacijska piramida",
-          "description": "<p><span class='male'></span>M</p>  <p><span class='female'></span>F</p>",
+          "description": "<p><span class='male'></span>Male</p>  <p><span class='female'></span>Female</p>",
           "keywords": "",
           "href": "/populationData-site/hr/1-7-8",
           "status": "complete"
