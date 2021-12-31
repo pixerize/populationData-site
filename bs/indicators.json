@@ -248,7 +248,7 @@
         {
           "id": "1-7-8",
           "title": "Projektovana populacijska piramida",
-          "description": "<p><span class='male'>blue</span>M</p>  <p><span class='male'>red</span>F</p>",
+          "description": "<p><span class='male'></span>M</p>  <p><span class='female'></span>F</p>",
           "keywords": "",
           "href": "/populationData-site/bs/1-7-8",
           "status": "complete"
