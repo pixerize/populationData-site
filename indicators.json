@@ -248,7 +248,7 @@
         {
           "id": "1-7-8",
           "title": "Projected population pyramid",
-          "description": "<p>M</p>  <p>F</p>",
+          "description": "<p><span class='male'></span>M</p>  <p><span class='male'></span>F</p>",
           "keywords": "",
           "href": "/populationData-site/1-7-8",
           "status": "complete"

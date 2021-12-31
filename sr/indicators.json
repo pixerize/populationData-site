@@ -248,7 +248,7 @@
         {
           "id": "1-7-8",
           "title": "Пројектована популациона пирамида",
-          "description": "<p>M</p>  <p>F</p>",
+          "description": "<p><span class='male'></span>M</p>  <p><span class='male'></span>F</p>",
           "keywords": "",
           "href": "/populationData-site/sr/1-7-8",
           "status": "complete"
