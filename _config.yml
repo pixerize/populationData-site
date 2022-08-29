@@ -22,6 +22,7 @@ languages:
   - bs
   - sr
   - hr
+  - test
 #
 # That's enough for the Quick Start! The remaining settings can be configured later.
 
