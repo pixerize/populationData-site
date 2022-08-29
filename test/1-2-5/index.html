@@ -1,0 +1,1954 @@
+<!DOCTYPE html>
+<html lang="test" class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CArray.from%2CSet%2CArray.prototype.findIndex"></script>
+<script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
+
+        <script>
+// This is where we initialise any global variables, namespaced in "opensdg".
+var opensdg = {
+
+  // A base URL for asynchronous calls to SDG data.
+  remoteDataBaseUrl: 'https://pixerize.github.io/populationData-data/test',
+
+  chartConfigAlterations: [],
+  // A hook which can be used to modify the configuration for Chart.js.
+  chartConfigAlter: function(callback) {
+    this.chartConfigAlterations.push(callback);
+  },
+
+  tableConfigAlterations: [],
+  // A hook which can be used to modify the configuration for Datatables.
+  tableConfigAlter: function(callback) {
+    this.tableConfigAlterations.push(callback);
+  },
+
+  // A hook which can be replaced to alter whether/how the values that are
+  // displayed on indicator tables/graphs get rounded.
+  dataRounding: function(value) {
+    // Alterations go here.
+    return value;
+  },
+
+  // A hook which can be used to alter the data before it is displayed on charts/tables.
+  dataDisplayAlterations: [],
+  dataDisplayAlter: function(callback) {
+    this.dataDisplayAlterations.push(callback);
+  },
+
+  language: 'test',
+};
+
+// For backwards compatibility, some of these might need to be global.
+// @TODO: Remove these eventually.
+var remoteDataBaseUrl = opensdg.remoteDataBaseUrl;
+
+</script>
+
+        <script>
+// JavaScript container for translation data.
+var translations = {
+  //Javascript version of the "t" filter from jekyll-open-sdg-plugins.
+  t: function(key) {
+
+    if (!key || typeof key !== 'string') {
+      return '';
+    }
+
+    // The majority of uses of this function are to translate disaggregation
+    // data. To spare data providers of needing to enter "data." in front of
+    // their disaggregation data, we specifically look for that here.
+    if (typeof this.data === 'object' && this.data !== null && this.data[key]) {
+      return this.data[key];
+    }
+
+    var originalKey = key;
+    var drilled = this;
+    var levelsDrilled = 0;
+    var levels = key.split('.');
+
+    for (var level in levels) {
+      // If we have drilled down to soon, abort.
+      if (typeof drilled !== 'object') {
+        break;
+      }
+
+      if (levels[level] in drilled) {
+        drilled = drilled[levels[level]];
+        levelsDrilled += 1;
+      }
+    }
+
+    // If we didn't drill the right number of levels, return the original string.
+    if (levels.length != levelsDrilled) {
+      return originalKey;
+    }
+
+    // Otherwise we must have drilled all the way.
+    return drilled;
+  },
+};
+</script>
+
+        <!-- Basic Page Needs
+        ================================================== -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- Mobile Specific Metas
+        ================================================== -->
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Title and meta description
+        ================================================== -->
+
+        
+    <title>
+        Број порођаја адолесценткиња према старосним групама - Индикатори за циљеве одрживог развоја
+    </title>
+
+
+
+        <meta name="description" content="">
+        <meta property="og:description" content="">
+        
+        <meta name="robots" content="noindex, nofollow">
+        
+        <link rel="canonical" href="/">
+
+        <!--[if IE 9]>
+        <script src="/populationData-site/assets/js/lib/classList.js"></script>
+        <![endif]-->
+
+        <!-- Favicons ================================================== -->
+        <!-- 128x128 -->
+        <link rel="shortcut icon" type="image/ico" href="/populationData-site/assets/img/favicons/favicon.ico">
+        <link rel="icon" type="image/png" href="/populationData-site/assets/img/favicons/favicon.png"><!-- 192x192, as recommended for Android
+        http://updates.html5rocks.com/2014/11/Support-for-theme-color-in-Chrome-39-for-Android
+        -->
+
+        
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
+        <link rel="stylesheet" href="/populationData-site/assets/css/style.css?v=20220829195413">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+          integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+          crossorigin=""/>
+        <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
+        <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
+        <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><!-- ShareThis BEGIN --><!-- ShareThis END -->
+
+        
+
+    </head>
+<body class="language-test
+layout-indicator
+">
+<!-- <div class="container"> -->
+
+<script>translations['header'] = {"alpha":"Алфа","default_contrast":"Задани контраст","disable_high_contrast":"Онемогући високи контраст","disclaimer":"Ова интернет страница се развија. Поздрављамо ваше <a href=\"mailto:%email_address\">повратне информације</a>.","enable_high_contrast":"Омогући високи контраст","high_contrast":"Висок контраст","skip_link":"Пријеђи на главни садржај","tag_line":"17 циљева за трансформирање нашег свијета"};</script>
+
+<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Пријеђи на главни садржај</a>
+<div id="disclaimer">
+</div>
+
+<header role="banner">
+  <div class="container">
+
+    <div class="logo-and-mobile-widgets">
+      <a class="navbar-brand" href="/populationData-site/test/" id="home">
+        <img src="/populationData-site/assets/img/logo/test/SDG_logo.png" alt=" - 17 циљева за трансформирање нашег свијета" />
+      </a>
+
+      <div class="mobile-widgets">
+        <ul id='accessibility-nav' class='contrast-switcher'></ul><div class="language-toggle-mobile">
+          <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown ">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name"></span>
+      <span class="language-abbreviation">test</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
+    <ul class="dropdown-menu"><li>
+            <a href="/populationData-site/1-2-5/">
+              English
+            </a>
+          </li><li>
+            <a href="/populationData-site/bs/1-2-5/">
+              Bosanski
+            </a>
+          </li><li>
+            <a href="/populationData-site/sr/1-2-5/">
+              Српски
+            </a>
+          </li><li>
+            <a href="/populationData-site/hr/1-2-5/">
+              Hrvatski
+            </a>
+          </li></ul>
+  </div>
+</div>
+
+        </div></div>
+    </div>
+    <div class="supp-by">Подржано од<a href="https://ba.unfpa.org/" target="_blank"><img src="/populationData-site/assets/img/other/unfpa-logo.png"></a></div>
+
+    <nav class="navbar navbar-default" id="main-nav">
+
+      <ul class="top-level">
+        <li id="menuToggle"
+            aria-label=""
+            aria-haspopup="true">
+          <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
+    <a href="/populationData-site/test/">Почетна</a>
+</li><li class="language-toggle-menu-header">
+    
+
+
+
+
+
+  <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown ">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name"></span>
+      <span class="language-abbreviation">test</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
+    <ul class="dropdown-menu"><li>
+            <a href="/populationData-site/1-2-5/">
+              English
+            </a>
+          </li><li>
+            <a href="/populationData-site/bs/1-2-5/">
+              Bosanski
+            </a>
+          </li><li>
+            <a href="/populationData-site/sr/1-2-5/">
+              Српски
+            </a>
+          </li><li>
+            <a href="/populationData-site/hr/1-2-5/">
+              Hrvatski
+            </a>
+          </li></ul>
+  </div>
+</div>
+
+
+
+</li>
+
+
+
+    <li class="nav-link contrast contrast-default contrast-type-default">
+        <a title="Онемогући високи контраст"
+           aria-label="Онемогући високи контраст"
+           data-contrast-switch-to="default"
+           href="javascript:void(0)"
+           data-on="click"
+data-event-category="Accessibility"
+data-event-action="Change contrast setting"
+data-event-label="default"
+
+        >A</a>
+    </li>
+    <li class="nav-link contrast contrast-high contrast-type-default">
+        <a title="Омогући високи контраст"
+           aria-label="Омогући високи контраст"
+           data-contrast-switch-to="high"
+           href="javascript:void(0)"
+           data-on="click"
+data-event-category="Accessibility"
+data-event-action="Change contrast setting"
+data-event-label="high"
+
+        >A</a>
+    </li>
+
+
+
+</ul>
+
+        </li>
+        <li id="searchToggle"
+            aria-label=""
+            aria-haspopup="true">
+          <div id="search-mobile" class="menu-target">
+  <form action="/populationData-site/test/search/">
+    <label class="sr-only" for="indicator_search-mobile">Претраживање</label>
+    <input type="text" name="q" id="indicator_search-mobile" title="Претраживање" /><!--
+    --><button aria-label="Претраживање" id="search-mobile-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
+  </form>
+</div>
+
+        </li>
+      </ul>
+
+      <div id="search" class="menu-target">
+  <form action="/populationData-site/test/search/">
+    <label class="sr-only" for="indicator_search">Претраживање</label>
+    <input type="text" name="q" id="indicator_search" title="Претраживање" /><!--
+    --><button aria-label="Претраживање" id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
+  </form>
+</div>
+
+
+      <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
+    <a href="/populationData-site/test/">Почетна</a>
+</li><li class="language-toggle-menu-header">
+    
+
+
+
+
+
+  <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown ">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name"></span>
+      <span class="language-abbreviation">test</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
+    <ul class="dropdown-menu"><li>
+            <a href="/populationData-site/1-2-5/">
+              English
+            </a>
+          </li><li>
+            <a href="/populationData-site/bs/1-2-5/">
+              Bosanski
+            </a>
+          </li><li>
+            <a href="/populationData-site/sr/1-2-5/">
+              Српски
+            </a>
+          </li><li>
+            <a href="/populationData-site/hr/1-2-5/">
+              Hrvatski
+            </a>
+          </li></ul>
+  </div>
+</div>
+
+
+
+</li>
+
+
+
+    <li class="nav-link contrast contrast-default contrast-type-default">
+        <a title="Онемогући високи контраст"
+           aria-label="Онемогући високи контраст"
+           data-contrast-switch-to="default"
+           href="javascript:void(0)"
+           data-on="click"
+data-event-category="Accessibility"
+data-event-action="Change contrast setting"
+data-event-label="default"
+
+        >A</a>
+    </li>
+    <li class="nav-link contrast contrast-high contrast-type-default">
+        <a title="Омогући високи контраст"
+           aria-label="Омогући високи контраст"
+           data-contrast-switch-to="high"
+           href="javascript:void(0)"
+           data-on="click"
+data-event-category="Accessibility"
+data-event-action="Change contrast setting"
+data-event-label="high"
+
+        >A</a>
+    </li>
+
+
+
+</ul>
+
+
+    </nav>
+  </div>
+
+</header>
+<div id="top" tabindex=-1></div>
+
+<a id="back-to-top" href="#"></a>
+
+<script type="text/template" id="item_template">
+  <% _.each(fields, function(fieldItem) { %>
+    <div class="variable-selector<% if(allowedFields.indexOf(fieldItem.field) == -1) { %> disallowed child<% }%>" data-field="<%=fieldItem.field%>">
+      <button class='accessBtn' tabindex='0' aria-expanded='false'
+        <% if(allowedFields.indexOf(fieldItem.field) == -1) { %>
+        aria-describedby='variable-hint-<%=fieldItem.field.replace(/ /g, '-')%>'
+        <% }%>
+      >
+        <% if(allowedFields.indexOf(fieldItem.field) == -1) { %><h6><% } else { %><h5><% } %>
+          <span aria-hidden="true"><%=translations.t(fieldItem.label)%><i class="fa fa-chevron-down"></i></span>
+          <span class="sr-only"> <%=translations.t(fieldItem.label)%></span>
+        <% if(allowedFields.indexOf(fieldItem.field) == -1) { %></h6><% } else { %></h5><% } %>
+      </button>
+      <div class="bar">
+        <div class="selected"></div>
+      </div>
+      <div class="variable-options">
+        <fieldset>
+          <legend class="sr-only">Подкатегорије - <%=translations.t(fieldItem.field)%></legend>
+          <div>
+            <button data-type="select">Означи све</button>
+            <button data-type="clear">Обриши све</button>
+          </div>
+          <% 
+          //sort numerically by value
+          function compare( a, b ) {
+            a = parseInt(a.value);
+            b = parseInt(b.value);
+            
+            if ( a < b ){
+              return -1;
+            } else if ( a > b){
+              return 1;
+            } else if (a == 0) {
+              return -1;
+            }
+            return 0;
+          }
+          fieldItem.values.sort( compare )
+          %>
+          <% _.each(fieldItem.values, function(item) { %>
+            <label>
+              <input type="checkbox" <%=item.checked ? 'checked' : ''%> value="<%=item.value%>" data-field="<%=fieldItem.field%>" /><%=translations.t(item.value)%>
+            </label>
+          <% }); %>
+        </fieldset>
+      </div>
+
+      <% if(allowedFields.indexOf(fieldItem.field) == -1) { %>
+        <div class="variable-hint" id="variable-hint-<%=fieldItem.field.replace(/ /g, '-')%>">Доступно када '<%= translations.t(_.find(edges, { To: fieldItem.field }).From) %>' је означено
+        </div>
+        <div class="no-data-hint" id="no-data-hint-<%=fieldItem.field.replace(/ /g, '-')%>">
+          Нема опција због горњих филтера
+        </div>
+      <% }%>
+
+    </div>
+  <% }); %>
+</script>
+
+<script type="text/template" id="units_template">
+  <% if(units.length) { %>
+    <h4>Мјерна јединица</h4>
+    <fieldset>
+      <legend class="sr-only">Мјерна јединица</legend>
+      <% _.each(units, function(unitsItem, index) { %>
+        <% var checked = (selectedUnit) ? (selectedUnit==unitsItem) : (index==0); %>
+        <label><input type="radio" name="unit" value="<%=unitsItem%>" tabindex=0 <%=checked ? 'checked' : ''%> /> <%=translations.t(unitsItem)%></label>
+      <% }); %>
+    </fieldset>
+  <% } %>
+</script>
+
+<script type="text/template" id="series_template">
+  <% if(serieses.length) { %>
+    <h4>Серије</h4>
+    <fieldset>
+      <legend class="sr-only">Серије</legend>
+      <% _.each(serieses, function(seriesItem, index) { %>
+        <% var checked = (selectedSeries) ? (selectedSeries==seriesItem) : (index==0); %>
+        <label><input type="radio" name="series" value="<%=seriesItem%>" tabindex=0 <%=checked ? 'checked' : ''%> /> <%=translations.t(seriesItem)%></label>
+      <% }); %>
+    </fieldset>
+  <% } %>
+</script>
+
+<script>translations['indicator'] = {"chart":"Графикон","clear_all":"Обриши све","clear_selections":"Обриши означено","data_not_available":"Ови подаци нису на располагању. Одаберите додатне подкатегорије.","dataset_size_warning":"Графикон може приказивати ​​податке за до 40 варијабли. Уклоните неке одабире у лијевим изборницима за правилну презентацију.","download_chart":"Преузмите графикон CSV","download_chart_image":"Преузми слику графикона","download_chart_image_title":"Преузми графикон као слику","download_csv":"Преузми CSV","download_csv_title":"Преузми као CSV","download_geojson":"Преузми GeoJSON","download_geojson_title":"Преузми као GeoJSON","download_headline":"Преузмите CSV наслов","download_headline_title":"Преузми податке о наслову као CSV","download_source":"Преузми извор CSV","download_source_sdmx":"Преузми извор SDMX","download_source_sdmx_title":"Преузми изворне податке као SDMX","download_source_title":"Преузми изворне податке као CSV","download_table":"Преузмите табелу CSV","edit":"Уреди","edit_data":"Уреди податке","edit_metadata":"Уреди метаподатке","footnote":"Фуснота","geographical_area":"Географско подручје","global_metadata":"Глобални метаподаци","global_metadata_blurb":"Ова таблица пружа информације о метаподацима за СДГ индикаторе како их је дефинисала Статистичка комисија УН-а. Комплетне глобалне метаподатке пружа Ођел за статистику УН-a.","legend_help":"Кликните на легенду како бисте уклонили поједине линије с графикона.","loading":"Учитавање","loading_map":"Учитавање мапе","map":"Мапа","national_metadata":"Mетаподаци","national_metadata_blurb":" ","next":"Сљедећи стат","no_data_hint":"Нема опција због горњих филтера","previous":"Претходни стат","select_all":"Означи све","series":"Серије","series_help":"Одаберите категорије из падајућег менија испод како бисте видјели различите подјеле података. Неки неће бити доступни док се не одабере виши степен.","source":"Извор","sources":"Извор","sub_categories":"Подкатегорије","table":"Табела","unit":"Јединица","unit_of_measurement":"Мјерна јединица","units_type":"Тип јединице","variable_hint":"Доступно када '%field' је означено","view_indicator_list":"Погледајте листу индикатора овог циља"};</script>
+
+<script>translations['data'] = {"2_members":"2 члана","3_members":"3 члана","4_members":"4 члана","5_members":"5 чланова","6_members":"6 чланова","7_members":"7 чланова","8+_members":"8+ чланова","ACTIVITY_RATES":"Стопе активности","ADMIN_AREA":"Административно подручје","AGE":"Старосна доб","AGE_GROUP_OF_WOMEN":"Старосна група жена","AGE_OF_MOTHER":"Старосна доб мајке","Age":"Старосна доб","BD":"Брчко дистрикт БиХ","BIRTH":"Рађање","BIRTHS":"Витална статистика","BIRTHS_AND_DEATHS":"Рођење и смрт","Bothsex":"Оба пола","CAUSE_OF_DEATH":"Узрок смрти (према шифрама болести по МКБ-10)","DEATH":"Смрт","DEATHS":"Смртни случајеви","DIVORCES":"Развод брака","EDUCATION":"Ниво образовања","ENROLMENT":"Врста образовне установе","FBIH":"Федерација БиХ","FERTILITY_RATE":"Стопа фертилитета","FORM_OF_VIOLENCE":"Облик насиља","Female":"Ж","GRAND_TOTAL":"Свеукупно","INFANT_MORTALITY":"Смртност дојенчади (до навршене прве године живота) стопа смртности дојенчади","KG":"Килограми","LIVE_BIRTH":"Живорођени","MARRIAGES":"Бракови","MARRIAGE_BIRTH":"Брак и порођај","MARTIAL_STATUS":"Брачно стање","MICS_INDICATORS":"Индикатори истраживања вишеструких показатеља","MICS_NUMBER":"Метода","Male":"M","Month":"Мјесец","Municipality":"Oпштина","NATURAL_CHANGE":"Природно кретање","NO_PER_1000_LIVE_BIRTHS":"Број на 1000 живорођених","NUMBER":"Број","NUMBER_OF_HOUSEHOLDS_BY_HOUSEHOLD_SIZE":"Величина домаћинства","POVERTY_RATE":"Стопа сиромаштва","QUANTITY":"Количина","RS":"Република Српска","SOURCE_OF_WATER":"Извор воде","STILLBIRTH_RATE":"Стопа мртворођених","SURVEY_IMPLEMENTED_BY":"Истраживање провео","Sex":"Пол","TYPE_OF_DEPENDENCY_RATIO":"Тип односа зависности","TYPE_OF_FAMILY/HOUSEHOLD":"Врста породице /домаћинства","TYPE_OF_SEWAGE":"Врста канализације","TYPE_OF_TOILET":"Врста тоалета","Type":"Врста","UNIT_MEASURE":"Мјерна јединица","UNIT_MEASUREMENT":"Мјерна јединица","USD":"УСД","VITAL_STATISTICS":"Витална статистика","Value":"Вриједност","Year":"Година","_%":"% од укупно","_%_labour":"„% радне снаге“","_ALL":"Сви","accepting_attitudes_towards_people_living_with_hiv_(men_15-49)":"Ставови прихватања особа које живе са HIV-ом (мушкарци у доби 15-49)","accepting_attitudes_towards_people_living_with_hiv_(women_15-49)":"Ставови прихватања особа које живе са HIV-ом (жене у доби 15-49)","active_labour_force":"„Активна (радна снага) као % радно способног становништва“","advanced_schools_faculty_academy_university":"Напредне школе /факултет /академија /универзитет","age_specific_fertility_rates":"Стопе фертилитета према доби","alcohol_use_(men_15-49)":"Кориштење алкохола (мушкарци у доби 15-49)","alcohol_use_(women_15-49)":"Кориштење алкохола (жене у доби 15-49)","all":"Сви","all_methods":"Све методе","artesian_well":"Артешки бунар","average_number_of_hh_members":"Просјечан број чланова домаћинства","bottled_water_from_shop":"Флаширана вода из продавнице","boys_to_girls":"Број дјечака на 100 ђевојчица","census_pyramid":"Ценсус","certain_conditions_originating":"„(П00-П96) Одређена стања настала у перинаталном периоду“","children_pre_woman":"Број дјеце по жени 15-49","closed_septic_tank":"Затворена септичка јама","closed_septic_tank_with_overflow":"Затворена септичка јама са преливом","comprehensive_knowledge_about_hiv_prevention_(men_15-24)":"Свеобухватно знање о превенцији HIV-а (мушкарци у доби 15-24)","comprehensive_knowledge_about_hiv_prevention_(men_15-49)":"Свеобухватно знање о превенцији HIV-а (мушкарци у доби 15-49)","comprehensive_knowledge_about_hiv_prevention_(women_15-24)":"Свеобухватно знање о превенцији HIV-а (жене у доби 15-24)","comprehensive_knowledge_about_hiv_prevention_(women_15-49)":"Свеобухватно знање о превенцији HIV-а (жене у доби 15-49)","condom_use_during_sex_with_multiple_partners_(men_15-49)":"Употреба кондома приликом полних односа са више партнера (мушкарци у доби 15-49)","condom_use_during_sex_with_multiple_partners_(women_15-49)":"Употреба кондома приликом полних односа са више партнера (жене у доби 15-49)","condom_use_with_non-regular_partners_(men_15-24)":"Употреба кондома са нередовним партнерима (мушкарци у доби 15-24)","condom_use_with_non-regular_partners_(women_15-24)":"Употреба кондома са нередовним партнерима (жене у доби 15-24)","congenital_malformations_deformations":"„(Q00-Q99) Конгениталне малформације, деформитети и хромосомске абнормалности“","consensual_couple_with_children":"Консензуални пар са дјецом","consensual_couple_without_children":"Консензуални пар без дјеце","container_(water_tank)_":"Контејнер (цистерна)","contraceptive_prevalence_rate_(modern_methods)":"Стопа преваленце контрацепције (савремене методе)","contraceptive_prevalence_rate_(total)":"Стопа преваленце контрацепције (укупно)","contraceptive_prevalence_rate_(traditional_methods)":"Стопа преваленце контрацепције (традиционалне методе)","crude_birth_rate":"Сирова стопа наталитета","crude_death_rate":"Сирова стопа смртности","crude_death_rate_1000":"Број на 1.000 становника","deaths":"Смрт","did_not_give_birth":"Нису рађале","diseases_of_the_blood":"„(Д50-Д89) Болести крви и крвотворних органа, као и поремећаји имунолошког система“","diseases_of_the_circulatory":"„(И00-И99) Болести циркулацијског система“","diseases_of_the_digestive":"„(К00-К93) Болести дигестивног система“","diseases_of_the_eye":"„(Х00-Х93) Болести ока, уха и аднекса\"","diseases_of_the_genitourinary":"„(Н00-Н99) Болести генитално-уринарног система“","diseases_of_the_musculoskeletal":"„(М00-М99) Болести мускулоскелетног система и везивног ткива“","diseases_of_the_nervous":"„(Г00-Г99) Болести нервног система“","diseases_of_the_respiratory":"„(Ј00-Ј99) Болести респираторног система“","diseases_of_the_skin":"„(Л00-Л99) Болести коже и поткожног ткива“","divorce_rate_(per_1,000_marriages)":"Стопа развода бракова (на 1.000 бракова)","divorced":"Разведен/а","drilled_(pipe)_well":"Избушени бунар (са водоводним цијевима)","drinking_fountain_connected_to_community_scheme":"Јавна чесма прикључена на водоводну мрежу у заједници","drinking_fountain_connected_to_own_pump_water_scheme":"Јавна чесма прикључена на властити систем водоснабдијевања","dug_well":"Ископани бунар","employed_as_of_working":"„Запослени као % радно способног становништва“","endocrine_metabolic_and_nutritional":"„(Е00-Е90) Ендокрине болести, болести исхране и болести метаболизма“","enrolment_in_high_school_education":"Средња школа","enrolment_in_higher_education":"Високо образовање /универзитет","enrolment_in_pre_school":"Предшколски одгој и образовање","enrolment_in_primary_school_education":"Основна школа","estimated_number_of_population":"Процјена становништва","external_causes_of_mortality":"„(В01-Y98) Спољни узроци смртности“","factors_influencing_health_status":"„(З00-З99) Фактори који утичу на здравствено стање и контакт са здравственом службом“","father_with_children":"Отац са дјецом","female_population":"Женско становништво","females_in_poverty":"„Жене у сиромаштву (%)“","gave_birth":"Рађале","happiness_(men_15-24)":"Срећа (жене у доби 15-24)","happiness_(women_15-24)":"Срећа (жене у доби 15-24)","health_indicators":"Индикатори здравља","higher_school_and_first_grade_of_faculty":"Високо образовање и прва година факултета","households_in_poverty":"„Домаћинства у сиромаштву (%)“","husband/partner_has_the_right_to_hit_or_beat_his_wife/partner_(men_15-49)":"Супруг/ партнер има право да удари или туче своју супругу/партнерицу (мушкарци у доби 15-49)","husband/partner_has_the_right_to_hit_or_beat_his_wife/partner_(women_15-49)":"Супруг/ партнер има право да удари или туче своју супругу/партнерицу (жене у доби 15-49)","in_marriage_birth":"Порођај у браку","inactive_as_of_working":"„Неактивни као % радно способног становништва“","incomplete_primary_education":"Непотпуно основно образовање","infant_(up_to_12_months_of_age)_mortality_rate":"Стопа смртности дојенчади (до навршене прве године живота)","infectious_and_parasitic":"„(А00-Б99) Заразне и паразитарне болести“","informal_union":"Неформална заједница","injuries_poisoning_and_consequences":"„(С00-Т98) Повреде, тровања и друге посљедице дејстава спољних фактора“","institutional_deliveries":"Порођај у здравственој установи","life_satisfaction_(men_15-24)":"Задовољство животом (мушкарци у доби 15-24)","life_satisfaction_(women_15-24)":"Задовољство животом (жене у доби 15-24)","live_births":"Живорођени","male_population":"Мушко становништво","males_in_poverty":"„Мушкарци у сиромаштву (%)“","marriage_before_age_15_(men_15-49)":"Брак прије навршених 15 година (мушкарци у доби 15-49)","marriage_before_age_15_(women_15-49)":"Брак прије навршених 15 година (жене у доби 15-49)","marriage_before_age_18_(men_20-49)":"Брак прије навршених 18 година (жене у доби 20-49)","marriage_before_age_18_(women_20-49)":"Брак прије навршених 18 година (жене у доби 20-49)","marriage_rate":"Стопа склопљених бракова","married":"У браку","married_couple_with_children":"Брачни пар са дјецом","married_couple_without_children":"Брачни пар без дјеце","mean_age":"Средња доб","men_aged_15-24_who_have_never_had_sex_":"Мушкарци у доби 15-24 који никад нису имали полни однос","mental_and_behavioural_disorders":"„(Ф00-Ф99) Душевни поремећаји и поремећаји понашања“","modern_methods":"Савремене методе","mother_with_children":"Мајка са дјецом","natural_increase":"Природни прираштај","neoplasms":"„(Ц00-Ц97,Д00-Д48) Неоплазме“","never_married":"Никад нису склопили брак","no_education":"Без образовања","no_per_1000_marriages":"Број на 1000 бракова","no_sewage":"Без канализације","non-family/multi-person_households":"Вишечлано домаћинство/без породице","non-family/single_households":"Једночлано домаћинство/без породице","number_birth_rate":"Број на 1.000 становника","number_of_beds_in_hospitals":"Број болничких кревета","number_of_beds_in_hospitals_per_100000_population":"Број болничких кревета на 100.000 становника","number_of_caesarean_sections":"Број царских резова","number_of_caesarean_sections_per_1000_live_births":"Број царских резова на 1.000 живорођених","number_of_divorces":"Број развода бракова","number_of_general_practitioners":"Број доктора опште медицине","number_of_infant_deaths":"Број смртних случајева међу дојенчади","number_of_marriages":"Број склопљених бракова","number_of_medical_doctors_providing_health_care_in_public_institutions":"Број доктора медицине који пружају здравствене услуге у јавним установама","number_of_medical_doctors_providing_health_care_in_public_institutions_per_100000_population":"Број доктора медицине који пружају здравствене услуге у јавним установама на 100.000 становника","number_of_midwives":"Број бабица","number_of_new_cases_of_AIDS_clinically_diagnosed":"Број нових случајева клинички дијагностикованог АIDS-а","number_of_new_cases_of_HIV":"Број нових случајева HIV инфекције","number_of_new_cases_of_HIV_per_100000_population":"Број нових случајева HIV инфекције на 100.000 становника","number_of_new_cases_of_cervical_cancer":"Број нових случајева рака грлића материце","number_of_new_cases_of_cervical_cancer_per_100000_female_population":"Број нових случајева рака дојке на 100.000 жена","number_of_new_cases_of_female_breast_cancer":"Број нових случајева рака дојке код жена","number_of_new_cases_of_female_breast_cancer_per_100000":"Број нових случајева рака дојке код жена на 100.000 жена","number_of_new_cases_of_gonorrhea":"Број нових случајева гонореје","number_of_new_cases_of_syphilis":"Број нових случајева сифилиса","number_of_population_per_general_practitioner":"Број становника на једног доктора опште медицине","number_of_stillbirths":"Број мртворођених","of_total_for_age_group":"„% од укупно за старосну групу“","old_age_support_ratio":"Омјер економске подршке старијим лицима","older_persons_to_youth_ratio":"Омјер старијих и младих","other":"Друго","other_arrangements":"Друга рјешења","out_of_marriage_birth":"Порођај изван брака","per_1000":"На 1.000 живорођених","per_capita":"По глави становника","persons_with_disabilities":"Лица са инвалидитетом","persons_without_disabilities":"Лица са инвалидитетом","piped_water_in_the_dwelling_unit_connected_to_community_scheme":"Текућа вода у стамбеној јединици која се доводи путем водоводних цијеви прикључених на водоводну мрежу у заједници","piped_water_in_the_dwelling_unit_connected_to_own_pump_water_system":"Текућа вода у стамбеној јединици која се доводи путем водоводних цијеви прикључених на властити систем водоснабдијевања","piped_water_in_the_dwelling_unit_connected_to_rural_or_local_water_supply_system":"Текућа вода у стамбеној јединици која се доводи путем водоводних цијеви прикључених на рурални или локални систем водоснабдијевања","population_in_poverty":"„Становништво у сиромаштву (%)“","post_secondary_school_specialisation":"Специјализација након завршене средње школе","pregnancy_childbirth_and_the":"„(О00-О99) Трудноћа, порођај и постпорођајни период“","primary_school":"Основна школа","projection_pyramid":"Година пројектовања","public_sewage":"Јавна канализација","real_gdp_growth":"Раст реалног БДП-а","regulated_water_spring":"Уређени извор воде","satisfied_demand_for_family_planning":"Задовољена потражња за планирањем породице","secondary_school":"Средња школа","sex_before_age_15_(men_15-24)":"Полни однос прије навршених 15 година (мушкарци у доби 15-24)","sex_before_age_15_(women_15-19-24)":"Полни однос прије навршених 15 година (жене у доби 15-19-24)","sex_with_multiple_partners_(men_15-49)":"Полни однос са више партнера (мушкарци у доби 15-49)","sex_with_multiple_partners_(women_15-49)":"Полни однос са више партнера (жене у доби 15-49)","sex_with_non-regular_partners_(men_15-24)":"Полни однос са нередовним партнерима (мушкарци у доби 15-24)","sex_with_non-regular_partners_(women_15-24)":"Полни однос са нередовним партнерима (жене у доби 15-24)","single_household":"1 члан","skilled_attendant_at_delivery":"Порођај у присуству стручног лица","status_unknown":"Статус непознат","street_drinking_fountain":"Јавна чесма на улици","symptoms_signs_and_abnormal":"„(Р00-Р99) Симптоми, знакови и абнормални клинички и лабораторијски налази који нису другдје класифицирани“","tobacco_use_(men_15-49)":"Кориштење дувана (мушкарци у доби 15-49)","tobacco_use_(women_15-49)":"Кориштење дувана (жене у доби 15-49)","total":"Укупно","total_15":"Укупно 15+","total_fertility_rate":"Укупна стопа фертилитета","total_illiterate":"Укупно неписмени","total_millions":"Укупно (у милионима)","total_population_(as_per_Public_Health_Institute_or_NSO_reports)":"Укупно становништво (према извјештајима Завода за јавно здравство или Завода/Агенције за статистику)","total_support_ratio":"Укупан омјер економске подршке","traditional_methods":"Традиционалне методе","unemployed_as_of_labour":"„Незапослени као % радне снаге“","unemployed_as_of_working":"„Незапослени као % радно способног становништва“","unknown":"Непознато","unknown_marital_status_birth":"Порођај при непознатом брачном статусу","unmet_need_for_family_planning":"Неостварена потреба за планирањем породице","widowed":"Удовац/удовица","women_aged_15-24_who_have_never_had_sex_":"Жене у доби 15-24 које никад нису имале полни однос","women_who_have_experienced_any_form_of_partner_violence_after_the_age_of_15_(ever)":"Жене које су доживјеле било који облик насиља од партнера након навршених 15 година живота (било када)","women_who_have_experienced_any_form_of_partner_violence_after_the_age_of_15_(past_12_months)":"Жене које су доживјеле било који облик насиља од партнера након навршених 15 година живота (у протеклих 12 мјесеци)","women_who_have_experienced_any_form_of_violence_after_the_age_of_15_(ever)":"Жене које су доживјеле било који облик насиља у доби од 15 година (било када)","women_who_have_experienced_any_form_of_violence_after_the_age_of_15_(ever)_-_18-24_years_of_age":"Жене које су доживјеле било који облик насиља након навршених 15 година живота (било када) – у доби 18-24","women_who_have_experienced_any_form_of_violence_after_the_age_of_15_(ever)_-_25-34_years_of_age":"Жене које су доживјеле било који облик насиља након навршених 15 година живота (било када) – у доби 25-34","women_who_have_experienced_any_form_of_violence_after_the_age_of_15_(ever)_-_35-44_years_of_age":"Жене које су доживјеле било који облик насиља након навршених 15 година живота (било када) – у доби 35-44","women_who_have_experienced_any_form_of_violence_after_the_age_of_15_(ever)_-_45-54_years_of_age":"Жене које су доживјеле било који облик насиља након навршених 15 година живота (било када) – у доби 45-54","women_who_have_experienced_any_form_of_violence_after_the_age_of_15_(ever)_-_55-64_years_of_age":"Жене које су доживјеле било који облик насиља након навршених 15 година живота (било када) – у доби 55-64","women_who_have_experienced_any_form_of_violence_after_the_age_of_15_(ever)_-_65+_years_of_age":"Жене које су доживјеле било који облик насиља након навршених 15 година живота (било када) – у доби 65+","women_who_have_experienced_any_form_of_violence_after_the_age_of_15_(ever)_-_rural_areas":"Жене које су доживјеле било који облик насиља након навршених 15 година живота (било када) – рурална подручја","women_who_have_experienced_any_form_of_violence_after_the_age_of_15_(ever)_-_urban_areas":"Жене које су доживјеле било који облик насиља након навршених 15 година живота (било када) – урбана подручја","women_who_have_experienced_any_form_of_violence_after_the_age_of_15_(past_12_months)":"Жене које су доживјеле било који облик насиља након навршених 15 година живота (у протеклих 12 мјесеци)","women_who_have_experienced_economic_violence_after_the_age_of_15_(ever)":"Жене које су доживјеле економско насиље након навршених 15 година живота (било када)","women_who_have_experienced_economic_violence_after_the_age_of_15_(past_12_months)":"Жене које су доживјеле економско насиље након навршених 15 година живота (у протеклих 12 мјесеци)","women_who_have_experienced_physical_violence_after_the_age_of_15_(ever)":"Жене које су доживјеле физичко насиље након навршених 15 година живота (било када)","women_who_have_experienced_physical_violence_after_the_age_of_15_(past_12_months)":"Жене које су доживјеле физичко насиље након навршених 15 година живота (у протеклих 12 мјесеци)","women_who_have_experienced_physical_violence_by_intimate_partner_(current_or_former_partner)_(ever)":"Жене које су доживјеле физичко насиље од интимног партнера (садашњег или бившег) (било када)","women_who_have_experienced_physical_violence_by_intimate_partner_(current_or_former_partner)_(past_12_months)":"Жене које су доживјеле физичко насиље од интимног партнера (садашњег или бившег) (у протеклих 12 мјесеци)","women_who_have_experienced_physical_violence_by_relatives_or_family_(other_than_intimate_partner)_(ever)":"Жене које су доживјеле физичко насиље од сродника или члана породице (осим интимног партнера) (било када)","women_who_have_experienced_physical_violence_in_broader_community_(not_intimate_partner)_(ever)":"Жене које су доживјеле физичко насиље у широј заједници (не од интимног партнера) (било када)","women_who_have_experienced_physical_violence_in_broader_community_(not_intimate_partner)_(past_12_months)":"Жене које су доживјеле физичко насиље у широј заједници (не од интимног партнера) (у протеклих 12 мјесеци)","women_who_have_experienced_physical_violence_in_broader_community_(not_relatives_or_intimate_partner)_(ever)":"Жене које су доживјеле физичко насиље у широј заједници (не од сродника или интимног партнера) (било када)","women_who_have_experienced_psychological_violence_after_the_age_of_15_(ever)":"Жене које су доживјеле психолошко насиље након навршених 15 година живота (било када)","women_who_have_experienced_psychological_violence_after_the_age_of_15_(past_12_months)":"Жене које су доживјеле психолошко насиље након навршених 15 година живота (у протеклих 12 мјесеци)","women_who_have_experienced_psychological_violence_by_intimate_partner_(current_or_former_partner)_(ever)":"Жене које су доживјеле психолошко насиље од интимног партнера (садашњег или бившег) (било када)","women_who_have_experienced_psychological_violence_by_intimate_partner_(current_or_former_partner)_(past_12_months)":"Жене које су доживјеле психолошко насиље од интимног партнера (садашњег или бившег) (у протеклих 12 мјесеци)","women_who_have_experienced_psychological_violence_by_relatives_or_family_(other_than_intimate_partner)_(ever)":"Жене које су доживјеле психолошко насиље од сродника или члана породице (осим интимног партнера) (било када)","women_who_have_experienced_psychological_violence_in_broader_community_(not_relatives_or_intimate_partner)_(ever)":"Жене које су доживјеле психолошко насиље у широј заједници (не од сродника или интимног партнера) (било када)","women_who_have_experienced_sexual_harassment_after_the_age_of_15_(ever)":"Жене које су доживјеле сексуално злостављање након навршених 15 година живота (било када)","women_who_have_experienced_sexual_harassment_after_the_age_of_15_(past_12_months)":"Жене које су доживјеле сексуално злостављање након навршених 15 година живота (у протеклих 12 мјесеци)","women_who_have_experienced_sexual_violence_after_the_age_of_15_(ever)":"Жене које су доживјеле сексуално насиље након навршених 15 година живота (било када)","women_who_have_experienced_sexual_violence_after_the_age_of_15_(past_12_months)":"Жене које су доживјеле сексуално насиље након навршених 15 година живота (у протеклих 12 мјесеци)","women_who_have_experienced_sexual_violence_by_intimate_partner_(current_or_former_partner)_(ever)":"Жене које су доживјеле сексуално насиље од интимног партнера (садашњег или бившег) (било када)","women_who_have_experienced_sexual_violence_by_intimate_partner_(current_or_former_partner)_(past_12_months)":"Жене које су доживјеле сексуално насиље од интимног партнера (садашњег или бившег) (у протеклих 12 мјесеци)","women_who_have_experienced_sexual_violence_in_broader_community_(not_intimate_partner)_(ever)":"Жене које су доживјеле сексуално насиље у широј заједници (не од интимног партнера) (било када)","women_who_have_experienced_sexual_violence_in_broader_community_(not_intimate_partner)_(past_12_months)":"Жене које су доживјеле сексуално насиље у широј заједници (не од интимног партнера) (у протеклих 12 мјесеци)","young_age_support_ratio":"Омјер економске подршке младима","young_men_aged_15-19_years_currently_married_or_in_union":"Млади мушкарци у доби 15-19 који су тренутно у браку или ванбрачној заједници","young_women_aged_15-19_years_currently_married_or_in_union":"Младе жене у доби 15-19 које су тренутно у браку или ванбрачној заједници"};</script>
+
+
+<div class="container">
+  
+<ol class="breadcrumb">
+  
+  <li><a href="/populationData-site/test/"></a></li>
+  <li><a href="/populationData-site/test/1" title="СТАНОВНИШТВО"> 1</a></li>
+  <li class="active">Стат 1.2.5</li>
+  
+</ol>
+
+
+</div>
+<div class="heading goal-banner indicator goal-1">
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-xs-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+        <a href="/populationData-site/test/1" title="Погледајте листу индикатора овог циља">
+          <img src="https://pixerize.github.io/populationData-site/assets/img/goals/test/1.png" alt="global_goals.1-short -  1" id="goal-1" class="goal-icon-image goal-icon-image-png"/>
+        </a>
+      </div>
+      <div class="col-xs-8 col-md-9 col-lg-10 indicator-details">
+      
+        <div>
+          <h1>
+            
+            <span class="stat-number">1.2.5</span>
+            
+            <span class="lead-copy">Број порођаја адолесценткиња према старосним групама</span>
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="main-content" class="container goal-1" role="main">
+  
+
+  
+
+  
+
+
+  
+
+
+
+<div class="row"
+  id="indicatorData"
+  data-indicatorid='indicator_1-2-5'
+  data-id="1-2-5"
+  data-country="djordje"
+  data-charttitle="Број порођаја адолесценткиња према старосним групама"
+  data-charttitles="null"
+  data-measurementunit=""
+  data-showdata="true"
+  data-graphtype="line"
+  data-geocoderegex=""
+  data-showmap="false"
+  data-startvalues="null"
+  data-graphlimits="null"
+  data-stackeddisaggregation=""
+  data-graphannotations="null"
+  data-indicatordownloads="null"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Година&quot;},{&quot;name&quot;:&quot;AGE&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;13 - 14&quot;,&quot;15 - 19&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Старосна доб&quot;},{&quot;name&quot;:&quot;UNIT_MEASURE&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;Мјерна јединица&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Вриједност&quot;}]}"
+  data-compositebreakdownlabel=""
+  data-precision="null"
+>
+  
+  <span role="status" class="sr-only" id="indicator-data-view-status"></span>
+  <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
+    <div id="serieses"></div>
+<div class="pyramid-units">
+      <h4 class="census-pyramid">Ценсус</h4>
+      <h4 class="projection-pyramid">Година пројектовања</h4>
+</div>
+<div id="units"></div>
+<div id="toolbar">
+  <span id="series-help">
+    <h4>Подкатегорије</h4>
+    <p>Одаберите категорије из падајућег менија испод како бисте видјели различите подјеле података. Неки неће бити доступни док се не одабере виши степен.</p>
+  </span>
+  <div id="fields">
+    <p class="async-loading" data-img="/populationData-site/assets/img/loading-small.gif"></p>
+  </div>
+</div>
+
+  </div>
+  <div id="indicator-main" class="indicator-main col-md-9">
+    
+
+
+<div id="headlineTable">
+
+  <div id="datatables">
+
+    <a href="https://pixerize.github.io/populationData-data/test/headline/1-2-5.csv" class="btn btn-primary btn-download" download="indicator_1-2-5.csv" tabindex="0" role="button">Преузмите CSV наслов</a>
+
+    <a href="https://pixerize.github.io/populationData-data/test/data/1-2-5.csv" class="btn btn-primary btn-download" style='float:left;margin-right:1em' download='indicator_1-2-5.csv' tabindex='0' role='button'>Преузми извор CSV</a>
+
+    <h3>Headline data</h3>
+    <table class="table-responsive table table-hover dataTable no-footer" role="grid">
+      <caption>Број порођаја адолесценткиња према старосним групама</caption>
+      <thead>
+        
+      </thead>
+      <tbody>
+        
+      </tbody>
+    </table>
+  </div>
+
+  <div id="datatableFooter">
+    
+    <p>Извор: BHAS</p>
+    
+    
+    
+    
+  </div>
+
+</div>
+
+
+<section>
+
+  <p class="async-loading" data-img="/populationData-site/assets/img/loading-small.gif"></p>
+
+  <div class="async-loaded spacer medium" style="display:none;">
+
+    <div style="display: none;">
+  <span id="table-alternative"></span>
+</div>
+<ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+  <li role="presentation" class="nav-item active">
+    <a class="nav-link" data-toggle="tab" id="tab-chartview" href="#chartview" aria-controls="chartview" role="tab" data-on="click"
+data-event-category="Tab change"
+data-event-action="Change data view"
+data-event-label="Change to Chart tab"
+ aria-describedby="table-alternative">Графикон</a>
+  </li>
+  <li role="presentation" class="nav-item">
+    <a class="nav-link" data-toggle="tab" id="tab-tableview" href="#tableview" aria-controls="tableview" role="tab" data-on="click"
+data-event-category="Tab change"
+data-event-action="Change data view"
+data-event-label="Change to Table tab"
+>Табела</a>
+  </li></ul>
+
+    <div class="tab-content data-view">
+  <div role="tabpanel" class="tab-pane active" id="chartview">
+    
+
+    <div id="dataset-size-warning" style="display:none" role="alert">
+      <i class="fa fa-bolt"><span class="sr-only"></span></i>
+      Графикон може приказивати ​​податке за до 40 варијабли. Уклоните неке одабире у лијевим изборницима за правилну презентацију.
+    </div>
+
+    
+    
+    <div id="selectionsChart">
+      <figure role="group">
+        <div id="chart-canvas">
+          <h4 id="chart-heading" class="chart-title">Број порођаја адолесценткиња према старосним групама</h4>
+          <div id="chart" class="plot-container">
+            
+<canvas
+    role="img"
+    aria-labelledby="chart-heading"
+    aria-describedby="table-alternative chart-annotations"
+    tabindex="0"
+ ></canvas>
+
+<script>
+// Add a chart alteration to support the chart_graph_limits metadata field.
+opensdg.chartConfigAlter(function(config, info) {
+  if (info.graphLimits && Object.keys(info.graphLimits).length > 0) {
+    var overrides = {
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              min: info.graphLimits.minimum,
+              max: info.graphLimits.maximum,
+            }
+          }]
+        }
+      }
+    }
+    // Add these overrides onto the normal config.
+    $.extend(true, config, overrides);
+  }
+});
+</script>
+
+<span style="display: none;" id="chart-annotations" role="status"></span>
+<script>
+opensdg.annotationPresets = {
+    common: {
+        // This "common" preset is applied to all annotations automatically.
+        borderColor: '#505a5f',
+        type: 'line',
+        label: {
+            backgroundColor: 'black',
+            fontColor: 'white',
+        },
+        // This "highContrast" overrides colors when in high-contrast mode.
+        highContrast: {
+            label: {
+                backgroundColor: 'white',
+                fontColor: 'black'
+            }
+        },
+        // This callback is used to generate a generic description for screenreaders.
+        // This can be overridden to be a more specific string, eg:
+        //
+        //     description: 'Chart annotation showing a 2030 target of 15%'
+        //
+        description: function() {
+            var descriptionParts = [translations.indicator.chart_annotation];
+            if (this.label && this.label.content) {
+                descriptionParts.push(translations.t(this.label.content));
+            }
+            else {
+                // If there is no label, just specify whether it is a box or line.
+                if (this.type == 'line') {
+                    descriptionParts.push(this.mode + ' line');
+                }
+                if (this.type == 'box') {
+                    descriptionParts.push('box');
+                }
+            }
+            if (typeof this.value !== 'undefined') {
+                descriptionParts.push(this.value);
+            }
+            return descriptionParts.join(': ');
+        },
+    },
+    target_line: {
+        mode: 'horizontal',
+        borderDash: [5, 5],
+        label: {
+            position: 'right',
+            content: translations.indicator.annotation_2030_target,
+        },
+    },
+};
+
+// Add a chart alteration to support the chart_annotations metadata field.
+opensdg.chartConfigAlter(function(config, info) {
+    if (info.graphAnnotations && info.graphAnnotations.length > 0) {
+        // Apply some helpers/fixes to the annotations.
+        var annotations = info.graphAnnotations.map(function(annotation) {
+            // Apply the "common" preset.
+            if (opensdg.annotationPresets.common) {
+                annotation = $.extend(true, {}, opensdg.annotationPresets.common, annotation);
+            }
+            // Apply any specified presets.
+            if (annotation.preset) {
+                var preset = annotation.preset;
+                if (opensdg.annotationPresets[preset]) {
+                    annotation = $.extend(true, {}, opensdg.annotationPresets[preset], annotation);
+                }
+            }
+            // Default to horizontal lines.
+            if (!annotation.mode && annotation.type === 'line') {
+                annotation.mode = 'horizontal';
+            }
+            // Provide the obscure scaleID properties on user's behalf.
+            if (!annotation.scaleID && annotation.type === 'line') {
+                if (annotation.mode === 'horizontal') {
+                    annotation.scaleID = 'y-axis-0';
+                }
+                if (annotation.mode === 'vertical') {
+                    annotation.scaleID = 'x-axis-0';
+                }
+            }
+            if (!annotation.xScaleID && annotation.type === 'box') {
+                annotation.xScaleID = 'x-axis-0';
+            }
+            if (!annotation.yScaleID && annotation.type === 'box') {
+                annotation.yScaleID = 'y-axis-0';
+            }
+            // Provide the "enabled" label property on the user's behalf.
+            if (annotation.label && annotation.label.content) {
+                annotation.label.enabled = true;
+            }
+            // Translate any label content.
+            if (annotation.label && annotation.label.content) {
+                annotation.label.content = translations.t(annotation.label.content);
+            }
+            // Save some original values for later used when contrast mode is switched.
+            if (typeof annotation.defaultContrast === 'undefined') {
+                annotation.defaultContrast = {};
+                if (annotation.borderColor) {
+                    annotation.defaultContrast.borderColor = annotation.borderColor;
+                }
+                if (annotation.backgroundColor) {
+                    annotation.defaultContrast.backgroundColor = annotation.backgroundColor;
+                }
+                if (annotation.label) {
+                    annotation.defaultContrast.label = {};
+                    if (annotation.label.fontColor) {
+                        annotation.defaultContrast.label.fontColor = annotation.label.fontColor;
+                    }
+                    if (annotation.label.backgroundColor) {
+                        annotation.defaultContrast.label.backgroundColor = annotation.label.backgroundColor;
+                    }
+                }
+            }
+            return annotation;
+        });
+        if (annotations.length > 0) {
+            var overrides = {
+                options: {
+                    annotation: {
+                        drawTime: 'afterDatasetsDraw',
+                        annotations: annotations
+                    }
+                }
+            };
+            // Add these overrides onto the normal config.
+            $.extend(true, config, overrides);
+
+            // Update the chart annotations element.
+            var descriptions = annotations.map(function(annotation) {
+                var description = '';
+                if (annotation.description) {
+                    if (typeof annotation.description === 'function') {
+                        description = annotation.description.call(annotation);
+                    }
+                    else {
+                        description = translations.t(annotation.description);
+                    }
+                }
+                return description;
+            }).filter(function(description) { return description != ''; });
+
+            var currentDescription = $('#chart-annotations').text();
+            var newDescription = descriptions.join('. ');
+            if (currentDescription != newDescription) {
+                $('#chart-annotations').text(newDescription);
+            }
+        }
+    }
+    else if (config.options && config.options.annotation) {
+        delete config.options.annotation;
+    }
+});
+</script>
+
+<script>
+// For line charts, add the vertical line hover functionality.
+opensdg.chartConfigAlter(function(config, info) {
+
+    var overrides = {
+        options: {
+            tooltips: {
+                intersect: true,
+                axis: 'y'
+            },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: false
+                    }
+                }],
+                XAxes: [{
+                    ticks: {
+                        beginAtZero: false
+                    }
+                }]
+            },
+        },
+        plugins: [{
+            beforeDatasetsDraw: function(chart) {
+                if (chart.tooltip._active && chart.tooltip._active.length) {
+                    var activePoint = chart.tooltip._active[0],
+                        ctx = chart.ctx,
+                        x = activePoint.tooltipPosition().x,
+                        topY = chart.scales['y-axis-0'].top,
+                        bottomY = chart.scales['y-axis-0'].bottom;
+
+                    // draw line
+                    ctx.save();
+                    ctx.beginPath();
+                    ctx.moveTo(x, topY);
+                    ctx.lineTo(x, bottomY);
+                    ctx.lineWidth = 2;
+                    ctx.strokeStyle = '#757575';
+                    ctx.setLineDash([5, 2]);
+                    ctx.stroke();
+                    ctx.restore();
+                }
+            }
+        }],
+    };
+    // Add these overrides onto the normal config, and return it.
+    $.extend(true, config, overrides);
+});
+</script>
+
+          </div>
+          <div id="plotLegend"></div>
+          
+
+
+
+<div id="selectionChartFooter" class="table-footer-text">
+  <h5 class="sr-only">Chart details</h5>
+    <dl>
+        
+        <dt>Извор:</dt>
+        <dd>BHAS</dd>
+        
+
+        
+
+        
+
+        
+
+        
+    <dl>
+</div>
+
+        </div>
+      </figure>
+      <div id="chartSelectionDownload" class="clearfix">
+        <button id="btnSave" title="Преузми графикон као слику" class='btn btn-primary btn-download'>
+          Преузми слику графикона
+        </button>
+      </div>
+    </div>
+
+
+
+  </div>
+  <div role="tabpanel" class="tab-pane" id="tableview">
+    <div style="display: none;">
+      <span id="column-sort-info"></span>
+    </div>
+    <div id="selectionsTable"></div>
+
+
+
+
+<div id="selectionTableFooter" class="table-footer-text">
+  <h5 class="sr-only">Chart details</h5>
+    <dl>
+        
+        <dt>Извор:</dt>
+        <dd>BHAS</dd>
+        
+
+        
+
+        
+
+        
+
+        
+    <dl>
+</div>
+
+<div id="tableSelectionDownload" class="clearfix"></div>
+
+  </div>
+</div>
+
+
+  </div>
+
+</section>
+
+  
+  <ul class="nav nav-tabs spacer medium" role="tablist">
+
+  <li role="presentation" class="nav-item active">
+  <a class="nav-link" data-toggle="tab" id="tab-national" href="#national" aria-controls="national" role="tab" data-on="click"
+data-event-category="Tab change"
+data-event-action="Change metadata view"
+data-event-label="Change to National Metadata tab"
+>Mетаподаци</a>
+</li>
+<li role="presentation" class="nav-item">
+  <a class="nav-link" data-toggle="tab" id="tab-sources" href="#sources" aria-controls="sources" role="tab" data-on="click"
+data-event-category="Tab change"
+data-event-action="Change metadata view"
+data-event-label="Change to Sources tab"
+>Извор</a>
+</li>
+
+
+  
+  <li role="presentation" class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#edit" aria-controls="edit" role="tab">Уреди</a>
+  </li>
+  
+</ul>
+
+<div class="tab-content">
+  
+    <div role="tabpanel" class="tab-pane active" id="national">
+  <!-- National Metadata -->
+  <div >
+    <article>
+      <p>
+        
+        
+         
+      </p>
+      <table class="table">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+      
+      <tr>
+        <th scope="row">Доступни индикатори </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Опис индикатора </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Географска покривеност </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Мјерна јединица </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Дефиниције </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Калкулације </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Остале информације </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Осигурање квалитета </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Упоредивост са међународним подацима/стандардима </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Коментари и ограничења </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Рационално и тумачење </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Подаци посљедњи пут ажурирани </th>
+        <td>
+          
+            
+            
+            
+            
+
+            
+              <a href="https://github.com/pixerize/populationData-data/commit/f45e68a10b4e9c47a874ad511b851808b687dc65" target="_blank">
+                2021-11-05: see changes on GitHub <span class="visuallyhidden"></span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Посљедњи пут ажурирани метаподаци </th>
+        <td>
+          
+            
+            
+            
+            
+
+            
+              <a href="https://github.com/pixerize/populationData-data/commit/4e46e447a9311463122c0fa5823378d6f607d53a" target="_blank">
+                2021-10-27: see changes on GitHub <span class="visuallyhidden"></span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</table>
+
+    </article>
+  </div>
+</div>
+<div role="tabpanel" class="tab-pane" id="global">
+  <!-- Global Metadata -->
+  <div>
+    <article>
+      <p>Ова таблица пружа информације о метаподацима за СДГ индикаторе како их је дефинисала Статистичка комисија УН-а. Комплетне глобалне метаподатке пружа Ођел за статистику УН-a.</p>
+      <table class="table">
+  
+  
+  
+  
+  
+      
+      
+      <tr>
+        <th scope="row">Назив индикатора </th>
+        <td>
+          
+            <p>Број порођаја адолесценткиња према старосним групама</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Број индикатора </th>
+        <td>
+          
+            <p>1.2.5</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Назив подциља </th>
+        <td>
+          
+            <p>Фертилитет</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Број подциља </th>
+        <td>
+          
+            <p>1.2</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Опис глобалног индикатора </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">UN- ов означени степен </th>
+        <td>
+          
+            <p>1</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">UN кустос агенција </th>
+        <td>
+          
+            <p>United Nations Office for Disaster Reduction (UNISDR)</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Линк до UN метаподатака </th>
+        <td>
+          
+            
+            
+            
+            
+
+            
+              <a href="https://unstats.un.org/sdgs/metadata/files/Metadata-01-05-01.pdf " target="_blank">
+                United Nations Sustainable Development Goals Metadata (PDF 224 KB) <span class="visuallyhidden"></span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</table>
+
+    </article>
+  </div>
+</div>
+<div role="tabpanel" class="tab-pane" id="sources">
+  <!-- Count the non-empty sources (up to 5) -->
+
+
+
+
+  <div class="row">
+  
+    
+    
+    <div class="col-md-6">
+      
+      <table class="table">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+      
+      <tr>
+        <th scope="row">Oрганизација </th>
+        <td>
+          
+            <p>BHAS</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Периодичност </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Посљедњи доступни подаци </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Географска покривеност </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Линк до извора података </th>
+        <td>
+          
+            
+            
+            
+            
+
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Датум издавања </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Сљедеће издање </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Статистичка класификација </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Контакт подаци </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Остале информације </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</table>
+
+    </div>
+    
+  </div>
+
+
+</div>
+
+  
+  
+  <div role="tabpanel" class="tab-pane" id="edit">
+    <div class="edit-container">
+  
+  
+
+  
+  
+
+
+  <a class="btn btn-primary" href="http://prose.io/#pixerize/populationData-data/edit/master/data/indicator_1-2-5.csv">Уреди податке</a>
+  
+
+  
+  <a class="btn btn-primary" href="http://prose.io/#pixerize/populationData-data/edit/master/meta/1-2-5.md">Уреди метаподатке</a>
+  
+
+  
+
+</div>
+
+  </div>
+  
+</div>
+
+
+  </div>
+</div>
+
+</div>
+
+<footer role="contentinfo">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div id="footerLinks">
+          <ul>
+            <li><a href="https://open-sdg.org"></a></li>
+            
+              <li>
+                
+                  <a href="mailto:sdg@bhas.gov.ba" target="_blank">Контактирајте нас</a>
+                
+                </li>
+              <li>
+                <a href="/populationData-site/test/about/cookies-and-privacy/">Колачићи</a>
+                
+                </li>
+              
+            
+            </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+<script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+<script>translations['general'] = translations['general'] || {};
+    translations['general']['hide'] = '';</script>
+
+<script>translations['search'] = translations['search'] || {};
+    translations['search']['search'] = 'Претраживање';</script>
+
+<script src='/populationData-site/assets/js/sdg.js?v=20220829195413'></script>
+
+
+    
+    
+    <script src="/populationData-site/assets/js/custom.js?v=20220829195413"></script><script>
+$(function() {
+    if($('#indicatorData').length) {
+      var domData = $('#indicatorData').data();
+
+      if (domData.showdata) {
+
+        $('.async-loading').each(function(i, obj) {
+            $(obj).append($('<img />').attr('src', $(obj).data('img')).attr('alt', translations.indicator.loading));
+        });
+
+        var remoteUrl = '/comb/' + domData.id + '.json';
+        if (opensdg.remoteDataBaseUrl !== '/') {
+          remoteUrl = opensdg.remoteDataBaseUrl + remoteUrl;
+        }
+
+        $.ajax({
+          url: remoteUrl,
+          success: function(res) {
+
+            $('.async-loading').remove();
+            $('.async-loaded').show();
+
+            var model = new indicatorModel({
+              data: res.data,
+              edgesData: res.edges,
+              showMap: domData.showmap,
+              country: domData.country,
+              indicatorId: domData.indicatorid,
+              shortIndicatorId: domData.id,
+              chartTitle: domData.charttitle,
+              chartTitles: domData.charttitles,
+              measurementUnit: domData.measurementunit,
+              showData: domData.showdata,
+              graphType: domData.graphtype,
+              startValues: domData.startvalues,
+              graphLimits: domData.graphlimits,
+              stackedDisaggregation: domData.stackeddisaggregation,
+              graphAnnotations: domData.graphannotations,
+              indicatorDownloads: domData.indicatordownloads,
+              dataSchema: domData.dataschema,
+              compositeBreakdownLabel: domData.compositebreakdownlabel,
+              precision: domData.precision,
+            }),
+            view  = new indicatorView(model, {
+              rootElement: '#indicatorData',
+              legendElement: '#plotLegend',
+              decimalSeparator: '',
+              maxChartHeight: 420,
+              tableColumnDefs: [
+                { maxCharCount: 25 }, // nowrap
+                { maxCharCount: 35, width: 200 },
+                { maxCharCount: Infinity, width: 250 }
+              ]
+            }),
+            controller = new indicatorController(model, view);
+            controller.initialise();
+          }
+        });
+      }
+    }
+
+    var switcher = new accessibilitySwitcher();
+
+
+});
+</script>
+
+
+
+
+</body>
+</html>
+
