@@ -11,18 +11,19 @@ $(document).ready(function () {
   $("#national tr:nth-child(11)").remove();
 });
 
+//remove link from dates
 $(document).ready(function () {
-  var date = '';
-  $("#national td a").each(function () {
-    date = $(this).text().substring(17, 27);
-    $(this).html(date).removeAttr("href");
-  });
+   let date1 = $("#national tr:nth-last-child(1) a ").text().substring(17, 27);
+   let date2 = $("#national tr:nth-last-child(2) a ").text().substring(17, 27);
+   $("#national tr:nth-last-child(1) a ").text(date1).removeAttr("href");
+   $("#national tr:nth-last-child(2) a ").text(date2).removeAttr("href");
 });
 
+//remove sources
 $(document).ready(function () {
-  $("#sources tr").each(function () {
-    $("#sources tr:nth-child(" + 2 + ")").remove();
-  });
+   $("#sources tr").each(function () {
+      $("#sources tr:nth-child(" + 2 + ")").remove();
+   });
 });
 
 //back to top button
