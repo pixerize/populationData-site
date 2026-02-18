@@ -2,7 +2,7 @@
   {
     "goal": {
       "id": "1",
-      "title": "СТАНОВНИШТВО",
+      "title": "global_goals.1-title",
       "indicators": [
         
         {
@@ -282,7 +282,7 @@
   {
     "goal": {
       "id": "2",
-      "title": "ПОПИС СТАНОВНИШТВА",
+      "title": "global_goals.2-title",
       "indicators": [
         
         {
@@ -402,7 +402,7 @@
   {
     "goal": {
       "id": "3",
-      "title": "ЗДРАВЉЕ",
+      "title": "global_goals.3-title",
       "indicators": [
         
         {
@@ -650,7 +650,7 @@
   {
     "goal": {
       "id": "4",
-      "title": "СОЦИЈАЛНА ЗАШТИТА",
+      "title": "global_goals.4-title",
       "indicators": [
         
         {
@@ -706,7 +706,7 @@
   {
     "goal": {
       "id": "5",
-      "title": "ОБРАЗОВАЊЕ",
+      "title": "global_goals.5-title",
       "indicators": [
         
         {
@@ -930,7 +930,7 @@
   {
     "goal": {
       "id": "6",
-      "title": "ЕКОНОМИЈА",
+      "title": "global_goals.6-title",
       "indicators": [
         
         {
@@ -962,7 +962,7 @@
   {
     "goal": {
       "id": "7",
-      "title": "РАДНА СНАГА И ЖИВОТНИ СТАНДАРД",
+      "title": "global_goals.7-title",
       "indicators": [
         
         {
@@ -1010,7 +1010,7 @@
   {
     "goal": {
       "id": "8",
-      "title": "НАСИЉЕ",
+      "title": "global_goals.8-title",
       "indicators": [
         
         {

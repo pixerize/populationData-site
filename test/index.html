@@ -103,7 +103,7 @@ var translations = {
         ================================================== -->
 
         
-    <title>Индикатори за циљеве одрживог развоја</title>
+    <title>custom.indicator_title</title>
 
 
 
@@ -129,7 +129,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/populationData-site/assets/css/style.css?v=20260217031617">
+        <link rel="stylesheet" href="/populationData-site/assets/css/style.css?v=20260218031928">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -147,9 +147,9 @@ layout-frontpage
 ">
 <!-- <div class="container"> -->
 
-<script>translations['header'] = {"alpha":"Алфа","default_contrast":"Задани контраст","disable_high_contrast":"Онемогући високи контраст","disclaimer":"Ова интернет страница се развија. Поздрављамо ваше <a href=\"mailto:%email_address\">повратне информације</a>.","enable_high_contrast":"Омогући високи контраст","high_contrast":"Висок контраст","skip_link":"Пријеђи на главни садржај","tag_line":"17 циљева за трансформирање нашег свијета"};</script>
+<script>translations['header'] = null;</script>
 
-<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Пријеђи на главни садржај</a>
+<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0"></a>
 <div id="disclaimer">
 </div>
 
@@ -158,7 +158,7 @@ layout-frontpage
 
     <div class="logo-and-mobile-widgets">
       <a class="navbar-brand" href="/populationData-site/test/" id="home">
-        <img src="/populationData-site/assets/img/logo/test/SDG_logo.png" alt=" - 17 циљева за трансформирање нашег свијета" />
+        <img src="/populationData-site/assets/img/logo/test/SDG_logo.png" alt=" - " />
       </a>
 
       <div class="mobile-widgets">
@@ -167,23 +167,23 @@ layout-frontpage
   
   <div class="btn-group language-toggle-dropdown ">
     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Test</span>
+      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name"></span>
       <span class="language-abbreviation">test</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
     <ul class="dropdown-menu"><li>
             <a href="/populationData-site/">
-              English
+              
             </a>
           </li><li>
             <a href="/populationData-site/bs/">
-              Bosanski
+              
             </a>
           </li><li>
             <a href="/populationData-site/sr/">
-              Српски
+              
             </a>
           </li><li>
             <a href="/populationData-site/hr/">
-              Hrvatski
+              
             </a>
           </li></ul>
   </div>
@@ -191,7 +191,7 @@ layout-frontpage
 
         </div></div>
     </div>
-    <div class="supp-by">Подржано од<a href="https://ba.unfpa.org/" target="_blank"><img src="/populationData-site/assets/img/other/unfpa-logo.png"></a></div>
+    <div class="supp-by">menu.supported_by<a href="https://ba.unfpa.org/" target="_blank"><img src="/populationData-site/assets/img/other/unfpa-logo.png"></a></div>
 
     <nav class="navbar navbar-default" id="main-nav">
 
@@ -200,7 +200,7 @@ layout-frontpage
             aria-label=""
             aria-haspopup="true">
           <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
-    <a href="/populationData-site/test/">Почетна</a>
+    <a href="/populationData-site/test/">menu.home</a>
 </li><li class="language-toggle-menu-header">
     
 
@@ -212,23 +212,23 @@ layout-frontpage
   
   <div class="btn-group language-toggle-dropdown ">
     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Test</span>
+      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name"></span>
       <span class="language-abbreviation">test</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
     <ul class="dropdown-menu"><li>
             <a href="/populationData-site/">
-              English
+              
             </a>
           </li><li>
             <a href="/populationData-site/bs/">
-              Bosanski
+              
             </a>
           </li><li>
             <a href="/populationData-site/sr/">
-              Српски
+              
             </a>
           </li><li>
             <a href="/populationData-site/hr/">
-              Hrvatski
+              
             </a>
           </li></ul>
   </div>
@@ -241,8 +241,8 @@ layout-frontpage
 
 
     <li class="nav-link contrast contrast-default contrast-type-default">
-        <a title="Онемогући високи контраст"
-           aria-label="Онемогући високи контраст"
+        <a title=""
+           aria-label=""
            data-contrast-switch-to="default"
            href="javascript:void(0)"
            data-on="click"
@@ -253,8 +253,8 @@ data-event-label="default"
         >A</a>
     </li>
     <li class="nav-link contrast contrast-high contrast-type-default">
-        <a title="Омогући високи контраст"
-           aria-label="Омогући високи контраст"
+        <a title=""
+           aria-label=""
            data-contrast-switch-to="high"
            href="javascript:void(0)"
            data-on="click"
@@ -275,9 +275,9 @@ data-event-label="high"
             aria-haspopup="true">
           <div id="search-mobile" class="menu-target">
   <form action="/populationData-site/test/search/">
-    <label class="sr-only" for="indicator_search-mobile">Претраживање</label>
-    <input type="text" name="q" id="indicator_search-mobile" title="Претраживање" /><!--
-    --><button aria-label="Претраживање" id="search-mobile-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
+    <label class="sr-only" for="indicator_search-mobile"></label>
+    <input type="text" name="q" id="indicator_search-mobile" title="" /><!--
+    --><button aria-label="" id="search-mobile-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
   </form>
 </div>
 
@@ -286,15 +286,15 @@ data-event-label="high"
 
       <div id="search" class="menu-target">
   <form action="/populationData-site/test/search/">
-    <label class="sr-only" for="indicator_search">Претраживање</label>
-    <input type="text" name="q" id="indicator_search" title="Претраживање" /><!--
-    --><button aria-label="Претраживање" id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
+    <label class="sr-only" for="indicator_search"></label>
+    <input type="text" name="q" id="indicator_search" title="" /><!--
+    --><button aria-label="" id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
   </form>
 </div>
 
 
       <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
-    <a href="/populationData-site/test/">Почетна</a>
+    <a href="/populationData-site/test/">menu.home</a>
 </li><li class="language-toggle-menu-header">
     
 
@@ -306,23 +306,23 @@ data-event-label="high"
   
   <div class="btn-group language-toggle-dropdown ">
     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Test</span>
+      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name"></span>
       <span class="language-abbreviation">test</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
     <ul class="dropdown-menu"><li>
             <a href="/populationData-site/">
-              English
+              
             </a>
           </li><li>
             <a href="/populationData-site/bs/">
-              Bosanski
+              
             </a>
           </li><li>
             <a href="/populationData-site/sr/">
-              Српски
+              
             </a>
           </li><li>
             <a href="/populationData-site/hr/">
-              Hrvatski
+              
             </a>
           </li></ul>
   </div>
@@ -335,8 +335,8 @@ data-event-label="high"
 
 
     <li class="nav-link contrast contrast-default contrast-type-default">
-        <a title="Онемогући високи контраст"
-           aria-label="Онемогући високи контраст"
+        <a title=""
+           aria-label=""
            data-contrast-switch-to="default"
            href="javascript:void(0)"
            data-on="click"
@@ -347,8 +347,8 @@ data-event-label="default"
         >A</a>
     </li>
     <li class="nav-link contrast contrast-high contrast-type-default">
-        <a title="Омогући високи контраст"
-           aria-label="Омогући високи контраст"
+        <a title=""
+           aria-label=""
            data-contrast-switch-to="high"
            href="javascript:void(0)"
            data-on="click"
@@ -375,7 +375,7 @@ data-event-label="high"
 
     
     <div class="site-intro spacer medium">
-        <h1>ПОДАЦИ О ДЕМОГРАФСКОЈ ОТПОРНОСТИ</h1>
+        <h1>frontpage.intro_title</h1>
         <p class="lead-copy">frontpage.intro_body</p>
     </div>
     
@@ -393,7 +393,7 @@ data-event-label="high"
             <div class="col-xs-6 col-md-3">
                 <a href="/populationData-site/test/1">
                   <img src="https://pixerize.github.io/populationData-site/assets/img/goals/test/1.png" id="goal-1" alt="global_goals.1-short -  1" class="goal-icon-image goal-icon-image-png" />
-                  <p>СТАНОВНИШТВО</p>
+                  <p>global_goals.1-title</p>
                 </a>
             </div>
         
@@ -402,7 +402,7 @@ data-event-label="high"
             <div class="col-xs-6 col-md-3">
                 <a href="/populationData-site/test/2">
                   <img src="https://pixerize.github.io/populationData-site/assets/img/goals/test/2.png" id="goal-2" alt="global_goals.2-short -  2" class="goal-icon-image goal-icon-image-png" />
-                  <p>ПОПИС СТАНОВНИШТВА</p>
+                  <p>global_goals.2-title</p>
                 </a>
             </div>
         
@@ -411,7 +411,7 @@ data-event-label="high"
             <div class="col-xs-6 col-md-3">
                 <a href="/populationData-site/test/3">
                   <img src="https://pixerize.github.io/populationData-site/assets/img/goals/test/3.png" id="goal-3" alt="global_goals.3-short -  3" class="goal-icon-image goal-icon-image-png" />
-                  <p>ЗДРАВЉЕ</p>
+                  <p>global_goals.3-title</p>
                 </a>
             </div>
         
@@ -420,7 +420,7 @@ data-event-label="high"
             <div class="col-xs-6 col-md-3">
                 <a href="/populationData-site/test/4">
                   <img src="https://pixerize.github.io/populationData-site/assets/img/goals/test/4.png" id="goal-4" alt="global_goals.4-short -  4" class="goal-icon-image goal-icon-image-png" />
-                  <p>СОЦИЈАЛНА ЗАШТИТА</p>
+                  <p>global_goals.4-title</p>
                 </a>
             </div>
         </div>
@@ -429,7 +429,7 @@ data-event-label="high"
             <div class="col-xs-6 col-md-3">
                 <a href="/populationData-site/test/5">
                   <img src="https://pixerize.github.io/populationData-site/assets/img/goals/test/5.png" id="goal-5" alt="global_goals.5-short -  5" class="goal-icon-image goal-icon-image-png" />
-                  <p>ОБРАЗОВАЊЕ</p>
+                  <p>global_goals.5-title</p>
                 </a>
             </div>
         
@@ -438,7 +438,7 @@ data-event-label="high"
             <div class="col-xs-6 col-md-3">
                 <a href="/populationData-site/test/6">
                   <img src="https://pixerize.github.io/populationData-site/assets/img/goals/test/6.png" id="goal-6" alt="global_goals.6-short -  6" class="goal-icon-image goal-icon-image-png" />
-                  <p>ЕКОНОМИЈА</p>
+                  <p>global_goals.6-title</p>
                 </a>
             </div>
         
@@ -447,7 +447,7 @@ data-event-label="high"
             <div class="col-xs-6 col-md-3">
                 <a href="/populationData-site/test/7">
                   <img src="https://pixerize.github.io/populationData-site/assets/img/goals/test/7.png" id="goal-7" alt="global_goals.7-short -  7" class="goal-icon-image goal-icon-image-png" />
-                  <p>РАДНА СНАГА И ЖИВОТНИ СТАНДАРД</p>
+                  <p>global_goals.7-title</p>
                 </a>
             </div>
         
@@ -456,7 +456,7 @@ data-event-label="high"
             <div class="col-xs-6 col-md-3">
                 <a href="/populationData-site/test/8">
                   <img src="https://pixerize.github.io/populationData-site/assets/img/goals/test/8.png" id="goal-8" alt="global_goals.8-short -  8" class="goal-icon-image goal-icon-image-png" />
-                  <p>НАСИЉЕ</p>
+                  <p>global_goals.8-title</p>
                 </a>
             </div>
         </div>
@@ -474,7 +474,7 @@ data-event-label="high"
          - 1.1 MB
         
             <br>
-            Подаци посљедњи пут ажурирани - Aug 29, 2022
+             - Aug 29, 2022
         
     </div>
 </div>
@@ -490,11 +490,11 @@ data-event-label="high"
             
               <li>
                 
-                  <a href="mailto:sdg@bhas.gov.ba" target="_blank">Контактирајте нас</a>
+                  <a href="mailto:sdg@bhas.gov.ba" target="_blank">menu.contact_us</a>
                 
                 </li>
               <li>
-                <a href="/populationData-site/test/about/cookies-and-privacy/">Колачићи</a>
+                <a href="/populationData-site/test/about/cookies-and-privacy/">menu.cookies</a>
                 
                 </li>
               
@@ -523,14 +523,14 @@ data-event-label="high"
     translations['general']['hide'] = '';</script>
 
 <script>translations['search'] = translations['search'] || {};
-    translations['search']['search'] = 'Претраживање';</script>
+    translations['search']['search'] = '';</script>
 
-<script src='/populationData-site/assets/js/sdg.js?v=20260217031617'></script>
+<script src='/populationData-site/assets/js/sdg.js?v=20260218031928'></script>
 
 
     
     
-    <script src="/populationData-site/assets/js/custom.js?v=20260217031617"></script><script>
+    <script src="/populationData-site/assets/js/custom.js?v=20260218031928"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
